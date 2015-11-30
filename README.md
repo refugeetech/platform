@@ -30,7 +30,6 @@ The project hub focuses on projects that are doing things for the integration of
 * Search/sort projects
 * projects profile page
 * Make requests
-* 
 
 ### First phase functionality
 First phase => Apply to be listed, List projects and initatives, Search sort by project variables(see below), project profile page
@@ -50,7 +49,6 @@ First phase => Apply to be listed, List projects and initatives, Search sort by 
   * Contact Person
   * Upvotes
   * Links
-    * Social feed?
   * List of skills needed
   * List of resources needed
   * Link to Form for volunteering
@@ -58,24 +56,20 @@ First phase => Apply to be listed, List projects and initatives, Search sort by 
   * Contact form
 * Project Account
   * Project profile
-    * VISIBLE: Boolean => if !pending review then visible
-* Resource Hub
-  * Accounts
-    * Private account
-      * Social login
-
-
-## Second phase functionality (initiating the resource hub and linking with project hub)
+    * if !pending review then visible
+* Private account
+  * Social login
+ 
+## Second phase functionality (initiating the resource hub and linking with project hub) : (WORKING)
+=> make requests
 * Account
-* Import skills from LinkedIn
-* Add skill to profile
-* Account types
-  * Private
-* Project
-* Organization
+  * Import skills from LinkedIn
+  * Add skill to profile
+* Account types: Added
+  * Organization
 * Project profile page (first link resource hub with project hub)
 
-## Third phase: Unclear from here
+## Third phase: (WORKING)
 
 ### Knowledge Hub
 * Publishing problems
@@ -92,7 +86,7 @@ First phase => Apply to be listed, List projects and initatives, Search sort by 
   * Link Cotunity.com widgets to problems for 'free text' crowdsourcing
   * Associate project/problem to problem/project
 
-## Fourth phase (stepping up the resource hub)
+## Fourth phase; stepping up the resource hub (Working)
 ### Resource Hub (project perspective)
 * Project
   * Resources
@@ -129,7 +123,10 @@ First phase => Apply to be listed, List projects and initatives, Search sort by 
   * Project
     * Can partner with organization
     * Can partner with project?
-  
+
+
+
+
 `*` The most important reason for this distinction is our view of other initiatives not focusing on tech to be problem owners; those who are working most closely with refugees. As problem owners they are potential users or partners with tech 
 focused projects. This makes it important to facilitate cooperation between them. To make them distinct in the project hub 
 lifts this point somewhat. Of course tech project could be working just as close with refugees as other projects. But tech is a tool that needs to be distributed and applied. Most tech initiatives therefore needs partners who are working directly with refugees and who can distribute their tech solutions.
