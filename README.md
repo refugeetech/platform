@@ -19,20 +19,28 @@ The project hub focuses on projects that are doing things for the integration of
 * Tech projects and other initiatives are made distinct on the hub which makes it easy for visitors to know what kind of project it is*.
 * Projects are searchable and filterable. They are presented in a nice and compelling list. Filter parameters are based on problem category that the project is targeting.
 * Projects can be targeting one or more specific issues under some category. These specific issues exists in our problem hub as uniquely identifiable issues that has been found through our workshop or crowdsourcing activities.
-* Projects have profiles that give information about their project and what they are doing and for whom. The previously mentioned “targeting” issues that projects are trying to solve is visible in the project profile. Clicking on such an issue shows a short summary of that issue. One can also browse to and redirect to that issue on the problem hub.
-* Projects can make request for assistance. The format of these requests (when published) should be similar to Problems and presented as “project specific” problems**.
+* Projects have profiles that give information about their project and what they are doing and for whom. The previously mentioned “targeting” issues that projects are trying to solve is visible in the project profile. Clicking on such an issue shows a short summary of that issue. One can also browse to and redirect to the source (on the problem hub if exists otherwise documents and other source files).
+* Projects can make request for assistance. The format of these requests (when published) should be similar to Issues and presented as “project specific” issues/problems and a reference to what skills are potentially needed to solve that issue**.
+* Social account login (linkedin, twitter, facebook, google, openID)
 
 ## Requirements shortlist for MVP Project hub
 
 * Apply to be listed
   * USE CASE SUGGESTION #1: Click Apply => Create an account => Fill in project profile (Is Application form) => Pending review status
 * Lists projects and initiatives
-* Search/sort projects
-* projects profile page
+* Filter projects by ? [issue]
+* Search projects
+  * text search
+    * autocomplete
+  * Zoomable TreeMaps [wishlist]
+    * Create a parser from schema to json that makes for a good use case
+* Accounts
+* Project profile page
 * Make requests
+* Social account login (linkedin, twitter, facebook, google, openID)
 
-### First phase functionality
-First phase => Apply to be listed, List projects and initatives, Search sort by project variables(see below), project profile page
+### First phase functionality (WORKING)
+First phase => Apply to be listed, List projects and initatives, Search or fileter by project variables(see below), project profile page, Accounts, Social login
 * Project variables 
   * Project name
   * Project stage
@@ -61,14 +69,13 @@ First phase => Apply to be listed, List projects and initatives, Search sort by 
   * Social login
  
 ## Second phase functionality (initiating the resource hub and linking with project hub) : (WORKING)
-=> make requests
+Second phase => make requests
 * Account
   * Import skills from LinkedIn
   * Add skill to profile
 * Account types: Added
   * Organization
 * Project profile page
-  * 
 
 ## Third phase (WORKING)
 
