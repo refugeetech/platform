@@ -20,7 +20,7 @@
     
       => text search, autocomplete then do
     
-      => autocomplete with icons/pictures
+         => autocomplete with icons/pictures
       
       => build filtering functionality
       
