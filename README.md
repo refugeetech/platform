@@ -1,6 +1,6 @@
 # Introduction
 
-The platform connects tech projects, public and private initiatives, problems, crowdsourcing of problems and crowdsourcing of ideas to solve problems, resources (cash, products & services, etc) and their respective sponsors, volunteers. The platform is a nexus for community building and collaboration and a resource to bootstrap non profits and profits alike? that are doing things that target the integration process.
+The platform connects tech projects, public and private initiatives, problems, crowdsourcing of problems and crowdsourcing of ideas to solve problems, volunteers and resources (cash, products & services, etc) and their respective sponsors. The platform is a nexus for community building and collaboration and a resource to bootstrap projects that are doing things that target the integration process. 
 
 The platform is made up of major parts that are integrated and intertwined:
 
@@ -67,9 +67,10 @@ First phase => Apply to be listed, List projects and initatives, Search sort by 
   * Add skill to profile
 * Account types: Added
   * Organization
-* Project profile page (first link resource hub with project hub)
+* Project profile page
+  * 
 
-## Third phase: (WORKING)
+## Third phase (WORKING)
 
 ### Knowledge Hub
 * Publishing problems
