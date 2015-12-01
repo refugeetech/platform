@@ -11,7 +11,7 @@ The platform is made up of major parts that are integrated and intertwined:
 
 # The purpose and background of the project hub
 
-The project hub focuses on projects that are doing things for the integration of newly arrived. Tech projects are projects focuses on tech. There are other initiatives such as publicly or privately run refugee camps, transit housing, volunteering networks such as Welcome to Sweden, and so on.
+The project hub focuses on projects that are doing things for the integration of newly arrived. Tech projects are projects focuses on tech. There are other initiatives such as publicly or privately run refugee camps, transit housing, volunteering networks such as Refugees Welcome, and others.
 
 # High level requirements of the minimum viable project hub
 
