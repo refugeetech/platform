@@ -3,11 +3,13 @@
 </head>
 
 <body>
-  <h1>Welcome to Refugee Tech!</h1>
-  {{#if currentUser}}
-    {{> landing}}
-    {{> addProject }}
-  {{ else }}
-    {{> atForm}}
-  {{/ if }}
+  <div class="container">
+    <h1>Welcome to Refugee Tech!</h1>
+    {{#if currentUser}}
+      {{> landing}}
+      {{> addProject }}
+    {{ else }}
+      {{> atForm}}
+    {{/ if }}
+  </div>
 </body>
