@@ -3,6 +3,8 @@
   {{# autoForm collection="Projects" id="insertProjectForm" type="insert" }}
     {{> afQuickField name='name' autofocus='true'}}
 
+    {{> afQuickField name='projectDescription' rows=3}}
+
     {{> afQuickField name="problemDescription" rows=3 }}
 
     {{> afQuickField name="problemCategories" }}
@@ -12,6 +14,7 @@
     {{> afQuickField name="teamDescription" rows=3 }}
 
     {{> afQuickField name="currentStage" }}
+
 
     <button type="submit" class="btn btn-primary">Submit Project</button>
   {{/ autoForm }}
