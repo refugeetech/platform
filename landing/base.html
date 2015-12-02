@@ -1,0 +1,12 @@
+<head>
+  <title>Refugee Tech</title>
+</head>
+
+<body>
+  <h1>Welcome to Refugee Tech!</h1>
+  {{#if currentUser}}
+    {{> landing}}
+  {{ else }}
+    {{> atForm}}
+  {{/ if }}
+</body>
