@@ -4,6 +4,9 @@
 
 <body>
   <h1>Welcome to Refugee Tech!</h1>
-
-  {{> landing}}
+  {{#if currentUser}}
+    {{> landing}}
+  {{ else }}
+    {{> atForm}}
+  {{/ if }}
 </body>
