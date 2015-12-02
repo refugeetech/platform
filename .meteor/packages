@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 useraccounts:unstyled
 accounts-password
 aldeed:simple-schema
+aldeed:collection2
