@@ -1,0 +1,9 @@
+<template name="addProject">
+  <h2>Add Project</h2>
+  {{> quickForm
+    collection="Projects"
+    id="insertProjectForm"
+    type="insert"
+    omitFields="contactPersonId,teamIds,requestIds"
+  }}
+</template>
