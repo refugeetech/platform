@@ -1,6 +1,8 @@
 # Project status
 [![Stories in Ready](https://badge.waffle.io/refugeetech/platform.png?label=ready&title=Ready)](http://waffle.io/refugeetech/platform)
 
+[![Throughput Graph](https://graphs.waffle.io/refugeetech/platform/throughput.svg)](https://waffle.io/refugeetech/platform/metrics) 
+
 # Introduction
 
 The platform connects tech projects, public and private initiatives, problems, crowdsourcing of problems and crowdsourcing of ideas to solve problems, volunteers and resources (cash, products & services, etc) and their respective sponsors. The platform is a nexus for community building and collaboration and a resource to bootstrap projects that are doing things that target the integration process. 
