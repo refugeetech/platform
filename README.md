@@ -44,7 +44,7 @@ The project hub focuses on projects that are doing things for the integration of
 * Make requests
 * Social account login (linkedin, twitter, facebook, google, openID)
 
-### First phase functionality (WORKING)
+### First phase functionality (IN PROGRESS)
 First phase => Apply to be listed, List projects and initatives, Search or fileter by project variables(see below), project profile page, Accounts, Social login
 * Project variables 
   * Project name
@@ -73,7 +73,7 @@ First phase => Apply to be listed, List projects and initatives, Search or filet
 * Private account
   * Social login
  
-## Second phase functionality (initiating the resource hub and linking with project hub) : (WORKING)
+## Second phase functionality (initiating the resource hub and linking with project hub)
 Second phase => make requests
 * Account
   * Import skills from LinkedIn
@@ -82,7 +82,7 @@ Second phase => make requests
   * Organization
 * Project profile page
 
-## Third phase (WORKING)
+## Third phase
 
 ### Knowledge Hub
 * Publishing problems
@@ -99,7 +99,7 @@ Second phase => make requests
   * Link Cotunity.com widgets to problems for 'free text' crowdsourcing
   * Associate project/problem to problem/project
 
-## Fourth phase; stepping up the resource hub (Working)
+## Fourth phase; stepping up the resource hub
 ### Resource Hub (project perspective)
 * Project
   * Resources
