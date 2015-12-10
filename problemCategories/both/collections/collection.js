@@ -1,1 +1,1 @@
-ProblemCategories = new Mongo.Collections('problemCategories');
+ProblemCategories = new Mongo.Collection('problemCategories');

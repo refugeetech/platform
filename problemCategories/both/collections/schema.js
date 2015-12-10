@@ -6,15 +6,17 @@ ProblemCategoriesSchema = new SimpleSchema({
   },
   "description": {
     type: String,
-    label: "Category Description"
+    label: "Category Description" 
   },
   "summary": {
     type: String,
-    label: "Category Summary"
+    label: "Category Summary",
+    max: 500 // same as for projectSummary
   },
   "short": {
     type: String,
-    label: "Problem Categories"
+    label: "Category tweet size description",
+    max: 140
   }
 });
 
