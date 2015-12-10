@@ -1,0 +1,1 @@
+ProblemCategories = new Mongo.Collections('problemCategories');
