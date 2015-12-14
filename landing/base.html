@@ -7,11 +7,11 @@
     <h1>Welcome to Refugee Tech!</h1>
     {{#if currentUser}}
       {{> landing}}
-      {{> addProject }}
+        {{> addProject }}
     {{ else }}
       {{> atForm}}
     {{/ if }}
-    
+
     {{> addCategory }}
     
     {{> problemCategories}}
