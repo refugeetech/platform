@@ -95,7 +95,7 @@ ProjectsSchema = new SimpleSchema({
  "postalAddress.city":{
     type:String,
     label:"City"
-  },
+ },
   "postalAddress.country":{
     type:String,
     label:"Country"
