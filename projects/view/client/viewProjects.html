@@ -1,0 +1,12 @@
+<template name="viewProjects">
+  <div class="page-header">
+    <h1>View all projects</h1>
+  </div>
+  {{# each projects }}
+  <div class="panel panel-default">
+    <div class="panel-header">
+      <h2 class="panel-heading">{{ name }}</h2>
+    </div>
+  </div>
+  {{/ each }}
+</template>
