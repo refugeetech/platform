@@ -6,75 +6,62 @@ ProjectsSchema = new SimpleSchema({
   },
   "projectDescription": {
     type: String,
-    label: "Project Description"
-  },
-  "projectSummary": {
-    type: String,
-    label: "Project Summary",
+    label: "Project Description (maximum 500 characters)",
     max: 500
   },
-  "contactPersonId": {
+  "projectShort": {
     type: String,
-    label: "Contact Person ID",
-    regEx: SimpleSchema.RegEx.Id,
-    optional: true
+    label: "Project Short (maximum 140 characters)",
+    max: 140
   },
-  "problemDescription": {
-    type: String,
-    label: "Problem Description"
-  },
-  "problemCategories": {
-    type: [String],
-    label: "Problem Categories"
-  },
+  // TODO: auto-associate user ID that created project
+  // "contactPersonId": {
+  //   type: String,
+  //   label: "Contact Person ID",
+  //   regEx: SimpleSchema.RegEx.Id,
+  //   optional: true
+  // },
+  // TODO: Add 'Problems' feature
+  // "problemDescription": {
+  //   type: String,
+  //   label: "Problem Description"
+  // },
+  // "problemCategories": {
+  //   type: [String],
+  //   label: "Problem Categories"
+  // },
   "tags": {
     type: [String],
     label: "Tags"
   },
-  "teamIds": {
-    type: [String],
-    label: "Team IDs",
-    regEx: SimpleSchema.RegEx.Id,
-    optional: true
-  },
-  "teamDescription": {
-    type: String,
-    label: "Team Description"
-  },
-  "currentStage": {
-    type: String,
-    label: "Current Stage"
-  },
-  "projectShort": {
-    type: String,
-    label: "Project Short",
-    max: 140
-  },
-  "dateListed": {
-    type: Date,
-    label: "Date Listed",
-    autoValue: function() {
-      if (this.isInsert) {
-        return new Date();
-      } else if (this.isUpsert) {
-        return {$setOnInsert: new Date()};
-      } else {
-        this.unset();  // Prevent user from supplying their own value
-      }
-    }
-  },
-  "startupDate": {
-    type: Date,
-    label: "Startup Date"
-  },
-  "targetGroups": {
-    type: [String],
-    label: "Target Groups"
-  },
-  "targetLocations": {
-    type: [String],
-    label: "Target Locations"
-  },
+  // TODO: add Teams feature
+  // "teamIds": {
+  //   type: [String],
+  //   label: "Team IDs",
+  //   regEx: SimpleSchema.RegEx.Id,
+  //   optional: true
+  // },
+  // "teamDescription": {
+  //   type: String,
+  //   label: "Team Description"
+  // },
+  // "currentStage": {
+  //   type: String,
+  //   label: "Current Stage"
+  // },
+  // "startupDate": {
+  //   type: Date,
+  //   label: "Startup Date"
+  // },
+  // TODO: Add "Target Groups" feature
+  // "targetGroups": {
+  //   type: [String],
+  //   label: "Target Groups"
+  // },
+  // "targetLocations": {
+  //   type: [String],
+  //   label: "Target Locations"
+  // },
   "targetPlatforms": {
     type: [String],
     label: "Target Platforms",
@@ -100,16 +87,31 @@ ProjectsSchema = new SimpleSchema({
     type:String,
     label:"Country"
   },
-  "links": {
-    type: [String],
-    label: "Links"
+  // TODO: Add links object with sub fields
+  // "links": {
+  //   type: [String],
+  //   label: "Links"
+  // }
+  // TODO: Add 'Requests' feature
+  // "requestIds": {
+  //   type: [String],
+  //   label: "Request IDs",
+  //   regEx: SimpleSchema.RegEx.Id,
+  //   optional: true
+  // }
+  "dateListed": {
+    type: Date,
+    label: "Date Listed",
+    autoValue: function() {
+      if (this.isInsert) {
+        return new Date();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: new Date()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    }
   },
-  "requestIds": {
-    type: [String],
-    label: "Request IDs",
-    regEx: SimpleSchema.RegEx.Id,
-    optional: true
-  }
 });
 
 Projects.attachSchema(ProjectsSchema);
