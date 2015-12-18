@@ -4,12 +4,12 @@ ProjectsSchema = new SimpleSchema({
     type: String,
     label: "Project Name"
   },
-  "projectDescription": {
+  "description": {
     type: String,
     label: "Project Description (maximum 500 characters)",
     max: 500
   },
-  "projectShort": {
+  "shortDescription": {
     type: String,
     label: "Project Short (maximum 140 characters)",
     max: 140
