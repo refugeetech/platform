@@ -24,3 +24,5 @@ aldeed:simple-schema
 aldeed:collection2
 aldeed:autoform
 twbs:bootstrap
+kadira:flow-router
+kadira:blaze-layout
