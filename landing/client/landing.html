@@ -1,3 +1,10 @@
-<!-- <template name="landing">
-  <h2>Landing</h2>
-</template> -->
+<template name="landing">
+  <div class="container">
+    <h1>Welcome to Refugee Tech!</h1>
+    {{#if currentUser}}
+      <p>Welcome!</p>
+    {{ else }}
+      {{> atForm}}
+    {{/ if }}
+  </div>
+</template>
