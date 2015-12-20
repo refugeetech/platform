@@ -1,10 +1,104 @@
+<head>
+    <title>Refugee Tech</title>
+</head>
+
 <template name="landing">
-  <div class="container">
-    <h1>Welcome to Refugee Tech!</h1>
     {{#if currentUser}}
-      <p>Welcome!</p>
+    <section class="bg-primary" id="one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="margin-top-0 text-primary">Refugee Tech</h2>
+                    <br>
+                    <h2 class="text-faded">
+                        Creative solutions to real world problems powered by technology and collaboration.
+                    </h2>
+                    <a href=/projects class="btn btn-default btn-xl">Add Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="margin-top-0 text-primary">Getting to Sweden is only the first part of the journey. Refugee Tech aims to support refugees in the subsequent phases of their transition:</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="feature">
+                        <i class="icon-lg ion-android-laptop wow fadeIn" data-wow-delay=".3s"></i>
+                        <h3>Arrival</h3>
+                        <p class="text-muted">Refugees flee unstable areas to escape ongoing humanitarian crises and seek safety in their new home, Sweden. The arrival is often fraught with trauma and stressful bureaucracy. Providing support to newly arrived refugees in this step is critical to their success.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="feature">
+                        <i class="icon-lg ion-social-sass wow fadeInUp" data-wow-delay=".2s"></i>
+                        <h3>Starting Anew</h3>
+                        <p class="text-muted">Now physically safe, refugees must build an entirely new life in Sweden: seek employment, find a place to live, navigate the Swedish language and customs, and much more. We seek to offer resources and advice to refugees in this step to help refugees navigate the process of starting over in Sweden.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="feature">
+                        <i class="icon-lg ion-ios-star-outline wow fadeIn" data-wow-delay=".3s"></i>
+                        <h3>Fulfilling Potential</h3>
+                        <p class="text-muted">Often, refugees are put in boxes that deny their talents and contributions, or limit their opportunities due to language and/or cultural barriers. The final step is about breaking down these barriers and allowing people to fulfill their potential as citizens and professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>Information</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">Item 1</a></li>
+                        <li><a href="">Item 2</a></li>
+                        <li><a href="">Item 3</a></li>
+                        <li><a href="">Item 4</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                        <li><a href="#">Item 4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 text-right">
+                    <h4>Follow</h4>
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
+                      <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
+                      <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+
+        </div>
+    </footer>
+
+    <!--scripts loaded here from cdn for performance -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="js/scripts.js"></script>
     {{ else }}
       {{> atForm}}
     {{/ if }}
-  </div>
 </template>
