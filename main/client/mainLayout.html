@@ -1,4 +1,7 @@
 <template name="mainLayout">
   {{> mainNavbar }}
+  {{> Template.dynamic template=landing }}
+  <div class="container-fluid">
     {{> Template.dynamic template=main }}
+  </div>
 </template>
