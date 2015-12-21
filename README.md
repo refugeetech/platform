@@ -3,7 +3,7 @@
 
 [![Throughput Graph](https://graphs.waffle.io/refugeetech/platform/throughput.svg)](https://waffle.io/refugeetech/platform/metrics) 
 
-# Introduction
+## Introduction
 
 The platform connects tech projects, public and private initiatives, problems, crowdsourcing of problems and crowdsourcing of ideas to solve problems, volunteers and resources (cash, products & services, etc) and their respective sponsors. The platform is a nexus for community building and collaboration and a resource to bootstrap projects that are doing things that target the integration process. 
 
@@ -14,11 +14,11 @@ The platform is made up of major parts that are integrated and intertwined:
 * Knowledge Hub: Problems, Solutions, Ideas, Q&A, Forum  ,, ; Is crowdsourced 
 * Associations: Relationships exist between project, problems they target, other projects targeting a specific problem, partners/financers/volunteers of a projects, etc.
 
-# The purpose and background of the project hub
+## The purpose and background of the Project Hub
 
 The project hub focuses on projects that are doing things for the integration of newly arrived. Tech projects are projects focuses on tech. There are other initiatives such as publicly or privately run refugee camps, transit housing, volunteering networks such as Refugees Welcome, and others.
 
-# High level requirements of the minimum viable project hub
+## High level requirements of the minimum viable Project Hub
 
 * Projects should be able to “apply” to be listed on the project hub.
 * Tech projects and other initiatives are made distinct on the hub which makes it easy for visitors to know what kind of project it is*.
@@ -45,6 +45,8 @@ The project hub focuses on projects that are doing things for the integration of
 * Social account login (linkedin, twitter, facebook, google, openID)
 
 ### First phase functionality (IN PROGRESS)
+__Create the Platform foundation__
+
 First phase => Apply to be listed, List projects and initatives, Search or fileter by project variables(see below), project profile page, Accounts, Social login
 * Project variables 
   * Project name
@@ -73,7 +75,9 @@ First phase => Apply to be listed, List projects and initatives, Search or filet
 * Private account
   * Social login
  
-## Second phase functionality (initiating the resource hub and linking with project hub)
+## Second phase functionality (not yet started)
+__Initiating the Resource Hub and linking with Project Hub__
+
 Second phase => make requests
 * Account
   * Import skills from LinkedIn
@@ -82,16 +86,17 @@ Second phase => make requests
   * Organization
 * Project profile page
 
-## Third phase
+## Third phase functionality (not yet started)
+__Initiating the Knowledge Hub and extending the Project Hub__
 
-### Knowledge Hub
+#### Knowledge Hub
 * Publishing problems
   * Descriptions (long,shorter,short)
   * tags || categories || (tags && categories)
 * Related projects (which projects are targeting these problems)
 
 
-### Project hub
+#### Project Hub
 * Project profile
   * Related problems
 * Crowdsourcing
@@ -99,8 +104,10 @@ Second phase => make requests
   * Link Cotunity.com widgets to problems for 'free text' crowdsourcing
   * Associate project/problem to problem/project
 
-## Fourth phase; stepping up the resource hub
-### Resource Hub (project perspective)
+## Fourth phase functionality (not yet started)
+__Stepping up the Resource Hub__
+
+#### Resource Hub (project perspective)
 * Project
   * Resources
     * Volunteer
@@ -113,7 +120,7 @@ Second phase => make requests
       * Housing
       * Office space
       * Laptops, etc
-### Project hub
+#### Project Hub
 * Project
   * Project profile
     * List project volunteers
