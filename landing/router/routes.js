@@ -1,5 +1,5 @@
 FlowRouter.route("/", {
   action: function (params) {
-    BlazeLayout.render("mainLayout", {main: "landing"}, );
+    BlazeLayout.render("mainLayout", {landing: "landing"} );
   }
 })
