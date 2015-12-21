@@ -1,0 +1,19 @@
+#landing-banner {
+    padding: 70px 0;
+    min-height: 70vh;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    background-image: url('images/background-header.jpg');
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#landing-title {
+  font-size: 3em;
+  text-shadow: 0 1px 0 #21235c; /* Match the color overlay hue of banner image*/
+}

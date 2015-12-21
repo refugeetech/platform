@@ -1,20 +1,20 @@
 <template name="addProject">
-  <div class="page-header">
-    <h2>Add Project</h2>
-  </div>
-    {{# autoForm collection="Projects" id="insertProjectForm" type="insert" }}
-    {{> afQuickField name='name' autofocus='true'}}
+    <div class="page-header">
+      <h2>Add Project</h2>
+    </div>
+      {{# autoForm collection="Projects" id="insertProjectForm" type="insert" }}
+      {{> afQuickField name='name' autofocus='true'}}
 
-    {{> afQuickField name='description' rows=5 }}
+      {{> afQuickField name='description' rows=5 }}
 
-    {{> afQuickField name="shortDescription" }}
+      {{> afQuickField name="shortDescription" }}
 
-    {{> afQuickField name="tags" }}
+      {{> afQuickField name="tags" }}
 
-    {{> afQuickField name="targetPlatforms" }}
+      {{> afQuickField name="targetPlatforms" }}
 
-    {{> afQuickField name="postalAddress"}}
+      {{> afQuickField name="postalAddress"}}
 
-    <button type="submit" class="btn btn-primary">Submit Project</button>
-  {{/ autoForm }}
+      <button type="submit" class="btn btn-primary">Submit Project</button>
+    {{/ autoForm }}
 </template>
