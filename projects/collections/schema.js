@@ -34,6 +34,29 @@ ProjectsSchema = new SimpleSchema({
     type: [String],
     label: "Tags"
   },
+
+  "currentStage": {
+     type: String,
+     allowedValues: [
+        'initiation',
+        'planning',
+        'implementationExecution',
+        'operationMonitoring',
+        'closing'
+     ],
+     optional: true,
+     label: "Select current project stage",
+     autoform: {
+        options: [
+           {label: "Initiation", value: "initiation"},
+           {label: "Planning", value: "planning"},
+           {label: "Implementation / Execution", value: "implementationExecution"},
+           {label: "Operation / Monitoring", value: "operationMonitoring"},
+           {label: "Closing", value: "closing"}
+       ]
+     }
+   },
+
   // TODO: add Teams feature
   // "teamIds": {
   //   type: [String],
