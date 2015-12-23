@@ -14,6 +14,25 @@ ProjectsSchema = new SimpleSchema({
     label: "Project Short (maximum 140 characters)",
     max: 140
   },
+
+  "problemCategories": {
+  type: [String],
+  label: "Problem Categories",
+  allowedValues: ['social', 'bureaucracy', 'housing', 'education',
+                  'language', 'employment', 'coordination'],
+  autoform: {
+    options: [
+      {label: "Social", value: "social"},
+      {label: "Bureaucracy", value: "bureaucracy"},
+      {label: "Housing", value: "housing"},
+      {label: "Education", value: "education"},
+      {label: "Language", value: "language"},
+      {label: "Employment", value: "employment"},
+      {label: "Coordination", value: "coordination"}
+    ]
+  }
+},
+
   // TODO: auto-associate user ID that created project
   // "contactPersonId": {
   //   type: String,
@@ -30,6 +49,7 @@ ProjectsSchema = new SimpleSchema({
   //   type: [String],
   //   label: "Problem Categories"
   // },
+
   "tags": {
     type: [String],
     label: "Tags"
