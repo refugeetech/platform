@@ -144,6 +144,35 @@ ProjectsSchema = new SimpleSchema({
     label: "URI",
     regex: SimpleSchema.Regex.Url
   },
+  "socialMedia": {
+    type:Object,
+    label: "Social Media"
+  },
+  "socialMedia.facebook": {
+    type:String,
+    label: "Facebook",
+    regex: SimpleSchema.Regex.Url
+  },
+  "socialMedia.linkedin": {
+    type:String,
+    label: "Linkedin",
+    regex: SimpleSchema.Regex.Url
+  },
+  "socialMedia.twitter": {
+    type:String,
+    label: "Twitter",
+    regex: SimpleSchema.Regex.Url
+  },
+  "socialMedia.instagram": {
+    type:String,
+    label: "Instagram",
+    regex: SimpleSchema.Regex.Url
+  },
+  "socialMedia.googleplus": {
+    type:String,
+    label: "Google+",
+    regex: SimpleSchema.Regex.Url
+  },
   // TODO: Add 'Requests' feature
   // "requestIds": {
   //   type: [String],
