@@ -130,11 +130,20 @@ ProjectsSchema = new SimpleSchema({
     type:String,
     label:"Country"
   },
-  // TODO: Add links object with sub fields
-  // "links": {
-  //   type: [String],
-  //   label: "Links"
-  // }
+  
+  "links": {
+     type: [Object],
+     label: "Links"
+  },
+  "links.$.name":{
+    type: String,
+    label: "Name"
+  },
+  "links.$.uri":{
+    type: String,
+    label: "URI",
+    regex: SimpleSchema.Regex.Url
+  },
   // TODO: Add 'Requests' feature
   // "requestIds": {
   //   type: [String],
@@ -145,7 +154,7 @@ ProjectsSchema = new SimpleSchema({
   "dateListed": {
     type: Date,
     label: "Date Listed",
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return new Date();
       } else if (this.isUpsert) {
