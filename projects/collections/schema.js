@@ -139,47 +139,35 @@ ProjectsSchema = new SimpleSchema({
     type: String,
     label: "Name"
   },
-  "links.$.uri":{
+  "links.$.url":{
     type: String,
-    label: "URI",
-    regex: SimpleSchema.Regex.Url
+    label: "URL",
+    regEx: SimpleSchema.RegEx.Url
   },
-  "socialMedia": {
-    type:Object,
-    label: "Social Media"
-  },
-  "socialMedia.facebook": {
+  "links.$.type": {
     type:String,
-    label: "Facebook",
-    regex: SimpleSchema.Regex.Url
+    label: "Type of URL",
+    allowedValues: ['web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore'],
+    autoform: {
+      options: [
+        //generic link types
+        {label: "Web", value: "web"},
+        {label: "Article", value: "article"},
+        {label: 'Blog', value:"blog"},
+        {label: "Other", value:"other"},
+        //appstores
+        {label: 'App Store', value:"appStore"},
+        {label: 'Google Play', value:"googlePlay"},
+        {label: 'Windows Store', value:"windowsStore"},
+        //social media types
+        {label: "Blogger", value: "blogger"},
+        {label: "Facebook", value: "facebook"},
+        {label: "Twitter", value: "twitter"},
+        {label: "Instagram", value: "instagram"},
+        {label: "Linkedin", value: "linkedin"}
+      ]
+    }
   },
-  "socialMedia.linkedin": {
-    type:String,
-    label: "Linkedin",
-    regex: SimpleSchema.Regex.Url
-  },
-  "socialMedia.twitter": {
-    type:String,
-    label: "Twitter",
-    regex: SimpleSchema.Regex.Url
-  },
-  "socialMedia.instagram": {
-    type:String,
-    label: "Instagram",
-    regex: SimpleSchema.Regex.Url
-  },
-  "socialMedia.googleplus": {
-    type:String,
-    label: "Google+",
-    regex: SimpleSchema.Regex.Url
-  },
-  // TODO: Add 'Requests' feature
-  // "requestIds": {
-  //   type: [String],
-  //   label: "Request IDs",
-  //   regEx: SimpleSchema.RegEx.Id,
-  //   optional: true
-  // }
   "dateListed": {
     type: Date,
     label: "Date Listed",
