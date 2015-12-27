@@ -130,22 +130,48 @@ ProjectsSchema = new SimpleSchema({
     type:String,
     label:"Country"
   },
-  // TODO: Add links object with sub fields
-  // "links": {
-  //   type: [String],
-  //   label: "Links"
-  // }
-  // TODO: Add 'Requests' feature
-  // "requestIds": {
-  //   type: [String],
-  //   label: "Request IDs",
-  //   regEx: SimpleSchema.RegEx.Id,
-  //   optional: true
-  // }
+  
+  "links": {
+     type: [Object],
+     label: "Links"
+  },
+  "links.$.name":{
+    type: String,
+    label: "Name"
+  },
+  "links.$.url":{
+    type: String,
+    label: "URL",
+    regEx: SimpleSchema.RegEx.Url
+  },
+  "links.$.type": {
+    type:String,
+    label: "Type of URL",
+    allowedValues: ['web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore'],
+    autoform: {
+      options: [
+        //generic link types
+        {label: "Web", value: "web"},
+        {label: "Article", value: "article"},
+        {label: 'Blog', value:"blog"},
+        {label: "Other", value:"other"},
+        //appstores
+        {label: 'App Store', value:"appStore"},
+        {label: 'Google Play', value:"googlePlay"},
+        {label: 'Windows Store', value:"windowsStore"},
+        //social media types
+        {label: "Blogger", value: "blogger"},
+        {label: "Facebook", value: "facebook"},
+        {label: "Twitter", value: "twitter"},
+        {label: "Instagram", value: "instagram"},
+        {label: "Linkedin", value: "linkedin"}
+      ]
+    }
+  },
   "dateListed": {
     type: Date,
     label: "Date Listed",
-    autoValue: function() {
+    autoValue: function () {
       if (this.isInsert) {
         return new Date();
       } else if (this.isUpsert) {

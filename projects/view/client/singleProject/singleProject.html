@@ -11,6 +11,9 @@
         {{# each tags }}
         <span class="label label-default">{{ this }}</span>
         {{/ each }}
+        {{# each links }}
+        <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}></a></span>
+        {{/ each }}
       </div>
     </div>
   </div>
