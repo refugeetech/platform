@@ -1,31 +1,31 @@
 # How to contribute
 
-## Workflow used: Gitflow
+# Workflow used: Gitflow
 
 About gitflow and some links
 
 
-## File structure used
+# File structure
 This project is using a feature module organization pattern. Please use the following, or similar, file structture:
 
-* / (project root)
-  * problemCategories/
-    * both/
+  * / (project root)
+    * featureName/
       * collections/
         * collection.js
         * schema.js
         * permissions.js
-    * client/
-      * templates/
-        * templateName.html
-        * templateName.js
-    * server/
-      * methods.js
-      * publications.js
-      
-      
-    ## Packages used in the project
-    Mockup data stuff
-    Schema stuff
-    Routing stuff
-    
+      * client/
+        * templateName/
+          * templateName.html
+          * templateName.js
+         * routes/
+          * routes.js 
+      * server/
+        * methods.js
+        * publications.js
+
+## Packages
+Mockup data stuff
+Schema stuff
+Routing stuff
+
