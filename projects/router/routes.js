@@ -13,9 +13,9 @@ FlowRouter.route("/projects/add", {
 // Add route to return a single JSON object containing the specified project.
 JsonRoutes.add("get", "/projects/:projectId", function (req, res, next) {
   var projectId = req.params.projectId; // The project id, in MongoDB
-  var singleProject = Projects.findOne(projectId) // Sends the result to client
+  var singleProject = Projects.findOne(projectId) // Finds matching project and returns object.
 
-  JsonRoutes.sendResult(res, 200, singleProject);
+  JsonRoutes.sendResult(res, 200, singleProject); // Sends the result to client
 });
 
 // Returns JSON array containing all projects in Projects collection.
