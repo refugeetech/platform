@@ -1,8 +1,10 @@
 # How to contribute
 
-# Workflow used: Gitflow
-
-About gitflow and some links
+# Workflow
+When contributing to the project, please follow the Gitflow guidelines. Specifically:
+* Create a new feature branch from the `develop` branch
+* Prefix your feature branch name with `/feature`
+* When ready for review, create a pull request against the `develop` branch
 
 
 # File structure
