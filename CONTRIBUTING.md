@@ -33,7 +33,7 @@ Use semantic variable names. Semantic variable names have the following traits:
 * When used in subsequent lines of code, the variable name reads as close to a plain language sentence as possible
  
 ## Reference
-For further reference, please [read Human JavaScript][http://read.humanjavascript.com/) by Henrik Joreteg.
+For further reference, please [read Human JavaScript](http://read.humanjavascript.com/) by Henrik Joreteg.
 
 # File structure
 This project is using a feature module organization pattern. Please use the following, or similar, file structture:
