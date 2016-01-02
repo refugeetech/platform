@@ -11,7 +11,7 @@ ProjectsSchema = new SimpleSchema({
   },
   "shortDescription": {
     type: String,
-    label: "Project Short (maximum 140 characters)",
+    label: "Project Short Description (maximum 140 characters)",
     max: 140
   },
 
@@ -53,6 +53,12 @@ ProjectsSchema = new SimpleSchema({
   "tags": {
     type: [String],
     label: "Tags"
+  },
+
+// The actual date the project began
+  "startupDate": {
+    type: Date,
+    label: "Project Startup Date"
   },
 
   "currentStage": {
@@ -105,6 +111,7 @@ ProjectsSchema = new SimpleSchema({
   //   type: [String],
   //   label: "Target Locations"
   // },
+
   "targetPlatforms": {
     type: [String],
     label: "Target Platforms",
@@ -130,7 +137,7 @@ ProjectsSchema = new SimpleSchema({
     type:String,
     label:"Country"
   },
-  
+
   "links": {
      type: [Object],
      label: "Links"
@@ -168,6 +175,8 @@ ProjectsSchema = new SimpleSchema({
       ]
     }
   },
+
+  // The date the project was submitted to refugeetech platform
   "dateListed": {
     type: Date,
     label: "Date Listed",
