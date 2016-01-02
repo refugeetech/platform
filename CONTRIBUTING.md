@@ -14,7 +14,7 @@ In a nutshell, **write code for humans to read and understand**. Our code will b
 *Every* significant line of code should have an accompanying human language (English) comment. This is for several reasons:
 
 * Comments act like a pair-programmer, explaining the code to other developers or your future self
-* Comments may illuminate errors in accompanying code
+* Comments may illuminate errors
   * logical errors where code is not doing what is expected
   * semantic errors where the code is not [literate](https://en.wikipedia.org/wiki/Literate_programming)
 
