@@ -10,13 +10,15 @@ FlowRouter.route("/projects/add", {
   }
 });
 
+// Return a single JSON object containing the specified project.
 JsonRoutes.add("get", "/projects/:projectId", function (req, res, next) {
   var projectId = req.params.projectId;
 
   JsonRoutes.sendResult(res, 200, Projects.findOne(projectId));
 });
 
+// Returns JSON array containing all projects in Projects collection.
 JsonRoutes.add("get", "/projects", function (req, res, next) {
-
-  JsonRoutes.sendResult(res, 200, Projects.find().fetch());
+    var allProjects = Projects.find().fetch();
+  JsonRoutes.sendResult(res, 200, allProjects);
 });
