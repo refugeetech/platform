@@ -16,7 +16,7 @@ JsonRoutes.add("get", "/projects/:id", function (req, res, next) {
   JsonRoutes.sendResult(res, 200, Projects.findOne(id));
 });
 
-JsonRoutes.add("get", "/projects", function (req, res) {
+JsonRoutes.add("get", "/projects", function (req, res, next) {
 
   JsonRoutes.sendResult(res, 200, Projects.find().fetch());
 });
