@@ -7,9 +7,8 @@ Please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-ch
 * Prefix your feature branch name with `/feature`
 * When ready for review, create a pull request against the `develop` branch
 
-# Code standard
-## JavaScript semi-standard
-Please follow the [JavaScript semi-standard coding style](https://github.com/Flet/semistandard).
+# Code quality
+In a nutshell, **write code for humans to read and understand**. Our code will be minified for machines during the build process.
 
 ## Comments
 *Every* significant line of code should have an accompanying human language (English) comment. This is for several reasons:
@@ -18,6 +17,12 @@ Please follow the [JavaScript semi-standard coding style](https://github.com/Fle
 * Comments may illuminate logical errors in the code they accompany
   * logical errors where code is not doing what is expected
   * semantic errors where the code is not [literate](https://en.wikipedia.org/wiki/Literate_programming)
+
+# One task per line
+Each line of code should perform only one action. When chaining is important, each chained aciton should be placed on a new line.
+
+## JavaScript semi-standard
+Please follow the [JavaScript semi-standard coding style](https://github.com/Flet/semistandard).
 
 ## Variables
 Use semantic variable names. Semantic variable names have the following traits:
