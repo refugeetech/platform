@@ -8,7 +8,7 @@ Please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-ch
 * When ready for review, create a pull request against the `develop` branch
 
 # Code quality
-In a nutshell, **write code for humans to read and understand**. Our code will be minified for machines during the build process.
+In a nutshell, **write code for humans to read and understand**. Our code will be minified for machines during the build process. For further reference, please [read Human JavaScript](http://read.humanjavascript.com/) by Henrik Joreteg.
 
 ## Comments
 *Every* significant line of code should have an accompanying human language (English) comment. This is for several reasons:
@@ -31,9 +31,6 @@ Use semantic variable names. Semantic variable names have the following traits:
 * Words are fully spelled out
 * Variables with multiple words use camel case notation
 * When used in subsequent lines of code, the variable name reads as close to a plain language sentence as possible
- 
-## Reference
-For further reference, please [read Human JavaScript](http://read.humanjavascript.com/) by Henrik Joreteg.
 
 # File structure
 This project is using a feature module organization pattern. Please use the following, or similar, file structture:
