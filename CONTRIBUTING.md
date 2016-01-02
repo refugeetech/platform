@@ -18,7 +18,7 @@ In a nutshell, **write code for humans to read and understand**. Our code will b
   * logical errors where code is not doing what is expected
   * semantic errors where the code is not [literate](https://en.wikipedia.org/wiki/Literate_programming)
 
-# One task per line
+## One task per line
 Each line of code should perform only one action. When chaining is important, each chained aciton should be placed on a new line.
 
 ## JavaScript semi-standard
