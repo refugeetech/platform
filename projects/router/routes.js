@@ -9,3 +9,14 @@ FlowRouter.route("/projects/add", {
     BlazeLayout.render("mainLayout", {main: "addProject"});
   }
 });
+
+JsonRoutes.add("get", "/projects/:id", function (req, res, next) {
+  var id = req.params.id;
+
+  JsonRoutes.sendResult(res, 200, Projects.findOne(id));
+});
+
+JsonRoutes.add("get", "/projects", function (req, res) {
+
+  JsonRoutes.sendResult(res, 200, Projects.find().fetch());
+});

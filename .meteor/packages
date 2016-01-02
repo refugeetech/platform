@@ -27,3 +27,4 @@ twbs:bootstrap
 kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
+simple:json-routes
