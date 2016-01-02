@@ -10,10 +10,10 @@ FlowRouter.route("/projects/add", {
   }
 });
 
-JsonRoutes.add("get", "/projects/:id", function (req, res, next) {
-  var id = req.params.id;
+JsonRoutes.add("get", "/projects/:projectId", function (req, res, next) {
+  var projectId = req.params.projectId;
 
-  JsonRoutes.sendResult(res, 200, Projects.findOne(id));
+  JsonRoutes.sendResult(res, 200, Projects.findOne(projectId));
 });
 
 JsonRoutes.add("get", "/projects", function (req, res, next) {
