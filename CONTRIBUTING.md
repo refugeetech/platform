@@ -1,7 +1,8 @@
-# How to contribute
+# Contributing
+Use the following guidelines when contributing to this project.
 
 # Workflow
-When contributing to the project, please follow the Gitflow guidelines. Specifically:
+Please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-cheatsheet/). Specifically:
 * Create a new feature branch from the `develop` branch
 * Prefix your feature branch name with `/feature`
 * When ready for review, create a pull request against the `develop` branch
