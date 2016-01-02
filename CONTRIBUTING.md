@@ -7,6 +7,9 @@ Please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-ch
 * Prefix your feature branch name with `/feature`
 * When ready for review, create a pull request against the `develop` branch
 
+# Code standard
+# JavaScript semi-standard
+Please follow the [JavaScript semi-standard coding style](https://github.com/Flet/semistandard).
 
 # File structure
 This project is using a feature module organization pattern. Please use the following, or similar, file structture:
