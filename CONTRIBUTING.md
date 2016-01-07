@@ -52,7 +52,17 @@ This project is using a feature module organization pattern. Please use the foll
         * publications.js
 
 ## Packages
-Mockup data stuff
-Schema stuff
-Routing stuff
+The following packages are important components of the RefugeeTech Platform.
 
+### Mockup data
+[Anti Fake](https://github.com/anticoders/meteor-fake/) is used to generate fake/example data.
+
+
+### Routing
+[Flow Router](https://github.com/kadirahq/flow-router) is used for project routing.
+
+### Schema
+[Simple Schema](https://github.com/aldeed/meteor-simple-schema) is used to create schemas for our database collections.
+
+### Templating
+[Blaze](https://meteor.github.io/blaze/) is the templating language used in our project packages.
