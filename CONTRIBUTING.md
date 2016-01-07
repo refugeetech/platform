@@ -55,9 +55,11 @@ This project is using a feature module organization pattern. Please use the foll
 ## Packages
 The RefugeeTech platform is built using the [Meteor.js framework](https://meteor.com). The following Meteor packages are important components of the RefugeeTech Platform.
 
+### Forms
+[AutoForm](https://github.com/aldeed/meteor-autoform) is used to provide easy input forms, based on schema definitions (see below).
+
 ### Mockup data
 [Anti Fake](https://github.com/anticoders/meteor-fake/) is used to generate fake/example data.
-
 
 ### Routing
 [Flow Router](https://github.com/kadirahq/flow-router) is used for project routing.
