@@ -53,7 +53,7 @@ This project is using a feature module organization pattern. Please use the foll
         * publications.js
 
 ## Packages
-The following packages are important components of the RefugeeTech Platform.
+The RefugeeTech platform is built using the [Meteor.js framework](https://meteor.com). The following Meteor packages are important components of the RefugeeTech Platform.
 
 ### Mockup data
 [Anti Fake](https://github.com/anticoders/meteor-fake/) is used to generate fake/example data.
@@ -67,3 +67,6 @@ The following packages are important components of the RefugeeTech Platform.
 
 ### Templating
 [Blaze](https://meteor.github.io/blaze/) is the templating language used in our project packages.
+
+### CSS
+[Bootstrap](http://getbootstrap.com/) is the primary CSS framework for the RefugeeTech templates.
