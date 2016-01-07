@@ -1,6 +1,6 @@
 if(Meteor.isClient) {
     Meteor.startup(function(){
-        //USAGE: just use Factory.create('factoryname') to add some documents to the database. Would be great to use local Collections instead/as an option.
+        //USAGE: just use Factory.create('factoryname') in the browser console to add some documents to the database. Would be great to use local Collections instead/as an option.
         
         //Define your factories here
         Factory.define('project',Projects, {
