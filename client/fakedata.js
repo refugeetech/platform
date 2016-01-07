@@ -26,27 +26,6 @@ if(Meteor.isClient) {
             
         });
 
-        var Forge = {
-            one: function(factoryName,insert) {
-                factory = Factory.get(factoryName);
-                if(factory) {
-                    if(insert==true) {
-                        //insert into the local database
-                        return factory.create();
-                    }
-                    else {
-                        //just create it in the current session
-                        return factory.build();
-                    }
-                }
-            }
-        };
-        
-        Session.set('Factory',Factory)
-
-        
-        Session.set('Forge',Forge());
-
 
     });
 }
