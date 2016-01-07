@@ -27,5 +27,9 @@ twbs:bootstrap
 kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
+<<<<<<< HEAD
 practicalmeteor:faker
 dburles:factory
+=======
+simple:json-routes
+>>>>>>> develop
