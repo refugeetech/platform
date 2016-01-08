@@ -58,7 +58,7 @@ When submitting a bug report or support request, include the following details, 
 * description of observed behavior
 * description of expected behavior
 * relevant environment details (e.g. web browser, operating system, etc)
-* 
+ 
 ### Bug report/support request example
 
 > #### Widget doesn't work when clicked
