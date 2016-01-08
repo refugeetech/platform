@@ -58,6 +58,31 @@ When submitting a bug report or support request, include the following details, 
 * description of observed behavior
 * description of expected behavior
 * relevant environment details (e.g. web browser, operating system, etc)
+* 
+### Bug report/support request example
+
+> #### Widget doesn't work when clicked
+>
+> On the page, the widget doesn't do anything when clicked.
+>
+> #### Steps to reproduce
+> 1. View the page
+> 1. Click the widget
+>
+> #### Observed behavior
+> When clicking the widget, nothing happens.
+>
+> #### Expected behavior
+> When clicking the widget, something should happen.
+>
+> #### Environment
+> * Web browser
+> * Operating system
+> #### Design
+> [Monochrome diagram of the desired design, e.g. a wireframe.]
+
+ 
+**Note:** Some of the above details will be added during the discussion and testing process.
 
 # Code quality
 In a nutshell, **write code for humans to read and understand**. Our code will be minified for machines during the build process. For further reference, please [read Human JavaScript](http://read.humanjavascript.com/) by Henrik Joreteg.
