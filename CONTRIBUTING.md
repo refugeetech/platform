@@ -1,13 +1,6 @@
 # Contributing
 Use the following guidelines when contributing to this project.
 
-# Workflow
-Please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-cheatsheet/). Specifically:
-* Create a new feature branch from the `develop` branch
-* Prefix your feature branch name with `/feature`
-* When ready for review, create a pull request against the `develop` branch
- * **Important:** Get another RefugeeTech developer to review your pull request before merging
-
 # Submitting issues
 There are a couple of common issue types in our tracker:
 * Bug reports / support requests
@@ -83,7 +76,14 @@ When submitting a bug report or support request, include the following details, 
  
 **Note:** Some of the above details will be added during the discussion and testing process.
 
-# Code quality
+# Contributing code
+When contributing code, please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-cheatsheet/). Specifically:
+* Create a new feature branch from the `develop` branch
+* Prefix your feature branch name with `/feature`
+* When ready for review, create a pull request against the `develop` branch
+ * **Important:** Get another RefugeeTech developer to review your pull request before merging
+
+## Code quality
 In a nutshell, **write code for humans to read and understand**. Our code will be minified for machines during the build process. For further reference, please [read Human JavaScript](http://read.humanjavascript.com/) by Henrik Joreteg.
 
 ## Comments
