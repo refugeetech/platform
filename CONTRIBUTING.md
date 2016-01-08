@@ -70,7 +70,7 @@ When submitting a bug report or support request, include the following details, 
 > 1. Click the widget
 >
 > #### Observed behavior
-> When clicking the widget, nothing happens.
+> When clicking the widget, nothing happens. [Optionally include a screenshot, if it is relevant.]
 >
 > #### Expected behavior
 > When clicking the widget, something should happen.
