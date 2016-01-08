@@ -8,6 +8,36 @@ Please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-ch
 * When ready for review, create a pull request against the `develop` branch
  * **Important:** Get another RefugeeTech developer to review your pull request before merging
 
+# Submitting issues
+There are a couple of common issue types in our tracker:
+* Bug reports / support requests
+* Features/enhancements
+ 
+Please follow our issue guidelines, when submitting new issues.
+
+## General details
+Each issue should have the following details:
+* brief, descriptive title
+* short overview paragraph further describing the issue
+ 
+## Feature/enhancement requests
+Provide the following details for feature/enhancement requests:
+
+* user story
+* wireframe depicting the desired user interface (in SVG or PNG format)
+* acceptance criteria - checklist of present tense statements describing how the feature behaves
+ 
+Some of the details can be added in a discovery and planning process around the feature.
+
+## Bug reports / support requests
+When submitting a bug report or support request, include the following details, if possible:
+
+* steps to reproduce
+* screenshot showing observed behavior
+* description of observed behavior
+* description of expected behavior
+* relevant environment details (e.g. web browser, operating system, etc)
+
 # Code quality
 In a nutshell, **write code for humans to read and understand**. Our code will be minified for machines during the build process. For further reference, please [read Human JavaScript](http://read.humanjavascript.com/) by Henrik Joreteg.
 
