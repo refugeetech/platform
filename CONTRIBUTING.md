@@ -78,9 +78,6 @@ When submitting a bug report or support request, include the following details, 
 > #### Environment
 > * Web browser
 > * Operating system
-> #### Design
-> [Monochrome diagram of the desired design, e.g. a wireframe.]
-
  
 **Note:** Some of the above details will be added during the discussion and testing process.
 
