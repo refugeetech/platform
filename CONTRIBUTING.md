@@ -23,7 +23,7 @@ Each issue should have the following details:
 ## Feature/enhancement requests
 Provide the following details for feature/enhancement requests:
 
-* user story - short paragraph in the form of "As a [user role], I would like [feature/enhancement], so that [need fulfilled]"
+* [user story](https://en.wikipedia.org/wiki/User_story) - short paragraph in the form of "As a [user role], I would like [feature/enhancement], so that [need fulfilled]"
 * [wireframe](https://en.wikipedia.org/wiki/Website_wireframe) - simple, monochrome diagram depicting the desired user interface (in SVG or PNG format)
 * acceptance criteria - checklist of present tense statements describing how the feature behaves
  
