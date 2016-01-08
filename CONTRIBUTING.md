@@ -82,6 +82,8 @@ When contributing code, please follow the [Gitflow guidelines](http://danielkumm
 * Prefix your feature branch name with `/feature`
 * When ready for review, create a pull request against the `develop` branch
  * **Important:** Get another RefugeeTech developer to review your pull request before merging
+  
+ ![git flow diagram with peer review step](https://openclipart.org/image/600px/svg_to_png/236560/Gitflow-featureBranch-peerReview.png)
 
 ## Code quality
 In a nutshell, **write code for humans to read and understand**. Our code will be minified for machines during the build process. For further reference, please [read Human JavaScript](http://read.humanjavascript.com/) by Henrik Joreteg.
