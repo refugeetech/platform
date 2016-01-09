@@ -58,7 +58,13 @@ ProjectsSchema = new SimpleSchema({
 // The actual date the project began
   "startupDate": {
     type: Date,
-    label: "Project Startup Date"
+    label: "Project Startup Date",
+    autoform: {
+      afFieldInput: {
+      type: "bootstrap-datepicker",
+      "data-date-autoclose": "true"
+      }
+    }
   },
 
   "currentStage": {
