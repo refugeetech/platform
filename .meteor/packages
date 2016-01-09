@@ -30,3 +30,5 @@ fortawesome:fontawesome
 practicalmeteor:faker
 dburles:factory
 simple:json-routes
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker
