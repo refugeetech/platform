@@ -78,12 +78,14 @@ When submitting a bug report or support request, include the following details, 
 
 # Contributing code
 When contributing code, please follow the [Gitflow guidelines](http://danielkummer.github.io/git-flow-cheatsheet/). Specifically:
-* Create a new feature branch from the `develop` branch
-* Prefix your feature branch name with `/feature`
-* Immediately open a pull request by comparing your branch against the `develop` branch
-* Label your pull request as `needs work`, so that other developers can see the work in progress
-* When ready for review, @ mention the development team, so that we know to review your code
- * **Important:** Get another RefugeeTech developer to review your pull request before merging
+
+1. Create a new feature branch from the `develop` branch
+1. Prefix your feature branch name with `/feature`
+1. Immediately open a pull request by comparing your branch against the `develop` branch
+1. Label your pull request as `needs work`, so that other developers can see the work in progress
+1. When ready for review, @ mention the development team, so that we know to review your code
+ 
+**Important:** Getting developer feedback is part of our peer review process. It helps to highlight issues and improvements early in the process.
   
  ![git flow diagram with peer review step](https://openclipart.org/image/600px/svg_to_png/236560/Gitflow-featureBranch-peerReview.png)
 
