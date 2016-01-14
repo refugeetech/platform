@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Bootstrap default behaviour overrides
+   ========================================================================== */
+
+.navbar-default {
+  background: #fff;
+  border: none;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #1d2660;
+}
+.navbar-brand {
+  font-size: 16px;
+  /* Sets the same base for relative units. Bootstrap sets this to 18px. An alternative is to use rems (root em) instead of ems */
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: inherit;
+  background: none;
+  border-bottom: 4px solid #1d2660;
+}
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li > a:focus  {
+  font-weight: bold;
+  color: inherit;
+  background: none;
+}
+
+
+
+/* ==========================================================================
+   Custom Selectors
+   ========================================================================== */
+
+/*
+ * 16px is the body font-size
+ */
+
+#top-nav .navbar-left {
+  height: calc(75/16 * 1em);
+  transition: height 0.1s ease-out;
+}
+#top-nav.shrinked .navbar-left {
+  height: calc(55/16 * 1em);
+}
+
+.navbar-brand {
+  padding: 1.4375em 0;
+  width: 12.5em;
+  transition: all 0.1s ease-out;
+}
+#top-nav.shrinked .navbar-brand {
+  width: calc(55/75 * 12.5em);
+  padding: calc(55/75 * 1.4375em) -0px;
+}
+
+
+#top-nav .navbar-left {
+  margin-left: 4.25em;
+}
+.navbar-nav.navbar-left a {
+  font-size: .9em;
+  margin-right: 2em;
+  padding: 1.665em calc(6/16 * 1em) calc(1.665em - 6/16 * 1em);
+  font-weight: 500;
+  line-height: 2em;
+  transition: all .1s ease-out;
+  transition-property: padding, line-height;
+}
+#top-nav.shrinked .navbar-nav.navbar-left a {
+  padding: 1.221em calc(6/16 * 1em) calc(1.221em - 6/16 * 1em);
+  line-height: 1.47em;;
+}
