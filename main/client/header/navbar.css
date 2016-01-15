@@ -4,7 +4,6 @@
 
 .navbar-default {
   background: #fff;
-  border: none;
 }
 .navbar-default .navbar-nav > li > a {
   color: #1d2660;
@@ -16,7 +15,7 @@
 .navbar-default .navbar-nav > li > a:hover {
   color: inherit;
   background: none;
-  border-bottom: 4px solid #1d2660;
+  border-bottom: 5px solid #1d2660;
 }
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active > a:hover,
@@ -26,8 +25,6 @@
   background: none;
 }
 
-
-
 /* ==========================================================================
    Custom Selectors
    ========================================================================== */
@@ -36,38 +33,78 @@
  * 16px is the body font-size
  */
 
-#top-nav .navbar-left {
-  height: calc(75/16 * 1em);
-  transition: height 0.1s ease-out;
-}
-#top-nav.shrinked .navbar-left {
-  height: calc(55/16 * 1em);
-}
+/* =========== Logo =========== */
 
 .navbar-brand {
-  padding: 1.4375em 0;
+  padding: 1.3125em -0px; /* 21/16 */
   width: 12.5em;
   transition: all 0.1s ease-out;
+  height: auto;
+  position: relative;
+  top: 0.125em;
 }
 #top-nav.shrinked .navbar-brand {
   width: calc(55/75 * 12.5em);
-  padding: calc(55/75 * 1.4375em) -0px;
+  padding: calc(55/75 * 1.3125em) -0px;
 }
 
+/* =====================================
+   Navbars
+   ===================================== */
+
+#top-nav .navbar-nav {
+  transition: height 0.1s ease-out;
+  height: calc(75/16 * 1em);
+}
+#top-nav.shrinked .navbar-nav {
+  height: calc(55/16 * 1em);
+}
+#top-nav .navbar-nav a {
+  transition: all .1s ease-out;
+  transition-property: padding;
+}
+
+/* =========== Left Navbar =========== */
 
 #top-nav .navbar-left {
   margin-left: 4.25em;
 }
-.navbar-nav.navbar-left a {
-  font-size: .9em;
-  margin-right: 2em;
-  padding: 1.665em calc(6/16 * 1em) calc(1.665em - 6/16 * 1em);
-  font-weight: 500;
-  line-height: 2em;
-  transition: all .1s ease-out;
-  transition-property: padding, line-height;
+#top-nav.shrinked .navbar-left {
+  margin-left: 4.25em; /* Not sure what's best here. Same margin is drawn in the mockup (RT_Hub_menu.png), but the comment suggests it should differ. If not: remove this block */
 }
-#top-nav.shrinked .navbar-nav.navbar-left a {
-  padding: 1.221em calc(6/16 * 1em) calc(1.221em - 6/16 * 1em);
-  line-height: 1.47em;;
+.navbar-nav.navbar-left a {
+  font-size: 0.875em; /* 14px/16px => 0.875em */
+  margin-right: calc(35/14 * 1em);
+  padding: calc(35/14 * 1em) calc(6/14 * 1em) calc(30/14 * 1em - 5px);
+  line-height: 10px; /* FF */
+  line-height: calc(10/14 * 1em);
+  font-weight: 500;
+}
+#top-nav.shrinked .navbar-left a {
+  padding: calc(24/14 * 1em) calc(6/14 * 1em) calc(21/14 * 1em - 5px);
+}
+.navbar-nav.navbar-left li:last-of-type a {
+  margin-right: 0;
+}
+
+/* =========== Right Navbar =========== */
+
+#top-nav .navbar-right {
+  font-weight: bold;
+}
+#top-nav .navbar-right .glyphicon {
+  top: .2em;
+  left: calc(-2/16 * 1em);
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+.navbar-nav.navbar-right a {
+  margin-right: calc(20/16 * 1em);
+  padding: calc(28/16 * 1em - 0.2em) calc(4/16 * 1em) calc(27/16 * 1em - 5px);
+}
+#top-nav.shrinked .navbar-right a {
+  padding: 1em calc(4/16 * 1em) calc(1em - 5px);
+}
+.navbar-nav.navbar-right li:last-of-type a {
+  margin-right: 0;
 }
