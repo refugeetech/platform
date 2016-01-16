@@ -1,9 +1,10 @@
 <template name="mainNavbar">
     <nav id="top-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header pull-left">
                 <a class="navbar-brand page-scroll" href="/#one">
-                  <img id="main-logo" src="images/RT-logo_v3.svg" alt="Refugee Tech logotype">
+                  <img class="hidden-sm hidden-xs" id="main-logo" src="images/RT-logo_v3.svg" alt="Refugee Tech logotype" />
+                  <img class="visible-sm visible-xs" id="main-logo" src="images/RT-logo_R.svg" alt="Refugee Tech logotype" />
                   <h1 class="visuallyhidden">Refugee Tech</h1>
                 </a>
             </div>
@@ -15,11 +16,12 @@
                   <li><a href="#">Blog</a></li>
                 </ul>
                 <ul class="navbar-right navbar-nav nav">
-                  <li><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>English</a></li>
-                  <li><a href="#"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>Share</a></li>
-                  <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span><span class="visible-lg-inline">English</span></a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span><span class="visible-lg-inline">Share</span></a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="visible-lg-inline">Search</span></a></li>
                 </ul>
             </div>
+        <a href="#" class="visible-xs pull-right" id="hamburger"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
       </div>
     </nav>
 </template>
