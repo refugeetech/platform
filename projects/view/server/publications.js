@@ -4,8 +4,4 @@ if (Meteor.isServer) {
     Meteor.publish("singleProject", function (projectId) {
           return Projects.find({ _id: projectId });
     });
-
-    Meteor.publish("projectProfile", function (projectId) {
-          return Projects.find({ _id: projectId });
-    });
 }
