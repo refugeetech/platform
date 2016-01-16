@@ -97,9 +97,9 @@
 /* =====================================
    Navbars
    ===================================== */
-   #top-nav.navbar-default .navbar-nav > li > a:hover {
-     border-bottom: 5px solid #1d2660;
-   }
+  #top-nav.navbar-default .navbar-nav > li > a:hover {
+    border-bottom: 5px solid #1d2660;
+  }
   #top-nav .navbar-nav {
     transition: height 0.1s ease-out;
     height: calc(75/16 * 1em);
@@ -117,7 +117,6 @@
   #top-nav .navbar-left {
     margin-left: 4.25em;
   }
-
   #top-nav .navbar-nav.navbar-left a {
     font-size: 0.875em; /* 14px/16px => 0.875em */
     margin-right: calc(25/14 * 1em);
@@ -144,7 +143,7 @@
   }
   #top-nav .navbar-nav.navbar-right a {
     margin-right: calc(20/16 * 1em);
-    padding: calc(28/16 * 1em - 0.2em) calc(4/16 * 1em) calc(27/16 * 1em - 5px);
+    padding: calc(28/16 * 1em - 0.2em) calc(4/16 * 1em) calc(26/16 * 1em - 5px);
   }
   #top-nav.shrinked .navbar-right a {
     padding: 1em calc(4/16 * 1em) calc(1em - 5px);
