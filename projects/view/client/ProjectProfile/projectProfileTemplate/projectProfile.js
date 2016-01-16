@@ -1,5 +1,10 @@
 Template.projectProfile.helpers({
     'getProject': function(){
-        return project.findOne();
+      console.log("projectProfile");
+      //console.log(project);
+        return Projects.findOne();
+    },
+    getProject2: function () {
+      return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
     }
 })

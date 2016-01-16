@@ -13,11 +13,12 @@
         -->
         <div>Testing again</div>
 
-          {{ #with getProject }}
+        {{#if Template.subscriptionsReady }}
+          {{ #with getProject2 }}
             <span>{{_id}}</span>
             <span>{{name}}</span>
             <span>{{city}}</span>
           {{ /with }}
-        
+        {{/if}}
     </div>
 </template>

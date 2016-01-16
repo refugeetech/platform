@@ -10,15 +10,15 @@ FlowRouter.route("/projects/add", {
   }
 });
 
-FlowRouter.route('/projects/:projectId', {  
+FlowRouter.route('/projects/:projectId', {
   subscriptions: function (params, queryParams) {
     this.register('project', Meteor.subscribe('projectProfile', params.projectId));
   },
-  action: function (params) {
+  action: function (params, queryParams) {
     BlazeLayout.render('projectProfilePage', { main: 'projectProfile' });
   },
   name: 'projectProfile'
-  
+
 });
 
 /*FlowRouter.route("projects/:id", {
