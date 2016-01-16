@@ -5,7 +5,8 @@ if (Meteor.isServer) {
           return Projects.find({ _id: projectId });
     });
     
-    Meteor.publish("projectProfile", function (projectId) {  
-          return Projects.findOne();
+    Meteor.publish("projectProfile", function (projectId) {
+            console.log("We are here...");
+          return Projects.find().fetch()[0];
     });
 }

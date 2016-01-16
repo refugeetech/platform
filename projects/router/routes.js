@@ -18,6 +18,7 @@ FlowRouter.route('/projects/:projectId', {
     BlazeLayout.render('projectProfilePage', { main: 'projectProfile' });
   },
   name: 'projectProfile'
+  
 });
 
 /*FlowRouter.route("projects/:id", {
