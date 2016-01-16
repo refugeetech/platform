@@ -7,6 +7,6 @@ if (Meteor.isServer) {
 
     Meteor.publish("projectProfile", function (projectId) {
             console.log(Projects.find().fetch());
-          return Projects.find({ _id: projectId });
+          return Projects.find({ _id:  new Meteor.Collection.ObjectID(projectId)});
     });
 }

@@ -1,5 +1,5 @@
 Template.projectProfile.helpers({
     'getProject': function(){
-        return Projects.findOne(); 
+        return project.findOne();
     }
 })
