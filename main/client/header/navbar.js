@@ -6,5 +6,6 @@ Meteor.startup(function() {
     if ($(document).scrollTop() > 75) topNav.addClass('shrinked');
     else topNav.removeClass('shrinked');
   });
-
+  
+  
 }); // end Meteor.startup
