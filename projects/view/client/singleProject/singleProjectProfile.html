@@ -1,0 +1,29 @@
+<template name="singleProjectProfile">
+
+  <!--
+   Social media links
+  -->
+
+  {{#if Template.subscriptionsReady }}
+    {{ #with getProject }}
+      <span>{{name}}</span>
+      <div>{{currentStage}}</div>
+      <span>{{startupDate}}</span>
+      <span>{{postalAddress.city}}</span>
+
+      {{# each targetPlatforms }}
+        <span class="label label-default">{{label}}></span>
+      {{/ each }}
+
+      {{# each links }}
+        <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}></a></span>
+      {{/ each }}
+      {{# each problemCategories }}
+        <span class="label label-default"><a href="{{label}}">{{label}}></a></span>
+      {{/ each }}
+
+      <p>{{ description }}</p>
+    {{ /with }}
+  {{/if}}
+
+</template>

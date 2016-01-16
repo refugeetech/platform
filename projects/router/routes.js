@@ -12,19 +12,9 @@ FlowRouter.route("/projects/add", {
 
 FlowRouter.route('/projects/:projectId', {
   action: function (params, queryParams) {
-    BlazeLayout.render('projectProfilePage', { main: 'projectProfile' });
-  },
-  name: 'projectProfile'
+    BlazeLayout.render('projectProfilePage', { main: 'singleProjectProfile' });
+  }
 });
-
-/*FlowRouter.route("projects/:id", {
-  action: function() {
-    BlazeLayout.render("projectProfilePage", main:"projectProfile");
-   }
-   subscription: function(params, qparams) {
-     this.register('project', )
-   }
-});*/
 
 // Add route to return a single JSON object containing the specified project.
 JsonRoutes.add("get", "/projects/:projectId/json", function (req, res, next) {
