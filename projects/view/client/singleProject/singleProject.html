@@ -14,7 +14,7 @@
         {{# each links }}
         <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}></a></span>
         {{/ each }}
-        <!--<a href="{{pathFor 'projectProfile' projectIdId=_id}}">Link to project</a>-->
+        <a href="/projects/{{_id}}">Link to project</a>
         <input name="projectId" type="hidden" value="{{_id}}"/>
       </div>
     </div>

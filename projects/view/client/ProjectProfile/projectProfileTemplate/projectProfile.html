@@ -1,6 +1,6 @@
 <template name ="projectProfile">
     <div class = "media">
-        
+
     </div>
     <div>
         <!--
@@ -12,8 +12,12 @@
          Website link
         -->
         <div>Testing again</div>
-        <span>{{_id}}</span>
-        <span>{{project.name}}</span>
-        <span>{{project.city}}</span>
+
+          {{ #with getProject }}
+            <span>{{_id}}</span>
+            <span>{{name}}</span>
+            <span>{{city}}</span>
+          {{ /with }}
+        
     </div>
 </template>
