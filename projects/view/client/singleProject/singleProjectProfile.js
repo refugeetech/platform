@@ -19,7 +19,45 @@ Template.singleProjectProfile.helpers({
   		if(this.type=='linkedin') {
   			return 'fa fa-linkedin';
   		}
-  	}
+  	},
+    startupDateFormatted: function () {
+      return moment(this.startupDate).format('YYYY');
+    },
+
+    websites: function () {
+
+      var websites = jQuery.grep(this.links, function( n, i ) {
+        return ( n.type === 'web' );
+      });
+      return websites;
+    },
+
+    socialLinks: function () {
+
+      var websites = jQuery.grep(this.links, function( n, i ) {
+        return ( n.type === 'web' ||
+          n.type === 'facebook' ||
+          n.type ===  'twitter' ||
+          n.type === 'instagram' ||
+          n.type === 'blogger' ||
+          n.type === 'linkedin'
+        );
+      });
+      return websites;
+    },
+
+    hasMultipleWebsites: function () {
+
+      //TODO: Duplicated code, can we reuse instead?
+      var websites = jQuery.grep(this.links, function( n, i ) {
+        return ( n.type === 'web' );
+      });
+
+      return websites.length > 1;
+    },
+    isWebsite: function () {
+      return this.type=='web';
+    }
 });
 
 Template.singleProjectProfile.onCreated(function(){
