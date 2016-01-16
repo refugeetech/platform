@@ -2,24 +2,24 @@
    Bootstrap default behaviour overrides
    ========================================================================== */
 
-.navbar-default {
+#top-nav.navbar-default {
   background: #fff;
 }
-.navbar-default .navbar-nav > li > a {
+#top-nav.navbar-default .navbar-nav > li > a {
   color: #1d2660;
 }
-.navbar-brand {
+#top-nav .navbar-brand {
   font-size: 16px;
   /* Sets the same base for relative units. Bootstrap sets this to 18px. An alternative is to use rems (root em) instead of ems */
 }
-.navbar-default .navbar-nav > li > a:hover {
+#top-nav.navbar-default .navbar-nav > li > a:hover {
   color: inherit;
   background: none;
   border-bottom: 5px solid #1d2660;
 }
-.navbar-default .navbar-nav > li.active > a,
-.navbar-default .navbar-nav > li.active > a:hover,
-.navbar-default .navbar-nav > li > a:focus  {
+#top-nav.navbar-default .navbar-nav > li.active > a,
+#top-nav.navbar-default .navbar-nav > li.active > a:hover,
+#top-nav.navbar-default .navbar-nav > li > a:focus  {
   font-weight: bold;
   color: inherit;
   background: none;
@@ -35,7 +35,7 @@
 
 /* =========== Logo =========== */
 
-.navbar-brand {
+#top-nav .navbar-brand {
   padding: 1.3125em -0px; /* 21/16 */
   width: 12.5em;
   transition: all 0.1s ease-out;
@@ -72,7 +72,7 @@
 #top-nav.shrinked .navbar-left {
   margin-left: 4.25em; /* Not sure what's best here. Same margin is drawn in the mockup (RT_Hub_menu.png), but the comment suggests it should differ. If not: remove this block */
 }
-.navbar-nav.navbar-left a {
+#top-nav .navbar-nav.navbar-left a {
   font-size: 0.875em; /* 14px/16px => 0.875em */
   margin-right: calc(35/14 * 1em);
   padding: calc(35/14 * 1em) calc(6/14 * 1em) calc(30/14 * 1em - 5px);
@@ -83,7 +83,7 @@
 #top-nav.shrinked .navbar-left a {
   padding: calc(24/14 * 1em) calc(6/14 * 1em) calc(21/14 * 1em - 5px);
 }
-.navbar-nav.navbar-left li:last-of-type a {
+#top-nav .navbar-nav.navbar-left li:last-of-type a {
   margin-right: 0;
 }
 
@@ -98,13 +98,13 @@
   font-size: 1.2em;
   margin-right: 0.5em;
 }
-.navbar-nav.navbar-right a {
+#top-nav .navbar-nav.navbar-right a {
   margin-right: calc(20/16 * 1em);
   padding: calc(28/16 * 1em - 0.2em) calc(4/16 * 1em) calc(27/16 * 1em - 5px);
 }
 #top-nav.shrinked .navbar-right a {
   padding: 1em calc(4/16 * 1em) calc(1em - 5px);
 }
-.navbar-nav.navbar-right li:last-of-type a {
+#top-nav .navbar-nav.navbar-right li:last-of-type a {
   margin-right: 0;
 }
