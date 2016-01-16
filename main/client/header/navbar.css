@@ -15,7 +15,6 @@
 #top-nav.navbar-default .navbar-nav > li > a:hover {
   color: inherit;
   background: none;
-  border-bottom: 5px solid #1d2660;
 }
 #top-nav.navbar-default .navbar-nav > li.active > a,
 #top-nav.navbar-default .navbar-nav > li.active > a:hover,
@@ -43,7 +42,7 @@
 /* =========== Hamburger nav =========== */
 
 #top-nav.navbar-default .navbar-toggle,
-#top-nav.navbar-default .navbar-toggle:hover, 
+#top-nav.navbar-default .navbar-toggle:hover,
 #top-nav.navbar-default .navbar-toggle:focus {
     color: inherit;
     border: none;
@@ -69,6 +68,7 @@
 @media only screen and (max-width: 767px) { /* sm */
   #top-nav .navbar-collapse {
     margin-top: calc(62/16 * 1em); /* 62 is navbar height */
+    text-align: center;
   }
    #top-nav .navbar-right .glyphicon {
     top: .2em;
@@ -97,7 +97,9 @@
 /* =====================================
    Navbars
    ===================================== */
-
+   #top-nav.navbar-default .navbar-nav > li > a:hover {
+     border-bottom: 5px solid #1d2660;
+   }
   #top-nav .navbar-nav {
     transition: height 0.1s ease-out;
     height: calc(75/16 * 1em);
@@ -109,13 +111,13 @@
     transition: all .1s ease-out;
     transition-property: padding;
   }
-  
+
   /* =========== Left Navbar =========== */
 
   #top-nav .navbar-left {
     margin-left: 4.25em;
   }
-  
+
   #top-nav .navbar-nav.navbar-left a {
     font-size: 0.875em; /* 14px/16px => 0.875em */
     margin-right: calc(25/14 * 1em);
@@ -130,9 +132,9 @@
   #top-nav .navbar-nav.navbar-left li:last-of-type a {
     margin-right: 0;
   }
-  
+
   /* =========== Right Navbar =========== */
-  
+
   #top-nav .navbar-right {
     font-weight: bold;
   }
@@ -154,7 +156,7 @@
 
 
 @media only screen and (min-width: 992px) { /* md */
-  
+
   /* =========== Logo =========== */
 
   #top-nav .navbar-brand {
@@ -169,11 +171,11 @@
   #top-nav.shrinked .navbar-brand {
     width: calc(55/75 * 12.5em);
     padding: calc(55/75 * 1.3125em) -0px;
-  } 
+  }
   #top-nav .navbar-nav.navbar-left a {
     margin-right: calc(35/14 * 1em);
   }
-  
+
 }
 
 
