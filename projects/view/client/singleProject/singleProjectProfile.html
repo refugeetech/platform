@@ -1,12 +1,12 @@
-<template name="singleProjectProfile">
 
-  <!--
-   Social media links
-  -->
+
+<template name="singleProjectProfile">
 
   {{#if Template.subscriptionsReady }}
     {{ #with getProject }}
-      <h1>{{name}}</h1>
+      <div class="page-header">
+        <h1>{{name}}</h1>
+      </div>
       <label>Progress: </label><span>{{currentStage}}</span><br/>
       <label>Launched in: </label><span>{{startupDateFormatted}}</span><br/>
       <label>Based in: </label><span>{{postalAddress.country}}</span><br/>
