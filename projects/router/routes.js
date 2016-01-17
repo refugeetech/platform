@@ -12,7 +12,7 @@ FlowRouter.route("/projects/add", {
 
 FlowRouter.route('/projects/:projectId', {
   action: function (params, queryParams) {
-    BlazeLayout.render('mainLayout', { main: 'singleProjectProfile' });
+    BlazeLayout.render('mainLayout', { main: 'projectProfile' });
   }
 });
 

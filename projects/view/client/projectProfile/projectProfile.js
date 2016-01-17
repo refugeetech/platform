@@ -1,4 +1,4 @@
-Template.singleProjectProfile.helpers({
+Template.projectProfile.helpers({
     getProject: function () {
       return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
     },
@@ -60,7 +60,7 @@ Template.singleProjectProfile.helpers({
     }
 });
 
-Template.singleProjectProfile.onCreated(function(){
+Template.projectProfile.onCreated(function(){
   var self = this;
   self.autorun(function() {
     var projectId = FlowRouter.getParam('projectId');
