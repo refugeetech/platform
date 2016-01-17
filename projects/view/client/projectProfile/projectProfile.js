@@ -57,6 +57,28 @@ Template.projectProfile.helpers({
     },
     isWebsite: function () {
       return this.type=='web';
+    },
+    calculateProgress: function(){
+
+      switch (this.currentStage) {
+        case "initiation":
+          return 10;
+          break;
+        case "planning":
+          return 20;
+          break;
+        case "implementationExecution":
+          return 50;
+          break;
+        case "operationMonitoring":
+          return 70;
+          break;
+        case "closing":
+          return 90;
+          break;
+        default:
+          return 0;
+      }
     }
 });
 
