@@ -6,8 +6,11 @@
 
     <div class="row">
       <div class="col-md-6" style="text-align: center;">
-          <!-- Placeholder for media -->
-          <p style="margin-top: 200px;">Placeholder for media - Replace me with an image!</p>
+          {{#each projectMedia}}
+            <div>
+              <img style="width:100%" src="{{this.url}}" alt="" />
+            </div>
+          {{/each}}
       </div>
       <div class="col-md-6">
         <div class="page-header">

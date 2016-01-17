@@ -34,3 +34,6 @@ rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
 reywood:publish-composite
 momentjs:moment
+cfs:standard-packages
+cfs:gridfs
+cfs:autoform

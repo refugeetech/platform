@@ -196,6 +196,16 @@ ProjectsSchema = new SimpleSchema({
       }
     }
   },
+
+  "mediaId": {
+    type: String,
+    autoform: {
+      afFieldInput: {
+        type: "cfs-file",
+        collection: "projectMedia"
+      }
+    }
+  }
 });
 
 Projects.attachSchema(ProjectsSchema);
