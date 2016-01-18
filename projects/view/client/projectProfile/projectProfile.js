@@ -1,7 +1,11 @@
 Template.projectProfile.helpers({
+  //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
     getProject: function () {
       return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
     },
+    //returns font awesome classes to prettyfy links, uses the ProjectsSchema.links.$ object as datacontext
+    //TODO: refactor ; is also used in singleProject template
+    //TODO: refactor the name ; should be called linkTypeToClass or equivalent
     typeToClass:function() {
   		if(this.type=='facebook') {
   			return 'fa fa-facebook';
