@@ -1,0 +1,30 @@
+<template name ="searchBox">
+    {{> EasySearch.Input index=projectsIndex }}
+    {{# each tag}}
+        <span class="tagTitle" value="{{text}}">{{text}}</span>
+    {{/each}}
+    {{#EasySearch.IfInputEmpty index=projectsIndex}}
+	  <div>Start searching!</div>
+
+	{{else}}
+    {{#EasySearch.Each index=projectsIndex}}
+	  <div class="result">
+	        <div class="panel-heading">
+				<h2 class="panel-header">{{ name }}</h2>
+      		</div>
+	  		<div class="panel-body">
+	  			<p>{{ description }}</p>
+	  		</div>
+	  </div>
+	{{/EasySearch.Each}}
+	{{#EasySearch.IfNoResults index=projectsIndex}}
+		  <div>No results found!</div>
+	{{/EasySearch.IfNoResults}}
+	
+	{{#EasySearch.IfSearching index=projectsIndex}}
+	  <div>Searching...</div>
+	{{/EasySearch.IfSearching}}
+	{{> EasySearch.LoadMore index=projectsIndex content="Load more content"}}
+	{{/EasySearch.IfInputEmpty}}
+	
+</template>
