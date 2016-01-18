@@ -38,7 +38,6 @@
   left: calc(15/16 * 1em);
 }
 
-
 /* =========== Hamburger nav =========== */
 
 #top-nav.navbar-default .navbar-toggle,
@@ -65,7 +64,7 @@
 
 /* =========== Mobile dropdwon menu =========== */
 
-@media only screen and (max-width: 767px) { /* sm */
+@media only screen and (max-width: 767px) { /* xs */
   #top-nav .navbar-collapse {
     margin-top: calc(62/16 * 1em); /* 62 is navbar height */
     text-align: center;
@@ -77,7 +76,6 @@
   }
 }
 
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -88,7 +86,7 @@
 
   #top-nav .navbar-brand {
     padding: 1.3125em -0px; /* 21/16 */
-    width: 1.875em;
+    width: 1.875em; /* Just the R is used as logo here to give room for navigation */
     height: auto;
     position: relative;
     left: calc(15/16 * 1em);
@@ -97,6 +95,7 @@
 /* =====================================
    Navbars
    ===================================== */
+
   #top-nav.navbar-default .navbar-nav > li > a:hover {
     border-bottom: 5px solid #1d2660;
   }
@@ -153,14 +152,13 @@
   }
 }
 
-
 @media only screen and (min-width: 992px) { /* md */
 
   /* =========== Logo =========== */
 
   #top-nav .navbar-brand {
     padding: 1.3125em -0px; /* 21/16 */
-    width: 12.5em;
+    width: 12.5em; /* Full logotype */
     transition: all 0.1s ease-out;
     height: auto;
     position: relative;
@@ -176,7 +174,6 @@
   }
 
 }
-
 
 @media only screen and (min-width: 1200px) { /* lg */
   #top-nav .navbar-right .glyphicon {
