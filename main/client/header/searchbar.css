@@ -1,0 +1,63 @@
+#searchbar, #spinner {
+  display: none;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) { /* sm */
+  #searchbar {
+    transition: transform 0.1s ease-out;
+    background: #F8F8F8;
+    display: block;
+    z-index: 10;
+  }
+  #searchbar.active {
+    transform: translateY(calc(76/16 * 1em));
+  }
+  #top-nav.shrinked + #searchbar {
+    transform: translateY(calc(-20/16 * 1em)); /* Move the searchbar up when navbar is smaller */
+  }
+  #top-nav.shrinked + #searchbar.active {
+    transform: translateY(calc(56/16 * 1em));
+  }
+  #searchbar input#search {
+    width: 100%;
+    background: inherit;
+    border: none;
+    font-size: 2em;
+    padding: calc(7/16 * 1em) 0; /* Adjust if the font props are changed */
+  }
+  #searchbar input#search:focus {
+    border: none;
+    outline: none;
+  }
+  #searchbar .container {
+    position: relative;
+  }
+  #spinner {
+    position: absolute;
+    left: calc(-100/16 * 1em); /* TODO: The spinner's position is outside the .container, so it needs to be adjusted near the breakpoints. */
+    top: calc(-27/16 * 1em);
+    display: block;
+  }
+  #spinner .uil-default-css {
+    position: relative;
+    background:none;
+    width: calc(77/16 * 1em);
+    height: calc(77/16 * 1em);
+    transform: scale(0.5);
+  }
+
+}
+
+@media only screen and (min-width: 992px) { /* md */
+
+
+
+}
+
+@media only screen and (min-width: 1200px) { /* lg */
+
+}
