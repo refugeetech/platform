@@ -1,30 +1,26 @@
 <template name ="searchBox">
-    {{> EasySearch.Input index=projectsIndex }}
-    {{# each tag}}
-        <span class="tagTitle" value="{{text}}">{{text}}</span>
-    {{/each}}
+    <!-- Search box functionality  -->
+    <!-- attributes=attributes calls the helper function attributes that contains the <input> attributes -->
+    {{> EasySearch.Input index=projectsIndex attributes=getAttributes }}
+    <!-- Autosuggest functionality  -->
+    <!-- TODO: If route == projects/ => filter those projects instead of autosuggest -->
     {{#EasySearch.IfInputEmpty index=projectsIndex}}
-	  <div>Start searching!</div>
-
+    <!-- Do nothing -->
 	{{else}}
+    <!-- fetch results -->
     {{#EasySearch.Each index=projectsIndex}}
-	  <div class="result">
-	        <div class="panel-heading">
-				<h2 class="panel-header">{{ name }}</h2>
-      		</div>
-	  		<div class="panel-body">
-	  			<p>{{ description }}</p>
-	  		</div>
-	  </div>
+    <!-- show autsuggestions -->
+        {{> autoSuggestProjectResult }}
 	{{/EasySearch.Each}}
 	{{#EasySearch.IfNoResults index=projectsIndex}}
 		  <div>No results found!</div>
 	{{/EasySearch.IfNoResults}}
-	
 	{{#EasySearch.IfSearching index=projectsIndex}}
+    <!-- connect this to the spinner instead -->
 	  <div>Searching...</div>
 	{{/EasySearch.IfSearching}}
+    <!-- load more maybe not useful for autosuggest =>  TODO => move to searchresults template -->
 	{{> EasySearch.LoadMore index=projectsIndex content="Load more content"}}
-	{{/EasySearch.IfInputEmpty}}
-	
+    {{/EasySearch.IfInputEmpty}}
 </template>
+    
