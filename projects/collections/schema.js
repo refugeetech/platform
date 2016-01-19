@@ -199,6 +199,7 @@ ProjectsSchema = new SimpleSchema({
 
   "mediaId": {
     type: String,
+    optional:true,
     autoform: {
       afFieldInput: {
         type: "cfs-file",
