@@ -4,6 +4,7 @@ if(Meteor.isClient) {
         
         //Define your factories here
         Factory.define('project',Projects, {
+            mediaid:"none",
             name: function() { return faker.name.findName();},
             description: function() {return faker.lorem.sentences();},
             shortDescription: function(){ return faker.lorem.sentence();},
