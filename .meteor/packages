@@ -35,3 +35,6 @@ aldeed:autoform-bs-datepicker
 reywood:publish-composite
 matb33:bootstrap-collapse-js
 momentjs:moment
+cfs:standard-packages
+cfs:gridfs
+cfs:autoform
