@@ -4,6 +4,14 @@ body {
 }
 
 /* ==========================================================================
+   Typography (Fonts are loaded from ... Not working yet d.t. xss policies)
+   ========================================================================== */
+ 
+body {
+    font-family: "Lab Grotesque Regular", Helvetica, sans-serif; font-weight:normal; font-style:normal;;
+}
+   
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 
