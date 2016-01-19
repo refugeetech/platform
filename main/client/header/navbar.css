@@ -4,6 +4,7 @@
 
 #top-nav.navbar-default {
   background: #fff;
+  z-index: 20;
 }
 #top-nav.navbar-default .navbar-nav > li > a {
   color: #1d2660;
@@ -172,7 +173,6 @@
   #top-nav .navbar-nav.navbar-left a {
     margin-right: calc(35/14 * 1em);
   }
-
 }
 
 @media only screen and (min-width: 1200px) { /* lg */
