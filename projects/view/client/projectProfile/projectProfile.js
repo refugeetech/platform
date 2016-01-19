@@ -83,6 +83,9 @@ Template.projectProfile.helpers({
         default:
           return 0;
       }
+    },
+    projectMedia: function () {
+      return ProjectMedia.find({_id: this.mediaId});
     }
 });
 
