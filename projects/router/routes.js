@@ -10,6 +10,12 @@ FlowRouter.route("/projects/add", {
   }
 });
 
+FlowRouter.route('/projects/:projectId', {
+  action: function (params, queryParams) {
+    BlazeLayout.render('mainLayout', { main: 'projectProfile' });
+  }
+});
+
 // Add route to return a single JSON object containing the specified project.
 JsonRoutes.add("get", "/projects/:projectId/json", function (req, res, next) {
   var projectId = req.params.projectId; // The project id, in MongoDB
