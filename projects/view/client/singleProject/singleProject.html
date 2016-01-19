@@ -14,6 +14,8 @@
         {{# each links }}
         <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}></a></span>
         {{/ each }}
+        <a href="/projects/{{_id}}">Link to project</a>
+        <input name="projectId" type="hidden" value="{{_id}}"/>
       </div>
     </div>
   </div>
