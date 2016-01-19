@@ -1,13 +1,14 @@
 <template name ="searchBox">
     <!-- Search box functionality  -->
     <!-- attributes=attributes calls the helper function attributes that contains the <input> attributes -->
-    {{> EasySearch.Input index=projectsIndex attributes=getAttributes }}
+    {{> EasySearch.Input index=projectsIndex attributes=getAttributes}}
     <!-- Autosuggest functionality  -->
     <!-- TODO: If route == projects/ => filter those projects instead of autosuggest -->
     {{#EasySearch.IfInputEmpty index=projectsIndex}}
     <!-- Do nothing -->
 	{{else}}
     <!-- fetch results -->
+    {{#if shouldShowAutoSuggestions}}
     {{#EasySearch.Each index=projectsIndex}}
     <!-- show autsuggestions -->
         {{> autoSuggestProjectResult }}
@@ -21,6 +22,7 @@
 	{{/EasySearch.IfSearching}}
     <!-- load more maybe not useful for autosuggest =>  TODO => move to searchresults template -->
 	{{> EasySearch.LoadMore index=projectsIndex content="Load more content"}}
+    {{/if}}
     {{/EasySearch.IfInputEmpty}}
 </template>
     

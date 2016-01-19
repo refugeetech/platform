@@ -4,9 +4,8 @@ Template.searchBox.helpers({
       id:"search",
       placeholder:"What are you looking for?"
   },
-  isNotAllProjectsRoute: function() {
-      console.log(FlowRouter.current())
-      console.log(FlowRouter.current().path != "/projects");
-      return FlowRouter.current().path != "/projects";
+  shouldShowAutoSuggestions: function() {
+      // when the route is on the all projects page searchbox will filter the page, therefore autosuggestion is not necessary
+      return Session.get('willShowAutoSuggestion') && !(FlowRouter.current().path == '/projects');
   }
 });
