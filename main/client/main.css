@@ -4,13 +4,64 @@ body {
 }
 
 /* ==========================================================================
-   Typography (Fonts are loaded from ... Not working yet d.t. xss policies)
+   Typography | TODO: Consider using font-weights like this: https://www.smashingmagazine.com/2013/02/setting-weights-and-styles-at-font-face-declaration/ --> Style Linking
    ========================================================================== */
- 
+
+ @font-face {
+   font-family: 'Lab Grotesque Black';
+   src:  url('fonts/labGrotesque/LabGrotesqueWeb-Black.woff2') format('woff2'),
+   url('fonts/labGrotesque/LabGrotesqueWeb-Black.woff') format('woff');
+ }
+ @font-face {
+   font-family: 'Lab Grotesque BlackItalic';
+   src:  url('fonts/labGrotesque/LabGrotesqueWeb-BlackItalic.woff2') format('woff2'),
+   url('fonts/labGrotesque/LabGrotesqueWeb-BlackItalic.woff') format('woff');
+ }
+ @font-face {
+   font-family: 'Lab Grotesque Bold';
+   src:  url('fonts/labGrotesque/LabGrotesqueWeb-Bold.woff2') format('woff2'),
+   url('fonts/labGrotesque/LabGrotesqueWeb-Bold.woff') format('woff');
+ }
+ @font-face {
+   font-family: 'Lab Grotesque BoldItalic';
+   src:  url('fonts/labGrotesque/LabGrotesqueWeb-BoldItalic.woff2') format('woff2'),
+   url('fonts/labGrotesque/LabGrotesqueWeb-BoldItalic.woff') format('woff');
+ }
+ @font-face {
+   font-family: 'Lab Grotesque Italic';
+   src:  url('fonts/labGrotesque/LabGrotesqueWeb-Italic.woff2') format('woff2'),
+   url('fonts/labGrotesque/LabGrotesqueWeb-Italic.woff') format('woff');
+ }
+ @font-face {
+  font-family: 'Lab Grotesque Light';
+  src:  url('fonts/labGrotesque/LabGrotesqueWeb-Light.woff2') format('woff2'),
+        url('fonts/labGrotesque/LabGrotesqueWeb-Light.woff') format('woff');
+ }
+ @font-face {
+  font-family: 'Lab Grotesque LightItalic';
+  src:  url('fonts/labGrotesque/LabGrotesqueWeb-LightItalic.woff2') format('woff2'),
+        url('fonts/labGrotesque/LabGrotesqueWeb-LightItalic.woff') format('woff');
+ }
+ @font-face {
+  font-family: 'Lab Grotesque Medium';
+  src:  url('fonts/labGrotesque/LabGrotesqueWeb-Medium.woff2') format('woff2'),
+        url('fonts/labGrotesque/LabGrotesqueWeb-Medium.woff') format('woff');
+ }
+ @font-face {
+  font-family: 'Lab Grotesque MediumItalic';
+  src:  url('fonts/labGrotesque/LabGrotesqueWeb-MediumItalic.woff2') format('woff2'),
+        url('fonts/labGrotesque/LabGrotesqueWeb-MediumItalic.woff') format('woff');
+ }
+ @font-face {
+   font-family: 'Lab Grotesque Regular';
+   src:  url('fonts/labGrotesque/LabGrotesqueWeb-Regular.woff2') format('woff2'),
+   url('fonts/labGrotesque/LabGrotesqueWeb-Regular.woff') format('woff');
+ }
+
 body {
-    font-family: "Lab Grotesque Regular", Helvetica, sans-serif; font-weight:normal; font-style:normal;;
+  font-family: "Lab Grotesque Regular", Helvetica, sans-serif; font-weight:normal; font-style:normal;;
 }
-   
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
