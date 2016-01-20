@@ -33,6 +33,7 @@ simple:json-routes
 rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
 reywood:publish-composite
+easy:search
 matb33:bootstrap-collapse-js
 momentjs:moment
 cfs:standard-packages
