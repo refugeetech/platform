@@ -3,7 +3,31 @@
     <a class="btn btn-primary pull-right" href="/projects/add" role="button">Add Project</a>
     <h1>View all projects</h1>
   </div>
-  
+
+  {{> categoryDropdown }}
+  <!-- {{> locationDropdown }}  -->
   {{> searchResults }}
-  
+
 </template>
+
+<!-- Dropdown menu for filtering searchResult by problemCategories -->
+<template name="categoryDropdown">
+  <select class="category-filter">
+    <option value="">All</option>
+    <option value="social">Social</option>
+    <option value="bureaucracy">Bureaucracy</option>
+    <option value="housing">Housing</option>
+    <option value="education">Education</option>
+    <option value="language">Language</option>
+    <option value="employment">Employment</option>
+    <option value="Coordination">coordination</option>
+  </select>
+</template>
+
+<!-- <template name="locationDropdown">
+  <select class="location-filter">
+    <option value="">Worldwide</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Norway">Norway</option>
+  </select>
+</template> -->
