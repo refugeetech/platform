@@ -6,9 +6,34 @@
 
 #project-list {
 	list-style-type: none;
+	padding-left: 0px;
 }
 
+#project-data {
+	font-size: 1em;
+	/*margin-left: -8%;*/
+}
 .project-data-link  {
 	text-decoration: none; 
 	color: #e92e71 !important;
+}
+
+#project-description {
+	margin-left:inherit;
+	font-size: 1.2em;
+}
+
+#project-image-version {
+	text-decoration: none; 
+	color: #e92e71 !important;
+	line-height: 2em;
+	font-size: 1.2em;
+}
+
+#project-media {
+	text-align: center;
+}
+
+#project-media-img{
+	width: 100%; 
 }

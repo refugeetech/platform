@@ -7,10 +7,13 @@
 
 <div id="content-container">
     <div class="row">
-      <div class="col-md-6" style="text-align: center;">
+      <div id="project-media" class="col-md-6">
           {{#each projectMedia}}
             <div>
-              <img style="width:100%" src="{{this.url}}" alt="" />
+              <img id="project-media-img" src="{{this.url}}" alt="" />
+
+              <!-- Should be redone -->
+              <a href="#" onclick="showMoreImages();" id="project-image-version"> See more images</a>
             </div>
           {{/each}}
       </div>
@@ -18,13 +21,15 @@
         <div id="project-name" class="page-header">
           <h1>{{name}}</h1>
         </div>
+        <div id="project-data">
         <label>Progress: </label>
+
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="{{calculateProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{calculateProgress}}%;">
             <span class="sr-only">{{calculateProgress}}% Complete</span>
           </div>
         </div>
-        <div id="project-data">
+
           <ul id="project-list">
             <li><label>Launched in </label><span> {{startupDateFormatted}}</span></li>
           <li><label>Categorys </label>
@@ -48,7 +53,7 @@
         <li><label>Application </label>
         {{# each platform in targetPlatforms }}
         <!-- this should be links -->
-          {{platform}}
+          <a href="type/{{platform}}" class="project-data-link">{{platform}}</a>
         {{/ each }}
       </li>
 
@@ -57,10 +62,14 @@
          <a href="{{url}}" class="project-data-link">{{name}}</a>
         {{/ each }}
       </li>
-
-
       </ul>
-          <p>{{ description }}</p>
+
+    </div>
+        <div id="project-description">{{ description }}</div>
+        <div id="project-buttons">
+          <!-- TODO: Round corners on buttons. -->
+          <a href="website_uri" class="btn btn-default">Visit website</a>  
+          <a href="share_function" class="btn btn-default btn-white-background">Share this page</a>
         </div>
       </div>
     </div>
