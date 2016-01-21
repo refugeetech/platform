@@ -1,6 +1,7 @@
 body {
   margin-top: 3.7em; /* Ensure body is not covered by top navbar */
   font-size: 16px;
+  color: #1d2660; /* All main body text seems to be this color */ 
 }
 
 /* ==========================================================================
