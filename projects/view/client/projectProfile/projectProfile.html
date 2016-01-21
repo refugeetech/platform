@@ -5,6 +5,7 @@
   <!-- calling the helper function getProject that returns a project object using the route parameter projectId -->
     {{ #with getProject }}
 
+<div id="content-container">
     <div class="row">
       <div class="col-md-6" style="text-align: center;">
           {{#each projectMedia}}
@@ -14,7 +15,7 @@
           {{/each}}
       </div>
       <div class="col-md-6">
-        <div class="page-header">
+        <div id="project-name" class="page-header">
           <h1>{{name}}</h1>
         </div>
         <label>Progress: </label>
@@ -23,41 +24,47 @@
             <span class="sr-only">{{calculateProgress}}% Complete</span>
           </div>
         </div>
-        <label>Launched in: </label><span>{{startupDateFormatted}}</span><br/>
-        <label>Based in: </label><span>{{postalAddress.country}}</span><br/>
-        <label>Website: </label>
-        {{# if hasMultipleWebsites }}
-          {{# each websites }}
-            <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}</a></span>
+        <div id="project-data">
+          <ul id="project-list">
+            <li><label>Launched in </label><span> {{startupDateFormatted}}</span></li>
+          <li><label>Categorys </label>
+        {{# each category in problemCategories }}
+          <a href="categories/{{category}}" class="project-data-link">{{category}}</a>
+        {{/ each }}
+      </li>
+            <!-- How do we link country issues, what is the route? -->
+          <li><label>Based in  </label><a href="country/{{postalAddress.country}}" class="project-data-link"> {{postalAddress.country}}</a></li>
+          <li><label>Website </label>
+          {{# if hasMultipleWebsites }}
+            {{# each websites }}
+              <a href="{{url}}" class="project-data-link">{{name}}</a>
           {{/ each }}
         {{else}}
           {{# each websites }}
-            <span class="label label-default"><a href="{{url}}">{{url}}</a></span>
+            <a href="{{url}}" class="project-data-link">{{url}}</a>
           {{/ each }}
         {{/ if}}
-
-        <br/>
-        <label>Application</label>
+      </li>
+        <li><label>Application </label>
         {{# each platform in targetPlatforms }}
-          <span class="label label-default">{{platform}}</span>
+        <!-- this should be links -->
+          {{platform}}
         {{/ each }}
-        <br/>
+      </li>
 
-        <label>Social</label>
+        <li><label>Social </label>
         {{# each socialLinks }}
-          <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}</a></span>
+         <a href="{{url}}" class="project-data-link">{{name}}</a>
         {{/ each }}
-        <br/>
+      </li>
 
-        <label>Challenge Categories</label>
-        {{# each category in problemCategories }}
-          <span class="label label-default">{{category}}</span>
-        {{/ each }}
-        <br/><br/>
-        <p>{{ description }}</p>
+
+      </ul>
+          <p>{{ description }}</p>
+        </div>
       </div>
     </div>
-
+</div> 
 
     {{ /with }}
   {{/if}}
