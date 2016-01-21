@@ -1,0 +1,14 @@
+#project-name {
+	font-size:1.5em;
+	margin-bottom: -5%;
+	font-weight: 600;
+}
+
+#project-list {
+	list-style-type: none;
+}
+
+.project-data-link  {
+	text-decoration: none; 
+	color: #e92e71 !important;
+}
