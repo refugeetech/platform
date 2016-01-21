@@ -34,6 +34,40 @@
 	text-align: center;
 }
 
-#project-media-img{
+#project-media-img {
 	width: 100%; 
+}
+
+#project-buttons {
+	margin-top:5%;
+}
+
+#project-positions {
+	width: 100%;
+	margin-top: 5%;
+	background: #F8F8F8;
+}
+
+#project-position-names-list {
+	padding-top: 2%;
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+#project-position-names-list li {
+	border-bottom: 5px solid #FFFFFF;
+}
+
+#project-position-names-list a {
+	text-decoration: none; 
+	color: #e92e71 !important;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+#project-positions-description-text {
+	margin-top:10%;
+	background-color: #FFFFFF;
+	height: 100%;
+	overflow:visible;
 }

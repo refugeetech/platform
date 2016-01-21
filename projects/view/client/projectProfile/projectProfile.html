@@ -67,6 +67,7 @@
     </div>
         <div id="project-description">{{ description }}</div>
         <div id="project-buttons">
+
           <!-- TODO: Round corners on buttons. -->
           <a href="website_uri" class="btn btn-default">Visit website</a>  
           <a href="share_function" class="btn btn-default btn-white-background">Share this page</a>
@@ -74,7 +75,23 @@
       </div>
     </div>
 </div> 
+<div id="project-positions" class="col-md-12">
+  <div id="project-positions-names" class="col-md-6">
+    <h2 id="project-position-header">Opening Positions</h2>
+    <span id="project-position-main-description"> If you have the right skillset and expereince, yu are more than welcome to help out.</span>
+    <ul id="project-position-names-list">
+      <!-- Should containt collection list of positions in li with position and local-->
 
+      <li><a href="#" onclick="showPosition();" class="project-position-name-link">Position name.</a> <br /> {{ postalAddress.country }}, {{ postalAddress.city }}</li>
+      <li><a href="#" onclick="showPosition();" class="project-position-name-link">Another position name click should load theese.</a> <br /> {{ postalAddress.country }}, {{ postalAddress.city }}</li>
+    </ul>
+  </div>
+  <div id="project-positions-description-container" class="col-md-6">
+    <div id="project-positions-description-text">
+      Describe the first position or the last clicked one. Probably jquery showPosition function call? 
+    </div>
+  </div>
+</div>
     {{ /with }}
   {{/if}}
 
