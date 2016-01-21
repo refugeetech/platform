@@ -39,7 +39,7 @@ Template.projectProfile.helpers({
     socialLinks: function () {
 
       var websites = jQuery.grep(this.links, function( n, i ) {
-        return ( n.type === 'web' ||
+        return (
           n.type === 'facebook' ||
           n.type ===  'twitter' ||
           n.type === 'instagram' ||
