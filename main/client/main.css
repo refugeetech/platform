@@ -77,6 +77,22 @@ body {
   color: #FF0000;
 }
 
+.btn-dark-blue {
+  background-color: #1d2660;
+  color: #FFFFFF;
+  width: auto;
+}
+
+.btn-black-on-white {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.btn-pink-on-white {
+  background-color: #FFFFFF;
+  color: #e92e71;
+}
+
 
 /* ==========================================================================
    Helper classes
