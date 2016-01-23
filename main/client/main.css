@@ -121,3 +121,12 @@ body {
     position: absolute;
     width: 1px;
 }
+
+/*
+ * Clear all helper. 
+ */
+
+.clearfix {
+  clear: both;
+}
+
