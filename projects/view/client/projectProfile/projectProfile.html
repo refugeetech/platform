@@ -22,49 +22,47 @@
           <h1>{{name}}</h1>
         </div>
         <div id="project-data">
-        <label>Progress: </label>
+          <label>Progress: </label>
 
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="{{calculateProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{calculateProgress}}%;">
-            <span class="sr-only">{{calculateProgress}}% Complete</span>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{calculateProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{calculateProgress}}%;">
+              <span class="sr-only">{{calculateProgress}}% Complete</span>
+            </div>
           </div>
-        </div>
 
           <ul id="project-list">
             <li><label>Launched in </label><span> {{startupDateFormatted}}</span></li>
-          <li><label>Categorys </label>
-        {{# each category in problemCategories }}
-          <a href="categories/{{category}}" class="project-data-link">{{category}}</a>
-        {{/ each }}
-      </li>
+            <li><label>Categorys </label>
+              {{# each category in problemCategories }}
+                <a href="categories/{{category}}" class="project-data-link">{{category}}</a>
+              {{/ each }}
+            </li>
             <!-- How do we link country issues, what is the route? -->
-          <li><label>Based in  </label><a href="country/{{postalAddress.country}}" class="project-data-link"> {{postalAddress.country}}</a></li>
-          <li><label>Website </label>
-          {{# if hasMultipleWebsites }}
-            {{# each websites }}
-              <a href="{{url}}" class="project-data-link">{{name}}</a>
-          {{/ each }}
-        {{else}}
-          {{# each websites }}
-            <a href="{{url}}" class="project-data-link">{{url}}</a>
-          {{/ each }}
-        {{/ if}}
-      </li>
-        <li><label>Application </label>
-        {{# each platform in targetPlatforms }}
-        <!-- this should be links -->
-          <a href="type/{{platform}}" class="project-data-link">{{platform}}</a>
-        {{/ each }}
-      </li>
+            <li><label>Based in  </label><a href="country/{{postalAddress.country}}" class="project-data-link"> {{postalAddress.country}}</a></li>
+            <li><label>Website </label>
+              {{# if hasMultipleWebsites }}
+                {{# each websites }}
+                  <a href="{{url}}" class="project-data-link">{{name}}</a>
+                {{/ each }}
+              {{else}}
+                {{# each websites }}
+                  <a href="{{url}}" class="project-data-link">{{url}}</a>
+                {{/ each }}
+              {{/ if}}
+            </li>
+            <li><label>Application </label>
+              {{# each platform in targetPlatforms }}
+                <a href="type/{{platform}}" class="project-data-link">{{platform}}</a>
+              {{/ each }}
+            </li>
+            <li><label>Social </label>
+              {{# each socialLinks }}
+                <a href="{{url}}" class="project-data-link">{{name}}</a>
+              {{/ each }}
+            </li>
+          </ul>
 
-        <li><label>Social </label>
-        {{# each socialLinks }}
-         <a href="{{url}}" class="project-data-link">{{name}}</a>
-        {{/ each }}
-      </li>
-      </ul>
-
-    </div>
+        </div>
         <div id="project-description">{{ description }}</div>
         <div id="project-buttons">
 
@@ -76,22 +74,86 @@
     </div>
 </div> 
 <div id="project-positions" class="col-md-12">
-  <div id="project-positions-names" class="col-md-6">
+  <div id="project-positions-names">
     <h2 id="project-position-header">Opening Positions</h2>
-    <span id="project-position-main-description"> If you have the right skillset and expereince, yu are more than welcome to help out.</span>
-    <ul id="project-position-names-list">
-      <!-- Should containt collection list of positions in li with position and local-->
+    <span id="project-position-main-description"> If you have the right skillset and expereince, you are more than welcome to help out.</span>
+    <div id="project-position-names-seperator" class="col-md-6">
+      <div id="project-position-lists" class="panel-body">
+        <ul id="project-position-names-list">
+          <!-- Should containt collection list of positions in li with position and local-->
 
-      <li><a href="#" onclick="showPosition();" class="project-position-name-link">Position name.</a> <br /> {{ postalAddress.country }}, {{ postalAddress.city }}</li>
-      <li><a href="#" onclick="showPosition();" class="project-position-name-link">Another position name click should load theese.</a> <br /> {{ postalAddress.country }}, {{ postalAddress.city }}</li>
-    </ul>
-  </div>
-  <div id="project-positions-description-container" class="col-md-6">
-    <div id="project-positions-description-text">
-      Describe the first position or the last clicked one. Probably jquery showPosition function call? 
+          <li><a href="#" onclick="showPosition();" class="project-position-name-link">Position name.</a> <br /> {{ postalAddress.country }}, {{ postalAddress.city }}</li>
+          <li><a href="#" onclick="showPosition();" class="project-position-name-link">Another position name click should load theese.</a> <br /> {{ postalAddress.country }}, {{ postalAddress.city }}</li>
+        </ul>
+      </div>
+    </div>
+    <div id="project-positions-description-container" class="col-md-6">
+      <div id="project-positions-description-text" class="panel-body panel-default">
+        <div>
+          Describe the first position or the last clicked one. Probably jquery show. Position function call and then load the collection data?. 
+        </div>
+        <div id="project-position-description-bottom-panel" class="panel-footer">
+          <div id="project-position-share-link"> <a href="#" onclick="share();"> Share this position</a></div><div id="project-position-apply"><span class="btn btn-dark-blue"> Apply now</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<div id="profile-page-related-information">
+  <div class="col-md-6">
+    <span id="profile-page-related-header"> Other 
+      {{# each category in problemCategories }}
+        <a href="categories/{{category}}">{{category}}</a>
+      {{ / each}}
+      challenges based in <a href="country/{{postalAddress.country}}"> {{ postalAddress.country }} </a>
+    </span>
+    {{# each category in problemCategories }}
+      <span id="profile-page-related-details"> <a href="related/{{projectId}}">See all projects</a> related to this issue or <a href="more/{{category}}">read more</a> about the {{category}} category</span>  
+    {{ / each}}
+  </div>
+  <div id="profile-page-related-links" class="col-md-6">
+    <a href="javascript(history.back());" id="profile-page-related-links-text">Go back</a>
+    <a href="see_more" class="btn btn-default profile-page-related-see-more">See more</a>  <!-- How do we do it-->
+  </div>
+</div>
+<div class="clearfix">&nbsp;</div>
+<div id="profile-page-what-is-container">
+  
+  <!-- Text should be added to this -->
+  <div class="col-md-3 profile-page-what-is-header-box-green">&nbsp;</div>
+  <div class="col-md-3 profile-page-what-is-header-box-grey">&nbsp;</div>
+  <div class="col-md-3 profile-page-what-is-header-box-green">&nbsp;</div>
+  <div class="col-md-3 profile-page-what-is-header-box-grey">&nbsp;</div>
+  <div id="profile-page-what-is-text" class="col-md-12">
+    <span id="profile-page-what-is-text-header" class="col-md-12">
+      What is a<br />
+      {{# each category in problemCategories }}
+        {{category}}  
+      {{ / each}}
+      Challenge?
+    </span>
+    <span id="profile-page-what-is-test-description" class="col-md-12">
+      We welcome volunteers from all the backgrounds get involved with Refugee Tech.  If you have a skill
+      or relevant experience that can help us reach our goal of affecting positive change in the lives of
+      refugees, we want to hear from you. 
+    </span>
+    <a href="readmore" id="profile-page-what-is-text-btn" class="btn btn-default btn-pink-on-white col-md-12">Read more</a>  
+  </div>
+</div>
+<div id="profile-page-be-part-container" class="col-md-12">
+  <div id="profile-page-be-part-text" class="col-md-12">
+    <span id="profile-page-be-part-header">
+      Do you also want to be a part of this community?
+    </span>
+    <span id="profile-page-be-part-description">
+      We welcome volunteers from all the backgrounds get involved with Refugee Tech.  If you have a skill
+      or relevant experience that can help us reach our goal of affecting positive change in the lives of
+      refugees, we want to hear from you. 
+    </span>
+    <a href="" id="profile-page-be-part-text-btn" class="btn btn-black-on-white col-md-12">Submit your solution</a>  
+  </div>
+</div>
+
     {{ /with }}
   {{/if}}
 
