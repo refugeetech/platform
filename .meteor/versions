@@ -4,7 +4,6 @@ aldeed:autoform@5.7.1
 aldeed:autoform-bs-datepicker@1.1.1
 aldeed:collection2@2.5.0
 aldeed:simple-schema@1.4.0
-autopublish@1.0.4
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -63,6 +62,7 @@ htmljs@1.0.5
 http@1.1.1
 id-map@1.0.4
 insecure@1.0.4
+jeremy:selectize@0.12.1_4
 jquery@1.11.4
 kadira:blaze-layout@2.3.0
 kadira:flow-router@2.10.0

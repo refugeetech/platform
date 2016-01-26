@@ -52,7 +52,8 @@ ProjectsSchema = new SimpleSchema({
 
   "tags": {
     type: [String],
-    label: "Tags"
+    label: "Tags",
+    regEx: SimpleSchema.RegEx.Id
   },
 
 // The actual date the project began
