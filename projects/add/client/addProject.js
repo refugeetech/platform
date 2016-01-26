@@ -15,6 +15,12 @@ Template.addProject.rendered = function() {
       // Get all existing tags
       let tagOptions = Tags.find().fetch();
 
+      // This function definition may not be necessary, so commenting out
+      // var tagCallback = function (tagObject) {
+      //   console.log("inside callback", tagObject);
+      //   return tagObject;
+      // };
+
       $('#tags').selectize({
           delimiter: ',',
           persist: false,
@@ -25,25 +31,22 @@ Template.addProject.rendered = function() {
           highlight: true,
           maxOptions: 5,
           options: tagOptions,
-          onItemAdd: function (tag) {
-            // Check to see if tag exists in Tags collection
-            var existingTag = Tags.findOne({"name": tag});
+          create: function (tagValue, tagCallback) {
+            // Add the tag to the Tags collection
+            let tagId = Tags.insert({"name": tagValue});
 
-            // placeholder for new tag ID
-            let tagId;
-
-            // If tag doesn't exist
-            if (!existingTag ) {
-              // Add the tag to the Tags collection
-              tagId = Tags.insert({"name": tag});
-
-              // TODO: figure out how to limit duplicate tags
-              // e.g. 'Beans' and 'beans'
-              // unless this is not an issue
+            // Construct a tag object with text/value
+            let tagObject = {
+              value: tagId,
+              text: tagValue
             };
 
-            // Return a tag object containing tag ID
-            return {value: tagId, text: tag};
+            // The tags object works here
+            console.log(tagObject);
+
+            // However, I am uncertain how to get the tag callback to work
+            // so that the newly created tag will be added to the Selectize widget
+            tagCallback(tagObject);
           }
       });
     }
