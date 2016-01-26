@@ -14,27 +14,23 @@ Template.addProject.rendered = function() {
     if (instance.subscriptionsReady()) {
       // Get all existing tags
       let tagOptions = Tags.find().fetch();
+  
       $('#tags').selectize({
           delimiter: ',',
           persist: false,
           valueField: '_id',
           labelField: 'name',
           searchField: 'name',
-          create: true,
           highlight: true,
           maxOptions: 5,
           options: tagOptions,
-          create: function (input,callback) {
-    
-            // Add the tag to the Tags collection
-           Tags.insert({"name": input}, function(error,id){
-              if(!error){
-                console.log('inside no error');
-                callback({value: id,text: input}); 
-              }
-                          });
+          create(input,callback){
+            Tags.insert({"name":input},function(error,id){
+              callback({value:id,text:input});
+            });
           },
-          selectOnTab:true
+              createOnBlur: true
+
         
       });
     }
