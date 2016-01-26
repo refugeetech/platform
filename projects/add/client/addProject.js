@@ -24,14 +24,12 @@ Template.addProject.rendered = function() {
           highlight: true,
           maxOptions: 5,
           options: tagOptions,
-          create(input,callback){
-            Tags.insert({"name":input},function(error,id){
-              callback({value:id,text:input});
-            });
-          },
-              createOnBlur: true
-
-        
+          create:true,
+          onItemAdd(value){
+            if(!Tags.findOne({_id:value})){
+              Tags.insert({"name":value});
+            }
+          }
       });
     }
 
