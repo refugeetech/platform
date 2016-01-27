@@ -2,20 +2,25 @@
   <div class="col-sm-4">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h2 class="panel-header">{{ name }}</h2>
+        <h2 class="panel-header">
+          {{ project.name }}&nbsp;
+          <small>{{ project.shortDescription }}</small>
+        </h2>
+        {{# each tag in project.tags }}
+        <span class="label label-info label-sm">{{ tag }}</span>
+        {{/ each }}
       </div>
       <div class="panel-body">
-        <p>{{ description }}</p>
+        <p>{{ project.description }}</p>
+        {{# each link in project.links }}
+          <a href="{{ link.url }}" class="badge badge-info">
+            <i class="fa fa-{{ linkTypeClass link.type}}"></i>&nbsp;
+            {{ link.name }}
+          </a>
+        {{/ each }}
       </div>
       <div class="panel-footer">
-        {{# each tags }}
-        <span class="label label-default">{{ this }}</span>
-        {{/ each }}
-        {{# each links }}
-        <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}></a></span>
-        {{/ each }}
-        <a href="/projects/{{_id}}">Link to project</a>
-        <input name="projectId" type="hidden" value="{{_id}}"/>
+        <a href="/projects/{{ _id }}">Project Homepage</a>
       </div>
     </div>
   </div>
