@@ -11,7 +11,16 @@
 
       {{> afFormGroup name="problemCategories" type="select-checkbox"}}
 
-      {{> afQuickField name="tags" }}
+      <div class="form-group">
+        <label for="tags">
+           Tags
+        </label>
+        <!-- tell AutoForm this is the tags field via data-schema-key property-->
+        <input type="select"
+            id="tags"
+            data-schema-key="tags"
+            placeholder="Choose some tags (e.g. food, clothing, shelter)">
+      </div>
 
       {{> afQuickField name="startupDate"}}
 
