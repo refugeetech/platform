@@ -34,7 +34,7 @@ Template.addProject.rendered = function() {
         }
       });
     }
-  }
+  });
 };
 
 Template.addProject.helpers({
