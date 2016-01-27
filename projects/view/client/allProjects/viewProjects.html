@@ -3,7 +3,15 @@
     <a class="btn btn-primary pull-right" href="/projects/add" role="button">Add Project</a>
     <h1>View all projects</h1>
   </div>
-  
-  {{> searchResults }}
-  
+    <div class="row">
+    {{#if projects }}
+      {{# each project in projects }}
+        {{> singleProject project=project }}
+      {{/ each }}
+    {{ else }}
+    <div class="col-xs-12">
+      <p>No projects have been added.</p>
+    </div>
+    {{/ if }}
+  </div>
 </template>

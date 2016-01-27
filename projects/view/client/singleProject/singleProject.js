@@ -1,20 +1,22 @@
 Template.singleProject.helpers({
-	typeToClass:function() {
-		if(this.type=='facebook') {
-			return 'fa fa-facebook';
+	linkTypeClass:function(linkType) {
+		let linkTypeClass  = "link"; // Default to link icon
+
+		switch (linkType) {
+			case "facebook":
+				linkTypeClass = "facebook";
+				break;
+			case "instagram":
+				linkTypeClass = "instagram";
+				break;
+			case "linkedin":
+				linkTypeClass = "linkedin";
+				break;
+			case "twitter":
+				linkTypeClass = "twitter";
+				break;
 		}
-		if(this.type=='twitter') {
-			return 'fa fa-twitter';
-		}
-		if(this.type=='instagram') {
-			return 'fa fa-instagram';
-		}
-		//need to implement font awesome icon for blogger and other link types used
-		if(this.type=='blogger') {
-			return 'fa fa-blogger';
-		}
-		if(this.type=='linkedin') {
-			return 'fa fa-linkedin';
-		}
+
+		return linkTypeClass;
 	}
 });
