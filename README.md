@@ -153,3 +153,24 @@ lifts this point somewhat. Of course tech project could be working just as close
 
  `**`This data/presentation structure will create coherence throughout the platform and “drilldown” use cases. For example
 one could start by browsing categories of Issue/problems on the problem/issue hub, then drill down to specific Problems and further down to projects specific problems that are faced by projects targeting those issue. Finally one could be able to assist to a project specific issue using ones resources or knowledge as requested or by reaching out with a different idea of how to be able to help.
+
+# Design
+# User Interface terminology
+Our User Interface has the following elements.
+
+## Left navbar
+The left navbar contains Refugee Tech Logo ('R' Refugee Tech) and several links. It is defined with the Bootstrap `navbar-left` class. Navbar items are added to an unordered list with the Bootstrap `navbar-left` class.
+
+Navbar left will contain the following links:
+* What we do
+* Knowledge Hub
+* Projects
+* Blog
+
+## Right navbar
+The right navbar is defined with the Bootstrap `navbar-left` class. Navbar items are added to an unordered list with the Bootstrap `navbar-left` class. 
+
+The `right-navbar` list will contain several links:
+* Language menu
+* Share button
+* Search button
