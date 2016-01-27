@@ -14,11 +14,11 @@ Template.addProject.rendered = function() {
     if (instance.subscriptionsReady()) {
       // Get all existing tags
       let tagOptions = Tags.find().fetch();
-  
+
       $('#tags').selectize({
           delimiter: ',',
           persist: false,
-          valueField: '_id',
+          valueField: 'name',
           labelField: 'name',
           searchField: 'name',
           highlight: true,
@@ -26,7 +26,8 @@ Template.addProject.rendered = function() {
           options: tagOptions,
           create:true,
           onItemAdd(value){
-            if(!Tags.findOne({_id:value})){
+            // Insert tag into Tags collection if it doesn't exist
+            if(!Tags.findOne({"name":value})){
               Tags.insert({"name":value});
             }
           }
