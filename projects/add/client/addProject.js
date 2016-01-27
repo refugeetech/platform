@@ -11,30 +11,29 @@ Template.addProject.rendered = function() {
   let instance = this;
 
   instance.autorun(function () {
+    // Make sure tags subscription is ready
     if (instance.subscriptionsReady()) {
       // Get all existing tags
       let tagOptions = Tags.find().fetch();
 
       $('#tags').selectize({
-          delimiter: ',',
-          persist: false,
-          valueField: 'name',
-          labelField: 'name',
-          searchField: 'name',
-          highlight: true,
-          maxOptions: 5,
-          options: tagOptions,
-          create:true,
-          onItemAdd(value){
-            // Insert tag into Tags collection if it doesn't exist
-            if(!Tags.findOne({"name":value})){
-              Tags.insert({"name":value});
-            }
+        delimiter: ',',
+        persist: false,
+        valueField: 'name',
+        labelField: 'name',
+        searchField: 'name',
+        highlight: true,
+        maxOptions: 5,
+        options: tagOptions,
+        create:true,
+        onItemAdd(value){
+          // Insert tag into Tags collection if it doesn't exist
+          if(!Tags.findOne({"name":value})){
+            Tags.insert({"name":value});
           }
-      });
-    }
-
-});
+        }
+    });
+  }
 }
 
 Template.addProject.helpers({
