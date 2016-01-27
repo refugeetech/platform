@@ -32,9 +32,10 @@ Template.addProject.rendered = function() {
             Tags.insert({"name":value});
           }
         }
-    });
+      });
+    }
   }
-}
+};
 
 Template.addProject.helpers({
   existingTags: function () {
