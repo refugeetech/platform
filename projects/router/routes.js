@@ -1,11 +1,5 @@
 FlowRouter.route("/projects", {
   action: function (params, queryParams) {
-    // Reactively gets the queryparams to sort the /projects page
-    let category = FlowRouter.getQueryParam("cat");
-    let location = FlowRouter.getQueryParam("loc");
-    console.log(category);
-    console.log(location);
-
     BlazeLayout.render("mainLayout", {main: "viewProjects"});
   }
 });
