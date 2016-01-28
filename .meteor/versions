@@ -122,6 +122,7 @@ tracker@1.0.9
 twbs:bootstrap@3.3.6
 ui@1.0.8
 underscore@1.0.4
+universe:utilities@2.1.0
 url@1.0.5
 useraccounts:core@1.12.4
 useraccounts:unstyled@1.12.4

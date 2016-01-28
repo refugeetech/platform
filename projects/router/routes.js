@@ -1,5 +1,5 @@
 FlowRouter.route("/projects", {
-  action: function (params) {
+  action: function (params, queryParams) {
     BlazeLayout.render("mainLayout", {main: "viewProjects"});
   }
 });

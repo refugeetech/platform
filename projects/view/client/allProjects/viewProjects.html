@@ -5,7 +5,7 @@
   </div>
 
   {{> categoryDropdown }}
-  <!-- {{> locationDropdown }}  -->
+  {{> locationDropdown }}
   {{> searchResults }}
 
 </template>
@@ -24,10 +24,12 @@
   </select>
 </template>
 
-<!-- <template name="locationDropdown">
+<template name="locationDropdown">
   <select class="location-filter">
-    <option value="">Worldwide</option>
-    <option value="Sweden">Sweden</option>
-    <option value="Norway">Norway</option>
-  </select>
-</template> -->
+    {{#each land}}
+  <option>{{name}}</option>
+{{/each}}
+
+
+        </select>
+</template>

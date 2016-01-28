@@ -39,3 +39,4 @@ momentjs:moment
 cfs:standard-packages
 cfs:gridfs
 cfs:autoform
+universe:utilities
