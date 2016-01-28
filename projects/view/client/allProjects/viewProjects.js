@@ -23,32 +23,21 @@ Template.locationDropdown.helpers({
 Template.categoryDropdown.events({
   'change #category-filter': function (event) {
 
-    // Get reference to Template instance
-    var instance = Template.instance();
-
     // Get value from dropdown.
-    let category = $('#category-filter').val();
-
-    // Assign searchValue to a reactive variable
-    instance.category.set(category);
+    var category = $( "#category-filter" ).val();
 
     // Sets the queryparameter "cat" to value in category dropdown
-    UniUtils.url.setQuery("cat", category);
+    FlowRouter.setQueryParams({cat: category});
   }
 });
 
 Template.locationDropdown.events({
   'change #location-filter': function (event) {
-    // Get reference to Template instance
-    var instance = Template.instance();
 
     // Get value from dropdown.
     let location = $('#location-filter').val();
 
-    // Assign searchValue to a reactive variable
-    instance.location.set(location);
-
     // Sets the queryparameter "loc" to value in location dropdown
-    UniUtils.url.setQuery("loc", location);
+    FlowRouter.setQueryParams({loc: location});
   }
 });

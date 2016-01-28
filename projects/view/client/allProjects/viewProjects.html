@@ -12,7 +12,7 @@
 
 <!-- Dropdown menu for filtering searchResult by problemCategories -->
 <template name="categoryDropdown">
-  <select class="category-filter">
+  <select id="category-filter">
     <option value="">All</option>
     <option value="social">Social</option>
     <option value="bureaucracy">Bureaucracy</option>
@@ -25,7 +25,7 @@
 </template>
 
 <template name="locationDropdown">
-  <select class="location-filter">
+  <select id="location-filter">
     {{#each countries}}
       <option value="{{this}}">{{this}}</option>
     {{/each}}
