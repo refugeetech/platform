@@ -20,14 +20,14 @@
     <option value="education">Education</option>
     <option value="language">Language</option>
     <option value="employment">Employment</option>
-    <option value="Coordination">coordination</option>
+    <option value="coordination">coordination</option>
   </select>
 </template>
 
 <template name="locationDropdown">
   <select class="location-filter">
-    {{#each land}}
-      <option>{{name}}</option>
+    {{#each countries}}
+      <option value="{{this}}">{{this}}</option>
     {{/each}}
   </select>
 </template>

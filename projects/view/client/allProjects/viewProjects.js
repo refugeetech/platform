@@ -1,4 +1,25 @@
+// Returns all countries for location dropdown
+Template.locationDropdown.helpers({
+  countries : function() {
+    //returns an array of project objects
+    var out =  Projects.find();
+    console.log(out);
+    console.log(out.fetch());
+    // lets just use a list initally
+    var countries = [];
+    var projects = Projects.find().fetch();
+    projects.forEach(function(project) {
+      var country = project.postalAddress.country;
+      if(countries.indexOf(country)<0) {
+        countries.push(country);
+      }
+    });
 
+    return countries;
+  }
+
+
+});
 // Add the template helper to get the Vendors list
 Template.viewProjects.helpers({
   'country': function() {
