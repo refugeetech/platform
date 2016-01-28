@@ -18,15 +18,10 @@ Template.locationDropdown.helpers({
 
 
 });
-// Add the template helper to get the Vendors list
-Template.viewProjects.helpers({
-  'country': function() {
-    return Projects.find().fetch();
-  }
-});
+
 // Filters searchResult when filter dropdown value is changed
-Template.viewProjects.events({
-  'change .category-filter': function (e) {
+Template.categoryDropdown.events({
+  'change #category-filter': function (event) {
 
     // Get reference to Template instance
     var instance = Template.instance();
@@ -39,8 +34,11 @@ Template.viewProjects.events({
 
     // Sets the queryparameter "cat" to value in category dropdown
     UniUtils.url.setQuery("cat", category);
-  },
-  'change .location-filter': function (e) {
+  }
+});
+
+Template.locationDropdown.events({
+  'change #location-filter': function (event) {
     // Get reference to Template instance
     var instance = Template.instance();
 
