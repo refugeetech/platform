@@ -16,7 +16,7 @@ ProjectsIndex  = new EasySearch.Index({
 
         // If there is a category querayparam, add it to the selector
         if(category != undefined && category.length > 0){
-          selector.problemCategories = category;
+          selector.challengeCategories = category;
         };
 
         // If there is a location queryparam, add it to the selector

@@ -16,7 +16,7 @@ if(Meteor.isClient) {
             name: function() { return faker.name.findName();},
             description: function() {return faker.lorem.sentences();},
             shortDescription: function(){ return faker.lorem.sentence();},
-            problemCategories: function(){ return [faker.random.arrayElement(['social', 'bureaucracy', 'housing', 'education','language', 'employment', 'coordination'])]; },
+            challengeCategories: function(){ return [faker.random.arrayElement(['social', 'bureaucracy', 'housing', 'education','language', 'employment', 'coordination'])]; },
             tags: function(){ return faker.lorem.words(); },
             startupDate: function() {return faker.date.past();},
             currentStage: function(){ return faker.random.arrayElement([
