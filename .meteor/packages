@@ -39,4 +39,3 @@ cfs:standard-packages
 cfs:gridfs
 cfs:autoform
 jeremy:selectize
-autopublish
