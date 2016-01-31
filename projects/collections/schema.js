@@ -40,10 +40,10 @@ ProjectsSchema = new SimpleSchema({
   //   regEx: SimpleSchema.RegEx.Id,
   //   optional: true
   // },
-  // TODO: Add 'Challange' feature
-  // "challangeDescription": {
+  // TODO: Add 'Challenge' feature
+  // "challengeDescription": {
   //   type: String,
-  //   label: "Challange Description"
+  //   label: "Challenge Description"
   // },
   // "challengeCategories": {
   //   type: [String],
