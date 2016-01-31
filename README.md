@@ -1,18 +1,18 @@
 # Project status
 [![Stories in Ready](https://badge.waffle.io/refugeetech/platform.png?label=ready&title=Ready)](http://waffle.io/refugeetech/platform)
 
-[![Throughput Graph](https://graphs.waffle.io/refugeetech/platform/throughput.svg)](https://waffle.io/refugeetech/platform/metrics) 
+[![Throughput Graph](https://graphs.waffle.io/refugeetech/platform/throughput.svg)](https://waffle.io/refugeetech/platform/metrics)
 
 ## Introduction
 
-The platform connects tech projects, public and private initiatives, problems, crowdsourcing of problems and crowdsourcing of ideas to solve problems, volunteers and resources (cash, products & services, etc) and their respective sponsors. The platform is a nexus for community building and collaboration and a resource to bootstrap projects that are doing things that target the integration process. 
+The platform connects tech projects, public and private initiatives, challanges, crowdsourcing of challanges and crowdsourcing of ideas to solve challanges, volunteers and resources (cash, products & services, etc) and their respective sponsors. The platform is a nexus for community building and collaboration and a resource to bootstrap projects that are doing things that target the integration process.
 
 The platform is made up of major parts that are integrated and intertwined:
 
 * Project Hub: Contains Projects and Organizations
 * Resource Hub: Funding (Grants(Cash, Material(Office space, Laptops, etc), Products&Services(Slack, Github, Etc), Knowledge(Expertise(Skills*Time):Volunteering, Information resources))
-* Knowledge Hub: Problems, Solutions, Ideas, Q&A, Forum  ,, ; Is crowdsourced 
-* Associations: Relationships exist between project, problems they target, other projects targeting a specific problem, partners/financers/volunteers of a projects, etc.
+* Knowledge Hub: Challanges, Solutions, Ideas, Q&A, Forum  ,, ; Is crowdsourced 
+* Associations: Relationships exist between project, challanges they target, other projects targeting a specific challange, partners/financers/volunteers of a projects, etc.
 
 ## The purpose and background of the Project Hub
 
@@ -22,10 +22,10 @@ The project hub focuses on projects that are doing things for the integration of
 
 * Projects should be able to “apply” to be listed on the project hub.
 * Tech projects and other initiatives are made distinct on the hub which makes it easy for visitors to know what kind of project it is*.
-* Projects are searchable and filterable. They are presented in a nice and compelling list. Filter parameters are based on problem category that the project is targeting.
-* Projects can be targeting one or more specific issues under some category. These specific issues exists in our problem hub as uniquely identifiable issues that has been found through our workshop or crowdsourcing activities.
-* Projects have profiles that give information about their project and what they are doing and for whom. The previously mentioned “targeting” issues that projects are trying to solve is visible in the project profile. Clicking on such an issue shows a short summary of that issue. One can also browse to and redirect to the source (on the problem hub if exists otherwise documents and other source files).
-* Projects can make request for assistance. The format of these requests (when published) should be similar to Issues and presented as “project specific” issues/problems and a reference to what skills are potentially needed to solve that issue**.
+* Projects are searchable and filterable. They are presented in a nice and compelling list. Filter parameters are based on challange category that the project is targeting.
+* Projects can be targeting one or more specific issues under some category. These specific issues exists in our challange hub as uniquely identifiable issues that has been found through our workshop or crowdsourcing activities.
+* Projects have profiles that give information about their project and what they are doing and for whom. The previously mentioned “targeting” issues that projects are trying to solve is visible in the project profile. Clicking on such an issue shows a short summary of that issue. One can also browse to and redirect to the source (on the challange hub if exists otherwise documents and other source files).
+* Projects can make request for assistance. The format of these requests (when published) should be similar to Issues and presented as “project specific” issues/challanges and a reference to what skills are potentially needed to solve that issue**.
 * Social account login (linkedin, twitter, facebook, google, openID)
 
 ## Requirements shortlist for MVP Project hub
@@ -48,11 +48,11 @@ The project hub focuses on projects that are doing things for the integration of
 __Create the Platform foundation__
 
 First phase => Apply to be listed, List projects and initatives, Search or fileter by project variables(see below), project profile page, Accounts, Social login
-* Project variables 
+* Project variables
   * Project name
   * Project stage
-  * Problem categories
-  * Problem description
+  * Challenge Categories
+  * Challange description
   * Solution Description (long)
   * Solution Summary (shorter)
   * Short description (tweet size)
@@ -74,7 +74,7 @@ First phase => Apply to be listed, List projects and initatives, Search or filet
     * if !pending review then visible
 * Private account
   * Social login
- 
+
 ## Second phase functionality (not yet started)
 __Initiating the Resource Hub and linking with Project Hub__
 
@@ -90,19 +90,19 @@ Second phase => make requests
 __Initiating the Knowledge Hub and extending the Project Hub__
 
 #### Knowledge Hub
-* Publishing problems
+* Publishing challanges
   * Descriptions (long,shorter,short)
   * tags || categories || (tags && categories)
-* Related projects (which projects are targeting these problems)
+* Related projects (which projects are targeting these challanges)
 
 
 #### Project Hub
 * Project profile
-  * Related problems
+  * Related challanges
 * Crowdsourcing
   * Upvoting
-  * Link Cotunity.com widgets to problems for 'free text' crowdsourcing
-  * Associate project/problem to problem/project
+  * Link Cotunity.com widgets to challanges for 'free text' crowdsourcing
+  * Associate project/challange to challange/project
 
 ## Fourth phase functionality (not yet started)
 __Stepping up the Resource Hub__
@@ -112,7 +112,7 @@ __Stepping up the Resource Hub__
   * Resources
     * Volunteer
       * Volunteering hours
-    * Financer 
+    * Financer
       * A Grant
       * Materials are Grants are owned by a financer
       * Can finance a project
@@ -147,12 +147,12 @@ __Stepping up the Resource Hub__
 
 
 
-`*` The most important reason for this distinction is our view of other initiatives not focusing on tech to be problem owners; those who are working most closely with refugees. As problem owners they are potential users or partners with tech 
-focused projects. This makes it important to facilitate cooperation between them. To make them distinct in the project hub 
+`*` The most important reason for this distinction is our view of other initiatives not focusing on tech to be challange owners; those who are working most closely with refugees. As challange owners they are potential users or partners with tech
+focused projects. This makes it important to facilitate cooperation between them. To make them distinct in the project hub
 lifts this point somewhat. Of course tech project could be working just as close with refugees as other projects. But tech is a tool that needs to be distributed and applied. Most tech initiatives therefore needs partners who are working directly with refugees and who can distribute their tech solutions.
 
  `**`This data/presentation structure will create coherence throughout the platform and “drilldown” use cases. For example
-one could start by browsing categories of Issue/problems on the problem/issue hub, then drill down to specific Problems and further down to projects specific problems that are faced by projects targeting those issue. Finally one could be able to assist to a project specific issue using ones resources or knowledge as requested or by reaching out with a different idea of how to be able to help.
+one could start by browsing categories of Issue/challanges on the challange/issue hub, then drill down to specific challanges and further down to projects specific challanges that are faced by projects targeting those issue. Finally one could be able to assist to a project specific issue using ones resources or knowledge as requested or by reaching out with a different idea of how to be able to help.
 
 # Design
 # User Interface terminology
@@ -168,7 +168,7 @@ Navbar left will contain the following links:
 * Blog
 
 ## Right navbar
-The right navbar is defined with the Bootstrap `navbar-left` class. Navbar items are added to an unordered list with the Bootstrap `navbar-left` class. 
+The right navbar is defined with the Bootstrap `navbar-left` class. Navbar items are added to an unordered list with the Bootstrap `navbar-left` class.
 
 The `right-navbar` list will contain several links:
 * Language menu
