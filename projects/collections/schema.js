@@ -15,9 +15,9 @@ ProjectsSchema = new SimpleSchema({
     max: 140
   },
 
-  "problemCategories": {
+  "challengeCategories": {
   type: [String],
-  label: "Problem Categories",
+  label: "Challenge Categories",
   allowedValues: ['social', 'bureaucracy', 'housing', 'education',
                   'language', 'employment', 'coordination'],
   autoform: {
@@ -54,14 +54,14 @@ ProjectsSchema = new SimpleSchema({
   //   regEx: SimpleSchema.RegEx.Id,
   //   optional: true
   // },
-  // TODO: Add 'Problems' feature
-  // "problemDescription": {
+  // TODO: Add 'Challenge' feature
+  // "challengeDescription": {
   //   type: String,
-  //   label: "Problem Description"
+  //   label: "Challenge Description"
   // },
-  // "problemCategories": {
+  // "challengeCategories": {
   //   type: [String],
-  //   label: "Problem Categories"
+  //   label: "Challenge Categories"
   // },
 
   "tags": {
