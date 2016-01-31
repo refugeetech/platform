@@ -117,20 +117,25 @@ ProjectsSchema = new SimpleSchema({
   //   type: [String],
   //   label: "Target Locations"
   // },
-
   "targetPlatforms": {
     type: [String],
     label: "Target Platforms",
-    allowedValues: ['web', 'ios', 'android', 'windows-phone'],
+    optional: true,
+    allowedValues: ['web', 'ios', 'android', 'windows-phone', 'other'],
     autoform: {
-      options: [
-        {label: "Web", value: "web"},
-        {label: "iOS", value: "ios"},
-        {label: "Android", value: "android"},
-        {label: "Windows Phone", value: "windows-phone"}
-      ]
+      type: "select-checkbox",
+      options: function () {
+        return [
+          {label: "Web", value: "web"},
+          {label: "iOS", value: "ios"},
+          {label: "Android", value: "android"},
+          {label: "Windows Phone", value: "windows-phone"},
+          {label: "Other", value: "other"}
+        ];
+      }
     }
   },
+
   "postalAddress": {
     type: Object,
     label: "Postal Address"
