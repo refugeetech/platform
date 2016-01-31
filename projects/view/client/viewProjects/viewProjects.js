@@ -12,5 +12,5 @@ Template.viewProjects.helpers({
     var projects = Projects.find().fetch();
 
     return projects;
-  }
-});
+    }
+ });

@@ -1,0 +1,12 @@
+<template name="allProjects">
+    <!-- This template just outputs everything currently publicised to its parent template in the Projects collection -->
+    {{#if projects }}
+      {{# each project in projects }}
+        {{> singleProject project=project }}
+      {{/ each }}
+    {{ else }}
+    <div class="col-xs-12">
+      <p>No projects have been added here.</p>
+    </div>
+    {{/ if }}
+</template>
