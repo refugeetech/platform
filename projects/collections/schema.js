@@ -33,6 +33,20 @@ ProjectsSchema = new SimpleSchema({
   }
 },
 
+  "solution": {
+     type: Object,
+     label: "Type of solution"
+   },
+   "solution.isTech":{
+     type:Boolean,
+     label:"Is this solution predominalty mediated by technology?"
+   },
+   "solution.description":{
+     type:String,
+     label:"Description of solution",
+     max: 500
+   },
+
   // TODO: auto-associate user ID that created project
   // "contactPersonId": {
   //   type: String,
