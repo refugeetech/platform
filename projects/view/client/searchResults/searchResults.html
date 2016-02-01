@@ -1,5 +1,15 @@
 <template name="searchResults">
-    {{#EasySearch.Each index=projectsIndex }}
-        {{> singleProject }}
-    {{/EasySearch.Each}}
+  {{#EasySearch.Each index=projectsIndex }}
+    {{> singleProject project=this}}
+  {{/EasySearch.Each}}
+
+  {{#EasySearch.IfNoResults index=projectsIndex}}
+    <div class="col-xs-12">
+      <p>No search results.</p>
+    </div>
+  {{else}}
+    <div class="col-xs-12">
+      {{> EasySearch.LoadMore index=projectsIndex}}
+    </div>
+  {{/EasySearch.IfNoResults}}
 </template>

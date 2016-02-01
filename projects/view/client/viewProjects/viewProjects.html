@@ -3,7 +3,10 @@
     <a class="btn btn-primary pull-right" href="/projects/add" role="button">Add Project</a>
     <h1>View all projects</h1>
   </div>
-  
-  {{> searchResults }}
-  
+  <div class="row">
+    {{> filterProjects }}
+  </div>
+  <div class="row">
+    {{> searchResults }}
+  </div>
 </template>

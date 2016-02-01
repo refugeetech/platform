@@ -65,11 +65,16 @@
         </div>
         <div id="project-description">{{ description }}</div>
         <div id="project-buttons">
-
           <!-- TODO: Round corners on buttons. -->
           <a href="website_uri" class="btn btn-default">Visit website</a>  
           <a href="share_function" class="btn btn-default btn-white-background">Share this page</a>
         </div>
+        <label>Challenge Categories</label>
+        {{# each category in challengeCategories }}
+          <span class="label label-default">{{category}}</span>
+        {{/ each }}
+        <br/><br/>
+        <p>{{ description }}</p>
       </div>
     </div>
 </div> 
