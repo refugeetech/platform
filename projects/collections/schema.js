@@ -15,9 +15,9 @@ ProjectsSchema = new SimpleSchema({
     max: 140
   },
 
-  "problemCategories": {
+  "challengeCategories": {
   type: [String],
-  label: "Problem Categories",
+  label: "Challenge Categories",
   allowedValues: ['social', 'bureaucracy', 'housing', 'education',
                   'language', 'employment', 'coordination'],
   autoform: {
@@ -33,6 +33,20 @@ ProjectsSchema = new SimpleSchema({
   }
 },
 
+  "solution": {
+     type: Object,
+     label: "Type of solution"
+   },
+   "solution.isTech":{
+     type:Boolean,
+     label:"Is this solution predominalty mediated by technology?"
+   },
+   "solution.description":{
+     type:String,
+     label:"Description of solution",
+     max: 500
+   },
+
   // TODO: auto-associate user ID that created project
   // "contactPersonId": {
   //   type: String,
@@ -40,14 +54,14 @@ ProjectsSchema = new SimpleSchema({
   //   regEx: SimpleSchema.RegEx.Id,
   //   optional: true
   // },
-  // TODO: Add 'Problems' feature
-  // "problemDescription": {
+  // TODO: Add 'Challenge' feature
+  // "challengeDescription": {
   //   type: String,
-  //   label: "Problem Description"
+  //   label: "Challenge Description"
   // },
-  // "problemCategories": {
+  // "challengeCategories": {
   //   type: [String],
-  //   label: "Problem Categories"
+  //   label: "Challenge Categories"
   // },
 
   "tags": {
@@ -117,20 +131,25 @@ ProjectsSchema = new SimpleSchema({
   //   type: [String],
   //   label: "Target Locations"
   // },
-
   "targetPlatforms": {
     type: [String],
     label: "Target Platforms",
-    allowedValues: ['web', 'ios', 'android', 'windows-phone'],
+    optional: true,
+    allowedValues: ['web', 'ios', 'android', 'windows-phone', 'other'],
     autoform: {
-      options: [
-        {label: "Web", value: "web"},
-        {label: "iOS", value: "ios"},
-        {label: "Android", value: "android"},
-        {label: "Windows Phone", value: "windows-phone"}
-      ]
+      type: "select-checkbox",
+      options: function () {
+        return [
+          {label: "Web", value: "web"},
+          {label: "iOS", value: "ios"},
+          {label: "Android", value: "android"},
+          {label: "Windows Phone", value: "windows-phone"},
+          {label: "Other", value: "other"}
+        ];
+      }
     }
   },
+
   "postalAddress": {
     type: Object,
     label: "Postal Address"

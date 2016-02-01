@@ -3,6 +3,7 @@ Projects = new Mongo.Collection('projects');
 //Add search index with easy search
 ProjectsIndex  = new EasySearch.Index({
     collection: Projects,
+    defaultSearchOptions: {limit:20},
     fields: ['name','tags'],
     engine: new EasySearch.Minimongo({
       selector: function (searchObject, options, aggregation) {
@@ -15,7 +16,7 @@ ProjectsIndex  = new EasySearch.Index({
 
         // If there is a category querayparam, add it to the selector
         if(category != undefined && category.length > 0){
-          selector.problemCategories = category;
+          selector.challengeCategories = category;
         };
 
         // If there is a location queryparam, add it to the selector

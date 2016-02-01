@@ -5,10 +5,18 @@ if(Meteor.isClient) {
         //Define your factories here
         Factory.define('project',Projects, {
             mediaid:"none",
+            solution: {
+              isTech:function() {
+                  return faker.random.arrayElement([true,false]);
+              },
+              description: function() {
+                  return faker.lorem.sentences();
+              }
+            },
             name: function() { return faker.name.findName();},
             description: function() {return faker.lorem.sentences();},
             shortDescription: function(){ return faker.lorem.sentence();},
-            problemCategories: function(){ return [faker.random.arrayElement(['social', 'bureaucracy', 'housing', 'education','language', 'employment', 'coordination'])]; },
+            challengeCategories: function(){ return [faker.random.arrayElement(['social', 'bureaucracy', 'housing', 'education','language', 'employment', 'coordination'])]; },
             tags: function(){ return faker.lorem.words(); },
             startupDate: function() {return faker.date.past();},
             currentStage: function(){ return faker.random.arrayElement([
