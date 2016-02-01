@@ -5,7 +5,7 @@ Template.categoryDropdown.events({
     var category = $( "#category-filter" ).val();
 
     // Set or remove the category URL parameter
-    if (country) {
+    if (category) {
       // Sets the queryparameter "category" to selected value
       FlowRouter.setQueryParams({category: category});
     } else {
