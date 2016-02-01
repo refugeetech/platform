@@ -1,0 +1,6 @@
+/*Truncates text that is longer than one line*/
+.truncate{
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
