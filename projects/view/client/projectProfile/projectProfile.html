@@ -77,7 +77,10 @@
         <p>{{ description }}</p>
       </div>
     </div>
-</div> 
+</div>
+<!-- TODO wrap content with class=row divs where proper -->
+<!-- START OUT OF SCOPE FOR RELEASE 0.2 -->
+<!-- START Project Positions Content (aka Requests) -->
 <div id="project-positions" class="col-md-12">
   <div id="project-positions-names">
     <h2 id="project-position-header">Opening Positions</h2>
@@ -103,7 +106,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> <!-- </div id=project-positions> -->
+<!-- END Project Positions Content (aka Requests) -->
+<!-- END OUT OF SCOPE FOR RELEASE 0.2 -->
+<!-- START Project Related Content -->
 <div id="profile-page-related-information">
   <div class="col-md-6">
     <span id="profile-page-related-header"> Other 
@@ -122,16 +128,21 @@
   </div>
 </div>
 <div class="clearfix">&nbsp;</div>
-<div id="profile-page-what-is-container">
-  
+<!-- END Project Related Content -->
+  <!-- TODO These boxes should be within a class=row? @brylie -->
   <!-- Text should be added to this -->
+  <!-- TODO Text should be taken from top 4 searchresults on projectsIndex for coordination (each box represents a related project) => See if singleProject template can be adapted to this format -->
+  <!-- TODO Add proper routing -->
   <div class="col-md-3 profile-page-what-is-header-box-green">&nbsp;</div>
   <div class="col-md-3 profile-page-what-is-header-box-grey">&nbsp;</div>
   <div class="col-md-3 profile-page-what-is-header-box-green">&nbsp;</div>
   <div class="col-md-3 profile-page-what-is-header-box-grey">&nbsp;</div>
+
+  <!-- TODO For each category this project is related to one of these boxes should appear -->
   <div id="profile-page-what-is-text" class="col-md-12">
     <span id="profile-page-what-is-text-header" class="col-md-12">
       What is a<br />
+      <!-- NOTE NOT the way it should be done , see above todo -->
       {{# each category in problemCategories }}
         {{category}}  
       {{ / each}}
@@ -142,6 +153,7 @@
       or relevant experience that can help us reach our goal of affecting positive change in the lives of
       refugees, we want to hear from you. 
     </span>
+    <!-- TODO Add proper routing -->
     <a href="readmore" id="profile-page-what-is-text-btn" class="btn btn-default btn-pink-on-white col-md-12">Read more</a>  
   </div>
 </div>
@@ -155,10 +167,10 @@
       or relevant experience that can help us reach our goal of affecting positive change in the lives of
       refugees, we want to hear from you. 
     </span>
+    <!-- TODO Add proper routing -->
     <a href="" id="profile-page-be-part-text-btn" class="btn btn-black-on-white col-md-12">Submit your solution</a>  
   </div>
 </div>
-
     {{ /with }}
   {{/if}}
 
