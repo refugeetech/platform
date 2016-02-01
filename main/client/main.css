@@ -1,6 +1,7 @@
 body {
   margin-top: 3.7em; /* Ensure body is not covered by top navbar */
   font-size: 16px;
+  color: #1d2660; /* All main body text seems to be this color */ 
 }
 
 /* ==========================================================================
@@ -63,6 +64,38 @@ body {
 }
 
 /* ==========================================================================
+   Buttons restyling 
+   TODO:  Make it look better , colors seem to be outside of the style set by the mockups
+   ========================================================================== */
+
+.btn {
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+
+.btn-white-background {
+  background-color : #FFFFFF;
+  color: #FF0000;
+}
+
+.btn-dark-blue {
+  background-color: #1d2660;
+  color: #FFFFFF;
+  width: auto;
+}
+
+.btn-black-on-white {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.btn-pink-on-white {
+  background-color: #FFFFFF;
+  color: #e92e71;
+}
+
+
+/* ==========================================================================
    Helper classes
    ========================================================================== */
 
@@ -89,3 +122,12 @@ body {
     position: absolute;
     width: 1px;
 }
+
+/*
+ * Clear all helper. 
+ */
+
+.clearfix {
+  clear: both;
+}
+

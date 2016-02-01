@@ -1,0 +1,267 @@
+/* ==========================================================================
+   Media styleing 
+   ========================================================================== */
+
+#project-media {
+	text-align: center;
+}
+
+#project-media-img {
+	width: 100%; 
+}
+
+#project-media-img {
+	margin-top: 8%;
+}
+
+#project-image-version {
+	text-decoration: none; 
+	color: #e92e71 !important;
+	line-height: 2em;
+	font-size: 1.2em;
+}
+
+/* ==========================================================================
+   General Project Info 
+   ========================================================================== */
+
+#project-name {
+	font-size:1.5em;
+	margin-bottom: -5%;
+	font-weight: 600;
+}
+
+#project-data {
+	font-size: 1em;
+}
+
+#project-list {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.project-data-link  {
+	text-decoration: none; 
+	color: #e92e71 !important;
+}
+
+#project-description {
+	margin-left:inherit;
+	font-size: 1.2em;
+}
+
+#project-buttons {
+	margin-top:5%;
+}
+
+/* ==========================================================================
+   Project Positions  
+   ========================================================================== */
+
+#project-positions {
+	width: 100%;
+	margin-top: 5%;
+	background: #F8F8F8;
+	margin-bottom: 2%;
+	max-height:45em;
+	height: 45em;
+}
+
+#project-position-names {
+	min-width:30%;
+}
+
+#project-position-header {
+	margin-left: 2%;
+}
+
+#project-position-main-description {
+	margin-left: 3%;
+}
+
+#project-position-names-seperator {
+	margin-top: 2em;
+}
+
+#project-position-names-list {
+	padding-top: 2%;
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+#project-position-names-list li {
+	border-bottom: 2px solid #FFFFFF;
+}
+
+#project-position-names-list a {
+	text-decoration: none; 
+	color: #e92e71 !important;
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+#project-positions-description-text {
+	background-color: #FFFFFF;
+	margin-top:5%;
+	text-decoration: none;
+
+	/* We probably want a min height regardless of text length of 
+	     the desciption of field. */
+	min-height: 40rem; 
+}
+
+#project-positions-description-container {
+	min-height: 80rem;
+	max-width: 80%;
+}
+
+#project-position-share-link a {
+	text-decoration: none; 
+	color: #e92e71 !important;
+	font-weight: 300;
+}
+
+#project-position-description-bottom-panel {
+	display: inline-flex;
+    padding-top: 80%;
+    background-color: #FFFFFF;
+}
+
+#project-position-apply {
+	margin-left: 14rem; /* Should probably calc min-width - the string length of "apply now" */
+}
+
+/* ==========================================================================
+   Related info
+   ========================================================================== */
+
+#profile-page-related-information {
+	margin-left: 8%;
+}
+
+#profile-page-related-header {
+	font-size: 1.3em;
+}
+
+#profile-page-related-header {
+	font-size: 1.3em;
+}
+
+#profile-page-related-header a {
+	text-decoration: none; 
+	color: #e92e71;
+	font-size: 1.4em;
+}
+
+#profile-page-related-links-text  {
+	text-decoration: none; 
+	color: #e92e71;
+}
+
+.profile-page-related-see-more {
+    margin-left: 60%;
+}
+
+.profile-page-related-see-more a {
+   text-decoration: none; 
+	color: #e92e71;
+}
+
+#profile-page-related-details {
+	margin-top: 0%;
+	display: block;
+}
+
+#profile-page-related-details a {
+	text-decoration: none; 
+	color: #e92e71;
+}
+
+/* ==========================================================================
+   Profile what is section
+   ========================================================================== */
+
+#profile-page-what-is-container {
+	margin-top:5em;
+	display: inline;
+}
+
+.profile-page-what-is-header-box-green {
+	background-color: #393939;
+	min-height: 30rem;
+}
+
+.profile-page-what-is-header-box-grey {
+	background-color: #b1b1b1;
+	min-height: 30rem;
+}
+
+#profile-page-what-is-text {
+	background-color: #e92e71;
+	color: #FFFFFF;
+	height: 40rem;
+}
+
+#profile-page-what-is-text-header {
+	text-align: center;
+	margin-top: 5rem;
+	display: block;
+	font-size: 2em;
+	min-width:50%;
+}
+
+#profile-page-what-is-test-description {
+	text-align: center;
+	margin-top: 5rem;
+	display: block;
+	margin-left:25%;
+	margin-right:25%;
+	max-width:50%;
+}
+
+#profile-page-what-is-text-btn {
+	margin-top: 5rem;
+	display: block;
+	margin-left:45%; /* Should be calculated better */
+	max-width:50%;
+	width:10%;
+}
+
+/* ==========================================================================
+   Profile page be part 
+   ========================================================================== */
+
+#profile-page-be-part-container {
+	padding-right: 0px;
+	padding-left: 0px;	
+}
+
+#profile-page-be-part-text {
+	background-color: #20245c;
+	color: #FFFFFF;
+	height: 40rem;
+}
+
+#profile-page-be-part-header {
+	text-align: center;
+	margin-top: 5rem;
+	display: block;
+	font-size: 2em;
+	min-width:50%;
+}
+
+#profile-page-be-part-description {
+	text-align: center;
+	margin-top: 5rem;
+	display: block;
+	margin-left:25%;
+	margin-right:25%;
+	max-width:50%;
+}
+
+#profile-page-be-part-text-btn {
+	margin-top: 5rem;
+	display: block;
+	width: 20%;
+	margin-left:40%; /* Should be calculated better */
+}
