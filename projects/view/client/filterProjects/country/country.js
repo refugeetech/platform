@@ -24,11 +24,16 @@ Template.countryDropdown.helpers({
 
 Template.countryDropdown.events({
   'change #country-filter': function (event) {
-
     // Get value from dropdown.
     let country = $('#country-filter').val();
 
-    // Sets the queryparameter "country" to value in country dropdown
-    FlowRouter.setQueryParams({country: country});
+    // Set or remove the country URL parameter
+    if (country) {
+      // Sets the queryparameter "country" to value in country dropdown
+      FlowRouter.setQueryParams({country: country});
+    } else {
+      // No country selected, remove url parameter
+      FlowRouter.setQueryParams({country: undefined});
+    }
   }
 });
