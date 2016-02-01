@@ -1,5 +1,5 @@
 // Returns countries for location dropdown
-Template.locationDropdown.helpers({
+Template.countryDropdown.helpers({
   countries : function() {
     var countries = [];
     var projects = Projects.find().fetch();
@@ -22,13 +22,18 @@ Template.locationDropdown.helpers({
 
 });
 
-Template.locationDropdown.events({
-  'change #location-filter': function (event) {
-
+Template.countryDropdown.events({
+  'change #country-filter': function (event) {
     // Get value from dropdown.
-    let location = $('#location-filter').val();
+    let country = $('#country-filter').val();
 
-    // Sets the queryparameter "loc" to value in location dropdown
-    FlowRouter.setQueryParams({loc: location});
+    // Set or remove the country URL parameter
+    if (country) {
+      // Sets the queryparameter "country" to value in country dropdown
+      FlowRouter.setQueryParams({country: country});
+    } else {
+      // No country selected, remove url parameter
+      FlowRouter.setQueryParams({country: undefined});
+    }
   }
 });

@@ -11,8 +11,8 @@ ProjectsIndex  = new EasySearch.Index({
         let selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
 
         // Reactively gets the queryparams to sort the /projects page
-        let category = FlowRouter.getQueryParam("cat");
-        let location = FlowRouter.getQueryParam("loc");
+        let category = FlowRouter.getQueryParam("category");
+        let country = FlowRouter.getQueryParam("country");
 
         // If there is a category querayparam, add it to the selector
         if(category != undefined && category.length > 0){
@@ -20,14 +20,13 @@ ProjectsIndex  = new EasySearch.Index({
         };
 
         // If there is a location queryparam, add it to the selector
-        if(location != undefined && location.length > 0){
-
-        // _. extend below is not EasySearch standard syntax for adding value to selector
-        // Dot notation for nested objects does not work in EasySearch.
-        // See: https://docs.mongodb.org/v2.2/core/read-operations/#subdocuments
-        // This has to be used whenever easysearch should filter on a nested...
-        // objects property.
-        _.extend(selector, {"postalAddress.country": location});
+        if(country != undefined && country.length > 0){
+          // _. extend below is not EasySearch standard syntax for adding value to selector
+          // Dot notation for nested objects does not work in EasySearch.
+          // See: https://docs.mongodb.org/v2.2/core/read-operations/#subdocuments
+          // This has to be used whenever easysearch should filter on a nested...
+          // objects property.
+          _.extend(selector, {"postalAddress.country": country});
         };
 
         return selector;

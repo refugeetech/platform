@@ -5,12 +5,3 @@ Template.viewProjects.created = function () {
   // Subscribe to all projects
   instance.subscribe("allProjects");
 };
-
-Template.viewProjects.helpers({
-  "projects": function () {
-    // Get all projects
-    var projects = Projects.find().fetch();
-
-    return projects;
-    }
- });
