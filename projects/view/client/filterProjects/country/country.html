@@ -1,7 +1,7 @@
 <!-- Dropdown menu for filtering searchResult by location -->
-<template name="locationDropdown">
-  <label for="location-filter" class="control-label">Country</label>
-  <select id="location-filter" class="form-control">
+<template name="countryDropdown">
+  <label for="country-filter" class="control-label">Country</label>
+  <select id="country-filter" class="form-control">
     <option value="">All</option>
     {{#each countries}}
       <option value="{{this}}">{{this}}</option>
