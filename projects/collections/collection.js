@@ -21,13 +21,12 @@ ProjectsIndex  = new EasySearch.Index({
 
         // If there is a location queryparam, add it to the selector
         if(country != undefined && country.length > 0){
-
-        // _. extend below is not EasySearch standard syntax for adding value to selector
-        // Dot notation for nested objects does not work in EasySearch.
-        // See: https://docs.mongodb.org/v2.2/core/read-operations/#subdocuments
-        // This has to be used whenever easysearch should filter on a nested...
-        // objects property.
-        _.extend(selector, {"postalAddress.country": country});
+          // _. extend below is not EasySearch standard syntax for adding value to selector
+          // Dot notation for nested objects does not work in EasySearch.
+          // See: https://docs.mongodb.org/v2.2/core/read-operations/#subdocuments
+          // This has to be used whenever easysearch should filter on a nested...
+          // objects property.
+          _.extend(selector, {"postalAddress.country": country});
         };
 
         return selector;
