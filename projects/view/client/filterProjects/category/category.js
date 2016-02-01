@@ -6,6 +6,6 @@ Template.categoryDropdown.events({
     var category = $( "#category-filter" ).val();
 
     // Sets the queryparameter "cat" to value in category dropdown
-    FlowRouter.setQueryParams({cat: category});
+    FlowRouter.setQueryParams({category: category});
   }
 });
