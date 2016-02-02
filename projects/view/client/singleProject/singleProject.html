@@ -1,5 +1,5 @@
 <template name="singleProject">
-  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="panel panel-default">
       <div class="panel-heading">
         <a href="/projects/{{ project._id }}">
@@ -13,7 +13,7 @@
         {{/ each }}
       </div>
       <div class="panel-body">
-        <p>{{ project.description }}</p>
+        <p class="truncate">{{ project.description }}</p>
         {{# each link in project.links }}
           <a href="{{ link.url }}" class="badge badge-info">
             <i class="fa fa-{{ linkTypeClass link.type}}"></i>&nbsp;
