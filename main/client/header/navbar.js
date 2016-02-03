@@ -2,15 +2,14 @@ if (Meteor.isClient) {
 
   Meteor.startup(function() {
   // Runs when the DOM is ready
-  
-  Session.set('willShowAutoSuggestion',false);
 
+    Session.set('willShowAutoSuggestion',false);
     const NAVBAR_HEIGHT = 75; // original navbar height in px
 
     var $window    = $(window),
         $document  = $(document),
         $searchbar = $('#searchbar');
-        
+
 
     $window.on('scroll', function(e) {
     // The scroll event is not supported yet by Meteor https://github.com/meteor/meteor/issues/3298,
@@ -32,7 +31,28 @@ if (Meteor.isClient) {
         $searchbar.removeClass('navbar-is-shrinked');
       }
     };
+
+    //adding share-button
+    let config = {
+      ui: {
+        flyout: 'bottom-center'
+      },
+      url: Meteor.absoluteUrl(),
+      networks: {
+        pinterest: {
+          enabled: false
+        },
+        reddit: {
+          enabled: false
+        },
+        whatsapp: {
+          enabled: false
+        }
+      }
+    }
+    let share = new ShareButton('.share-button', config);
   }); // end Meteor.startup
+
 
   Template.mainNavbar.events({
     'click .activate-searchbar': function(event) {
@@ -44,7 +64,6 @@ if (Meteor.isClient) {
           Session.set('willShowAutoSuggestion',true);
       }
       $('#searchbar').toggleClass('active'); // Toggle the searchbar
-      
     }
   });
 }

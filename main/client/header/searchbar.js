@@ -12,6 +12,7 @@ if(Meteor.isClient) {
       'blur input':function(event,template) {
           $('#searchbar').removeClass('active'); //hide the searchbar when input blurs
       }
+
   });
 
 }
