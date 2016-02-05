@@ -52,13 +52,5 @@ Template.mainNavbar.events({
         Session.set('willShowAutoSuggestion',true);
     }
     $('#searchbar').toggleClass('active'); // Toggle the searchbar
-  },
-  "click #js-share-button": function () {
-    // // Get reference to template instance
-    // let instance = Template.instance();
-    //
-    // // toggle the share button popup
-    // instance.shareButton.toggle();
-    // console.log("clicked share");
   }
 });
