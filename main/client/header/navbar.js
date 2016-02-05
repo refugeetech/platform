@@ -31,27 +31,15 @@ Template.mainNavbar.rendered = function () {
   };
 
   //adding share-button
-  let shareConfig = {
+  let config = {
     ui: {
-      flyout: 'bottom-center'
-    },
-    url: Meteor.absoluteUrl(),
-    networks: {
-      pinterest: {
-        enabled: false
-      },
-      reddit: {
-        enabled: false
-      },
-      whatsapp: {
-        enabled: false
-      }
+      flyout: "bottom center",
+      button_font: false,
+      icon_font:false
     }
   };
 
-  // Set up share button; attach to template instance
-  instance.shareButton = new ShareButton('#js-share-button', shareConfig);
-  console.log(instance.shareButton)
+  new ShareButton(config);
 };
 
 Template.mainNavbar.events({
@@ -66,11 +54,11 @@ Template.mainNavbar.events({
     $('#searchbar').toggleClass('active'); // Toggle the searchbar
   },
   "click #js-share-button": function () {
-    // Get reference to template instance
-    let instance = Template.instance();
-
-    // toggle the share button popup
-    instance.shareButton.toggle();
-    console.log("clicked share");
+    // // Get reference to template instance
+    // let instance = Template.instance();
+    //
+    // // toggle the share button popup
+    // instance.shareButton.toggle();
+    // console.log("clicked share");
   }
 });
