@@ -17,6 +17,6 @@ FlowRouter.route('/projects/:projectId', {
 });
 FlowRouter.route("/projects-active", {
   action: function (params, queryParams) {
-    BlazeLayout.render("mainLayout", {main: "approvedProjectDetail"});
+    BlazeLayout.render("mainLayout", {main: "activeProjectDetail"});
   }
 });

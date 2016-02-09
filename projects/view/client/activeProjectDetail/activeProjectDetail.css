@@ -193,9 +193,9 @@ button.active-button{
 }
 .image_slide li img{
 	width: calc(100% - 20px);
--webkit-box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.26);
--moz-box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.26);
-box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.26);
+	-webkit-box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.26);
+	-moz-box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.26);
+	box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.26);
 }
 /**************** Project table ********************/
 li h4{
@@ -293,6 +293,27 @@ li .detail:last-child::after{
 	width: 200px;
 	border-radius: 1000px;
 	background-color: #1F225D;
+}
+.circle.active{
+	-webkit-animation: cd-bounce-1 0.6s;
+	-moz-animation: cd-bounce-1 0.6s;
+	animation: cd-bounce-1 0.6s;
+}
+.span_3_of_12:nth-child(2) .circle{
+	  -webkit-animation-delay: 0.2s; /* Chrome, Safari, Opera */
+    animation-delay: 0.2s;
+}
+.span_3_of_12:nth-child(3) .circle{
+	  -webkit-animation-delay: 0.3s; /* Chrome, Safari, Opera */
+    animation-delay: 0.3s;
+}
+.span_3_of_12:nth-child(4) .circle{
+	  -webkit-animation-delay: 0.4s; /* Chrome, Safari, Opera */
+    animation-delay: 0.4s;
+}
+.span_3_of_12:nth-child(5) .circle{
+	  -webkit-animation-delay: 0.6s; /* Chrome, Safari, Opera */
+    animation-delay: 0.6s;
 }
 .circle h3{
 	line-height: 200px;
@@ -444,18 +465,39 @@ li .detail:last-child::after{
 	background-color: #1F225D;
 }
 .be_a_part h1{
+	opacity: 0;
+	margin-top: 0px;
 	font-size: 46px;
 	font-weight: 900;
 	color:#fff;
+	-webkit-transition: all 0.6s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
+	-moz-transition: all  0.6s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
+	transition: all  0.6s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
 }
 .be_a_part p{
 	color:#fff;
+	opacity: 0;
+	margin-top: 0px;
+	-webkit-transition: all 0.8s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
+	-moz-transition: all  0.8s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
+	transition: all  0.8s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
 }
 .be_a_part button{
 	margin-top: 40px;
 	background-color: #fff;
 	color:#1F225D;
 	border-color: #fff;
+	-webkit-transition: all 1s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
+	-moz-transition: all  1s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
+	transition: all  1s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
+}
+.be_a_part .animation.active h1{
+	opacity:1;
+	margin-top: 0;
+}
+.be_a_part .animation.active p{
+	opacity:1;
+	margin-top: 0;
 }
 @media only screen and (max-width: 480px) {
 	.be_a_part .content_wrapper{

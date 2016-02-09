@@ -1,6 +1,4 @@
 Template.activeProjectDetail.onRendered(function () {
-	// Get reference to template instance
-	// Subscribe to all projects
 	$('.summary').after('<span id="show-more"> More...</span>');
 	$('#show-more').click(function(){
 		$('.content-text').addClass('visable');
@@ -25,6 +23,8 @@ Template.activeProjectDetail.onRendered(function () {
 		$('#view-images').removeClass('active');
 		$('.projectDetailList').removeClass('inactive');
 	})
+	 var circle = $('.circle')
+	 var animation = $('.animation')
     var timelineBlocks = $('.timeline-object'),
         offset = 0.8;
 
@@ -35,6 +35,10 @@ Template.activeProjectDetail.onRendered(function () {
 	$(window).on('scroll', function(){
 		showBlocks(timelineBlocks, offset);
 		hideBlocks(timelineBlocks, offset);
+		showBlocks(circle, offset);
+		hideBlocks(circle, offset);
+		showBlocks(animation, offset);
+		hideBlocks(animation, offset);
 			});
 	
 	function hideBlocks(blocks, offset) {
