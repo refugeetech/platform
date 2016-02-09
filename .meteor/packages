@@ -39,3 +39,4 @@ cfs:standard-packages
 cfs:gridfs
 cfs:autoform
 jeremy:selectize
+zimme:active-route
