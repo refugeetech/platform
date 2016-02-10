@@ -5,7 +5,7 @@ KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain catego
     label: "The name of the stakeholder"
   },
   "mediaId": { //used to store logos/images etc of the stakeholders
-    type: String,
+    type: [String],
     optional:true,
     autoform: {
       afFieldInput: {
@@ -30,8 +30,8 @@ ProjectEventSchema = new SimpleSchema({
     label:"The date of the event",
     autoform: {
       afFieldInput: {
-      type: "bootstrap-datepicker",
-      "data-date-autoclose": "true"
+        type: "bootstrap-datepicker",
+        "data-date-autoclose": "true"
       }
     }
   },

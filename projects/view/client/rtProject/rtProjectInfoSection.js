@@ -1,7 +1,7 @@
 Template.rtProjectInfoSection.onRendered(function () {
-	 var circle = $('.circle')
-	 var animation = $('.animation')
-    var timelineBlocks = $('.timeline-object'),
+  	let circle = $('.circle');
+	const animation = $('.animation')
+    let timelineBlocks = $('.timeline-object'),
         offset = 0.8;
 
     //hide timeline blocks which are outside the viewport
@@ -15,7 +15,7 @@ Template.rtProjectInfoSection.onRendered(function () {
 		hideBlocks(circle, offset);
 		showBlocks(animation, offset);
 		hideBlocks(animation, offset);
-			});
+	});
 	
 	function hideBlocks(blocks, offset) {
 		console.log('hide')
