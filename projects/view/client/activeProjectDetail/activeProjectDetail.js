@@ -1,5 +1,7 @@
+// refactored too singleProjectDetails.js and rtProjectInfoSection.js 
 Template.activeProjectDetail.onRendered(function () {
 	$('.summary').after('<span id="show-more"> More...</span>');
+	//refactored too singleProjectDetailed.js using meteors event handlers
 	$('#show-more').click(function(){
 		$('.content-text').addClass('visable');
 		$(this).css({
@@ -23,6 +25,7 @@ Template.activeProjectDetail.onRendered(function () {
 		$('#view-images').removeClass('active');
 		$('.projectDetailList').removeClass('inactive');
 	})
+	//refactored too rtProjectInfoSection.js .onRendered
 	 var circle = $('.circle')
 	 var animation = $('.animation')
     var timelineBlocks = $('.timeline-object'),
