@@ -225,7 +225,19 @@ ProjectsSchema = new SimpleSchema({
         collection: "projectMedia"
       }
     }
+  },
+  isRTProject: {
+    type:Boolean,
+    label: "Is this a project a result of the Refugee Tech process?",
   }
 });
 
 Projects.attachSchema(ProjectsSchema);
+
+RTProjectsInfoSchema = new SimpleSchema({
+  problemOwners: {
+    type:[Object]
+  }
+});
+
+ProblemOwnerSchema = new Sim
