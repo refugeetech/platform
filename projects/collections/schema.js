@@ -20,17 +20,24 @@ KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain catego
   }
 });
 
-ProjectEvent = new SimpleSchema({
+ProjectEventSchema = new SimpleSchema({
   title: {
     type:String,
     label:"Title of this event"
   },
   date: {
     type:Date,
-    label:"The date of the event"
+    label:"The date of the event",
+    autoform: {
+      afFieldInput: {
+      type: "bootstrap-datepicker",
+      "data-date-autoclose": "true"
+      }
+    }
   },
   meta: {
-    type:[Object] // meta data about this event
+    type:[Object], // meta data about this event
+    optional:true
   },
   "mediaId": { //used to store logos/images etc of the event
     type: String,
@@ -52,14 +59,14 @@ ProjectDataStoreSchema = new SimpleSchema({
   problemOwners: {
     type:[KeyStakeHolderSchema]
   },
-  projectsOwners: {
+  projectOwners: {
     type:[KeyStakeHolderSchema]
   },
   productOwners: {
     type:[KeyStakeHolderSchema]
   },
   history: {
-    type:[ProjectEvent],
+    type:[ProjectEventSchema],
     label: "list of hitstoric events, sorted on date"
   }
 });
