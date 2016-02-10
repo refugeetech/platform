@@ -31,28 +31,22 @@ Template.updateProject.rendered = function() {
 
 Template.updateProject.helpers({
     //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.updateProject.onCreated callback
-    getProject: function () {
+    project: function () {
       return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
-    },
-  existingTags: function () {
-    // Get all existing tags
-    let tags = Tags.find().fetch();
-
-    return tags;
-  }
+    }
 });
 
 Template.updateProject.onCreated(function(){
-  var self = this;
-
   // Get reference to template instance
-  let instance = this;
+  const instance = this;
 
   // Subscribe to all tags, for tag auto-complete field
   instance.subscribe("allTags");
   
-  self.autorun(function() {
-    var projectId = FlowRouter.getParam('projectId');
-    self.subscribe('singleProject', projectId);
+  instance.autorun(function() {
+    //subscribe to singleProject with the projectId from the route parameter
+    let projectId = FlowRouter.getParam('projectId');
+    instance.subscribe('singleProject', projectId);
   });
+  
 });
