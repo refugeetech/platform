@@ -234,10 +234,3 @@ ProjectsSchema = new SimpleSchema({
 
 Projects.attachSchema(ProjectsSchema);
 
-RTProjectsInfoSchema = new SimpleSchema({
-  problemOwners: {
-    type:[Object]
-  }
-});
-
-ProblemOwnerSchema = new Sim
