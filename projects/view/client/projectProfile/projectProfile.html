@@ -3,7 +3,7 @@
 <!-- We are subscibing to the singleProject publication -->
   {{#if Template.subscriptionsReady }}
   <!-- calling the helper function getProject that returns a project object using the route parameter projectId -->
-    {{#with getProject }}
+    {{#with project }}
     {{#if isRTProject }}
       {{> rtProjectProfile }}
     {{else}}

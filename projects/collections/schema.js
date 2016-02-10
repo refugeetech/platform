@@ -35,6 +35,10 @@ ProjectEventSchema = new SimpleSchema({
       }
     }
   },
+  description: {
+    type:String,
+    label:"Describe the event"
+  },
   meta: {
     type:[Object], // meta data about this event
     optional:true

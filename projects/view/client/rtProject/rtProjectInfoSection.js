@@ -34,3 +34,27 @@ Template.rtProjectInfoSection.onRendered(function () {
 		});
 	}
 });
+
+Template.rtProjectInfoSection.helpers({
+	keyContributors:function() {
+		return this.dataStore.keyContributors;
+	},
+	problemOwners:function() {
+		return this.dataStore.problemOwners;
+	},
+	productOwners:function() {
+		return this.dataStore.productOwners;
+	},
+	projectOwners:function() {
+		return this.dataStore.projectOwners;
+	},
+	media:function() {
+		console.log(ProjectMedia.find({_id: this.mediaId}).fetch());
+		return ProjectMedia.findOne({_id:this.mediaId});
+	},
+	history:function() {
+		return this.dataStore.history.sort(function(a,b){
+			return a.date.getTime() - b.date.getTime();
+		});
+	}
+});

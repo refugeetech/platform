@@ -1,6 +1,6 @@
 Template.projectProfile.helpers({
   //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
-    getProject: function () {
+    project: function () {
       return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
     },
     //returns font awesome classes to prettyfy links, uses the ProjectsSchema.links.$ object as datacontext
@@ -100,7 +100,7 @@ Template.projectProfile.onCreated(function(){
 
 Template.rtProjectProfile.helpers({
   //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
-    getProject: function () {
+    project: function () {
       return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
     },
     //returns font awesome classes to prettyfy links, uses the ProjectsSchema.links.$ object as datacontext
@@ -187,7 +187,7 @@ Template.rtProjectProfile.helpers({
     projectMedia: function () {
       return ProjectMedia.find({_id: this.mediaId});
     },
-    isRTProject: ()=> this.isRTProject ? true: false //temporary until a proper schema has been developed
+    isRTProject: ()=> true //temporary until a proper schema has been developed
 });
 
 Template.rtProjectProfile.onCreated(function(){
