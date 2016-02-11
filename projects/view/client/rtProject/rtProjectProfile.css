@@ -74,6 +74,6 @@
 	padding-bottom: 40px;
 }
 
-.key_contributers div.col {
-  padding-left: 50px !important;
+.rtProjectInfoSection .key_contributers div.col {
+  padding-left: 50px;
 }
