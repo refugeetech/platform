@@ -1,14 +1,4 @@
 Template.rtProjectInfoSection.onRendered(function () {
-	//the carousel init
-	$(".owl-carousel.problem_owner").owlCarousel({
-		items:1
-	});
-	
-	$(".owl-carousel.key_contributers").owlCarousel({
-		items:2
-	});
-	
-	//the timeline stuff
   	let circle = $('.circle');
 	const animation = $('.animation')
     let timelineBlocks = $('.timeline-object'),

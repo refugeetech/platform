@@ -63,7 +63,7 @@
 	-moz-animation: cd-bounce-1 0.6s;
 	animation: cd-bounce-1 0.6s;
 }
-.rtProjectInfoSection .span_3_of_12:nth-child(2) .circle{
+.rtProjectInfoSection.span_3_of_12:nth-child(2) .circle{
 	  -webkit-animation-delay: 0.2s; /* Chrome, Safari, Opera */
     animation-delay: 0.2s;
 }
