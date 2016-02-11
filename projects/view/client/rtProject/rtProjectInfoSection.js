@@ -16,7 +16,7 @@ Template.rtProjectInfoSection.onRendered(function () {
 		showBlocks(animation, offset);
 		hideBlocks(animation, offset);
 	});
-	
+
 	function hideBlocks(blocks, offset) {
 		blocks.each(function(){
 			if($(this).offset().top >= ($(window).scrollTop()+$(window).height()*offset)){
@@ -56,4 +56,8 @@ Template.rtProjectInfoSection.helpers({
 			return a.date.getTime() - b.date.getTime();
 		});
 	}
+});
+
+Template.registerHelper("prettifyDate", function(timestamp) {
+  return timestamp.toISOString().slice(0, 10)
 });

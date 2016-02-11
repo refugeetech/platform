@@ -73,3 +73,16 @@
 .singleProjectDetailed .project-detail-text{
 	padding-bottom: 40px;
 }
+
+.rtProjectInfoSection .key_contributers div.col {
+  padding-left: 50px;
+}
+
+.rtProjectInfoSection .timeline-object h1 {
+  margin-top: 0;
+}
+
+.rtProjectInfoSection .timeline-object h6 {
+  color: #909090;
+  margin-bottom: 0;
+}
