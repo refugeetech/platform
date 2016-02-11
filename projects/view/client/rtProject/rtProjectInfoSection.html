@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	</section>
-	
+
 	<!-- A slide show might bee a good idea to show key actors for this section -->
 	<div class="section group problem_owner content">
 		{{#each problemOwners}}
@@ -32,7 +32,7 @@
 		<div class="col span_8_of_12"><h1>{{name}}</h1><p>{{description}}</p></div>
 		{{/each}}
 	</div>
-	
+
 	<!-- A slide show might bee a good idea to show key actors for this section -->
 	<div class="section group key_contributers content">
 		{{#each keyContributors}}
@@ -42,17 +42,21 @@
 		{{/each}}
 		{{/each}}
 	</div>
-	
+
 	<!-- The timline seem a bit broken, and to be able to include images it might spare us some time to use a package for this -->
 	<section class="timeline">
 		<div id="line"></div>
 		<!-- Using the dataStore.history array with ProjectEventSchema type objects-->
 		{{#each history}}
 		<div class="section group timeline-object">
-			<div class="col span_5_of_12"><h1>{{title}}</h1><p>{{description}}</p></div>
+			<div class="col span_5_of_12">
+        <h6>{{prettifyDate date}}</h6>
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+      </div>
 		</div>
 		{{/each}}
 	</section>
-	
+
 	</div>
 </template>
