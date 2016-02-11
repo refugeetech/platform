@@ -1,18 +1,32 @@
 //helper schemas for the projectschema dataStore field
+
+ProjectMediaFileSchema = new SimpleSchema({
+  "id": {
+    type: String,
+    optional:true,
+    autoform: {
+      afFieldInput: {
+        type: "cfs-file",
+        collection: "projectMedia"
+      }
+    }
+  }
+});
+
+ProjectMediaLibrarySchema = new SimpleSchema({
+    files: {
+        type: [ProjectMediaFileSchema],
+        label: "Media Library"
+    }
+});
+
 KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain category of users that will be implemented in later iterations
   name: {
     type:String,
     label: "The name of the stakeholder"
   },
-  "mediaId": { //used to store logos/images etc of the stakeholders
-    type: [String],
-    optional:true,
-    autoform: {
-      afFieldInput: {
-        type: ["cfs-file"],
-        collection: "projectMedia"
-      }
-    }
+  media: { //used to store logos/images etc of the stakeholders
+    type: ProjectMediaLibrarySchema
   },
   description: {
     type:String,
@@ -43,15 +57,8 @@ ProjectEventSchema = new SimpleSchema({
     type:[Object], // meta data about this event
     optional:true
   },
-  "mediaId": { //used to store logos/images etc of the event
-    type: String,
-    optional:true,
-    autoform: {
-      afFieldInput: {
-        type: ["cfs-file"],
-        collection: "projectMedia"
-      }
-    }
+  media: { //used to store logos/images etc of the event
+    type: ProjectMediaLibrarySchema
   }
 });
 
@@ -292,15 +299,8 @@ ProjectsSchema = new SimpleSchema({
       }
     }
   },
-  "mediaId": {
-    type: String,
-    optional:true,
-    autoform: {
-      afFieldInput: {
-        type: "cfs-file",
-        collection: "projectMedia"
-      }
-    }
+  media: {
+      type: ProjectMediaLibrarySchema
   },
   isRTProject: {
     type:Boolean,
