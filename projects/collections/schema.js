@@ -4,10 +4,13 @@ ProjectMediaFileSchema = new SimpleSchema({
   "id": {
     type: String,
     optional:true,
+    label: "File",
     autoform: {
       afFieldInput: {
-        type: "cfs-file",
-        collection: "projectMedia"
+        type: "fileUpload",
+        collection: "projectMedia",
+        label: "choose file",
+        optional:true
       }
     }
   }
@@ -16,7 +19,8 @@ ProjectMediaFileSchema = new SimpleSchema({
 ProjectMediaLibrarySchema = new SimpleSchema({
     files: {
         type: [ProjectMediaFileSchema],
-        label: "Media Library"
+        label: "List of files",
+        optional:true
     }
 });
 
@@ -26,7 +30,9 @@ KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain catego
     label: "The name of the stakeholder"
   },
   media: { //used to store logos/images etc of the stakeholders
-    type: ProjectMediaLibrarySchema
+    type: ProjectMediaLibrarySchema,
+    label: "Media library for this stakeholder",
+    optional:true
   },
   description: {
     type:String,
@@ -58,27 +64,38 @@ ProjectEventSchema = new SimpleSchema({
     optional:true
   },
   media: { //used to store logos/images etc of the event
-    type: ProjectMediaLibrarySchema
+    type: ProjectMediaLibrarySchema,
+    label: "Media library for this event"
   }
 });
 
 ProjectDataStoreSchema = new SimpleSchema({
   //this schema is used to store lots of metadata about RT Projects, good for not polluting the ProjectsSchema with arbitrary/temporary fields
   keyContributors: {
-    type:[KeyStakeHolderSchema]
+    type:[KeyStakeHolderSchema],
+    label: "List of key contributors",
+    optional:true
   },
   problemOwners: {
-    type:[KeyStakeHolderSchema]
+    type:[KeyStakeHolderSchema],
+    label: "List of Problem Owners",
+    optional:true
   },
   projectOwners: {
-    type:[KeyStakeHolderSchema]
+    type:[KeyStakeHolderSchema],
+    label: "List of Project Owners",
+    optional:true
   },
   productOwners: {
-    type:[KeyStakeHolderSchema]
+    type:[KeyStakeHolderSchema],
+    label: "List of Product Owners",
+    optional:true
   },
   history: {
     type:[ProjectEventSchema],
-    label: "list of hitstoric events, sorted on date"
+    label: "List of events",
+    optional:true
+   
   }
 });
 
@@ -300,14 +317,17 @@ ProjectsSchema = new SimpleSchema({
     }
   },
   media: {
-      type: ProjectMediaLibrarySchema
+      type: ProjectMediaLibrarySchema,
+      label: "Project Media Library",
+      optional:true
   },
   isRTProject: {
     type:Boolean,
     label: "Is this project a result of the Refugee Tech process?",
   },
   dataStore: { //this object will contain everything else about a project; currently only used for RT Projects
-    type:ProjectDataStoreSchema
+    type:ProjectDataStoreSchema,
+    optional:true
   }
 });
 
