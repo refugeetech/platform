@@ -73,3 +73,7 @@
 .singleProjectDetailed .project-detail-text{
 	padding-bottom: 40px;
 }
+
+.key_contributers div.col {
+  padding-left: 50px !important;
+}
