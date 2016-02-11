@@ -1,0 +1,60 @@
+<template name="singleProjectDetailed">
+	<!-- refactoring activeProjectDetail: projectDetail -->
+	<div class="singleProjectDetailed">
+    {{#with project}} <!-- getting the project object into context -->
+	<div class="section group projectDetail">
+		<div class="col span_4_of_12 image_slide_wrapper">
+			<ul class="image_slide">
+			    <li><img src="http://u.jimdo.com/www400/o/layout/ld15d0bf2d37a9ed2/img/new-startpage/crossplatform.png?v=1438241954595"></li>
+			  {{#each projectMedia}}
+				<li><img src="{{this.url}}"></li>
+				{{/each}}
+			</ul>
+			<button class="btn" id="view-images">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+			<path fill="#EC2870" d="M416.9,371.9H109.8V64.8h307.1V371.9z M134.8,346.9h257.1V89.8H134.8V346.9z"/>
+			<polygon fill="#EC2870" points="98.8,320.8 73.8,320.8 73.8,28.8 365.8,28.8 365.8,53.8 98.8,53.8 "/>
+			</svg>
+			See more images
+			</button>
+		</div>
+		<div class="col span_8_of_12 projectDetailList">
+			<h1>{{name}}</h1>
+			<h3>In Progress <div class="process-progress-bar"><span style="width: {{calculateProgress}}%"></span></div></h3>
+			<ul class="project-detail">
+				<li><h4>Launched in</h4><h4>{{startupDateFormatted}}</h4></li>
+				<li><h4>Category</h4><h4 class="detail"> Coordination</h4></li>
+				<li><h4>Based in </h4><h4 class="detail">{{postalAddress.country}}</h4></li>
+				<li><h4>Application </h4>{{# each platform in targetPlatforms }}<h4 class="detail">{{platform}}</h4>{{/each}}</li>
+				<li>
+			  <h4>Website </h4>
+        {{# if hasMultipleWebsites }}
+          {{# each websites }}
+            <h4 class="detail"><a href="{{url}}">{{name}}</a></h4>
+          {{/ each }}
+        {{else}}
+          {{# each websites }}
+            <h4><a class="detail" href="{{url}}">{{url}}</a></h4>
+          {{/ each }}
+        {{/ if}}
+				</li>
+				<li>
+				<h4>Social </h4>
+				{{# each socialLinks }}
+				  <h4><a class="detail" href="{{url}}">{{type}}</a></h4>
+				{{/each}}
+				</li>
+			</ul>
+			<div class="project-detail-text">
+				<p class="summary">
+					{{description}}
+				</p>
+			</div>
+			<a href="{{webSiteUrl}}" class="btn">Visit Website</a>
+			<button class="btn">Share this project with your friends</button> <!-- some sharing functionality here , maybe the carrots plugin -->
+		</div>
+	</div>
+	{{/with}}
+    </div>
+</template>

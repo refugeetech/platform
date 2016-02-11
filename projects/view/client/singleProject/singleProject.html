@@ -16,7 +16,7 @@
         <p class="truncate">{{ project.description }}</p>
         {{# each link in project.links }}
           <a href="{{ link.url }}" class="badge badge-info">
-            <i class="fa fa-{{ linkTypeClass link.type}}"></i>&nbsp;
+            <i class="fa fa-{{link.type}}"></i>&nbsp;
             {{ link.name }}
           </a>
         {{/ each }}

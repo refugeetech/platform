@@ -1,3 +1,87 @@
+//helper schemas for the projectschema dataStore field
+
+ProjectMediaFileSchema = new SimpleSchema({
+  "id": {
+    type: String,
+    optional:true,
+    autoform: {
+      afFieldInput: {
+        type: "cfs-file",
+        collection: "projectMedia"
+      }
+    }
+  }
+});
+
+ProjectMediaLibrarySchema = new SimpleSchema({
+    files: {
+        type: [ProjectMediaFileSchema],
+        label: "Media Library"
+    }
+});
+
+KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain category of users that will be implemented in later iterations
+  name: {
+    type:String,
+    label: "The name of the stakeholder"
+  },
+  media: { //used to store logos/images etc of the stakeholders
+    type: ProjectMediaLibrarySchema
+  },
+  description: {
+    type:String,
+    label: "Describes the stakeholders and its role in this project"
+  }
+});
+
+ProjectEventSchema = new SimpleSchema({
+  title: {
+    type:String,
+    label:"Title of this event"
+  },
+  date: {
+    type:Date,
+    label:"The date of the event",
+    autoform: {
+      afFieldInput: {
+        type: "bootstrap-datepicker",
+        "data-date-autoclose": "true"
+      }
+    }
+  },
+  description: {
+    type:String,
+    label:"Describe the event"
+  },
+  meta: {
+    type:[Object], // meta data about this event
+    optional:true
+  },
+  media: { //used to store logos/images etc of the event
+    type: ProjectMediaLibrarySchema
+  }
+});
+
+ProjectDataStoreSchema = new SimpleSchema({
+  //this schema is used to store lots of metadata about RT Projects, good for not polluting the ProjectsSchema with arbitrary/temporary fields
+  keyContributors: {
+    type:[KeyStakeHolderSchema]
+  },
+  problemOwners: {
+    type:[KeyStakeHolderSchema]
+  },
+  projectOwners: {
+    type:[KeyStakeHolderSchema]
+  },
+  productOwners: {
+    type:[KeyStakeHolderSchema]
+  },
+  history: {
+    type:[ProjectEventSchema],
+    label: "list of hitstoric events, sorted on date"
+  }
+});
+
 // Schema for Projects collection
 ProjectsSchema = new SimpleSchema({
   "name": {
@@ -215,17 +299,21 @@ ProjectsSchema = new SimpleSchema({
       }
     }
   },
-
-  "mediaId": {
-    type: String,
-    optional:true,
-    autoform: {
-      afFieldInput: {
-        type: "cfs-file",
-        collection: "projectMedia"
-      }
-    }
+  media: {
+      type: ProjectMediaLibrarySchema
+  },
+  isRTProject: {
+    type:Boolean,
+    label: "Is this project a result of the Refugee Tech process?",
+  },
+  dataStore: { //this object will contain everything else about a project; currently only used for RT Projects
+    type:ProjectDataStoreSchema
   }
 });
 
 Projects.attachSchema(ProjectsSchema);
+
+
+
+
+

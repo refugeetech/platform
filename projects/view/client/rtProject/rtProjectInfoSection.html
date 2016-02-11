@@ -1,0 +1,58 @@
+<template name="rtProjectInfoSection">
+	<!-- refactoring activeProjectDetail: Infosection with key actors, timelines etc-->
+	<div class="rtProjectInfoSection">
+	<section class="factorWrapper">
+	<!-- Not sure how this section is supposed to be used; need feedback from davito -->
+	<div class="section group factors">
+		<div class="col span_3_of_12">
+			<div class="circle"><h3>Key factors</h3></div>
+			<div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+		</div>
+		<div class="col span_3_of_12">
+			<div class="circle"><h3>Problem owner</h3></div>
+			<div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></div>
+		</div>
+		<div class="col span_3_of_12">
+			<div class="circle"><h3>Project owner</h3></div>
+			<div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></div>
+		</div>
+		<div class="col span_3_of_12">
+			<div class="circle"><h3>Key Contributers</h3></div>
+			<div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></div>
+		</div>
+	</div>
+	</section>
+	
+	<!-- A slide show might bee a good idea to show key actors for this section -->
+	<div class="section group problem_owner content">
+		{{#each problemOwners}}
+		{{#each media}}
+		<div class="col span_4_of_12 image"><img src="{{url}}"/></div>
+		{{/each}}
+		<div class="col span_8_of_12"><h1>{{name}}</h1><p>{{description}}</p></div>
+		{{/each}}
+	</div>
+	
+	<!-- A slide show might bee a good idea to show key actors for this section -->
+	<div class="section group key_contributers content">
+		{{#each keyContributors}}
+		<div class="col span_8_of_12"><h1>{{name}}</h1><p>{{description}}</p></div>
+		{{#each media}}
+		<div class="col span_4_of_12 image"><img src="{{url}}"/></div>
+		{{/each}}
+		{{/each}}
+	</div>
+	
+	<!-- The timline seem a bit broken, and to be able to include images it might spare us some time to use a package for this -->
+	<section class="timeline">
+		<div id="line"></div>
+		<!-- Using the dataStore.history array with ProjectEventSchema type objects-->
+		{{#each history}}
+		<div class="section group timeline-object">
+			<div class="col span_5_of_12"><h1>{{title}}</h1><p>{{description}}</p></div>
+		</div>
+		{{/each}}
+	</section>
+	
+	</div>
+</template>
