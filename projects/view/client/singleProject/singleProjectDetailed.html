@@ -6,8 +6,10 @@
 		<div class="col span_4_of_12 image_slide_wrapper">
 			<ul class="image_slide">
 			    <li><img src="http://u.jimdo.com/www400/o/layout/ld15d0bf2d37a9ed2/img/new-startpage/crossplatform.png?v=1438241954595"></li>
-			  {{#each projectMedia}}
+			  {{#each media.files}}
+        {{#each pics}}
 				<li><img src="{{this.url}}"></li>
+        {{/each}}
 				{{/each}}
 			</ul>
 			<button class="btn" id="view-images">

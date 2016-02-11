@@ -10,5 +10,6 @@ Template.projectProfile.onCreated(function(){
   self.autorun(function() {
     const projectId = FlowRouter.getParam('projectId');
     self.subscribe('singleProject', projectId);
+    self.subscribe('projectMedia');
   });
 });

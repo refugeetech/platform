@@ -18,7 +18,6 @@ Template.rtProjectInfoSection.onRendered(function () {
 	});
 	
 	function hideBlocks(blocks, offset) {
-		console.log('hide')
 		blocks.each(function(){
 			if($(this).offset().top >= ($(window).scrollTop()+$(window).height()*offset)){
 				$(this).removeClass('active');
