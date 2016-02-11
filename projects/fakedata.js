@@ -4,6 +4,7 @@ if(Meteor.isClient) {
         
         //Define your factories here
         Factory.define('project',Projects, {
+            isRTProject:false,
             mediaid:"none",
             solution: {
               isTech:function() {
