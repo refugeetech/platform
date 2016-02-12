@@ -1,9 +1,9 @@
 /**************** Be a part ********************/
- .be_a_part{
+.be_a_part{
   margin-top: 80px;
   text-align: center;
 }
- .be_a_part .content_wrapper{
+.be_a_part .content_wrapper{
   min-height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -13,7 +13,7 @@
   max-width: 900px;
   background-color: #1F225D;
 }
- .be_a_part h1{
+.be_a_part h1{
   opacity: 0;
   margin-top: 0px;
   font-size: 46px;
@@ -23,7 +23,7 @@
   -moz-transition: all  0.6s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
   transition: all  0.6s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
 }
- .be_a_part p{
+.be_a_part p{
   color:#fff;
   opacity: 0;
   margin-top: 0px;
@@ -31,7 +31,7 @@
   -moz-transition: all  0.8s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
   transition: all  0.8s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
 }
- .be_a_part .btn{
+.be_a_part .btn{
   margin-top: 40px;
   background-color: #fff;
   color:#1F225D;
@@ -40,11 +40,11 @@
   -moz-transition: all  1s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
   transition: all  1s 0.5s cubic-bezier(0.44, 0.88, 0.85, 1.11);
 }
- .be_a_part .animation.active h1{
+.be_a_part .animation.active h1{
   opacity:1;
   margin-top: 0;
 }
- .be_a_part .animation.active p{
+.be_a_part .animation.active p{
   opacity:1;
   margin-top: 0;
 }

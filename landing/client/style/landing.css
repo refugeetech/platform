@@ -1,16 +1,16 @@
 #landing-banner {
-    padding: 70px 0;
-    min-height: 70vh;
-    position: relative;
-    text-align: center;
-    color: #fff;
-    width: 100%;
-    background-image: url('images/background-header.jpg');
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  padding: 70px 0;
+  min-height: 70vh;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  background-image: url('images/background-header.jpg');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 #landing-title {

@@ -1,4 +1,4 @@
-.rtProjectInfoSection .section { 
+.rtProjectInfoSection .section {
   max-width: 1024px;
   clear: both;
   padding: 0px;
@@ -6,45 +6,45 @@
   margin-left: auto;
   margin-right: auto;
 }
-.rtProjectInfoSection .content{ 
+.rtProjectInfoSection .content{
   min-height: 300px;
   display: table;
 }
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection	.content{ 
+  .rtProjectInfoSection	.content{
     min-height: 0px;
-  }	
+  }
 }
-.rtProjectInfoSection .content .col{ 
+.rtProjectInfoSection .content .col{
   display: table-cell;
   vertical-align: middle;
   float: none;
 }
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection	.content .col{ 
+  .rtProjectInfoSection	.content .col{
     display: none;
     min-height: 200px;
-	}
+  }
 }
-.rtProjectInfoSection .content .span_8_of_12{ 
+.rtProjectInfoSection .content .span_8_of_12{
   padding-left:20px;
   padding-right:50px;
 }
 
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection	.content .span_8_of_12{ 
+  .rtProjectInfoSection	.content .span_8_of_12{
     display: block;
     padding: 10px;
-	}
-	.content:nth-child(2n + 2) .span_8_of_12{ 
+  }
+  .content:nth-child(2n + 2) .span_8_of_12{
     padding-left: 10px;
-	}	
+  }
 }
 
-.rtProjectInfoSection .content:nth-child(2n + 2) .span_8_of_12{ 
-	padding-left: 50px;
+.rtProjectInfoSection .content:nth-child(2n + 2) .span_8_of_12{
+  padding-left: 50px;
 }
-.rtProjectInfoSection .content .image{ 
+.rtProjectInfoSection .content .image{
   background-color: #BFBFBF;
   height: 100%;
 
@@ -105,15 +105,15 @@
   padding-bottom: 40px;
 }
 @media only screen and (max-width: 1024px) {
-.rtProjectInfoSection 	.factors .span_3_of_12{
+  .rtProjectInfoSection 	.factors .span_3_of_12{
     width: 49%;
-	}
+  }
 }
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection 	.factors .span_3_of_12{
+  .rtProjectInfoSection 	.factors .span_3_of_12{
     width: calc(100% - 20px);
     padding-left: 20px;
-	}
+  }
 }
 .rtProjectInfoSection .factors p{
   color:#1F225D;
@@ -133,9 +133,9 @@
   background-color: #F0F0F0;
 }
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection 	.timeline #line{
+  .rtProjectInfoSection 	.timeline #line{
     left:23px;
-	}	
+  }
 }
 .rtProjectInfoSection .timeline-object{
   width: 100%;
@@ -150,25 +150,25 @@
   transition: all 0.2s cubic-bezier(0.44, 0.88, 0.85, 1.11);
 }
 .rtProjectInfoSection .timeline-object.active .span_5_of_12{
-	opacity: 1;
-	width: 41.08%;
+  opacity: 1;
+  width: 41.08%;
 }
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection	.timeline-object.active .span_5_of_12{
-	width: calc(100% - 60px);
-	margin-left: 60px
-	}
+  .rtProjectInfoSection	.timeline-object.active .span_5_of_12{
+    width: calc(100% - 60px);
+    margin-left: 60px
+  }
 }
 .rtProjectInfoSection .timeline-object:nth-child(2n + 2) .col{
-	float: right;
+  float: right;
 }
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection	.timeline-object:nth-child(2n + 2) .col{
-	float: left;
-	}
+  .rtProjectInfoSection	.timeline-object:nth-child(2n + 2) .col{
+    float: left;
+  }
 }
 @media only screen and (min-width: 480px) {
-.rtProjectInfoSection 	.timeline-object:nth-child(2n + 2).active .span_5_of_12::after{
+  .rtProjectInfoSection 	.timeline-object:nth-child(2n + 2).active .span_5_of_12::after{
     border-radius: 100px;
     content: " ";
     display: block;
@@ -181,24 +181,24 @@
     -webkit-animation: cd-bounce-1 0.6s;
     -moz-animation: cd-bounce-1 0.6s;
     animation: cd-bounce-1 0.6s;
-	}
-.rtProjectInfoSection	.timeline-object:nth-child(2n + 1).active .span_5_of_12::before{
-  border-radius: 100px;
-  content: " ";
-  display: block;
-  background: #EC2870;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top:calc(50% - 50px);
-  left:calc(50% - 50px);
-  -webkit-animation: cd-bounce-1 0.6s;
-  -moz-animation: cd-bounce-1 0.6s;
-  animation: cd-bounce-1 0.6s;
-	}	
+  }
+  .rtProjectInfoSection	.timeline-object:nth-child(2n + 1).active .span_5_of_12::before{
+    border-radius: 100px;
+    content: " ";
+    display: block;
+    background: #EC2870;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top:calc(50% - 50px);
+    left:calc(50% - 50px);
+    -webkit-animation: cd-bounce-1 0.6s;
+    -moz-animation: cd-bounce-1 0.6s;
+    animation: cd-bounce-1 0.6s;
+  }
 }
 @media only screen and (max-width: 480px) {
-.rtProjectInfoSection	.timeline-object.active .span_5_of_12::before{
+  .rtProjectInfoSection	.timeline-object.active .span_5_of_12::before{
     border-radius: 100px;
     content: " ";
     display: block;
@@ -211,5 +211,5 @@
     -webkit-animation: cd-bounce-1 0.6s;
     -moz-animation: cd-bounce-1 0.6s;
     animation: cd-bounce-1 0.6s;
-	}	
+  }
 }
