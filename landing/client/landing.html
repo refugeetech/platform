@@ -1,38 +1,131 @@
 <template name="landing">
-    <section id="landing-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-                    <div class="landing-page-slogan">
-                        <h2 class="text-faded landing-slogan">
-                            Creative solutions to real world challenges powered by technology and collaboration.
-                        </h2>
-                        <a href="#involved" id="landing-get-involved" class="btn btn-primary btn-rounded btn-red-on-white-rounded">Get involved</a>
-                    </div>
+    <column class="col-lg-1"></column>
+    <column class="col-lg-10">
+      <section class="row" id="landing-banner">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-lg-offset-4 col-md-8 col-md-offset-2 text-center">
+                      <div class="landing-page-slogan">
+                          <h2 class="text-faded landing-slogan">
+                              Creative solutions to real world challenges powered by technology and collaboration.
+                          </h2>
+                          <a href="#involved" id="landing-get-involved" class="btn btn-primary btn-rounded btn-red-on-white-rounded">Get involved</a>
+                      </div>
 
-                </div>
-            </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="row" id="transition">
+        <div class="bgclr-white wrapper">
+          <div class="row section-padding"></div>
+          <column class="col-lg-10 col-lg-offset-1">
+            <row class="row top-text-box">
+              <p class="context-header">The Journey</p>
+              <h2 class="section-heading">Supporting refugees in their transition</h2>
+            </row>
+            <row class="row">
+              <column class="col-lg-4 transition-column" id="transition-1">
+                <img src="images/circle_1_no.png" class="col-lg-12 img-circle" />
+                <h2 class="row transition-heading col-lg-12">Arrival</h2>
+                <p class="row transition-text col-lg-12">The arrival is often frought with trauma and lorem ipsulum trauma and lorem ipsulum trauma and lorem ipsulum trauma and lorem ipsulum</p>
+              </column>
+              <column class="col-lg-4 transition-column" id="transition-2">
+                <img src="images/circle_2_no.png" class="col-lg-12 img-circle" />
+                <h2 class="row transition-heading col-lg-12">Starting over</h2>
+                <p class="row transition-text col-lg-12">The arrival is often frought with trauma and lorem ipsulum trauma and lorem ipsulum trauma and lorem ipsulum trauma and lorem ipsulum</p>
+              </column>
+              <column class="col-lg-4 transition-column" id="transition-3">
+                <img src="images/circle_3_no.png" class="col-lg-12 img-circle" />
+                <h2 class="row transition-heading col-lg-12">Fulfilling potential</h2>
+                <p class="row transition-text col-lg-12">The arrival is often frought with trauma and lorem ipsulum trauma and lorem ipsulum trauma and lorem ipsulum trauma and lorem ipsulum</p>
+              </column>
+            </row>
+          </column>
+          <div class="row section-padding"></div>
         </div>
-    </section>
-
-    <section id="two">
-        <div class="col-md-12 col-sm-12 col-xs-12 second-sector">
-            <span class="small-landing-page-sector-header">The Journey</span>
-            <h2 class="second-header-landing-page">Supporting refugees in their transition</h2>
-            <div class="col-md-4 col-sm-12 col-xs-12"></div>
-            <div class="col-md-4 landing-page-images col-sm-12 col-xs-12">
-                <ul class="landing-page-images">
-                    <li>
-                            <img src="images/background-header.jpg" class="img-circle" />
-                    </li>
-                    <li>
-                            <img src="images/background-header.jpg" class="img-circle" />
-                        </li>
-                    <li>
-                            <img src="images/background-header.jpg" class="img-circle" />
-                    </li>
-                </ul>
+      </section>
+      <section class="row" id="volunteer">
+        <div class="bgclr-blue wrapper container-fluid">
+          <div class="row section-padding"></div>
+          <div class="container-fluid row">
+            <div class="top-text-box col-lg-6 col-lg-offset-4">
+              <padding class="row"></padding>
+              <div class="row"><p class="context-header col-lg-6 col-lg-offset-3">Your Expertise</p></div>
+              <h1 class="row">Volunteering and Networking</h1>
+              <p class="target-groups-text row">(NGO, Companies, Programmers, Social Worker, etc.)</p>
             </div>
-    </div>
-</section>
+          </div>
+          <padding class="row"></padding>
+          <div class="container-fluid row">
+            <div class="network-image-column col-lg-5 col-lg-offset-1">
+              <img src="images/networking_help_bluebg.svg" class="img-circle col-lg-6 col-lg-offset-3" />
+            </div>
+            <div class="get-involved-column col-lg-5">
+              <p class="get-involved-text">We welcome volunteers from all backgrounds get involved with Refugee Tech. If you have a skill or relevant experience that can help us reach our goal of affecting change in the lives of refugees, we want to hear from you. <br><br> Please fill out our short survey</p>
+              <a href="#involved" class="get-involved-button btn btn-primary btn-rounded btn-white-on-red-rounded">Get involved</a>
+            </div>
+          </div>
+        <div class="row section-padding"></div>
+        </div>
+      </section>
+      <section class="row bgimg-refugee" id="our-process">
+        <!-- There is probably a better way to offset rows -->
+        <div class="row section-padding"></div>
+        <div id="our-process-row" class="container-fluid row">
+          <div class="what-we-do-column col-lg-5 col-lg-offset-6">
+            <p class="context-header">Our Process</p>
+            <h2 class="column-heading">Getting to Sweden is only the first part of the transition.</h2>
+            <br>
+            <a href="#involved" class="get-involved-button btn btn-primary btn-rounded btn-red-on-white-rounded">What we do</a>
+          </div>
+        </div>
+        <div class="row section-padding"></div>
+        <div id="knowledge-projects-row" class="container-fluid row">
+          <div class="bgclr-white col-lg-10 col-lg-offset-1">
+            <padding class="row"></padding>
+            <row class="row">
+              <div class="read-and-continue col-lg-4 col-lg-offset-1">
+                <div class="row"><p class="context-header col-lg-6 col-lg-offset-3">Knowledge</p></div>
+                <h1 class="row">Who, Why, How, Get som answers</h1>
+                <p class="target-groups-text row">Some cool information about what the knowledgehub is goes here bros and siss.</p>
+              </div>
+              <div class="read-and-continue col-lg-4 col-lg-offset-2">
+                <div class="row"><p class="context-header col-lg-6 col-lg-offset-3">Projects</p></div>
+                <h1 class="row">A place for all creative solutions</h1>
+                <p class="projecthub-info-text row">Some cool information about what the projecthub is goes here bros and siss.</p>
+              </div>
+            </row>
+            <row class="row button-row"> <!-- to make sure the buttons are aligned -->
+              <column class="col-lg-4 col-lg-offset-1">
+                <a href="#involved" class="get-involved-button btn btn-primary btn-rounded btn-white-on-red-rounded">knowledge hub</a>
+              </column>
+              <column class="col-lg-4 col-lg-offset-2">
+                <a href="#involved" class="get-involved-button btn btn-primary btn-rounded btn-white-on-red-rounded">See all Projects</a>
+              </column>
+            </row>
+            <div class="row section-padding"></div>
+          </div>
+        </div>
+      </section>
+      <section class="row" id="peak1-blog">
+        <div class="bgclr-blue container-fluid">
+          <div class="row section-padding"></div>
+          <row class="row">
+            <column class="col-lg-3"></column>
+            <div class="row bgclr-blue col-lg-6">
+              <div class="row read-and-continue container-fluid">
+                <div class="row"><p class="context-header col-lg-6 col-lg-offset-3">Blog</p></div>
+                <h1 class="row">Yashar and his team just released Lingio, an interacibe language learning app!</h1>
+              </div>
+              <row class="row">
+                <a href="#involved" class="get-involved-button btn btn-primary btn-rounded btn-white-on-red-rounded">Read this article</a>
+                <a href="#involved" class="get-involved-button btn btn-primary btn-rounded btn-red-on-blue-rounded">Visit Blog</a>
+              </row>
+            </div>
+          </row>
+          <div class="row section-padding"></div>
+        </div>
+      </section>
+    </column>
 </template>
