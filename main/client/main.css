@@ -10,27 +10,27 @@ body {
  @font-face {
    font-family: 'Lab Grotesque Black';
    src:  url('fonts/labGrotesque/LabGrotesqueWeb-Black.woff2') format('woff2'),
-   url('fonts/labGrotesque/LabGrotesqueWeb-Black.woff') format('woff');
+         url('fonts/labGrotesque/LabGrotesqueWeb-Black.woff') format('woff');
  }
  @font-face {
    font-family: 'Lab Grotesque BlackItalic';
    src:  url('fonts/labGrotesque/LabGrotesqueWeb-BlackItalic.woff2') format('woff2'),
-   url('fonts/labGrotesque/LabGrotesqueWeb-BlackItalic.woff') format('woff');
+         url('fonts/labGrotesque/LabGrotesqueWeb-BlackItalic.woff') format('woff');
  }
  @font-face {
    font-family: 'Lab Grotesque Bold';
    src:  url('fonts/labGrotesque/LabGrotesqueWeb-Bold.woff2') format('woff2'),
-   url('fonts/labGrotesque/LabGrotesqueWeb-Bold.woff') format('woff');
+         url('fonts/labGrotesque/LabGrotesqueWeb-Bold.woff') format('woff');
  }
  @font-face {
    font-family: 'Lab Grotesque BoldItalic';
    src:  url('fonts/labGrotesque/LabGrotesqueWeb-BoldItalic.woff2') format('woff2'),
-   url('fonts/labGrotesque/LabGrotesqueWeb-BoldItalic.woff') format('woff');
+         url('fonts/labGrotesque/LabGrotesqueWeb-BoldItalic.woff') format('woff');
  }
  @font-face {
    font-family: 'Lab Grotesque Italic';
    src:  url('fonts/labGrotesque/LabGrotesqueWeb-Italic.woff2') format('woff2'),
-   url('fonts/labGrotesque/LabGrotesqueWeb-Italic.woff') format('woff');
+         url('fonts/labGrotesque/LabGrotesqueWeb-Italic.woff') format('woff');
  }
  @font-face {
   font-family: 'Lab Grotesque Light';
@@ -53,9 +53,9 @@ body {
         url('fonts/labGrotesque/LabGrotesqueWeb-MediumItalic.woff') format('woff');
  }
  @font-face {
-   font-family: 'Lab Grotesque Regular';
-   src:  url('fonts/labGrotesque/LabGrotesqueWeb-Regular.woff2') format('woff2'),
-   url('fonts/labGrotesque/LabGrotesqueWeb-Regular.woff') format('woff');
+  font-family: 'Lab Grotesque Regular';
+  src:  url('fonts/labGrotesque/LabGrotesqueWeb-Regular.woff2') format('woff2'),
+  url('fonts/labGrotesque/LabGrotesqueWeb-Regular.woff') format('woff');
  }
 
 body {
@@ -71,7 +71,7 @@ body {
  */
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /*
@@ -80,12 +80,12 @@ body {
  */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
