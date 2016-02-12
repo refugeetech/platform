@@ -17,11 +17,11 @@ ProjectMediaFileSchema = new SimpleSchema({
 });
 
 ProjectMediaLibrarySchema = new SimpleSchema({
-    files: {
-        type: [ProjectMediaFileSchema],
-        label: "List of files",
-        optional:true
-    }
+  files: {
+    type: [ProjectMediaFileSchema],
+    label: "List of files",
+    optional:true
+  }
 });
 
 KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain category of users that will be implemented in later iterations
@@ -95,7 +95,7 @@ ProjectDataStoreSchema = new SimpleSchema({
     type:[ProjectEventSchema],
     label: "List of events",
     optional:true
-   
+
   }
 });
 
@@ -117,36 +117,36 @@ ProjectsSchema = new SimpleSchema({
   },
 
   "challengeCategories": {
-  type: [String],
-  label: "Challenge Categories",
-  allowedValues: ['social', 'bureaucracy', 'housing', 'education',
-                  'language', 'employment', 'coordination'],
-  autoform: {
-    options: [
-      {label: "Social", value: "social"},
-      {label: "Bureaucracy", value: "bureaucracy"},
-      {label: "Housing", value: "housing"},
-      {label: "Education", value: "education"},
-      {label: "Language", value: "language"},
-      {label: "Employment", value: "employment"},
-      {label: "Coordination", value: "coordination"}
-    ]
-  }
-},
+    type: [String],
+    label: "Challenge Categories",
+    allowedValues: ['social', 'bureaucracy', 'housing', 'education',
+    'language', 'employment', 'coordination'],
+    autoform: {
+      options: [
+        {label: "Social", value: "social"},
+        {label: "Bureaucracy", value: "bureaucracy"},
+        {label: "Housing", value: "housing"},
+        {label: "Education", value: "education"},
+        {label: "Language", value: "language"},
+        {label: "Employment", value: "employment"},
+        {label: "Coordination", value: "coordination"}
+      ]
+    }
+  },
 
   "solution": {
-     type: Object,
-     label: "Type of solution"
-   },
-   "solution.isTech":{
-     type:Boolean,
-     label:"Is this solution predominalty mediated by technology?"
-   },
-   "solution.description":{
-     type:String,
-     label:"Description of solution",
-     max: 500
-   },
+    type: Object,
+    label: "Type of solution"
+  },
+  "solution.isTech":{
+    type:Boolean,
+    label:"Is this solution predominalty mediated by technology?"
+  },
+  "solution.description":{
+    type:String,
+    label:"Description of solution",
+    max: 500
+  },
 
   // TODO: auto-associate user ID that created project
   // "contactPersonId": {
@@ -170,39 +170,39 @@ ProjectsSchema = new SimpleSchema({
     label: "Tags"
   },
 
-// The actual date the project began
+  // The actual date the project began
   "startupDate": {
     type: Date,
     label: "Project Startup Date",
     autoform: {
       afFieldInput: {
-      type: "bootstrap-datepicker",
-      "data-date-autoclose": "true"
+        type: "bootstrap-datepicker",
+        "data-date-autoclose": "true"
       }
     }
   },
 
   "currentStage": {
-     type: String,
-     allowedValues: [
-        'initiation',
-        'planning',
-        'implementationExecution',
-        'operationMonitoring',
-        'closing'
-     ],
-     optional: true,
-     label: "Select current project stage",
-     autoform: {
-        options: [
-           {label: "Initiation", value: "initiation"},
-           {label: "Planning", value: "planning"},
-           {label: "Implementation / Execution", value: "implementationExecution"},
-           {label: "Operation / Monitoring", value: "operationMonitoring"},
-           {label: "Closing", value: "closing"}
-       ]
-     }
-   },
+    type: String,
+    allowedValues: [
+      'initiation',
+      'planning',
+      'implementationExecution',
+      'operationMonitoring',
+      'closing'
+    ],
+    optional: true,
+    label: "Select current project stage",
+    autoform: {
+      options: [
+        {label: "Initiation", value: "initiation"},
+        {label: "Planning", value: "planning"},
+        {label: "Implementation / Execution", value: "implementationExecution"},
+        {label: "Operation / Monitoring", value: "operationMonitoring"},
+        {label: "Closing", value: "closing"}
+      ]
+    }
+  },
 
   // TODO: add Teams feature
   // "teamIds": {
@@ -255,18 +255,18 @@ ProjectsSchema = new SimpleSchema({
     type: Object,
     label: "Postal Address"
   },
- "postalAddress.city":{
+  "postalAddress.city":{
     type:String,
     label:"City"
- },
+  },
   "postalAddress.country":{
     type:String,
     label:"Country"
   },
 
   "links": {
-     type: [Object],
-     label: "Links"
+    type: [Object],
+    label: "Links"
   },
   "links.$.name":{
     type: String,
@@ -317,9 +317,9 @@ ProjectsSchema = new SimpleSchema({
     }
   },
   media: {
-      type: ProjectMediaLibrarySchema,
-      label: "Project Media Library",
-      optional:true
+    type: ProjectMediaLibrarySchema,
+    label: "Project Media Library",
+    optional:true
   },
   isRTProject: {
     type:Boolean,
@@ -332,8 +332,3 @@ ProjectsSchema = new SimpleSchema({
 });
 
 Projects.attachSchema(ProjectsSchema);
-
-
-
-
-

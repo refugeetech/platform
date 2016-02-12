@@ -1,6 +1,10 @@
 /*Truncates text that is longer than one line*/
 .truncate{
-    white-space: nowrap;
-    overflow:hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 97be0a8e74288c2bb2697640fce3d8b7f1ae6a2c

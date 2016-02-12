@@ -1,6 +1,6 @@
 /*
- *  16px is the body font-size - main.css
- */
+*  16px is the body font-size - main.css
+*/
 
 #top-nav.navbar-default {
   background: #fff;
@@ -44,9 +44,9 @@
 #top-nav.navbar-default .navbar-toggle,
 #top-nav.navbar-default .navbar-toggle:hover,
 #top-nav.navbar-default .navbar-toggle:focus {
-    color: inherit;
-    border: none;
-    background: none;
+  color: inherit;
+  border: none;
+  background: none;
 }
 #top-nav.navbar-default .navbar-toggle {
   margin: 1em 0 0;
@@ -70,7 +70,7 @@
     margin-top: calc(62/16 * 1em); /* 62 is navbar height */
     text-align: center;
   }
-   #top-nav .navbar-right .glyphicon {
+  #top-nav .navbar-right .glyphicon {
     top: .2em;
     left: -.2em;
     font-size: 1.2em;
@@ -78,12 +78,12 @@
 }
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+Media Queries
+========================================================================== */
 
 @media only screen and (min-width: 768px) { /* sm */
 
-/* =========== Logo =========== */
+  /* =========== Logo =========== */
 
   #top-nav .navbar-brand {
     padding: 1.3125em -0px; /* 21/16 */
@@ -93,9 +93,9 @@
     left: calc(15/16 * 1em);
   }
 
-/* =====================================
-   Navbars
-   ===================================== */
+  /* =====================================
+  Navbars
+  ===================================== */
 
   #top-nav.navbar-default .navbar-nav > li > a:hover {
     border-bottom: 5px solid #1d2660;

@@ -1,15 +1,15 @@
 
 <template name="projectProfile">
-<!-- We are subscibing to the singleProject publication -->
+  <!-- We are subscibing to the singleProject publication -->
   {{#if Template.subscriptionsReady }}
-  <!-- calling the helper function getProject that returns a project object using the route parameter projectId -->
+    <!-- calling the helper function getProject that returns a project object using the route parameter projectId -->
     {{#with project }}
-    {{#if isRTProject }}
-      {{> rtProjectProfile }}
-    {{else}}
-      {{> singleProjectDetailed }}
-      {{> beAPart }}
-    {{/if}}
+      {{#if isRTProject }}
+        {{> rtProjectProfile }}
+      {{else}}
+        {{> singleProjectDetailed }}
+        {{> beAPart }}
+      {{/if}}
     {{/with }}
   {{/if}}
 </template>
