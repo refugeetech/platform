@@ -3,63 +3,13 @@
 <!-- We are subscibing to the singleProject publication -->
   {{#if Template.subscriptionsReady }}
   <!-- calling the helper function getProject that returns a project object using the route parameter projectId -->
-    {{ #with getProject }}
-
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center">
-          {{#each projectMedia}}
-            <div>
-              <img style="width:100%" src="{{this.url}}" alt="" />
-            </div>
-          {{/each}}
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="page-header">
-          <h1>{{name}}</h1>
-        </div>
-        <label>Progress: </label>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="{{calculateProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{calculateProgress}}%;">
-            <span class="sr-only">{{calculateProgress}}% Complete</span>
-          </div>
-        </div>
-        <label>Launched in: </label><span>{{startupDateFormatted}}</span><br/>
-        <label>Based in: </label><span>{{postalAddress.country}}</span><br/>
-        <label>Website: </label>
-        {{# if hasMultipleWebsites }}
-          {{# each websites }}
-            <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}</a></span>
-          {{/ each }}
-        {{else}}
-          {{# each websites }}
-            <span class="label label-default"><a href="{{url}}">{{url}}</a></span>
-          {{/ each }}
-        {{/ if}}
-
-        <br/>
-        <label>Application</label>
-        {{# each platform in targetPlatforms }}
-          <span class="label label-default">{{platform}}</span>
-        {{/ each }}
-        <br/>
-
-        <label>Social</label>
-        {{# each socialLinks }}
-          <span class="label label-default {{typeToClass}}"><a href="{{url}}">{{name}}</a></span>
-        {{/ each }}
-        <br/>
-
-        <label>Challenge Categories</label>
-        {{# each category in challengeCategories }}
-          <span class="label label-default">{{category}}</span>
-        {{/ each }}
-        <br/><br/>
-        <p class="description">{{ description }}</p>
-      </div>
-    </div>
-
-
-    {{ /with }}
+    {{#with project }}
+    {{#if isRTProject }}
+      {{> rtProjectProfile }}
+    {{else}}
+      {{> singleProjectDetailed }}
+      {{> beAPart }}
+    {{/if}}
+    {{/with }}
   {{/if}}
-
 </template>
