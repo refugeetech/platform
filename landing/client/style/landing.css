@@ -84,6 +84,7 @@
 }
 
 /* SECTION #volunteer */
+
  .section-heading {
     text-align: center;
     font-size: 4.5rem;
@@ -95,17 +96,21 @@
     font-weight: 700;
     letter-spacing: 0.3rem;
  }
+ .column-paragraph {
+    font-size: 3rem;
+    font-weight: 300;
+ }
  .top-text-box {
    align-items:center;
    text-align: center;
  }
  
  .top-text-box h1 {
-   font-size: 3em;
+   font-size: 4em;
  }
  
   .context-header  {
-   font-size: 1em;
+   font-size: 1.5em;
  }
  
  .target-groups-text {
