@@ -1,0 +1,16 @@
+ .section-padding {
+   padding-top: 3em;
+   padding-bottom: 3em;
+ }
+ #about-banner{
+     height:25em;
+     border:1px solid black;
+     background-color: #8a8889;
+     margin:0;
+     padding:0;
+ }
+
+ #about-text h1{
+     font-size: 4em;
+
+ }
