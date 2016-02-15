@@ -9,8 +9,7 @@
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  /* background: linear-gradient(to top,#20245C,#282761); */
-  
+ 
   /* flip background vertically */
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
