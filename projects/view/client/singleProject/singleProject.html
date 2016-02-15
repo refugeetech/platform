@@ -15,10 +15,10 @@
       <div class="panel-body">
         <p class="truncate">{{ project.description }}</p>
         {{# each link in project.links }}
-          <a href="{{ link.url }}" class="badge badge-info">
-            <i class="fa fa-{{ linkTypeClass link.type}}"></i>&nbsp;
-            {{ link.name }}
-          </a>
+        <a href="{{ link.url }}" class="badge badge-info">
+          <i class="fa fa-{{link.type}}"></i>&nbsp;
+          {{ link.name }}
+        </a>
         {{/ each }}
       </div>
       <div class="panel-footer">
