@@ -1,0 +1,33 @@
+#our-process {
+  background-image: url('images/gfx_5.jpg');
+ 
+  min-height: 70vh;
+  text-align: left;
+  color: #fff;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  /* background: linear-gradient(to top,#20245C,#282761); */
+  
+  /* flip background vertically */
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  
+ }
+ 
+ #our-process > * {
+   /* undo the vertical flip for all child elements */
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+   
+ }

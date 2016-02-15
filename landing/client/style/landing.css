@@ -117,18 +117,7 @@
    font-size: 1.5em;
  }
  
- .bgimg-refugee {
-  background-image: url('images/gfx_5.jpg');
- 
-  min-height: 70vh;
-  text-align: left;
-  color: #fff;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
- }
+
  
  .bgimg-banner {
     position: relative;
@@ -136,6 +125,7 @@
     color: #fff;
     background-image: url('images/background-header.jpg');
     font-size: 1em;
+    
  }
  
  .bgclr-blue {
