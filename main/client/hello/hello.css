@@ -10,9 +10,8 @@
 
 #lets-be-friends a{
     color:#000000;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-color: #CB000F;
-    -webkit-text-decoration-style: double;
+    text-decoration: underline wavy black;        /* Red underlining */
+
 }
 
 #children-pics{
