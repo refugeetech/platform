@@ -3,15 +3,16 @@
 }
 
 #lets-be-friends h1{
-    font-size: 5em;
+    font-size: 4em;
     color:#ffffff;
 
 }
 
 #lets-be-friends a{
     color:#000000;
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-color: #CB000F;
+    -webkit-text-decoration-style: double;
 }
 
 #children-pics{
@@ -24,6 +25,6 @@
 }
 
 #lets-be-friends-text{
-    padding:2em;
+    padding:3em;
 }
 
