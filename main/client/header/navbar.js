@@ -1,21 +1,19 @@
 if (Meteor.isClient) {
 
   Meteor.startup(function() {
-  // Runs when the DOM is ready
-  
-  Session.set('willShowAutoSuggestion',false);
+    // Runs when the DOM is ready
+    Session.set('willShowAutoSuggestion',false);
 
     const NAVBAR_HEIGHT = 75; // original navbar height in px
 
     var $window    = $(window),
-        $document  = $(document),
-        $searchbar = $('#searchbar');
-        
+    $document  = $(document),
+    $searchbar = $('#searchbar');
 
     $window.on('scroll', function(e) {
-    // The scroll event is not supported yet by Meteor https://github.com/meteor/meteor/issues/3298,
-    // so we use a jquery instead. 
-    // This block runs whenever the page is scrolled
+      // The scroll event is not supported yet by Meteor https://github.com/meteor/meteor/issues/3298,
+      // so we use a jquery instead.
+      // This block runs whenever the page is scrolled
       toggleNavbarClass();
     });
 
@@ -38,13 +36,12 @@ if (Meteor.isClient) {
     'click .activate-searchbar': function(event) {
       event.preventDefault();
       if(!$('#searchbar').hasClass('active')) {
-          // Focus on the input of the searchbar only if it is already hidden
-          $('#searchbar input').focus();
-          //show autosuggestions only if input has focus
-          Session.set('willShowAutoSuggestion',true);
+        // Focus on the input of the searchbar only if it is already hidden
+        $('#searchbar input').focus();
+        //show autosuggestions only if input has focus
+        Session.set('willShowAutoSuggestion',true);
       }
       $('#searchbar').toggleClass('active'); // Toggle the searchbar
-      
     }
   });
 }
