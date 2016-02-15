@@ -2,13 +2,22 @@
    padding-top: 3em;
    padding-bottom: 3em;
  }
+
  #about-banner{
-     height:25em;
-     border:1px solid black;
-     background-color: #8a8889;
-     margin:0;
-     padding:0;
+     padding: 70px 0;
+     min-height: 70vh;
+     position: relative;
+     text-align: center;
+     color: #fff;
+     width: 100%;
+     background: #BFBFBF;
+     background-position: center;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
  }
+
 
  #about-text h1{
      font-size: 4em;
