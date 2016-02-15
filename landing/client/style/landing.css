@@ -29,26 +29,6 @@
     font-size: 0.7em;
 }
 
-.btn-red-on-white-rounded {
-    background: #FFFFFF;
-    color: #D92D6F;
-    border-radius: 24px;
-    font-size: 2.5rem;
-}
-
- .btn-white-on-red-rounded {
-    background: #D92D6F;
-    color: #FFFFFF;
-    border-radius: 24px;
-    font-size: 2.5rem;
- }
- 
- .btn-red-on-blue-rounded {
-    background: #20245C;
-    color: #D92D6F;
-    border-radius: 24px;
-    font-size: 2.5rem;
- }
 
 #landing-get-involved {
     margin-top: -10%;
@@ -147,22 +127,6 @@
    background-color: white;
    color:#20245C;
 }
-
-
-/* General Button Stuff */
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
-    background-color: #20245C;
-    color:#D92D6F;
-}
-
- .btn:hover {
-  background-color: #20245C;
- }
-
- .bgclr-white.btn {
-  box-shadow: white;
- }
  
  .transition-column {
    align-items: center;
