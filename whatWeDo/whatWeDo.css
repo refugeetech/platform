@@ -1,0 +1,19 @@
+#what-we-do .section-header-paragraph {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+#what-we-do .section-paragraph {
+  font-size: 1.5em;
+  font-weight: 300;
+  word-spacing: 0.3em;
+}
+
+#what-we-do .row-padding {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+#what-we-do {
+  
+}
