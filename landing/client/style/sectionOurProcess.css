@@ -4,11 +4,11 @@
   min-height: 70vh;
   text-align: left;
   color: #fff;
-  background-position: top left;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  background-size: 100%;
-  -o-background-size: 100%;
+  background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   
   /* flip background vertically */
   -moz-transform: scaleX(-1);
