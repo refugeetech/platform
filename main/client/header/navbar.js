@@ -32,7 +32,7 @@ Template.mainNavbar.rendered = function () {
 
   //adding share-button
   let config = {
-    url:"http://www.refugeetech.com"
+    url:"http://www.refugeetech.com",
     ui: {
       flyout: "bottom center",
       button_font: false,
