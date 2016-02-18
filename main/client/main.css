@@ -1,7 +1,7 @@
 /* Variables */
 
 body {
-  margin-top: 3.7em; /* Ensure body is not covered by top navbar */ /*TODO: Solve this using a better method*/
+   /* Ensure body is not covered by top navbar */ /*TODO: Solve this using a better method*/
   font-size: 16px;
 }
 
