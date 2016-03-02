@@ -1,0 +1,28 @@
+#lets-be-friends {
+    background: #E92E71;
+}
+
+#lets-be-friends h1 {
+    font-size: 4em;
+    color: #ffffff;
+
+}
+
+#lets-be-friends a {
+    color: #000000;
+}
+
+#children-pics {
+    display: inline-block;
+    overflow: hidden;
+}
+
+#children-pics img {
+    float: left;
+    width: 25%;
+}
+
+#lets-be-friends-text {
+    padding: 3em;
+}
+

@@ -1,5 +1,7 @@
+/* Variables */
+
 body {
-  margin-top: 3.7em; /* Ensure body is not covered by top navbar */
+   /* Ensure body is not covered by top navbar */ /*TODO: Solve this using a better method*/
   font-size: 16px;
 }
 
@@ -58,9 +60,40 @@ Typography | TODO: Consider using font-weights like this: https://www.smashingma
   url('fonts/labGrotesque/LabGrotesqueWeb-Regular.woff') format('woff');
 }
 
+/* Default Font Settings */
 body {
-  font-family: "Lab Grotesque Regular", Helvetica, sans-serif; font-weight:normal; font-style:normal;;
+  font-family: 'Lab Grotesque Regular', Helvetica, sans-serif; font-weight:normal; font-style:normal;;
 }
+
+ .section-heading {
+   font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:bold; font-style:normal;;
+   font-size: 3em;
+ }
+ 
+ h2 {
+   font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:bold; font-style:normal; 
+ }
+ 
+ .column-heading {
+   font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:bold; font-style:normal;
+   font-size: 2em;
+   line-height: calc(54/46);
+ }
+ 
+ .column-paragraph {
+  font-size: 1.5em;
+  line-height: calc(50/40);
+ }
+ 
+ .section-paragraph {
+  font-size: 2em;
+  line-height: calc(48/32);
+ }
+ 
+ .context-header {
+   font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:normal; font-style:italic;;
+   font-size: 1.5em;
+ }
 
 /* ==========================================================================
 Helper classes

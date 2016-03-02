@@ -5,7 +5,8 @@
 <template name="mainLayout">
   {{> mainNavbar }}
   {{> searchbar }}
-  {{> Template.dynamic template=landing }}
+  {{> Template.dynamic template=landing}}
+    {{> Template.dynamic template=about}}
   <div class="container-fluid">
     {{> Template.dynamic template=main }}
   </div>
