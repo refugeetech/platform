@@ -1,0 +1,18 @@
+#letsBeFriends {
+    background: #E92E71;
+    padding: 3em;
+}
+
+#letsBeFriends h1 {
+    font-size: 4em;
+    color: #ffffff;
+
+}
+
+#letsBeFriends a {
+    color: #000000;
+}
+
+#letsBeFriends.text {
+    padding: 3em;
+}

@@ -1,0 +1,10 @@
+#childrenPics {
+    display: inline-block;
+    overflow: hidden;
+}
+
+#childrenPics img {
+    float: left;
+    width: 25%;
+}
+
