@@ -1,0 +1,19 @@
+<template name="sectionWhatTheySay">
+  <section id="whatTheySay" class="row bgclr-blue">
+    <div class="row context-header">
+      <div class="col-lg-4 col-lg-offset-5">Buzz</div>
+    </div>
+    <div class="row">
+      <h1>What they are saying about us</h1>
+    </div>
+    <div class="owl-carousel row">
+      {{#each media}}
+        <div id="{{id}}" class="media col-lg-6">
+          <a href="{{source}}" alt="{{text}}">
+            <img src="{{pic}}">
+          </a>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+</template>

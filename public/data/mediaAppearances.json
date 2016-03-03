@@ -1,0 +1,67 @@
+  {
+    "media": [
+    {
+      "outlet":"Di-Digital",
+      "pic":"http://digital.di.se/Content/images/digital/logos/di_digital_logo.svg",
+      "source":"http://digital.di.se/artikel/techinsats-till-flyktingar",
+      "text":"Så ska tech-volontärerna hjälpa flyktingar",
+      "language":"SE"
+    },
+    {
+      "outlet":"Radio Sweden Arabic",
+      "pic":"images/Sverigesradio_srgb.png",
+      "source":"http://sverigesradio.se/sida/artikel.aspx?programid=2494&artikel=6289735",
+      "text":"تطبيقات جديدة ستساعد القادمين الجدد على الاندماج",
+      "language":"AR"
+    },
+    {
+      "outlet":"Sveriges Radio P1",
+      "pic":"images/P1_srgb_sv_neg.png",
+      "source":"http://sverigesradio.se/sida/artikel.aspx?programid=4058&artikel=6325671",
+      "text":"Kan teknik vara vägen till jobb?",
+      "language":"SE"
+    },
+    {
+      "outlet":"Radio Sweden P6",
+      "pic":"images/Sverigesradio_srgb.png",
+      "source":"http://sverigesradio.se/sida/artikel.aspx?programid=2054&artikel=6291903",
+      "text":"Helping refugees with apps",
+      "language":"EN"
+    },
+    {
+      "outlet":"Sveriges Radio P4",
+      "pic":"images/P4_srgb_sv_neg.png",
+      "source":"http://sverigesradio.se/sida/artikel.aspx?programid=103&artikel=6290852",
+      "text":"Refugee Tech vill hjälpa flyktingar med appar",
+      "language":"SE"
+    },
+    {
+      "outlet":"InternetWorld",
+      "pic":"images/internetworld-logo.jpg",
+      "source":"http://internetworld.idg.se/2.1006/1.647356/teknik-integration?queryText=refugee%20tech",
+      "text":"Teknik löser integrationsproblem – så jobbar Refugee Tech",
+      "language":"SE"
+    },
+    {
+      "outlet":"Feber.se",
+      "pic":"images/feberlogo6.png",
+      "source":"http://feber.se/pryl/art/337633/refugee_tech_hjlper_flyktingar/",
+      "text":"Refugee Tech hjälper flyktingar i Sverige med teknik",
+      "language":"SE"
+    },
+    {
+      "outlet":"mobilestories.se",
+      "pic":"images/mobilestorieslogo.png",
+      "source":"http://mobilestories.se/refugee-tech",
+      "text":"Refugee Tech är en ideell organisation tog form ur en Facebook-grupp hösten 2015",
+      "language":"SE"
+    },
+    {
+      "outlet":"Resume",
+      "pic":"images/resume-logo.jpg",
+      "source":"http://www.resume.se/nyheter/artiklar/2015/12/11/hackaton-pa-byragolvet-ska-forenkla-nyanlandas-etablering/",
+      "text":"Hackaton på byrågolvet ska förenkla livet för nyanlända",
+      "language":"SE"
+    }
+  ]
+}
