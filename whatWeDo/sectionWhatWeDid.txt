@@ -1,0 +1,28 @@
+This is copy for a yet to be created section
+
+RT History => Presenting a compelling story
+
+(cant we use mystory for this?)
+
+Startup
+Background: The boy on the beach , Refugee Air, Tech Initatives, There has to be a better way
+A group had been created: refugee tech facebook group , Nicole. We got together and Milad was asked to set things up.
+Setting up the Team: milad, shahin, arsham, leo
+Reaching out: Ambjörn, etc
+Finding our purpose: projecthub,crowdsourcing,etc
+Setting up the website: cred to him
+
+Iteration 0
+First event: actors, people present, etc
+Outcome: report
+
+First hackathon: actors, etc
+
+refocusing: pwc, pilotprocess etc
+
+planning the pilotprocess
+
+Iteration 1 : pilotprocess
+In our latest iteration the theme was Jobs and Integration. Thus we identified problems with relevant actors such as the swedish Arbetsförmedlingen, Incluso and others. We identified 4 challenges, went on to produce 4 solutions together with additional creatives from hyperisland and professional analysts from PwC. Finally our hackathon produced 4 prototypes showcasing how the solutions could be implemented to solve the initial challenges. These prototypes represent the beginning of a cycle that produces Refugee Tech Projects several times a year. RT Projects are the forerunners of tech inspired responses to integration challenges and will always strive for the highest standards in inclusive and open innovation for newcomers, with newcomers.
+outcomes: reports, projects, etc
+
