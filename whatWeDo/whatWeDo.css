@@ -1,10 +1,18 @@
-#what-we-do .section-header-paragraph {
+#what-we-do .section-padding {
+  padding-top:7em;
+}
+
+#what-we-do h1 {
   font-size: 2em;
+}
+#what-we-do .section-header-paragraph {
+  font-size: 1.5em;
   font-weight: 300;
 }
 
+
 #what-we-do .section-paragraph {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 300;
   word-spacing: 0.3em;
 }

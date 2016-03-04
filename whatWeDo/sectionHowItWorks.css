@@ -1,0 +1,31 @@
+#how-it-works h1{
+    color:#20245C;
+}
+
+.button{
+    display: block;
+    padding: 0.8em 1.3em;
+    text-decoration: none;
+    color: #e92e71;
+    border-radius: 999px;
+    background-color: #fff
+}
+
+.tab a:hover{
+    background-color:darkgrey;
+    color: #e92e71;
+
+}
+.is-active{
+    color: #fff;
+    background-color: #e92e71
+}
+#how-it-works ol{
+    list-style:none;
+}
+.tab-content{
+    display:none;
+}
+.display-this{
+    display: block;
+}
