@@ -1,6 +1,9 @@
 #how-it-works h1{
     color:#20245C;
 }
+#how-it-works .section-padding{
+    padding: 2em;
+}
 
 .button{
     display: block;
@@ -12,9 +15,9 @@
 }
 
 .tab a:hover{
-    background-color:darkgrey;
+    background-color:#e3e7e8;
     color: #e92e71;
-
+    text-decoration: none;
 }
 .is-active{
     color: #fff;
