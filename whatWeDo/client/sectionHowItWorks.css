@@ -1,4 +1,4 @@
-#how-it-works h1{
+#how-it-works h1, h2 {
     color:#20245C;
 }
 #how-it-works .section-padding{
@@ -23,20 +23,11 @@
     color: #fff;
     background-color: #D92D6F;
 }
+
 #how-it-works ol{
     list-style:none;
 }
-.tab-content{
+
+#how-it-works .tab-content {
     display:none;
-}
-.display-this{
-    display: block;
-}
-
-.owl-item.active{
-    background-color: transparent;
-}
-
-.owl-item .active{
-    background-color: transparent;
 }

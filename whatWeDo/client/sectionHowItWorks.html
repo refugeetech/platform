@@ -1,108 +1,71 @@
 <template name="sectionHowItWorks">
   <section id="how-it-works" class="row">
-    <div class="col-lg-12 section-padding"></div>
-    <div class="col-lg-12">
-      <div class="row">
-      <div class="col-lg-10 col-lg-offset-1">
-        <h1 class="section-heading">How it Works</h1>
-      </div>
-      <div class="owl-carousel col-lg-12">
-        
-          <div class="tab-content-carousel row" id="identifying">
-            <div class="col-xs-4">
-                <img class="img-responsive" src="/images/1_problem.svg">
-            </div>
-            <p class="col-xs-4 col-xs-offset-2 column-paragraph">To make a real difference, we must first identify and prioritize the most urgent problems. To do this we perform a joint analysis, first speaking to refugees and lead organizations and then using scientific processes to gather data and better understand the scope of the problems at hand. This step lays the groundwork for us and our collaborators to identify sustainable solutions.</p>
+      <div class="col-lg-12 section-padding"></div>
+      <div class="col-lg-12">
+        <div class="row">
+        <div class="col-xs-11 col-xs-offset-1">
+          <h1 class="section-heading">How it Works</h1>
+        </div>
+        <div class="col-xs-3 col-xs-offset-1">
+          <div class="row tab-nav">
+            <ol class="tabs">
+              <li class="tab">
+                <a href="#" class="btn btn-stacked btn-default active" data-target="identifying">1. Identifying the Problems</a>
+              </li>
+              <li class="tab">
+                <a href="#" class="btn btn-stacked btn-default" data-target="generating">2. Generating Ideas</a>
+              </li>
+              <li class="tab">
+                <a href="#" class="btn btn btn-stacked btn-default" data-target="hackathon">3. Hackathon</a>
+              </li>
+              <li class="tab">
+                <a href="#" class="btn btn btn-stacked btn-default" data-target="evolving">4. Evolving the Solution</a>
+              </li>
+              <li class="tab">
+                <a href="#" class="btn btn-stacked btn-default btn-default" data-target="implementation"> 5. Implementation</a>
+              </li>
+            </ol>
           </div>
-          
-          <div class="tab-content-carousel" id="generating">
-            <div class="text-center push-bottom col-xs-4">
-              <img class="img-responsive" src="/images/2_idea_lamp.svg">
+        </div>
+        <div class="col-xs-7">
+          <div class="tab-container">
+            <div class="tab-content" id="identifying" style="display: block;">
+              <div class="text-center push-bottom col-xs-4 col-lg-4">
+                  <img class="img-responsive" src="/images/1_problem.svg">
+              </div>
+              <p class="col-xs-12 col-lg-8 column-paragraph">To make a real difference, we must first identify and prioritize the most urgent problems. To do this we perform a joint analysis, first speaking to refugees and lead organizations and then using scientific processes to gather data and better understand the scope of the problems at hand. This step lays the groundwork for us and our collaborators to identify sustainable solutions.</p>
             </div>
-            <p class="col-xs-12 col-lg-8 column-paragraph"> Now that we’ve identified a problem, we brainstorm to find possible solutions. We bring creative minds from diverse backgrounds together to foster a deeper understanding of the problem in this step. Unique perspectives lead to many potential solutions, which we identify and evaluate before the next step, creating the technology to implement the solution.</p>
-          </div>
-          
-          <div class="tab-content-carousel" id="hackathon">
-            <div class="text-center push-bottom col-xs-4">
-              <img class="img-responsive" src="/images/3_hack_colab.svg">
+            <div class="tab-content" id="generating">
+              <div class="text-center push-bottom col-xs-4">
+                <img class="img-responsive" src="/images/2_idea_lamp.svg">
+              </div>
+              <p class="col-xs-12 col-lg-8 column-paragraph"> Now that we’ve identified a problem, we brainstorm to find possible solutions. We bring creative minds from diverse backgrounds together to foster a deeper understanding of the problem in this step. Unique perspectives lead to many potential solutions, which we identify and evaluate before the next step, creating the technology to implement the solution.</p>
             </div>
-            <p class="col-xs-12 col-lg-8 column-paragraph"> This step is where solutions are built and tested. Our process is designed so that the solutions with the highest potential to solve the problem are the ones that will be developed as prototypes. Techies, designers and engineers take the lead on creating the technology needed to develop these prototypes, which are then market tested by dedicated teams. We involve relevant stakeholders in this process to ensure our solutions have the necessary funding and resources to be fully realized and implemented.</p>
-          </div>
+            
+            <div class="tab-content" id="hackathon">
+              <div class="text-center push-bottom col-xs-4">
+                <img class="img-responsive" src="/images/3_hack_colab.svg">
+              </div>
+              <p class="col-xs-12 col-lg-8 column-paragraph"> This step is where solutions are built and tested. Our process is designed so that the solutions with the highest potential to solve the problem are the ones that will be developed as prototypes. Techies, designers and engineers take the lead on creating the technology needed to develop these prototypes, which are then market tested by dedicated teams. We involve relevant stakeholders in this process to ensure our solutions have the necessary funding and resources to be fully realized and implemented.</p>
+            </div>
 
-          <div class="tab-content-carousel" id="evolving">
-            <div class="text-center push-bottom col-xs-4">
-              <img class="img-responsive" src="/images/4_open_source_networking_help.svg">
-            </div>
-            <p class="col-xs-12 col-lg-8 column-paragraph"> The prototypes created at the hackathon are kept open source so that further improvements and developments can be made by anyone with an interest in solving the problem we’ve identified. This step is about product development, but it’s also about creating the necessary foundation to release the solution into the world. We hope that by keeping our projects open source, we can pave the way for other individuals or organizations to implement our solutions, apply our best practices and/or learn from our mistakes.</p>
-          </div>
+              <div class="tab-content" id="evolving">
+                <div class="text-center push-bottom col-xs-4">
+                  <img class="img-responsive" src="/images/4_open_source_networking_help.svg">
+                </div>
+                <p class="col-xs-12 col-lg-8 column-paragraph"> The prototypes created at the hackathon are kept open source so that further improvements and developments can be made by anyone with an interest in solving the problem we’ve identified. This step is about product development, but it’s also about creating the necessary foundation to release the solution into the world. We hope that by keeping our projects open source, we can pave the way for other individuals or organizations to implement our solutions, apply our best practices and/or learn from our mistakes.</p>
+              </div>
 
-          <div class="tab-content-carousel" id="implementation">
-            <div class="text-center push-bottom col-xs-4">
-              <img class="col-lg-10" src="/images/6_help_out_data_gather.svg">
-            </div>
-          <p class="col-xs-12 col-lg-8 column-paragraph">After thorough research, collaboration, development and testing, we make our solution available - be it a product, service, or digital tool - to the people and organizations who can implement them to make a powerful impact on the lives of people in need.</p>
+              <div class="tab-content" id="implementation">
+                <div class="text-center push-bottom col-xs-4">
+                  <img class="col-lg-10" src="/images/6_help_out_data_gather.svg">
+                </div>
+              <p class="col-xs-12 col-lg-8 column-paragraph">After thorough research, collaboration, development and testing, we make our solution available - be it a product, service, or digital tool - to the people and organizations who can implement them to make a powerful impact on the lives of people in need.</p>
+              </div>
           </div>
-      </div>
-      <div class="col-lg-3 col-lg-offset-1">
-        <div class="row tab-nav">
-          <ol class="tabs">
-            <li class="tab">
-              <a href="#" class="btn btn-stacked btn-default" data-target="identifying">1. Identifying the Problems</a>
-            </li>
-            <li class="tab">
-              <a href="#" class="btn btn-stacked btn-default" data-target="generating">2. Generating Ideas</a>
-            </li>
-            <li class="tab">
-              <a href="#" class="btn btn btn-stacked btn-default" data-target="hackathon">3. Hackathon</a>
-            </li>
-            <li class="tab">
-              <a href="#" class="btn btn btn-stacked btn-default" data-target="evolving">4. Evolving the Solution</a>
-            </li>
-            <li class="tab">
-              <a href="#" class="btn btn-stacked btn-default btn-default" data-target="implementation"> 5. Implementation</a>
-            </li>
-          </ol>
+        </div>
         </div>
       </div>
-      <div class="col-lg-7">
-        <div class="tab-container">
-          <div class="tab-content" id="identifying">
-            <div class="text-center push-bottom col-xs-4 col-lg-4">
-                <img class="img-responsive" src="/images/1_problem.svg">
-            </div>
-            <p class="col-xs-12 col-lg-8 column-paragraph">To make a real difference, we must first identify and prioritize the most urgent problems. To do this we perform a joint analysis, first speaking to refugees and lead organizations and then using scientific processes to gather data and better understand the scope of the problems at hand. This step lays the groundwork for us and our collaborators to identify sustainable solutions.</p>
-          </div>
-          <div class="tab-content" id="generating">
-            <div class="text-center push-bottom col-xs-4">
-              <img class="img-responsive" src="/images/2_idea_lamp.svg">
-            </div>
-            <p class="col-xs-12 col-lg-8 column-paragraph"> Now that we’ve identified a problem, we brainstorm to find possible solutions. We bring creative minds from diverse backgrounds together to foster a deeper understanding of the problem in this step. Unique perspectives lead to many potential solutions, which we identify and evaluate before the next step, creating the technology to implement the solution.</p>
-          </div>
-          
-          <div class="tab-content" id="hackathon">
-            <div class="text-center push-bottom col-xs-4">
-              <img class="img-responsive" src="/images/3_hack_colab.svg">
-            </div>
-            <p class="col-xs-12 col-lg-8 column-paragraph"> This step is where solutions are built and tested. Our process is designed so that the solutions with the highest potential to solve the problem are the ones that will be developed as prototypes. Techies, designers and engineers take the lead on creating the technology needed to develop these prototypes, which are then market tested by dedicated teams. We involve relevant stakeholders in this process to ensure our solutions have the necessary funding and resources to be fully realized and implemented.</p>
-          </div>
-
-            <div class="tab-content" id="evolving">
-              <div class="text-center push-bottom col-xs-4">
-                <img class="img-responsive" src="/images/4_open_source_networking_help.svg">
-              </div>
-              <p class="col-xs-12 col-lg-8 column-paragraph"> The prototypes created at the hackathon are kept open source so that further improvements and developments can be made by anyone with an interest in solving the problem we’ve identified. This step is about product development, but it’s also about creating the necessary foundation to release the solution into the world. We hope that by keeping our projects open source, we can pave the way for other individuals or organizations to implement our solutions, apply our best practices and/or learn from our mistakes.</p>
-            </div>
-
-            <div class="tab-content" id="implementation" style="display: none;">
-              <div class="text-center push-bottom col-xs-4">
-                <img class="col-lg-10" src="/images/6_help_out_data_gather.svg">
-              </div>
-            <p class="col-xs-12 col-lg-8 column-paragraph">After thorough research, collaboration, development and testing, we make our solution available - be it a product, service, or digital tool - to the people and organizations who can implement them to make a powerful impact on the lives of people in need.</p>
-            </div>
-        </div>
-      </div>
-      </div>
-    </div>
     <div class="col-lg-12 section-padding"></div>
   </section>
 </template>
