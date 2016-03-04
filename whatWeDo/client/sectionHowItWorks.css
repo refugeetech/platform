@@ -1,0 +1,42 @@
+#how-it-works h1{
+    color:#20245C;
+}
+#how-it-works .section-padding{
+    padding: 2em;
+}
+
+#how-it-works .btn-stacked {
+    display: block;
+    padding: 0.8em 1.3em;
+    text-decoration: none;
+    color:#D92D6F;
+    border-color: transparent;
+    text-align: left;
+}
+
+#how-it-works .btn:focus, .btn:active:focus, .btn.active:focus {
+    color: #fff;
+    background-color: #D92D6F;
+}
+
+#how-it-works .btn.active {
+    color: #fff;
+    background-color: #D92D6F;
+}
+#how-it-works ol{
+    list-style:none;
+}
+.tab-content{
+    display:none;
+}
+.display-this{
+    display: block;
+}
+
+.owl-item.active{
+    background-color: transparent;
+}
+
+.owl-item .active{
+    background-color: transparent;
+}
