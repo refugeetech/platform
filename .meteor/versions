@@ -56,6 +56,7 @@ email@1.0.8
 es5-shim@4.1.14
 fastclick@1.0.7
 fortawesome:fontawesome@4.5.0
+gadicohen:reactive-window@1.0.6
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
@@ -88,6 +89,7 @@ mongo-id@1.0.1
 mongo-livedata@1.0.9
 mpowaga:jquery-fileupload@9.11.2
 mpowaga:jquery-ui-widget@1.11.4
+mrt:isolate-value@2.0.2
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
