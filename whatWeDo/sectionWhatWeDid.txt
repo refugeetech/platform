@@ -16,6 +16,8 @@ Iteration 0
 First event: actors, people present, etc
 Outcome: report
 
+new family members: jonathan, tarek etc
+
 First hackathon: actors, etc
 
 refocusing: pwc, pilotprocess etc
