@@ -16,7 +16,8 @@
     },
     {
       "outlet":"Sveriges Radio P1",
-      "pic":"images/P1_srgb_sv_neg.png",
+      "pic":"images/P1garant_srgb_neg.png",
+      "picClass":"constrain",
       "source":"http://sverigesradio.se/sida/artikel.aspx?programid=4058&artikel=6325671",
       "text":"Kan teknik vara vägen till jobb?",
       "language":"SE"
@@ -30,7 +31,7 @@
     },
     {
       "outlet":"Sveriges Radio P4",
-      "pic":"images/P4_srgb_sv_neg.png",
+      "pic":"images/P4stockholm_lay_srgb_neg.png",
       "source":"http://sverigesradio.se/sida/artikel.aspx?programid=103&artikel=6290852",
       "text":"Refugee Tech vill hjälpa flyktingar med appar",
       "language":"SE"
@@ -52,7 +53,7 @@
     {
       "outlet":"mobilestories.se",
       "pic":"images/mobilestorieslogo.png",
-      "source":"http://mobilestories.se/refugee-tech",
+      "source":"http://mobilestories.se/de-vill-l%C3%B6sa-flyktingkrisen-med-teknik",
       "text":"Refugee Tech är en ideell organisation tog form ur en Facebook-grupp hösten 2015",
       "language":"SE"
     },
@@ -61,6 +62,20 @@
       "pic":"images/resume-logo.jpg",
       "source":"http://www.resume.se/nyheter/artiklar/2015/12/11/hackaton-pa-byragolvet-ska-forenkla-nyanlandas-etablering/",
       "text":"Hackaton på byrågolvet ska förenkla livet för nyanlända",
+      "language":"SE"
+    },
+    {
+      "outlet":"Industrifonden",
+      "pic":"images/industrifonden_logo.jpg",
+      "source":"http://www.industrifonden.se/aid",
+      "text":"Industrifonden support Refugee Tech",
+      "language":"EN"
+    },
+    {
+      "outlet":"Metro",
+      "pic":"images/metro_news.jpg",
+      "source":"https://issuu.com/metro_sweden/docs/20151211_se_stockholm/3?e=0",
+      "text":"Deras appar ska hjälpa flyktingar",
       "language":"SE"
     }
   ]
