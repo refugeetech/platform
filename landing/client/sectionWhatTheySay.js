@@ -11,7 +11,7 @@ Template.sectionWhatTheySay.onRendered(function() {
   const options = {
     center:true,
     items: 3,
-    margin: 200,
+    margin: 20,
     loop: true
   };
   $(".owl-carousel").owlCarousel(options);
