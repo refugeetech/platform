@@ -1,0 +1,210 @@
+{
+  "posts": [
+    {
+      "name":"sectionHowItWorks",
+      "section-heading": {
+        "language": {
+          "en":"How it Works"
+        }
+      },
+      "contents": [
+        {
+          "id": "identifying",            
+          "img":"images/1_problem.svg",
+          "column-paragraph": 
+          {
+            "language":
+            {
+              "en":"To make a real difference, we must first identify and prioritize the most urgent problems. To do this we perform a joint analysis, first speaking to refugees and lead organizations and then using scientific processes to gather data and better understand the scope of the problems at hand. This step lays the groundwork for us and our collaborators to identify sustainable solutions."
+            }
+          }
+        },
+        {
+          "id": "generating",            
+          "img":"images/2_idea_lamp.svg",
+          "column-paragraph": 
+          {
+            "language":
+            {
+              "en":"Now that we’ve identified a problem, we brainstorm to find possible solutions. We bring creative minds from diverse backgrounds together to foster a deeper understanding of the problem in this step. Unique perspectives lead to many potential solutions, which we identify and evaluate before the next step, creating the technology to implement the solution."
+            }
+          }
+        },
+        {
+          "id": "hackathon",            
+          "img":"images/images/3_hack_colab.svg",
+          "column-paragraph": 
+          {
+            "language":
+            {
+              "en":"This step is where solutions are built and tested. Our process is designed so that the solutions with the highest potential to solve the problem are the ones that will be developed as prototypes. Techies, designers and engineers take the lead on creating the technology needed to develop these prototypes, which are then market tested by dedicated teams. We involve relevant stakeholders in this process to ensure our solutions have the necessary funding and resources to be fully realized and implemented."
+            }
+          }
+        },
+        {
+          "id": "evolving",            
+          "img":"images/images/images/4_open_source_networking_help.svg",
+            "column-paragraph": 
+          {
+            "language":
+            {
+              "en":"The prototypes created at the hackathon are kept open source so that further improvements and developments can be made by anyone with an interest in solving the problem we’ve identified. This step is about product development, but it’s also about creating the necessary foundation to release the solution into the world. We hope that by keeping our projects open source, we can pave the way for other individuals or organizations to implement our solutions, apply our best practices and/or learn from our mistakes."
+            }
+          }
+        },
+        {
+          "id": "implementation",            
+          "img":"images/images/6_help_out_data_gather.svg",
+            "column-paragraph": 
+          {
+            "language":
+            {
+              "en":"After thorough research, collaboration, development and testing, we make our solution available - be it a product, service, or digital tool - to the people and organizations who can implement them to make a powerful impact on the lives of people in need."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name":"sectionWhatWeDo",
+      "section-heading": {
+        "language": {
+          "en":"What we do"
+        }
+      },
+      "contents": [
+        {
+          "id": "what-we-do",            
+          "img":"images/what-we-do.png",
+          "section-header-paragraph":
+          {
+            "language":
+            {
+              "en":"Technology has historically been at the forefront of human advancement. We believe that together, creative minds can harness technology to solve real world problems. That belief is at the core of our mission: to use technology to connect, collaborate, and innovate in order to solve problems faced by refugees today and in the future."
+            }
+          },
+          "section-paragraph": 
+          {
+            "language":
+            {
+              "en":"We build bridges between different parts of society to bring in stakeholders, innovators, and tech-savvy people to design and develop creative solutions. We listen to refugees about the problems they face, to organizations on the ground already working on solutions, and to creative tech people. By bringing these voices into one conversation, we can find real solutions that work. We use these conversations, along with research and hard data to identify the most relevant and urgent problems that could be solved by innovative technology. The best ideas generated during this process are the ones that we’ll turn into tools and services to improve the lives of thousands of refugees."
+            }
+          }
+        },
+        {
+          "name":"sectionLetsBeFriends",
+          "contents":
+          [
+            {
+              "id":"letsBeFriends",
+              "text":
+              {
+                "language":
+                {
+                  "en":
+                  {
+                    "hello": "Hello. Let's be friends. Like us on ",
+                    "follow-us":", follow us on",
+                    "mail-us":"mail us",
+                    "say-hello":"and say hello."
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name":"sectionChildrenPics",
+          "contents":
+          [
+            {
+              "child0":"images/gfx_10.jpg",
+              "child1":"images/gfx_9.jpg",
+              "child2":"images/gfx_5.jpg",
+              "child3":"images/gfx_intro.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"navigation",
+      "contents":
+      [
+        {
+          "id":"text",
+          "about-us":
+          {
+            "language":
+            {
+              "en": "About us",
+              "se": "Om oss"
+            }
+          },
+          "what-we-do":
+          {
+            "language":
+            {
+              "en": "What we do",
+              "se": "Vad vi gör"
+            }
+          },
+          "general-questions":
+          {
+            "language":
+            {
+              "en": "General Questions",
+              "se": "Generella Frågor"
+            }
+          },
+          "companies-organizations":
+          {
+            "language":
+            {
+              "en": "Companies & Organizations ",
+              "se": "Företag och Organisationer"
+            }
+          }
+        }  
+      ]
+    },
+    {
+      "name":"buttons",
+      "contents":[],
+      "content": {
+        "sectionHowItWorks": {
+          "identifying-problems": {
+            "language": {
+              "en":"Identifying the Problems",
+              "se":"Identifiera Problemen"
+            }
+          },
+          "generating-ideas": {
+            "language": {
+              "en":"Generating Ideas",
+              "se":"Generera Idéer"
+            }
+          },
+          "hackathon": {
+            "language": {
+              "en":"Generating Ideas",
+              "se":"Generera Idéer"
+            }
+          },
+          "evolving-solution": {
+            "language": {
+              "en":"Evolving the Solution",
+              "se":"Vidareutveckla lösningarna"
+            }
+          },
+          "implementation": {
+            "language": {
+              "en":"Implementation",
+              "se":"Implementering"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
