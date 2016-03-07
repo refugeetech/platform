@@ -16,31 +16,12 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-insecure                # Allow all DB writes from clients (for prototyping)
-useraccounts:unstyled
-accounts-password
-aldeed:simple-schema
-aldeed:collection2
-aldeed:autoform
 twbs:bootstrap
 kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
-practicalmeteor:faker
-dburles:factory
-simple:json-routes
-rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
-reywood:publish-composite
-easy:search
 matb33:bootstrap-collapse-js
-momentjs:moment
-cfs:standard-packages
-cfs:gridfs
-cfs:autoform
-jeremy:selectize
 zimme:active-route
-yogiben:autoform-file
 richsilv:owl-carousel
 gadicohen:reactive-window
-webapp
