@@ -15,3 +15,7 @@ Template.sectionHowItWorks.events({
     $(event.target).addClass('active');
   }
 });
+
+Template.sectionHowItWorks.helpers({
+  content: ()=> Session.get('content')
+});

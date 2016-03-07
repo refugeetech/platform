@@ -1,17 +1,19 @@
 {
-  "posts": [
-    {
-      "name":"sectionHowItWorks",
-      "section-heading": {
+  "test":"shiiiet",
+  "test2": {
+    "shit":"shiiiiiiiiet"
+  },
+  "sectionHowItWorks": {
+      "sectionheading": {
         "language": {
           "en":"How it Works"
         }
       },
-      "contents": [
-        {
-          "id": "identifying",            
+      "contents":
+      {
+        "identifying": {            
           "img":"images/1_problem.svg",
-          "column-paragraph": 
+          "columnparagraph": 
           {
             "language":
             {
@@ -19,10 +21,9 @@
             }
           }
         },
-        {
-          "id": "generating",            
+        "generating": {            
           "img":"images/2_idea_lamp.svg",
-          "column-paragraph": 
+          "columnparagraph": 
           {
             "language":
             {
@@ -30,10 +31,9 @@
             }
           }
         },
-        {
-          "id": "hackathon",            
+        "hackathon": {            
           "img":"images/images/3_hack_colab.svg",
-          "column-paragraph": 
+          "columnparagraph": 
           {
             "language":
             {
@@ -41,10 +41,9 @@
             }
           }
         },
-        {
-          "id": "evolving",            
+        "evolving": {            
           "img":"images/images/images/4_open_source_networking_help.svg",
-            "column-paragraph": 
+            "columnparagraph": 
           {
             "language":
             {
@@ -52,134 +51,117 @@
             }
           }
         },
-        {
-          "id": "implementation",            
+        "implementation": {              
           "img":"images/images/6_help_out_data_gather.svg",
-            "column-paragraph": 
+            "columnparagraph": 
           {
             "language":
             {
-              "en":"After thorough research, collaboration, development and testing, we make our solution available - be it a product, service, or digital tool - to the people and organizations who can implement them to make a powerful impact on the lives of people in need."
+              "en":"After thorough research, collaboration, development and testing, we make our solution available  be it a product, service, or digital tool  to the people and organizations who can implement them to make a powerful impact on the lives of people in need."
             }
           }
         }
-      ]
+      }
     },
-    {
-      "name":"sectionWhatWeDo",
-      "section-heading": {
+    "sectionWhatWeDo": {
+      "sectionheading": {
         "language": {
           "en":"What we do"
         }
       },
-      "contents": [
-        {
-          "id": "what-we-do",            
-          "img":"images/what-we-do.png",
-          "section-header-paragraph":
+      "contents": {
+        "whatwedo": {              
+          "img":"images/whatwedo.png",
+          "sectionheaderparagraph":
           {
             "language":
             {
               "en":"Technology has historically been at the forefront of human advancement. We believe that together, creative minds can harness technology to solve real world problems. That belief is at the core of our mission: to use technology to connect, collaborate, and innovate in order to solve problems faced by refugees today and in the future."
             }
           },
-          "section-paragraph": 
+          "sectionparagraph": 
           {
             "language":
             {
-              "en":"We build bridges between different parts of society to bring in stakeholders, innovators, and tech-savvy people to design and develop creative solutions. We listen to refugees about the problems they face, to organizations on the ground already working on solutions, and to creative tech people. By bringing these voices into one conversation, we can find real solutions that work. We use these conversations, along with research and hard data to identify the most relevant and urgent problems that could be solved by innovative technology. The best ideas generated during this process are the ones that we’ll turn into tools and services to improve the lives of thousands of refugees."
+              "en":"We build bridges between different parts of society to bring in stakeholders, innovators, and techsavvy people to design and develop creative solutions. We listen to refugees about the problems they face, to organizations on the ground already working on solutions, and to creative tech people. By bringing these voices into one conversation, we can find real solutions that work. We use these conversations, along with research and hard data to identify the most relevant and urgent problems that could be solved by innovative technology. The best ideas generated during this process are the ones that we’ll turn into tools and services to improve the lives of thousands of refugees."
             }
           }
-        },
-        {
-          "name":"sectionLetsBeFriends",
-          "contents":
-          [
-            {
-              "id":"letsBeFriends",
-              "text":
-              {
-                "language":
-                {
-                  "en":
-                  {
-                    "hello": "Hello. Let's be friends. Like us on ",
-                    "follow-us":", follow us on",
-                    "mail-us":"mail us",
-                    "say-hello":"and say hello."
-                  }
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name":"sectionChildrenPics",
-          "contents":
-          [
-            {
-              "child0":"images/gfx_10.jpg",
-              "child1":"images/gfx_9.jpg",
-              "child2":"images/gfx_5.jpg",
-              "child3":"images/gfx_intro.jpg"
-            }
-          ]
         }
-      ]
+      }
     },
-    {
-      "name":"navigation",
-      "contents":
-      [
+    "sectionLetsBeFriends":{
+      "contents": {
+        "letsBeFriends":
         {
-          "id":"text",
-          "about-us":
+          "language":
           {
-            "language":
+            "en":
             {
-              "en": "About us",
-              "se": "Om oss"
-            }
-          },
-          "what-we-do":
-          {
-            "language":
-            {
-              "en": "What we do",
-              "se": "Vad vi gör"
-            }
-          },
-          "general-questions":
-          {
-            "language":
-            {
-              "en": "General Questions",
-              "se": "Generella Frågor"
-            }
-          },
-          "companies-organizations":
-          {
-            "language":
-            {
-              "en": "Companies & Organizations ",
-              "se": "Företag och Organisationer"
+              "hello": "Hello. Let's be friends. Like us on ",
+              "followus":", follow us on",
+              "mailus":"mail us",
+              "sayhello":"and say hello."
             }
           }
-        }  
-      ]
+        }
+      }
     },
-    {
-      "name":"buttons",
-      "contents":[],
-      "content": {
+    "sectionChildrenPics": {
+      "images":
+      {
+        "child0":"images/gfx_10.jpg",
+        "child1":"images/gfx_9.jpg",
+        "child2":"images/gfx_5.jpg",
+        "child3":"images/gfx_intro.jpg"
+      }
+    },
+    "navigation": {
+      "contents":
+      {
+        "aboutus":
+        {
+          "language":
+          {
+            "en": "About us",
+            "se": "Om oss"
+          }
+        },
+        "whatwedo":
+        {
+          "language":
+          {
+            "en": "What we do",
+            "se": "Vad vi gör"
+          }
+        },
+        "generalquestions":
+        {
+          "language":
+          {
+            "en": "General Questions",
+            "se": "Generella Frågor"
+          }
+        },
+        "companiesorganizations":
+        {
+          "language":
+          {
+            "en": "Companies & Organizations ",
+            "se": "Företag och Organisationer"
+          }
+        }
+      }
+    },
+    "buttons": {
+      "contents": {
         "sectionHowItWorks": {
-          "identifying-problems": {
+          "identifyingproblems": {
             "language": {
               "en":"Identifying the Problems",
               "se":"Identifiera Problemen"
             }
           },
-          "generating-ideas": {
+          "generatingideas": {
             "language": {
               "en":"Generating Ideas",
               "se":"Generera Idéer"
@@ -187,11 +169,11 @@
           },
           "hackathon": {
             "language": {
-              "en":"Generating Ideas",
-              "se":"Generera Idéer"
+              "en":"Hackathon",
+              "se":"Hackathon"
             }
           },
-          "evolving-solution": {
+          "evolvingsolution": {
             "language": {
               "en":"Evolving the Solution",
               "se":"Vidareutveckla lösningarna"
@@ -206,5 +188,4 @@
         }
       }
     }
-  ]
 }
