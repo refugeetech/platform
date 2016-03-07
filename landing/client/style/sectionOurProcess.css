@@ -1,0 +1,40 @@
+#our-process {
+  background-image: url('images/gfx_5.jpg');
+ 
+  min-height: 70vh;
+  text-align: left;
+  color: #fff;
+  background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  
+  /* flip background vertically */
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  
+ }
+ 
+ #our-process > * {
+   /* undo the vertical flip for all child elements */
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+   
+ }
+ 
+ .bgclr-gradient-blue  {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b2762+0,20245c+100&0+0,0.5+22,1+63;bgclr-gradient-blue */
+background: -moz-linear-gradient(top,  rgba(59,39,98,0) 0%, rgba(53,38,97,0.5) 22%, rgba(42,37,94,1) 63%, rgba(32,36,92,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(59,39,98,0) 0%,rgba(53,38,97,0.5) 22%,rgba(42,37,94,1) 63%,rgba(32,36,92,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(59,39,98,0) 0%,rgba(53,38,97,0.5) 22%,rgba(42,37,94,1) 63%,rgba(32,36,92,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003b2762', endColorstr='#20245c',GradientType=0 ); /* IE6-9 */
+} 

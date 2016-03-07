@@ -1,0 +1,9 @@
+<template name="whatWeDo">
+  {{> sectionWhatWeDo}}
+  {{#if rwindow.screen 'lte' 'small'}}
+  {{> sectionHowItWorksCarousel}}
+  {{else }}
+  {{> sectionHowItWorks}}
+  {{/if}}
+  {{> sectionChildrenPics}}
+</template>

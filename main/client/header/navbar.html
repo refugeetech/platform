@@ -1,0 +1,35 @@
+<template name="mainNavbar">
+    <nav id="top-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" id="hamburger" data-toggle="collapse" data-target="#rft-collapse-navbar" aria-expanded="false">
+                <span class="hamburger-text">menu</span>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand page-scroll" href="/#one">
+              <img class="hidden-sm hidden-xs" id="main-logo" src="images/RT-logo_v3.svg" alt="Refugee Tech logotype" />
+              <img class="visible-sm visible-xs" id="main-logo" src="images/RT-logo_R.svg" alt="Refugee Tech logotype" />
+              <h1 class="visuallyhidden">Refugee Tech</h1>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="rft-collapse-navbar">
+            <ul class="text-uppercase navbar-left navbar-nav nav ">
+             <!--When changing to proper links for "What we do", "Knowledge hub" and "Blog", please change the path in <li> to the same as in the corresponding href-->
+              <li class="{{isActivePath class='active' path='/what-we-do'}}"><a href="/what-we-do">What we do</a></li>
+              <!--<li class="{{isActivePath class='active' path='/#knowledge'}}"><a href="/#knowledge">Knowledge Hub</a></li>-->
+              <!--<li class="{{isActivePath class='active' path='/projects'}}"><a href="/projects">Projects</a></li>-->
+              <!--<li class="{{isActivePath class='active' path='/#blog'}}"><a href=/#blog>Blog</a></li>-->
+            </ul>
+            <ul class="navbar-right navbar-nav nav">
+              <!--<li><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span><span class="visible-lg-inline visible-xs-inline">English</span></a></li>-->
+              <!-- <li><a href="#"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span><span class="visible-lg-inline visible-xs-inline">Share</span></a></li> -->
+              <li id="share-button-container"><share-button></share-button></li>
+              <!--<li><a class="activate-searchbar" href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="visible-lg-inline visible-xs-inline">Search</span></a></li>-->
+            </ul>
+        </div>
+      </div>
+    </nav>
+</template>

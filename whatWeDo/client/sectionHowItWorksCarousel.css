@@ -1,0 +1,20 @@
+#how-it-works-carousel h1, h2 {
+    color:#20245C;
+}
+
+#how-it-works-carousel .section-padding{
+    padding: 2em;
+}
+
+
+#how-it-works-carousel .tab-content-carousel img {
+  max-height: 30em;
+}
+
+how-it-works-carousel .owl-item.active{
+    background-color: transparent;
+}
+
+how-it-works-carousel .owl-item .active{
+    background-color: transparent;
+}

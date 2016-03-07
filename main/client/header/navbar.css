@@ -1,0 +1,183 @@
+/*
+*  16px is the body font-size - main.css
+*/
+
+#top-nav.navbar-default {
+  background: #fff;
+  z-index: 20;
+}
+#top-nav.navbar-default .navbar-nav > li > a {
+  color: #1d2660;
+}
+#top-nav .navbar-brand {
+  font-size: 16px;
+  /* Sets the same base for relative units. Bootstrap sets this to 18px. An alternative is to use rems (root em) instead of ems */
+}
+#top-nav.navbar-default .navbar-nav > li > a:hover {
+  color: inherit;
+  background: none;
+}
+#top-nav.navbar-default .navbar-nav > li.active > a,
+#top-nav.navbar-default .navbar-nav > li.active > a:hover,
+#top-nav.navbar-default .navbar-nav > li > a:focus  {
+  font-weight: bold;
+  color: inherit;
+  background: none;
+}
+
+#top-nav .container {
+  position: relative;
+}
+
+/* =========== Logo =========== */
+
+#top-nav .navbar-brand {
+  padding: 1em -0px; /* 21/16 */
+  width: 1.875em;
+  height: auto;
+  position: relative;
+  left: calc(15/16 * 1em);
+}
+
+/* =========== Hamburger nav =========== */
+
+#top-nav.navbar-default .navbar-toggle,
+#top-nav.navbar-default .navbar-toggle:hover,
+#top-nav.navbar-default .navbar-toggle:focus {
+  color: inherit;
+  border: none;
+  background: none;
+}
+#top-nav.navbar-default .navbar-toggle {
+  margin: 1em 0 0;
+}
+
+#top-nav .navbar-toggle .hamburger-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 100%;
+}
+#top-nav.navbar-default .navbar-toggle .icon-bar {
+  background-color: #1d2660;
+  height: 3px;
+}
+
+/* =========== Mobile dropdwon menu =========== */
+
+@media only screen and (max-width: 767px) { /* xs */
+  #top-nav .navbar-collapse {
+    margin-top: calc(62/16 * 1em); /* 62 is navbar height */
+    text-align: center;
+  }
+  #top-nav .navbar-right .glyphicon {
+    top: .2em;
+    left: -.2em;
+    font-size: 1.2em;
+  }
+}
+
+/* ==========================================================================
+Media Queries
+========================================================================== */
+
+@media only screen and (min-width: 768px) { /* sm */
+
+  /* =========== Logo =========== */
+
+  #top-nav .navbar-brand {
+    padding: 1.3125em -0px; /* 21/16 */
+    width: 1.875em; /* Just the R is used as logo here to give room for navigation */
+    height: auto;
+    position: relative;
+    left: calc(15/16 * 1em);
+  }
+
+  /* =====================================
+  Navbars
+  ===================================== */
+
+  #top-nav.navbar-default .navbar-nav > li > a:hover {
+    border-bottom: 5px solid #1d2660;
+  }
+  #top-nav .navbar-nav {
+    transition: height 0.1s ease-out;
+    height: calc(75/16 * 1em);
+  }
+  #top-nav.shrinked .navbar-nav {
+    height: calc(55/16 * 1em);
+  }
+  #top-nav .navbar-nav a {
+    transition: all .1s ease-out;
+    transition-property: padding;
+  }
+
+  /* =========== Left Navbar =========== */
+
+  #top-nav .navbar-left {
+    margin-left: 4.25em;
+  }
+  #top-nav .navbar-nav.navbar-left a {
+    font-size: 0.875em; /* 14px/16px => 0.875em */
+    margin-right: calc(25/14 * 1em);
+    padding: calc(35/14 * 1em) calc(6/14 * 1em) calc(30/14 * 1em - 5px);
+    line-height: 10px; /* FF */
+    line-height: calc(10/14 * 1em);
+    font-weight: 500;
+  }
+  #top-nav.shrinked .navbar-left a {
+    padding: calc(24/14 * 1em) calc(6/14 * 1em) calc(21/14 * 1em - 5px);
+  }
+  #top-nav .navbar-nav.navbar-left li:last-of-type a {
+    margin-right: 0;
+  }
+
+  /* =========== Right Navbar =========== */
+
+  #top-nav .navbar-right {
+    font-weight: bold;
+  }
+  #top-nav .navbar-right .glyphicon {
+    top: .2em;
+    font-size: 1.2em;
+  }
+  #top-nav .navbar-nav.navbar-right a {
+    margin-right: calc(20/16 * 1em);
+    padding: calc(28/16 * 1em - 0.2em) calc(4/16 * 1em) calc(26/16 * 1em - 5px);
+  }
+  #top-nav.shrinked .navbar-right a {
+    padding: 1em calc(4/16 * 1em) calc(1em - 5px);
+  }
+  #top-nav .navbar-nav.navbar-right li:last-of-type a {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) { /* md */
+
+  /* =========== Logo =========== */
+
+  #top-nav .navbar-brand {
+    padding: 1.3125em -0px; /* 21/16 */
+    width: 12.5em; /* Full logotype */
+    transition: all 0.1s ease-out;
+    height: auto;
+    position: relative;
+    top: 0.125em;
+    left: calc(15/16 * 1em);
+  }
+  #top-nav.shrinked .navbar-brand {
+    width: calc(55/75 * 12.5em);
+    padding: calc(55/75 * 1.3125em) -0px;
+  }
+  #top-nav .navbar-nav.navbar-left a {
+    margin-right: calc(35/14 * 1em);
+  }
+}
+
+@media only screen and (min-width: 1200px) { /* lg */
+  #top-nav .navbar-right .glyphicon {
+    margin-right: 0.5em;
+    left: calc(-2/16 * 1em);
+  }
+}

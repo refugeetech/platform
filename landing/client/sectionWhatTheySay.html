@@ -1,0 +1,22 @@
+<template name="sectionWhatTheySay">
+  <section id="whatTheySay" class="row bgclr-blue">
+    <div class="section-padding col-xs-12"></div>
+    <div class="col-xs-12 context-header">
+      <p>Buzz</p>
+    </div>
+    <div class="col-xs-8 col-xs-offset-2 section-heading">
+      <h1>What they are saying about us</h1>
+    </div>
+    <div class="col-xs-12">
+      <div class="row owl-carousel">
+        {{#each media}}
+          <div id="{{id}}" class="media col-xs-12">
+            <a href="{{source}}" alt="{{text}}" target="_blank">
+              <img class="img-responsive {{picClass}}" src="{{pic}}">
+            </a>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</template>

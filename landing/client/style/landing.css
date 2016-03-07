@@ -1,0 +1,117 @@
+#landing-banner {
+    padding: 4.75em 0;
+    min-height: 70vh;
+    text-align: center;
+    color: #fff;
+    background-image: url('images/gfx_intro.jpg');
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 5em;
+}
+
+#landing-title {
+  font-size: 5rem;
+  text-shadow: 0 1px 0 #20245C; /* Match the color overlay hue of banner image*/
+}
+
+.landing-page-slogan {
+    margin-left: 45%;
+    width: 80%;
+    text-align: left;
+}
+
+.landing-slogan {
+    font-size: 0.7em;
+}
+
+
+#landing-get-involved {
+    margin-top: -10%;
+}
+
+.small-landing-page-sector-header {
+    margin-top: 5%;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+.second-sector {
+    background-color: #FFFFFF;
+    min-height:400px;
+}
+
+.second-sector img {
+    height: 200px;
+    width: 200px;
+}
+
+.second-header-landing-page {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+}
+
+.landing-pages-images ul {
+    display: inline;
+    list-style-type: none;
+}
+
+/* SECTION #volunteer */
+ .top-text-box {
+   align-items:center;
+   text-align: center;
+ }
+ 
+ .top-text-box h1 {
+   font-size: 4em;
+ }
+ 
+  .context-header  {
+   font-size: 1.5em;
+   font-family: "Lab gr"
+ }
+ 
+ .target-groups-text {
+   font-size: 1.5em;
+ }
+ 
+
+ 
+ .bgimg-banner {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-image: url('images/background-header.jpg');
+    font-size: 1em;
+    
+ }
+ 
+ .bgclr-blue {
+   background-color: #20245C;
+   color: white;
+ }
+ 
+ .bgclr-white {
+   background-color: white;
+   color:#20245C;
+}
+ 
+ .transition-column {
+   align-items: center;
+   text-align: center;
+   padding: 70px 0;
+ }
+ 
+ #peak1-blog {
+   text-align: center;
+ }
+ 
+ .section-padding {
+   padding-top: 3em;
+   padding-bottom: 3em;
+ }

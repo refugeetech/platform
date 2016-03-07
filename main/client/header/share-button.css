@@ -1,0 +1,14 @@
+share-button {
+  background: #fff;
+  color: #1d2660;
+}
+
+  #top-nav .navbar-nav.navbar-right #share-button-container {
+    margin-right: calc(20/16 * 1em);
+    padding: calc(28/16 * 1em - 0.2em) calc(4/16 * 1em) calc(26/16 * 1em - 5px);
+  }
+  #top-nav.shrinked .navbar-right #share-button-container {
+    padding: 1em calc(4/16 * 1em) calc(1em - 5px);
+  }
+
+ 

@@ -1,0 +1,13 @@
+<head>
+  <title>Refugee Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<template name="mainLayout">
+  {{> mainNavbar }}
+  <div class="container-fluid">
+    {{> Template.dynamic template=main }}
+  </div>
+  <div class="container-fluid">
+    {{> mainFooter }}
+  </div>
+</template>

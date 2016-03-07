@@ -1,0 +1,47 @@
+/* collect all button styling here */
+
+  .btn:focus, .btn:active:focus, .btn.active:focus {
+      background-color: #20245C;
+      color:#D92D6F;
+  }
+
+ .btn-4blue-background {
+    color: #D92D6F;
+    border-color:transparent;
+  }
+  
+  .btn-4blue-background:hover {
+    background-color: #D92D6F;
+    color:white;
+    border-color:#20245C;
+  }
+ 
+ .btn-4red-background {
+    color:white;
+    border-color:white;
+    border-width: 0.1em;
+  }
+  
+ .btn-4red-background:hover {
+    color:#D92D6F;
+    background-color: white;
+    border-color: white;
+  }
+ 
+ .btn-4white-background {
+   color:#D92D6F;
+   border-color:#D92D6F;
+ }
+ 
+ .btn-4white-background:hover {
+   background-color: #D92D6F;
+   color: white;
+   border-color: white;
+  }
+ 
+ .btn {
+   background-color: transparent;
+   font-size: 2.5rem;
+   border-radius: 2em;
+ }
+ 
