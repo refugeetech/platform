@@ -1,4 +1,4 @@
-Template.singleProjectBox.helpers({
+Template.singleProjectDetailed.helpers({
   //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
   project: function () {
     return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
@@ -22,7 +22,12 @@ Template.singleProjectBox.helpers({
       n.type === 'linkedin'
     );
   });
-  return websites;
+  var out = {};
+  jQuery.each(websites,(n,i)=>{
+    out[n.type] = n;
+  });
+  console.log(out);
+  return out;
 },
 hasMultipleWebsites: function () {
   //TODO: Duplicated code, can we reuse instead?
@@ -60,7 +65,7 @@ pics: function () {
 }
 });
 
-Template.singleProjectBox.events({
+Template.singleProjectDetailed.events({
   'click #show-more ': function(event,template) {
     $('.content-text').addClass('visable');
     $(event).target.css({
