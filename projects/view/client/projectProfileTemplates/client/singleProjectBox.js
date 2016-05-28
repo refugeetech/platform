@@ -1,4 +1,6 @@
-Template.singleProjectDetailed.helpers({
+
+
+Template.singleProjectBox.helpers({
   //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
   project: function () {
     return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
@@ -6,28 +8,23 @@ Template.singleProjectDetailed.helpers({
   startupDateFormatted: function () {
     return moment(this.startupDate).format('YYYY');
   },
+  spitMeAnURL: (list,type)=> {
+    
+    return _.findWhere(list,{type:type}).url;
+  },
   websites: function () {
     const websites = jQuery.grep(this.links, function( n, i ) {
       return ( n.type === 'web' );
     });
     return websites;
   },
-  socialLinks: function () {
-    const websites = jQuery.grep(this.links, function( n, i ) {
-      return ( n.type === 'web' ||
-      n.type === 'facebook' ||
-      n.type ===  'twitter' ||
-      n.type === 'instagram' ||
-      n.type === 'blogger' ||
-      n.type === 'linkedin'
-    );
-  });
-  var out = {};
-  jQuery.each(websites,(n,i)=>{
-    out[n.type] = n;
-  });
-  console.log(out);
-  return out;
+  twitter: (project)=> {
+    return project.links[0].url;
+  },
+  socialLinks: function (project,type) {
+  return _.find(project.links,(n,i)=> {
+    return n.type==type;
+  }).url;
 },
 hasMultipleWebsites: function () {
   //TODO: Duplicated code, can we reuse instead?
@@ -60,29 +57,24 @@ calculateProgress: function(){
     return 0;
   }
 },
-pics: function () {
-  return ProjectMedia.find({_id: this.id});
+spitMeASrc: function (project) {
+  var tmp = ProjectMedia.find({_id: project.mediaId}).fetch()[0].url();
+  console.log(tmp);
+  return tmp;
 }
 });
 
-Template.singleProjectDetailed.events({
+Template.singleProjectBox.events({
   'click #show-more ': function(event,template) {
     $('.content-text').addClass('visable');
     $(event).target.css({
       display:'none',
     });
   },
-  "click #view-images": function(event,template) {
-    if($(event.target).hasClass('active')){
-      $('.image_slide_wrapper').removeClass('image_slide_wrapper_active');
-      $('#view-images').removeClass('active');
-      $('.projectDetailList').removeClass('inactive');
-    }
-    else{
-      $('.image_slide_wrapper').addClass('image_slide_wrapper_active');
-      $('#view-images').addClass('active');
-      $('.projectDetailList').addClass('inactive');
-    }
+  "click img": function(event,template) {
+    var tmp = ProjectMedia.find({_id: this.mediaId});
+    console.log(tmp.fetch()[0].url());
+    
   },
   "click .projectDetailList":function(event,template) {
     $('.image_slide_wrapper').removeClass('image_slide_wrapper_active');
