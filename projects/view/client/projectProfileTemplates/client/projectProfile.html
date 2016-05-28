@@ -1,0 +1,23 @@
+<template name="projectProfile">
+  <!-- We are subscibing to the singleProject publication -->
+  {{#if Template.subscriptionsReady }}
+    <!-- calling the helper function getProject that returns a project object using the route parameter projectId -->
+    {{#with project }}
+    <!-- Start projectProfile -->
+    
+    	<!-- Start singleProjectBox -->
+    	{{>singleProjectBox}}
+    	<!-- end singleProjectBox -->
+    
+    	<!-- start projectDetails -->
+    	{{>projectDetails}}
+    	<!-- end projectDetails -->
+    	
+    	<!-- start relatedProjectInfo -->
+    	{{>relatedProjectInfo}}
+    	<!-- end relatedProjectInfo -->
+    	
+    <!-- End projectProfile -->
+    {{/with }}
+  {{/if}}
+</template>

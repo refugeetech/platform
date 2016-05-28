@@ -1,4 +1,4 @@
-Template.singleProjectDetailed.helpers({
+Template.singleProjectBox.helpers({
   //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
   project: function () {
     return Projects.findOne({ _id: FlowRouter.getParam('projectId')});
@@ -60,7 +60,7 @@ pics: function () {
 }
 });
 
-Template.singleProjectDetailed.events({
+Template.singleProjectBox.events({
   'click #show-more ': function(event,template) {
     $('.content-text').addClass('visable');
     $(event).target.css({
