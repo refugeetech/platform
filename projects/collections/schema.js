@@ -115,6 +115,11 @@ ProjectsSchema = new SimpleSchema({
     label: "Project Short Description (maximum 140 characters)",
     max: 140
   },
+  "email": {
+    type: String,
+    label: "Project's email address",
+    max: 100
+  },
 
   "challengeCategories": {
     type: [String],
@@ -280,7 +285,7 @@ ProjectsSchema = new SimpleSchema({
   "links.$.type": {
     type:String,
     label: "Type of URL",
-    allowedValues: ['web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore'],
+    allowedValues: ['web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore','github','slack','trello'],
     autoform: {
       options: [
         //generic link types
@@ -297,7 +302,11 @@ ProjectsSchema = new SimpleSchema({
         {label: "Facebook", value: "facebook"},
         {label: "Twitter", value: "twitter"},
         {label: "Instagram", value: "instagram"},
-        {label: "Linkedin", value: "linkedin"}
+        {label: "Linkedin", value: "linkedin"},
+		//dev
+        {label: "Slack", value: "slack"},
+        {label: "Github", value: "github"},
+        {label: "Trello", value: "trello"}
       ]
     }
   },
