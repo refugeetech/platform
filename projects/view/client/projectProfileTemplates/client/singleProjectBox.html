@@ -8,7 +8,7 @@
     		
     		<h1 class="section-heading">{{project.name}}</h1>
     
-    		<p class="column-paragraph">A <a href="#">{{project.challengeCategories}} project</a> that launched in <a href="#">Sweden</a> in 2015</p>
+    		<p class="column-paragraph">A <a href="#">{{project.challengeCategories}} project</a> that launched in <a href="#">{{project.postalAddress.country}}</a> in {{startupDateFormatted project.startupDate}}.</p>
     		<p class="column-paragraph">{{project.description}}</p>
     		<p class="column-paragraph">Contact us at <a href="mailto:{{project.email}}">{{project.email}}</a>, <a href="{{spitMeAnURL project.links 'twitter'}}">Twitter</a> or <a href="{{spitMeAnURL project.links 'facebook'}}">Facebook</a>.</p>
     	</div>
