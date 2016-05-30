@@ -77,7 +77,7 @@ logging@1.0.12
 matb33:bootstrap-base@10.0.0
 matb33:bootstrap-collapse-js@10.0.0
 matb33:bootstrap-transition-js@10.0.0
-mdg:validation-error@0.2.0
+mdg:validation-error@0.5.1
 meteor@1.1.14
 meteor-base@1.0.4
 minifier-css@1.1.11
@@ -99,8 +99,8 @@ npm-mongo@1.4.43
 observe-sequence@1.0.11
 ordered-dict@1.0.7
 peerlibrary:assert@0.2.5
-peerlibrary:base-component@0.14.0
-peerlibrary:blaze-components@0.16.2
+peerlibrary:base-component@0.16.0
+peerlibrary:blaze-components@0.18.0
 peerlibrary:computed-field@0.3.1
 peerlibrary:data-lookup@0.1.0
 peerlibrary:reactive-field@0.1.0
