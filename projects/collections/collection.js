@@ -33,8 +33,3 @@ ProjectsIndex  = new EasySearch.Index({
     }
   })
 });
-
-ProjectMedia = new FS.Collection("projectMedia", {
-  stores: [new FS.Store.GridFS("projectMediaStore")]
-});
-

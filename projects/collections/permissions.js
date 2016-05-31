@@ -3,17 +3,3 @@ Projects.allow({
     return true;
   }
 });
-
-ProjectMedia.allow({
-  download: function () {
-    return true;
-  },
-  fetch: null
-});
-
-ProjectMedia.allow({
-  update: function () {
-    return true;
-  }
-});
-

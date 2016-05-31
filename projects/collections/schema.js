@@ -1,18 +1,9 @@
 //helper schemas for the projectschema dataStore field
-
 ProjectMediaFileSchema = new SimpleSchema({
   "id": {
     type: String,
     optional:true,
-    label: "File",
-    autoform: {
-      afFieldInput: {
-        type: "fileUpload",
-        collection: "projectMedia",
-        label: "choose file",
-        optional:true
-      }
-    }
+    label: "File"
   }
 });
 
@@ -245,12 +236,13 @@ ProjectsSchema = new SimpleSchema({
         this.unset();  // Prevent user from supplying their own value
       }
     }
-  },
+  }
+  /*,
   media: {
     type: ProjectMediaLibrarySchema,
     label: "Project Media Library",
     optional:true
-  },
+  },/*
   /*
   isRTProject: {
     type:Boolean,
