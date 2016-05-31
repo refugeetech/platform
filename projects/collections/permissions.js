@@ -11,3 +11,9 @@ ProjectMedia.allow({
   fetch: null
 });
 
+ProjectMedia.allow({
+  update: function () {
+    return true;
+  }
+});
+
