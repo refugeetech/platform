@@ -4,21 +4,7 @@
   </div>
   {{# autoForm collection="Projects" id="insertProjectForm" type="insert" }}
   {{> afQuickField name='name' autofocus='true'}}
-
   {{> afQuickField name='description' rows=5 }}
-  
-  {{> afQuickField name="links"}}
-<!--
-  {{> afQuickField name="shortDescription" }}
-  
-  
-  {{> afQuickField name="email" }}
--->
-  {{> afFormGroup name="challengeCategories" type="select-checkbox"}}
-<!--
-  {{> afQuickField name="solution"}}
--->
-
   <div class="form-group">
     <label for="tags">
       Tags
@@ -29,23 +15,35 @@
     data-schema-key="tags"
     placeholder="Choose some tags (e.g. food, clothing, shelter)">
   </div>
+  {{> afFormGroup name="challengeCategories" type="select-checkbox"}}
+  {{> afQuickField name="targetPlatforms" }}
+  {{> afQuickField name="links"}}
+  {{> afQuickField name="startupDate"}}
+  {{> afQuickField name="postalAddress"}}
+<!--
+  {{> afQuickField name="shortDescription" }}
+  
+  
+  {{> afQuickField name="email" }}
+-->
+<!--
+  {{> afQuickField name="solution"}}
+-->
+
+
 <!--
    {{> afQuickField name="isRTProject"}}
  -->
- 
-  {{> afQuickField name="startupDate"}}
+
 <!-- 
   {{> afFormGroup name="currentStage"}}
 -->
 
-  {{> afQuickField name="targetPlatforms" }}
-  {{> afQuickField name="postalAddress"}}
 
   
 
   <!-- {{> afQuickField name="dataStore"}} -->
 
-  {{> afQuickField name="media"}}
   
   <!-- {{> afQuickField name="pictures"}} -->
 
