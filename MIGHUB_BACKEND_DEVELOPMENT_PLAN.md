@@ -36,11 +36,6 @@ Step0 has been implemented in the ProjectsSchema.links.type schema definition
 [tomi:upload-jquery](https://github.com/tomitrescak/meteor-tomi-upload-jquery)
 
 
-
-----
-#### Implement the 
-----
-
 ### Links
 -----
 #### Step 0
