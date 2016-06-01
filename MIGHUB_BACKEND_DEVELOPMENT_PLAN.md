@@ -96,7 +96,8 @@ Previous link type definitions:
 - Define endpoint to get all projects sorted under all tags
 
 
-Step0 has been implemented and has been described in the file API00.md
+```Step0 has been implemented and has been described in the file API00.md```
+
 ```javascript
 {label: "Home Page", value:"home"},
 {label: "Web App", value:"webApp"}
