@@ -1,3 +1,25 @@
+CategoriesSchema = new SimpleSchema({
+  "categories": {
+    type: [String],
+    label: "Challenge Categories",
+    allowedValues: ['social', 'bureaucracy', 'housing', 'education',
+    'language', 'employment', 'coordination','information'],
+    autoform: {
+      options: [
+        {label: "Social", value: "social"},
+        {label: "Bureaucracy", value: "bureaucracy"},
+        {label: "Housing", value: "housing"},
+        {label: "Education", value: "education"},
+        {label: "Language", value: "language"},
+        {label: "Employment", value: "employment"},
+        {label: "Coordination", value: "coordination"},
+        {label: "Information", value: "information"}
+      ]
+    }
+  }
+});
+
+
 //helper schemas for the projectschema dataStore field
 ProjectMediaFileSchema = new SimpleSchema({
   "id": {
@@ -90,6 +112,7 @@ ProjectDataStoreSchema = new SimpleSchema({
   }
 });
 
+// Since challengeCategories is not a collection
 // Schema for Projects collection
 ProjectsSchema = new SimpleSchema({
   "migHubComplete": {
@@ -356,5 +379,7 @@ ProjectsSchema = new SimpleSchema({
     optional:true
   }*/
 });
+
+Categories.attachSchema(CategoriesSchema);
 
 Projects.attachSchema(ProjectsSchema);

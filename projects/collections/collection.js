@@ -33,3 +33,12 @@ ProjectsIndex  = new EasySearch.Index({
     }
   })
 });
+
+//this is only a helper collection at the moment and is mainly used to build the Projects Schema
+Categories = new Mongo.Collection('categories');
+
+
+
+
+
+
