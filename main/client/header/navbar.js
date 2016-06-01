@@ -30,17 +30,6 @@ Template.mainNavbar.rendered = function () {
     }
   };
 
-  //adding share-button
-  let config = {
-    url:"http://www.refugeetech.com",
-    ui: {
-      flyout: "bottom center",
-      button_font: false,
-      icon_font:false,
-    }
-  };
-
-  new ShareButton(config);
 };
 
 Template.mainNavbar.events({
