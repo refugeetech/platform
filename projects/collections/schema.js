@@ -188,16 +188,16 @@ ProjectsSchema = new SimpleSchema({
     allowedValues: ['home','pic','mainPic','logo','web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore','github','slack','trello'],
     autoform: {
       options: [
-        //generic link types
+    //generic link types
         {label: "Web", value: "web"},
         {label: "Article", value: "article"},
         {label: 'Blog', value:"blog"},
         {label: "Other", value:"other"},
-        //appstores
+    //appstores
         {label: 'App Store', value:"appStore"},
         {label: 'Google Play', value:"googlePlay"},
         {label: 'Windows Store', value:"windowsStore"},
-        //social media types
+    //social media types
         {label: "Blogger", value: "blogger"},
         {label: "Facebook", value: "facebook"},
         {label: "Twitter", value: "twitter"},
@@ -207,11 +207,13 @@ ProjectsSchema = new SimpleSchema({
         {label: "Slack", value: "slack"},
         {label: "Github", value: "github"},
         {label: "Trello", value: "trello"},
-    //dev 2
-        {label: "Home Page", value:"home"},
+    //pictures Step 0
         {label:"Project Pic", value:"mainPic"},
         {label:"Project Logo", value:"logo"},
-        {label:"Picture", value:"pic"}
+        {label:"Picture", value:"pic"},
+    //weblinks Step 0
+        {label: "Home Page", value:"home"},
+        {label: "Web App", value:"webApp"}
       ]
     }
   },
