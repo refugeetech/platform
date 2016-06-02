@@ -28,8 +28,6 @@ Step0 has been implemented in the ProjectsSchema.links.type schema definition
 ----
 - Implement the file storage capability using the following packages already installed: 
 
-(search them online)
-
 
 [tomi:upload-server](https://github.com/tomitrescak/meteor-uploads)
 
@@ -118,7 +116,7 @@ ___Step1.0___
       - check out projects/collections/collection.js for reference
     - add new schema definition in a new file comments/collections/schema.js
       - field 1: projectId , type = string, optional = false => id of the project the comment is made for
-      - field 2: value/text, type = string, min = (an integer for the minimum amopunt of characters for the comment), max = (ditto max characters for the comment) 
+      - field 2: value/text, type = string, min = (an integer for the minimum amount of characters for the comment), max = (ditto max characters for the comment) 
 - Define endpoints to add reviews to project
   - Analogous to breakdown of comments above
 - Define endpoints to add ratings to project
@@ -136,7 +134,7 @@ ___Step1.1___
 
 - [Make the API RESTful](https://themeteorchef.com/recipes/writing-an-api/)
 - Use versioning for the api endpoints
-  - /api/v00/
+  - /api/0/
 - Structure the API for reusability
 - Handle errors and unwanted requests
 

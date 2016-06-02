@@ -311,39 +311,13 @@ Returns:
 ```
 sourcefile: tags/server/jsonRoutes.js
 
-### GET all projects having only specified tags
-
-
-ENDPOINT: 
-
-/tags/only/___:tags___/json
-
-Parameter Syntax: tag1,tag2,...
-
-Returns:
-```javascript
-{
-  meta:
-  {
-    schemaDescription:
-    {
-      fieldDescription:'',
-      dataStructure:['project']
-    },
-    pseudoQuery:'return project in Projects where only ['+req.params.tags+'] in project.tags'
-  },
-  data:result
-}
-```
-sourcefile: tags/server/jsonRoutes.js
-
 
 ### GET all projects having any of specified tags
 
 
 ENDPOINT: 
 
-/tags/any/___:tag___/json
+/tags/in/___:tag___/json
 
 Parameter Syntax: tag1,tag2,...
 
@@ -365,4 +339,28 @@ Returns:
 sourcefile: tags/server/jsonRoutes.js
 
 
-  
+### GET all projects having only specified tags
+
+
+ENDPOINT: 
+
+/tags/eq/___:tags___/json
+
+Parameter Syntax: tag1,tag2,...
+
+Returns:
+```javascript
+{
+  meta:
+  {
+    schemaDescription:
+    {
+      fieldDescription:'',
+      dataStructure:['project']
+    },
+    pseudoQuery:'return project in Projects where only ['+req.params.tags+'] in project.tags'
+  },
+  data:result
+}
+```
+sourcefile: tags/server/jsonRoutes.js
