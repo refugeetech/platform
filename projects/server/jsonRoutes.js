@@ -81,7 +81,7 @@ JsonRoutes.add("get", "/projects/:projectId/json", function (req, res, next) {
         fieldDescription:'',
         dataStructure:'project'
       },
-      pseudoQuery:'return project in database where ['+req.params.projectId+'] equals project._id'
+      pseudoQuery:'return project in Projects where ['+req.params.projectId+'] equals project._id'
     },
     data:result
     
@@ -106,7 +106,7 @@ JsonRoutes.add("get", "/categories/:categories/json", function (req, res, next) 
         fieldDescription:'',
         dataStructure:['project']
       },
-      pseudoQuery:'return project for each project in database where all of ['+req.params.categories+'] in project.challengeCategories'
+      pseudoQuery:'return project for each project in Projects where all of ['+req.params.categories+'] in project.challengeCategories'
     },
     data:result
   }); // Sends the result to client
@@ -128,7 +128,7 @@ JsonRoutes.add("get", "/categories/in/:categories/json", function (req, res, nex
         fieldDescription:'',
         dataStructure:['project']
       },
-      pseudoQuery:'return project for each project in database where any of ['+req.params.categories+'] in project.challengeCategories'
+      pseudoQuery:'return project for each project in Projects where any of ['+req.params.categories+'] in project.challengeCategories'
     },
     data:result
   }); // Sends the result to client
@@ -151,7 +151,7 @@ JsonRoutes.add("get", "/categories/eq/:categories/json", function (req, res, nex
         fieldDescription:'',
         dataStructure:'project'
       },
-      pseudoQuery:'return projects in database where ['+req.params.categories+'] equals project.challengeCategories'
+      pseudoQuery:'return projects in Projects where ['+req.params.categories+'] equals project.challengeCategories'
     },
     data:result
     
@@ -196,21 +196,21 @@ JsonRoutes.add("get", "/categories/projects/json", function (req, res, next) {
       {
         fieldDescription:
         {
-          name:'the name of the tag',
+          value:'ProjectsSchema.challengeCategories.options.$.value',
           projects: 'list of projects'
           
         },
         dataStructure:
         [
           {
-            name:'category.value',
+            value:'category.value',
             projects:['project']
           }
         ]
       },
-      pseudoQuery:'return category.value from each challengeCategories.options in ProjectsSchema with return each project in database where option.value in project.challengeCategories'
+      pseudoQuery:'return category.value from each challengeCategories.options in ProjectsSchema with return each project in Projects where category.value in project.challengeCategories'
     },
-    data:result
+    data:out
   });
 });
 

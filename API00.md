@@ -8,7 +8,7 @@ API for the ProjectHub
 
 # GET Categories
   
-## GET All category values (category.value) in ProjectsSchema
+## GET All category values (category.value) in ProjectsSchema.challengeCategories.options
 
 ENDPOINT: 
 
@@ -22,7 +22,7 @@ Returns:
     schemaDescription:
     {
       fieldDescription:'',
-      dataStructure:['category.value']
+      dataStructure:['ProjectsSchema.challengeCategories.options.$.value']
     },
     pseudoQuery:'return category.value from each challengeCategories.options in ProjectsSchema'
   },
@@ -31,7 +31,7 @@ Returns:
 ```
 sourcefile: projects/server/jsonRoutes.js
 
-## GET All category objects from database
+## GET All category objects from ProjectsSchema.challengeCategories.options
 
 ENDPOINT: 
 
@@ -56,7 +56,7 @@ sourcefile: projects/server/jsonRoutes.js
 
 # GET Tags
 
-## GET All tags (tag names) in database
+## GET All tags (tag names) in Tags
 
 ENDPOINT: 
 
@@ -121,19 +121,19 @@ Returns:
     {
       fieldDescription:
       {
-        name:'the name of the tag',
+        value:'ProjectsSchema.challengeCategories.options.$.value',
         projects: 'list of projects'
         
       },
       dataStructure:
       [
         {
-          name:'tag.name',
+          value:'category.value',
           projects:['project']
         }
       ]
     },
-    pseudoQuery:'return tag.name from each tag in Tags with return each project in database where tag.name in project.tags'
+    pseudoQuery:'return category.value from each challengeCategories.options in ProjectsSchema with return each project in Projects where category.value in project.challengeCategories'
   },
   data:out
 }
@@ -167,7 +167,7 @@ Returns:
         }
       ]
     },
-    pseudoQuery:'return tag.name from each tag in Tags with return each project in database where tag.name in project.tags'
+    pseudoQuery:'return tag.name from tag in Tags with return project in Projects where tag.name in project.tags'
   },
   data:out
 }
@@ -223,7 +223,7 @@ Returns:
       fieldDescription:'',
       dataStructure:['project']
     },
-    pseudoQuery:'return project in database where all of ['+req.params.categories+'] in project.challengeCategories'
+    pseudoQuery:'return project in Projects where all of ['+req.params.categories+'] in project.challengeCategories'
   },
   data:result
 }

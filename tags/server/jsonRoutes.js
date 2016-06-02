@@ -12,9 +12,9 @@ JsonRoutes.add("get", "/tags/json", function (req, res, next) {
       schemaDescription:
       {
         fieldDescription:'',
-        dataStructure:['tag.name.value']
+        dataStructure:['tag.name']
       },
-      pseudoQuery:'return tag.name.value for each tag in database'
+      pseudoQuery:'return tag.name for each tag in Tags'
     },
     data:result
     
@@ -39,7 +39,7 @@ JsonRoutes.add("get", "/tags/:tags/json", function (req, res, next) {
         fieldDescription:'',
         dataStructure:['project']
       },
-      pseudoQuery:'return project for each project in database where all of ['+req.params.tag+'] in project.tags'
+      pseudoQuery:'return project in Projects where all of ['+req.params.tag+'] in project.tags'
     },
     data:result
     
@@ -63,7 +63,7 @@ JsonRoutes.add("get", "/tags/in/:tag/json", function (req, res, next) {
         fieldDescription:'',
         dataStructure:['project']
       },
-      pseudoQuery:'return project for each project in database where any of ['+req.params.tag+'] in project.tags'
+      pseudoQuery:'return project in Projects where any of ['+req.params.tag+'] in project.tags'
     },
     data:result
     
@@ -87,7 +87,7 @@ JsonRoutes.add("get", "/tags/eq/:tags/json", function (req, res, next) {
         fieldDescription:'',
         dataStructure:['project']
       },
-      pseudoQuery:'return project for each project in database where only ['+req.params.tags+'] in project.tags'
+      pseudoQuery:'return project in Projects where only ['+req.params.tags+'] in project.tags'
     },
     data:result
     
@@ -143,7 +143,7 @@ JsonRoutes.add("get", "/tags/projects/json", function (req, res, next) {
           }
         ]
       },
-      pseudoQuery:'return tag.name from each tag in database with return each project in database where tag.name in project.tags'
+      pseudoQuery:'return tag.name from tag in Tags with return project in Projects where tag.name in project.tags'
     },
     data:result
   });
