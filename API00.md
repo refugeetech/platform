@@ -364,3 +364,21 @@ Returns:
 }
 ```
 sourcefile: tags/server/jsonRoutes.js
+
+# PUT API
+
+## PUT ratings
+
+ENDPOINT: 
+
+/ratings/add/_:parameters_
+
+Parameter Syntax: collection=:collection&ratedId=:ratedId&rating=:rating&raterId=:raterId&weakId=:weakId
+
+Returns:
+```javascript
+{
+  data:result
+}
+```
+sourcefile: ratings/server/jsonRoutes.js
