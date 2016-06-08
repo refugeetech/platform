@@ -44,20 +44,6 @@ Reviews.attachSchema(new SimpleSchema({
     label:"Flag used to moderate the content",
     defaultValue: false
   },
-  nbrUpVotes: {
-    type: Number,
-    label: "Number of upvotes",
-    autoValue: (doc)=> {
-      return _.filter(Ratings.find({rated:{collection:"reviews", id:doc.reviewed.id}}).fetch(),(rating,index)=>{return rating.rating=='UP';}).length;
-    }
-  },
-  nbrDownVotes: {
-    type: Number,
-    label: "Number of upvotes",
-    autoValue: (doc)=> {
-      return _.filter(Ratings.find({rated:{collection:"reviews", id:doc.reviewed.id}}).fetch(),(rating,index)=>{return rating.rating=='DOWN';}).length;
-    }
-  },
   date: {
     type: Date,
     label:"Timestamp of the review",

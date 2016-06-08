@@ -1,3 +1,94 @@
+/* STUB */
+/////////////// GET RATINGS FOR A PROJECT ///////////////
+JsonRoutes.add("get", "/reviews/projects/:projectId/json", function (req, res, next) {
+  var reviewId = req.params.reviewId; // The review id, in MongoDB
+  var result = Reviews.findOne(reviewId) 
+
+  JsonRoutes.sendResult(res, 200,
+/* API RESPONSE */
+  {
+    meta:
+    {
+      schemaDescription:
+      {
+        fieldDescription:'',
+        dataStructure:'review'
+      },
+      pseudoQuery:'return review in Reviews where ['+req.params.reviewId+'] equals review._id'
+    },
+    data:result
+    
+  }); 
+
+/* STUB */
+/////////////// GET RATINGS FOR A COMMENT ///////////////
+JsonRoutes.add("get", "/reviews/comments/:commentId/json", function (req, res, next) {
+  var reviewId = req.params.reviewId; // The review id, in MongoDB
+  var result = Reviews.findOne(reviewId) 
+
+  JsonRoutes.sendResult(res, 200,
+/* API RESPONSE */
+  {
+    meta:
+    {
+      schemaDescription:
+      {
+        fieldDescription:'',
+        dataStructure:'review'
+      },
+      pseudoQuery:'return review in Reviews where ['+req.params.reviewId+'] equals review._id'
+    },
+    data:result
+    
+  }); 
+
+/* STUB */
+/////////////// GET RATINGS FOR A REVIEW ///////////////
+JsonRoutes.add("get", "/ratings/reviews/:reviewId/json", function (req, res, next) {
+  var reviewId = req.params.reviewId; // The review id, in MongoDB
+  var result = Reviews.findOne(reviewId) 
+
+  JsonRoutes.sendResult(res, 200,
+/* API RESPONSE */
+  {
+    meta:
+    {
+      schemaDescription:
+      {
+        fieldDescription:'',
+        dataStructure:'review'
+      },
+      pseudoQuery:'return review in Reviews where ['+req.params.reviewId+'] equals review._id'
+    },
+    data:result
+
+});
+
+/* STUB */
+////////// GET ALL RATINGS RELATED TO A PROJECT ////////////////
+JsonRoutes.add("get", "/ratings/projects/:projectId/nested/json", function (req, res, next) {
+  var reviewId = req.params.reviewId; // The review id, in MongoDB
+  var result = Reviews.findOne(reviewId) 
+
+  JsonRoutes.sendResult(res, 200,
+/* API RESPONSE */
+  {
+    meta:
+    {
+      schemaDescription:
+      {
+        fieldDescription:'',
+        dataStructure:'review'
+      },
+      pseudoQuery:'return review in Reviews where ['+req.params.reviewId+'] equals review._id'
+    },
+    data:result
+
+});
+  
+
+
+
 ////////////// INSERT RATING //////////////
 // collection=projects&documentId=koAeSLKJb9AjWALaq&rating=UP&weakId=leo/json
 // collection=reviews&documentId=4LHJ6tgYAJaR3CHS9&rating=DOWN&weakId=leo&reviewerId=leo/json
