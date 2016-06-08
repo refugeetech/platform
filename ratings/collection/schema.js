@@ -8,7 +8,7 @@
 Rater = new SimpleSchema({
   weakId: {
     type: String,
-    label: "Used to weakly identify the rater/commenter/reviewer as long as user login is not enforced",
+    label: "A weak identifier of the rater/commenter/reviewer", // has to be used as long as user login is not enforced",
     optional: false
   },
   id: {

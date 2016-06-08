@@ -1,7 +1,6 @@
 ////////////// INSERT RATING //////////////
 // collection=projects&ratedId=koAeSLKJb9AjWALaq&rating=UP&weakId=leo
 //collection=:collection&ratedId=:ratedId&rating=:rating&raterId=:raterId&weakId=:weakId
-// Returns JSON array containing all projects in Projects collection with a specific tag
 JsonRoutes.add("get", "/ratings/put/:reqstring/json", function (req, res, next) {
   var tmp = req.params.reqstring.split("&");
   console.log(tmp);

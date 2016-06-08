@@ -19,25 +19,53 @@ Reviewer = new SimpleSchema({
 Reviewed = new SimpleSchema({
   collection: {
     type: String,
-    label: "In what collection does the document of the thing beeing reviewd reside",
+    label: "The collection of the object beeing reviewed",
     allowedValues: ["projects"] //  only projects can be reviewed at the moment  as there are no other relevant entities at the moment
   },
   id: {
     type: String,
-    label: "the id of the thing the collection beeing reviewed"
+    label: "the id of the thing in the collection beeing reviewed"
   }
 });
 Reviews.attachSchema(new SimpleSchema({
   reviewer: {
     type: Reviewer
   },
-  review: {
+  text: {
     type: String,
     label: "The content of the review",
-    min: 200 // a review is more than a comment and to be useful it should have some minimum number och letters
+    min: 50 // a review is more than a comment and to be useful it should have some minimum number of letters
   },
   reviewed: {
     type:Reviewed
+  },
+  approved: {
+    type: Boolean,
+    label:"Overrides autoApproved and is set by moderator if necessary.",
+    defaultValue: true
+  },
+  // This is used to self moderate the content on the mighub. If enough users thinks a review is inappropriate (by downvoting) then the comment needs to be reviewed by a moderator to be visible, through the approved field, since the autoApproved will return false
+  autoApproved: {
+    type: Boolean,
+    label: "Is this comment approved?",
+    autoValue: ()=> {
+      const maxNumberOfDownVotes = 10;
+      return _.filter(Reviews.find({rated:{collection:"reviews", id:this.field("_id")}}).fetch(),(rating,index)=>{return rating.rating=='DOWN';}).length >= maxNumberOfDownVotes;
+    }
+  },
+  nbrUpVotes: {
+    type: Number,
+    label: "Number of upvotes",
+    autoValue: ()=> {
+      return _.filter(Ratings.find({rated:{collection:"reviews", id:this.field("_id")}}).fetch(),(rating,index)=>{return rating.rating=='UP';}).length;
+    }
+  },
+  nbrDownVotes: {
+    type: Number,
+    label: "Number of upvotes",
+    autoValue: ()=> {
+      return _.filter(Ratings.find({rated:{collection:"reviews", id:this.field("_id")}}).fetch(),(rating,index)=>{return rating.rating=='DOWN';}).length;
+    }
   },
   date: {
     type: Date,
