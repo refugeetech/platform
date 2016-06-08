@@ -167,16 +167,12 @@ Returns:
   {
     schemaDescription:
     {
-      fieldDescription:{
-        reviewId:"The id of the newly created review document in the reviews collection"
-      },
-      dataStructure:
-      {
-        reviewId: 'review._id'
-      }
+      fieldDescription:'',
+      dataStructure:'[rating]'
     },
-    pseudoQuery:'return review._id for the created review'
-  }
+    pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'reviews'
+  },
+  data:result
 }
 ```
 sourcefile: ratings/server/jsonRoutes.js
@@ -193,16 +189,12 @@ Returns:
   {
     schemaDescription:
     {
-      fieldDescription:{
-        reviewId:"The id of the newly created review document in the reviews collection"
-      },
-      dataStructure:
-      {
-        reviewId: 'review._id'
-      }
+      fieldDescription:'',
+      dataStructure:'[rating]'
     },
-    pseudoQuery:'return review._id for the created review'
-  }
+    pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'comments'
+  },
+  data:result
 }
 ```
 sourcefile: ratings/server/jsonRoutes.js
