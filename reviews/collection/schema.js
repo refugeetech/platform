@@ -41,17 +41,8 @@ Reviews.attachSchema(new SimpleSchema({
   },
   approved: {
     type: Boolean,
-    label:"Overrides autoApproved and is set by moderator if necessary.",
-    defaultValue: true
-  },
-  // This is used to self moderate the content on the mighub. If enough users thinks a review is inappropriate (by downvoting) then the comment needs to be reviewed by a moderator to be visible, through the approved field, since the autoApproved will return false
-  autoApproved: {
-    type: Boolean,
-    label: "Is this comment approved?",
-    autoValue: ()=> {
-      const maxNumberOfDownVotes = 10;
-      return _.filter(Reviews.find({rated:{collection:"reviews", id:this.field("_id")}}).fetch(),(rating,index)=>{return rating.rating=='DOWN';}).length >= maxNumberOfDownVotes;
-    }
+    label:"Flag used to moderate the content",
+    defaultValue: false
   },
   nbrUpVotes: {
     type: Number,
