@@ -1,8 +1,8 @@
-/* STUB */
 /////////////// GET RATINGS FOR A PROJECT ///////////////
-JsonRoutes.add("get", "/reviews/projects/:projectId/json", function (req, res, next) {
-  var reviewId = req.params.reviewId; // The review id, in MongoDB
-  var result = Reviews.findOne(reviewId); 
+JsonRoutes.add("get", "/ratings/projects/:documentId/json", function (req, res, next) {
+  var CollectionMap = {projects:Projects, reviews:Reviews, comments:Comments}; //using the map to more easily refactor later on
+  var documentId = req.params.documentId;
+  var result = CollectionMap["projects"].findOne({_id:documentId});
 
   JsonRoutes.sendResult(res, 200,
 /* API RESPONSE */
@@ -12,20 +12,19 @@ JsonRoutes.add("get", "/reviews/projects/:projectId/json", function (req, res, n
       schemaDescription:
       {
         fieldDescription:'',
-        dataStructure:'review'
+        dataStructure:'[rating]'
       },
-      pseudoQuery:'return review in Reviews where ['+req.params.reviewId+'] equals review._id'
+      pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'projects'
     },
     data:result
-    
   }); 
 });
 
-/* STUB */
 /////////////// GET RATINGS FOR A COMMENT ///////////////
-JsonRoutes.add("get", "/reviews/comments/:commentId/json", function (req, res, next) {
-  var reviewId = req.params.reviewId; // The review id, in MongoDB
-  var result = Reviews.findOne(reviewId);
+JsonRoutes.add("get", "/ratings/comments/:commentId/json", function (req, res, next) {
+  var CollectionMap = {projects:Projects, reviews:Reviews, comments:Comments}; //using the map to more easily refactor later on
+  var documentId = req.params.documentId;
+  var result = CollectionMap["reviews"].findOne({_id:documentId});
 
   JsonRoutes.sendResult(res, 200,
 /* API RESPONSE */
@@ -35,20 +34,20 @@ JsonRoutes.add("get", "/reviews/comments/:commentId/json", function (req, res, n
       schemaDescription:
       {
         fieldDescription:'',
-        dataStructure:'review'
+        dataStructure:'[rating]'
       },
-      pseudoQuery:'return review in Reviews where ['+req.params.reviewId+'] equals review._id'
+      pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'comments'
     },
     data:result
     
   }); 
 });
 
-/* STUB */
 /////////////// GET RATINGS FOR A REVIEW ///////////////
 JsonRoutes.add("get", "/ratings/reviews/:reviewId/json", function (req, res, next) {
-  var reviewId = req.params.reviewId; // The review id, in MongoDB
-  var result = Reviews.findOne(reviewId);
+  var CollectionMap = {projects:Projects, reviews:Reviews, comments:Comments}; //using the map to more easily refactor later on
+  var documentId = req.params.documentId;
+  var result = CollectionMap["ratings"].findOne({_id:documentId});
 
     JsonRoutes.sendResult(res, 200,
   /* API RESPONSE */
@@ -58,15 +57,16 @@ JsonRoutes.add("get", "/ratings/reviews/:reviewId/json", function (req, res, nex
         schemaDescription:
         {
           fieldDescription:'',
-          dataStructure:'review'
+          dataStructure:'[rating]'
         },
-        pseudoQuery:'return review in Reviews where ['+req.params.reviewId+'] equals review._id'
+        pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'reviews'
       },
       data:result
   
   });
 
 });
+
 /* STUB */
 ////////// GET ALL RATINGS RELATED TO A PROJECT ////////////////
 JsonRoutes.add("get", "/ratings/projects/:projectId/nested/json", function (req, res, next) {

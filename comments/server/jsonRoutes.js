@@ -12,7 +12,7 @@ JsonRoutes.add("get", "/comments/:commentId/json", function (req, res, next) {
       schemaDescription:
       {
         fieldDescription:'',
-        dataStructure:'review'
+        dataStructure:'comment'
       },
       pseudoQuery:'return comment in Comments where ['+req.params.commentId+'] equals comment._id'
     },
@@ -26,7 +26,7 @@ JsonRoutes.add("get", "/comments/:commentId/json", function (req, res, next) {
 ////////////// INSERT COMMENT //////////////
 // collection=projects&objectId=koAeSLKJb9AjWALaq&text=All comments builds community&weakId=leo
 
-//collection=:collection&commentedId=:reviewedId&text=:text&reviewerId=:reviewerId&weakId=:weakId
+//collection=:collection&documentId=:reviewedId&text=:text&reviewerId=:reviewerId&weakId=:weakId
 JsonRoutes.add("get", "/comments/put/:reqstring/json", function (req, res, next) {
   var tmp = req.params.reqstring.split("&");
   console.log(tmp);
@@ -35,7 +35,7 @@ JsonRoutes.add("get", "/comments/put/:reqstring/json", function (req, res, next)
     req.params[tmp3[0]]=tmp3[1];
   });
   console.log(req.params);
-  var project = Projects.findOne({_id:req.params.objectId});
+  var project = Projects.findOne({_id:req.params.documentId});
   console.log(project);
   if(project === undefined) {
     
@@ -46,12 +46,12 @@ JsonRoutes.add("get", "/comments/put/:reqstring/json", function (req, res, next)
 /* API RESPONSE */
     {
       error: 400,
-      reason: "Reviewed object with id="+req.params.objectId + ", in collection "+ req.params.collection + " does not exist"
+      reason: "Reviewed object with id="+req.params.documentId + ", in collection "+ req.params.collection + " does not exist"
     });
   }
   else {
-    var commentId = Comments.insert({commenter: {weakId:req.params.weakId, id:req.params.userId},
-    reviewed:{collection:req.params.collection,id:req.params.reviewedId},
+    var commentId = Comments.insert({commenter: {weakId:req.params.weakId, id:req.params.commenterId},
+    reviewed:{collection:req.params.collection,id:req.params.documentId},
     text:req.params.text});
       JsonRoutes.sendResult(res, 200,
     /* API RESPONSE */

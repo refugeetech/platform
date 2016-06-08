@@ -79,6 +79,138 @@ Returns:
 ```
 sourcefile: tags/server/jsonRoutes.js
 
+# GET COMMENTS
+
+## GET Single Comment by id
+
+ENDPOINT: 
+
+/comments/:commentId/json
+
+Returns:
+```javascript
+{
+  meta:
+  {
+    schemaDescription:
+    {
+      fieldDescription:'',
+      dataStructure:'[rating]'
+    },
+    pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'comments'
+  },
+  data:result
+}
+```
+sourcefile: comments/server/jsonRoutes.js
+
+# GET REVIEWS
+
+## GET Single Review by id
+
+ENDPOINT: 
+
+/reviews/:reviewId/json
+
+Returns:
+```javascript
+{
+  meta:
+  {
+    schemaDescription:
+    {
+      fieldDescription:'',
+      dataStructure:'[rating]'
+    },
+    pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'reviews'
+  },
+  data:result
+}
+```
+sourcefile: reviews/server/jsonRoutes.js
+
+# GET RATINGS
+
+## GET Ratings for a single object by id
+
+### GET Ratings for a single project by id
+ENDPOINT: 
+
+/ratings/projects/:projectId/json
+
+Returns:
+```javascript
+{
+  meta:
+  {
+    schemaDescription:
+    {
+      fieldDescription:'',
+      dataStructure:'[rating]'
+    },
+    pseudoQuery:'return ratings in ratings  for document with id=['+req.params.reviewId+'] in collection'+'projects'
+  },
+  data:result
+}
+```
+sourcefile: ratings/server/jsonRoutes.js
+
+### GET Ratings for a single review by id
+ENDPOINT: 
+
+/ratings/reviews/:reviewId/json
+
+Returns:
+```javascript
+{
+  meta:
+  {
+    schemaDescription:
+    {
+      fieldDescription:{
+        reviewId:"The id of the newly created review document in the reviews collection"
+      },
+      dataStructure:
+      {
+        reviewId: 'review._id'
+      }
+    },
+    pseudoQuery:'return review._id for the created review'
+  }
+}
+```
+sourcefile: ratings/server/jsonRoutes.js
+
+### GET Ratings for a single comment by id
+ENDPOINT: 
+
+/ratings/comments/:commentId/json
+
+Returns:
+```javascript
+{
+  meta:
+  {
+    schemaDescription:
+    {
+      fieldDescription:{
+        reviewId:"The id of the newly created review document in the reviews collection"
+      },
+      dataStructure:
+      {
+        reviewId: 'review._id'
+      }
+    },
+    pseudoQuery:'return review._id for the created review'
+  }
+}
+```
+sourcefile: ratings/server/jsonRoutes.js
+
+## GET all ratings
+### GET all ratings a projects comments [[[STUB]]]
+### GET all ratings a projects reviews [[[STUB]]]
+
 # GET Projects
 
 ## GET All
@@ -371,14 +503,90 @@ sourcefile: tags/server/jsonRoutes.js
 
 ENDPOINT: 
 
-/ratings/add/_:parameters_
+/ratings/put/_:parameters_/json
 
-Parameter Syntax: collection=:collection&ratedId=:ratedId&rating=:rating&raterId=:raterId&weakId=:weakId
+Parameter Syntax: collection=:collection&documentId=:documentId&rating=:rating&raterId=:raterId&weakId=:weakId
+
+allowedValues: :collection == projects || reviews || comments
 
 Returns:
 ```javascript
 {
-  data:result
+  schemaDescription:
+  {
+    fieldDescription:{
+      collection: 'The collectin of the document beeing rated',
+      documentId: 'the documentId of the document beeing rated',
+      rating: 'type of the rating inserted' ,
+      count: 'the current number of ratings for the rated object with rated type'
+    },
+    dataStructure:
+    {
+      collection: 'collection',
+      documentId: 'document._id',
+      rating: 'rating.type' ,
+      count: 'rated.nbrDownVotes/nbrUpvotes'
+    }
+  },
+  pseudoQuery:'return review._id for the created review'
 }
 ```
 sourcefile: ratings/server/jsonRoutes.js
+
+## PUT reviews
+
+ENDPOINT: 
+
+/reviews/put/_:parameters_/json
+
+Parameter Syntax: collection=:collection&documentId=:documentId&text=:text&reviewerId=:reviewerId&weakId=:weakId
+
+allowedValues: :collection == projects
+
+Returns:
+```javascript
+{
+  schemaDescription:
+  {
+    fieldDescription:{
+      reviewId:"The id of the newly created review document in the reviews collection"
+    },
+    dataStructure:
+    {
+      reviewId: 'review._id'
+    }
+  },
+  pseudoQuery:'return review._id for the created review'
+}
+```
+sourcefile: ratings/server/jsonRoutes.js
+
+## PUT comments
+
+ENDPOINT: 
+
+/comments/put/_:parameters_/json
+
+Parameter Syntax: collection=:collection&documentId=:reviewedId&text=:text&reviewerId=:reviewerId&weakId=:weakId
+
+allowedValues: :collection == projects
+
+Returns:
+```javascript
+{
+  schemaDescription:
+  {
+    fieldDescription:{
+      commentId:"The id of the newly created comment in the comments collection"
+    },
+    dataStructure:
+    {
+      commentId: 'comment._id'
+    }
+  },
+  pseudoQuery:'return comment._id for the created comment'
+}
+```
+sourcefile: ratings/server/jsonRoutes.js
+
+
