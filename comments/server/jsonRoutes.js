@@ -53,7 +53,6 @@ JsonRoutes.add("get", "/comments/put/:reqstring/json", function (req, res, next)
     var commentId = Comments.insert({commenter: {weakId:req.params.weakId, id:req.params.userId},
     reviewed:{collection:req.params.collection,id:req.params.reviewedId},
     text:req.params.text});
-    result = Comments.find({reviewed:{collection:req.params.collection, id:req.params.objectId}}).fetch();
       JsonRoutes.sendResult(res, 200,
     /* API RESPONSE */
       {

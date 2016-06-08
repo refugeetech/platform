@@ -1,6 +1,7 @@
 ////////////// INSERT RATING //////////////
-// collection=projects&ratedId=koAeSLKJb9AjWALaq&rating=UP&weakId=leo
-//collection=:collection&ratedId=:ratedId&rating=:rating&raterId=:raterId&weakId=:weakId
+// collection=projects&documentId=koAeSLKJb9AjWALaq&rating=UP&weakId=leo/json
+// collection=reviews&documentId=4LHJ6tgYAJaR3CHS9&rating=DOWN&weakId=leo&reviewerId=leo/json
+//parameter syntax: collection=:collection&documentId=:documentId&rating=:rating&raterId=:raterId&weakId=:weakId
 JsonRoutes.add("get", "/ratings/put/:reqstring/json", function (req, res, next) {
   var tmp = req.params.reqstring.split("&");
   console.log(tmp);
@@ -9,26 +10,69 @@ JsonRoutes.add("get", "/ratings/put/:reqstring/json", function (req, res, next) 
     req.params[tmp3[0]]=tmp3[1];
   });
   console.log(req.params);
-  var project = Projects.findOne({_id:req.params.ratedId});
-  if(project === null) {
-    result = -1;
+  var CollectionMap = {projects:Projects, reviews:Reviews, comments:Comments};
+  var doc = CollectionMap[req.params.collection].findOne({_id:req.params.documentId});
+  if(doc === undefined) {
+    JsonRoutes.sendResult(res, 400,
+    /* API RESPONSE */
+    {
+      error: 400,
+      reason: "Reviewed document with id="+req.params.documentId + ", in collection "+ req.params.collection + " does not exist"
+    });
   }
   else {
-    var status = Ratings.insert({rater: {weakId:req.params.weakId, id:req.params.raterId},
-    rated:{collection:req.params.collection,id:req.params.ratedId},
-    rating:req.params.rating});
-    if(status === null) {
-      result = -1;
+    
+    var id;
+    try {
+      id = Ratings.insert({rater: {weakId:req.params.weakId, id:req.params.raterId},
+      rated:{collection:req.params.collection,id:req.params.documentId},
+      rating:req.params.rating});
+    }
+    catch(e) {
+      
+    }
+    if(id === undefined) {
+      JsonRoutes.sendResult(res, 400,
+      /* API RESPONSE */
+      {
+        error: 400,
+        reason: "An error occured creating the document"
+      });
     }
     else {
-      result = Ratings.find({rated:{collection:req.params.collection, id:req.params.ratedId},rating:req.params.rating}).fetch().length;
+      count = Ratings.find({rated:{collection:req.params.collection, id:req.params.documentId},rating:req.params.rating}).fetch().length;
+    
+      JsonRoutes.sendResult(res, 200,
+      /* API RESPONSE */
+      {
+        meta:
+        {
+          schemaDescription:
+          {
+            fieldDescription:{
+              collection: 'The collectin of the document beeing rated',
+              documentId: 'the documentId of the document beeing rated',
+              rating: 'type of the rating inserted' ,
+              count: 'the current number of ratings for the rated object with rated type'
+            },
+            dataStructure:
+            {
+              collection: 'collection',
+              documentId: 'document._id',
+              rating: 'rating.type' ,
+              count: 'rated.nbrDownVotes/nbrUpvotes'
+            }
+          },
+          pseudoQuery:'return review._id for the created review'
+        },
+        data: {
+          collection: req.params.collection,
+          documentId: req.params.documentId,
+          rating: req.params.rating,
+          count: count
+        }
+      });
     }
   }
-  //console.log("result="+result);
-  JsonRoutes.sendResult(res, 200,
-/* API RESPONSE */
-  {
-    data:result //returns -1 if failed else the current number of ratings of the voted type for the rated object
-  });
 
 });

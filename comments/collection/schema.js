@@ -50,15 +50,15 @@ Comments.attachSchema(new SimpleSchema({
   nbrUpVotes: {
     type: Number,
     label: "Number of upvotes",
-    autoValue: ()=> {
-      return _.filter(Ratings.find({rated:{collection:"comments", id:this.field("_id")}}).fetch(),(rating,index)=>{return rating.rating=='UP';}).length;
+    autoValue: (doc)=> {
+      return _.filter(Ratings.find({rated:{collection:"comments", id:doc.reviewed.id}}).fetch(),(rating,index)=>{return rating.rating=='UP';}).length;
     }
   },
   nbrDownVotes: {
     type: Number,
     label: "Number of upvotes",
-    autoValue: ()=> {
-      return _.filter(Ratings.find({rated:{collection:"comments", id:this.field("_id")}}).fetch(),(rating,index)=>{return rating.rating=='DOWN';}).length;
+    autoValue: (doc)=> {
+      return _.filter(Ratings.find({rated:{collection:"comments", id:doc.reviewed.id}}).fetch(),(rating,index)=>{return rating.rating=='DOWN';}).length;
     }
   },
   date: {
