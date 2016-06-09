@@ -23,8 +23,17 @@ Step0 has been implemented in the ProjectsSchema.links.type schema definition
 {label:"Project Logo", value:"logo"},
 {label:"Picture", value:"pic"}
 ```
+
 ----
 #### Step 1
+----
+- Create a new Schema/Collection for Picture Links
+  - Be able to easily fetch pictures/logos of needed size
+  - Be able to easily save pictures/logos of needed size with a structured name schema
+ 
+
+----
+#### Step 2
 ----
 - Implement the file storage capability using the following packages already installed: 
 
@@ -128,15 +137,24 @@ ___Step1.1___
 - Defined endpoints to fetch all comments/ratings/reviews on specific project //COMPLETED
   - Ditto Reviews, Ratings //COMPLETED
 
+
 ----
 #### Step 2
 ----
+- Prepare the API for an MVP release
+  - Upvote projects
+  - Fetch Projects
+   - embedd the count of upvotes
+  - Use versioning for the api endpoints
+    - /api/0/
+  - Handle errors and unwanted requests //INITIATED
+
+----
+#### Step 3
+----
 
 - [Make the API RESTful](https://themeteorchef.com/recipes/writing-an-api/)
-- Use versioning for the api endpoints
-  - /api/0/
 - Structure the API for reusability
-- Handle errors and unwanted requests //INITIATED
 
   
  
