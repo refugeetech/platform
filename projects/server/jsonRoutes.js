@@ -46,8 +46,8 @@ JsonRoutes.add("get", "/categories/o/json", function (req, res, next) {
 ////////////// GET PROJECTS DUMP //////////////
 // Returns JSON array containing all projects in Projects collection.
 JsonRoutes.add("get", "/projects/json", function (req, res, next) {
-  var result = Projects.find().fetch(); // Finds all projects and returns array
-
+  //var result = Projects.find().fetch(); // Finds all projects and returns array
+  var result = _.map(Projects.find().fetch(),(p,i)=> {return ExtendProjectWithRatings(p);}); // Finds all projects, extends with ratings (upvotes) and returns array
   JsonRoutes.sendResult(res, 200,
 /* API RESPONSE */
   {
@@ -69,7 +69,9 @@ JsonRoutes.add("get", "/projects/json", function (req, res, next) {
 //  return a single JSON object containing the specified project.
 JsonRoutes.add("get", "/projects/:projectId/json", function (req, res, next) {
   var projectId = req.params.projectId; // The project id, in MongoDB
-  var result = Projects.findOne(projectId) // Finds matching project and returns object.
+  //var result = Projects.findOne(projectId) // Finds matching project and returns object.
+  var result = ExtendProjectWithRatings(Projects.findOne(projectId)); // Finds matching project, extends with upvotes and returns object.
+  
 
   JsonRoutes.sendResult(res, 200,
 /* API RESPONSE */
@@ -94,7 +96,8 @@ JsonRoutes.add("get", "/projects/:projectId/json", function (req, res, next) {
 ////////////// GET PROJECTS: ALL CATEGORIES //////////////
 // Finds all projects with all these categories
 JsonRoutes.add("get", "/categories/:categories/json", function (req, res, next) {
-  var result = Projects.find({challengeCategories: { $all: req.params.categories.split(',') }}).fetch(); 
+  //var result = Projects.find({challengeCategories: { $all: req.params.categories.split(',') }}).fetch(); 
+  var result = _.map(Projects.find({challengeCategories: { $all: req.params.categories.split(',') }}).fetch(),(p,i)=> {return ExtendProjectWithRatings(p);}); // Finds all projects, extends with ratings (upvotes) and returns array
 
   JsonRoutes.sendResult(res, 200,
 /* API RESPONSE */
@@ -116,7 +119,8 @@ JsonRoutes.add("get", "/categories/:categories/json", function (req, res, next) 
 ////////////// GET PROJECTS: IN CATEGORIES //////////////
 // Finds all projects with any of these categories
 JsonRoutes.add("get", "/categories/in/:categories/json", function (req, res, next) {
-  var result = Projects.find({challengeCategories: { $in: req.params.categories.split(',') }}).fetch(); 
+  //var result = Projects.find({challengeCategories: { $in: req.params.categories.split(',') }}).fetch(); 
+  var result = _.map(Projects.find({challengeCategories: { $in: req.params.categories.split(',') }}).fetch(),(p,i)=> {return ExtendProjectWithRatings(p);}); // Finds all projects, extends with ratings (upvotes) and returns array
 
   JsonRoutes.sendResult(res, 200,
 /* API RESPONSE */
@@ -139,7 +143,8 @@ JsonRoutes.add("get", "/categories/in/:categories/json", function (req, res, nex
 
 // Finds all projects with only these categories
 JsonRoutes.add("get", "/categories/eq/:categories/json", function (req, res, next) {
-  var result = Projects.find({challengeCategories: { $eq: req.params.categories.split(',') }}).fetch(); 
+  //var result = Projects.find({challengeCategories: { $eq: req.params.categories.split(',') }}).fetch(); 
+  var result = _.map(Projects.find({challengeCategories: { $eq: req.params.categories.split(',') }}).fetch(),(p,i)=> {return ExtendProjectWithRatings(p);}); // Finds all projects, extends with ratings (upvotes) and returns array
 
   JsonRoutes.sendResult(res, 200,
 /* API RESPONSE */
@@ -164,13 +169,11 @@ JsonRoutes.add("get", "/categories/eq/:categories/json", function (req, res, nex
 // Returns JSON array containing all categories in the projects schema and all projects with such a category sorted under each category
 JsonRoutes.add("get", "/categories/projects/json", function (req, res, next) {
   var options = ProjectsSchema.getDefinition('challengeCategories').autoform.options; // All cetagories in the ProjectsSchema
-
-  console.log("Categories: "+_.keys(options));
   var result = [];
   
   _.each
   (
-    options,(category,index)=>
+    options,(category)=>
     {
     result.push
     (
@@ -179,10 +182,10 @@ JsonRoutes.add("get", "/categories/projects/json", function (req, res, next) {
         // category = { label: 'label', value: 'value'}
         _.pick(category,'value'),
         { 
-          projects: Projects.find
+          projects: _.map(Projects.find
           (
             {challengeCategories: {$in: [category.value] }}
-          ).fetch()
+          ).fetch(), (p)=> {return ExtendProjectWithRatings(p)})
         }
       )
     );
@@ -210,9 +213,13 @@ JsonRoutes.add("get", "/categories/projects/json", function (req, res, next) {
       },
       pseudoQuery:'return category.value from each challengeCategories.options in ProjectsSchema with return each project in Projects where category.value in project.challengeCategories'
     },
-    data:out
+    data:result
   });
 });
+
+ExtendProjectWithRatings = (project) => {
+  return _.extend(project,{upvotes: Ratings.find({rated:{collection:"projects", id:project._id},rating:"UP"}).fetch().length});
+}
 
 
 

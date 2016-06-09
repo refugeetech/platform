@@ -364,3 +364,41 @@ Returns:
 }
 ```
 sourcefile: tags/server/jsonRoutes.js
+
+# PUT API
+
+## PUT ratings
+
+ENDPOINT: 
+
+/ratings/put/_:parameters_/json
+
+Parameter Syntax: collection=:collection&documentId=:documentId&rating=:rating&raterId=:raterId&weakId=:weakId
+
+allowedValues: :collection == projects || reviews || comments
+
+Returns:
+```javascript
+{
+  schemaDescription:
+  {
+    fieldDescription:{
+      collection: 'The collectin of the document beeing rated',
+      documentId: 'the documentId of the document beeing rated',
+      rating: 'type of the rating inserted' ,
+      count: 'the current number of ratings for the rated object with rated type'
+    },
+    dataStructure:
+    {
+      collection: 'collection',
+      documentId: 'document._id',
+      rating: 'rating.type' ,
+      count: 'rated.nbrDownVotes/nbrUpvotes'
+    }
+  },
+  pseudoQuery:'return review._id for the created review'
+}
+```
+sourcefile: ratings/server/jsonRoutes.js
+
+
