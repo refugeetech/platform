@@ -28,7 +28,7 @@
     border-color: white;
   }
  
- .btn-4white-background {
+ .btn-4white-background .btn-primary {
    color:#D92D6F;
    border-color:#D92D6F;
  }
@@ -44,4 +44,3 @@
    font-size: 2.5rem;
    border-radius: 2em;
  }
- 
