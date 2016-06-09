@@ -34,13 +34,11 @@ ProjectsIndex  = new EasySearch.Index({
   })
 });
 
-ProjectMedia = new FS.Collection("projectMedia", {
-  stores: [new FS.Store.GridFS("projectMediaStore")]
-});
+//this is only a helper collection at the moment and is mainly used to build the Projects Schema
+Categories = new Mongo.Collection('categories');
 
-ProjectMedia.allow({
-  download: function () {
-    return true;
-  },
-  fetch: null
-});
+
+
+
+
+

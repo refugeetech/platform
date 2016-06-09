@@ -1,18 +1,31 @@
-//helper schemas for the projectschema dataStore field
+CategoriesSchema = new SimpleSchema({
+  "categories": {
+    type: [String],
+    label: "Challenge Categories",
+    allowedValues: ['social', 'bureaucracy', 'housing', 'education',
+    'language', 'employment', 'coordination','information'],
+    autoform: {
+      options: [
+        {label: "Social", value: "social"},
+        {label: "Bureaucracy", value: "bureaucracy"},
+        {label: "Housing", value: "housing"},
+        {label: "Education", value: "education"},
+        {label: "Language", value: "language"},
+        {label: "Employment", value: "employment"},
+        {label: "Coordination", value: "coordination"},
+        {label: "Information", value: "information"}
+      ]
+    }
+  }
+});
 
+
+//helper schemas for the projectschema dataStore field
 ProjectMediaFileSchema = new SimpleSchema({
   "id": {
     type: String,
     optional:true,
-    label: "File",
-    autoform: {
-      afFieldInput: {
-        type: "fileUpload",
-        collection: "projectMedia",
-        label: "choose file",
-        optional:true
-      }
-    }
+    label: "File"
   }
 });
 
@@ -99,28 +112,27 @@ ProjectDataStoreSchema = new SimpleSchema({
   }
 });
 
+// Since challengeCategories is not a collection
 // Schema for Projects collection
 ProjectsSchema = new SimpleSchema({
+  "migHubComplete": {
+    type: Boolean,
+    label: "Has this project a completely filled profile on the mighub ?",
+    defaultValue: true
+  },
   "name": {
     type: String,
     label: "Project Name"
   },
   "description": {
     type: String,
-    label: "Project Description (maximum 500 characters)",
-    max: 500
+    label: "Project Description"
   },
-  "shortDescription": {
-    type: String,
-    label: "Project Short Description (maximum 140 characters)",
-    max: 140
-  },
-
   "challengeCategories": {
     type: [String],
     label: "Challenge Categories",
     allowedValues: ['social', 'bureaucracy', 'housing', 'education',
-    'language', 'employment', 'coordination'],
+    'language', 'employment', 'coordination','information'],
     autoform: {
       options: [
         {label: "Social", value: "social"},
@@ -129,11 +141,156 @@ ProjectsSchema = new SimpleSchema({
         {label: "Education", value: "education"},
         {label: "Language", value: "language"},
         {label: "Employment", value: "employment"},
-        {label: "Coordination", value: "coordination"}
+        {label: "Coordination", value: "coordination"},
+        {label: "Information", value: "information"}
       ]
     }
   },
 
+  "tags": {
+    type: [String],
+    label: "Tags"
+  },
+
+  // The actual date the project began
+  "startupDate": {
+    type: Date,
+    label: "Project Startup Date",
+    optional:true,
+    autoform: {
+      afFieldInput: {
+        type: "bootstrap-datepicker",
+        "data-date-autoclose": "true"
+      }
+    }
+  },
+"targetPlatforms": {
+    type: [String],
+    label: "Target Platforms",
+    optional: true,
+    allowedValues: ['web', 'ios', 'android', 'windows-phone', 'other'],
+    autoform: {
+      type: "select-checkbox",
+      options: function () {
+        return [
+          {label: "Web", value: "web"},
+          {label: "iOS", value: "ios"},
+          {label: "Android", value: "android"},
+          {label: "Windows Phone", value: "windows-phone"},
+          {label: "Other", value: "other"}
+        ];
+      }
+    }
+  },
+  "links.$.type": {
+    type:String,
+    label: "Type of URL",
+    allowedValues: ['home','pic','mainPic','logo','web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore','github','slack','trello'],
+    autoform: {
+      options: [
+    //generic link types
+        {label: "Web", value: "web"},
+        {label: "Article", value: "article"},
+        {label: 'Blog', value:"blog"},
+        {label: "Other", value:"other"},
+    //appstores
+        {label: 'App Store', value:"appStore"},
+        {label: 'Google Play', value:"googlePlay"},
+        {label: 'Windows Store', value:"windowsStore"},
+    //social media types
+        {label: "Blogger", value: "blogger"},
+        {label: "Facebook", value: "facebook"},
+        {label: "Twitter", value: "twitter"},
+        {label: "Instagram", value: "instagram"},
+        {label: "Linkedin", value: "linkedin"},
+		//dev
+        {label: "Slack", value: "slack"},
+        {label: "Github", value: "github"},
+        {label: "Trello", value: "trello"},
+    //pictures Step 0
+        {label:"Project Pic", value:"mainPic"},
+        {label:"Project Logo", value:"logo"},
+        {label:"Picture", value:"pic"},
+    //weblinks Step 0
+        {label: "Home Page", value:"home"},
+        {label: "Web App", value:"webApp"}
+      ]
+    }
+  },
+
+  "postalAddress": {
+    type: Object,
+    label: "Postal Address",
+    optional:true
+  },
+  "postalAddress.city":{
+    type:String,
+    label:"City",
+    optional:true
+  },
+  "postalAddress.country":{
+    type:String,
+    label:"Country",
+    optional:true
+  },
+
+  "links": {
+    type: [Object],
+    label: "Links"
+  },
+  "links.$.name":{
+    type: String,
+    label: "Name"
+  },
+  "links.$.url":{
+    type: String,
+    label: "URL",
+    regEx: SimpleSchema.RegEx.Url
+  },
+
+  // The date the project was submitted to refugeetech platform
+  "dateListed": {
+    type: Date,
+    label: "Date Listed",
+    autoValue: function () {
+      if (this.isInsert) {
+        return new Date();
+      } else if (this.isUpsert) {
+        return {$setOnInsert: new Date()};
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    }
+  }
+  /*,
+  media: {
+    type: ProjectMediaLibrarySchema,
+    label: "Project Media Library",
+    optional:true
+  },/*
+  /*
+  isRTProject: {
+    type:Boolean,
+    label: "Is this project a result of the Refugee Tech process?"
+  },
+  */
+  /*
+  "shortDescription": {
+    type: String,
+    label: "Project Short Description (maximum 140 characters)",
+    max: 140,
+    optional:true
+  },
+  */
+  /*
+  "email": {
+    type: String,
+    label: "Project's email address",
+    max: 100,
+    optional:true
+  },*/
+
+  /*
   "solution": {
     type: Object,
     label: "Type of solution"
@@ -147,6 +304,7 @@ ProjectsSchema = new SimpleSchema({
     label:"Description of solution",
     max: 500
   },
+  */
 
   // TODO: auto-associate user ID that created project
   // "contactPersonId": {
@@ -164,24 +322,7 @@ ProjectsSchema = new SimpleSchema({
   //   type: [String],
   //   label: "Challenge Categories"
   // },
-
-  "tags": {
-    type: [String],
-    label: "Tags"
-  },
-
-  // The actual date the project began
-  "startupDate": {
-    type: Date,
-    label: "Project Startup Date",
-    autoform: {
-      afFieldInput: {
-        type: "bootstrap-datepicker",
-        "data-date-autoclose": "true"
-      }
-    }
-  },
-
+/*
   "currentStage": {
     type: String,
     allowedValues: [
@@ -203,6 +344,7 @@ ProjectsSchema = new SimpleSchema({
       ]
     }
   },
+  */
 
   // TODO: add Teams feature
   // "teamIds": {
@@ -232,103 +374,14 @@ ProjectsSchema = new SimpleSchema({
   //   type: [String],
   //   label: "Target Locations"
   // },
-  "targetPlatforms": {
-    type: [String],
-    label: "Target Platforms",
-    optional: true,
-    allowedValues: ['web', 'ios', 'android', 'windows-phone', 'other'],
-    autoform: {
-      type: "select-checkbox",
-      options: function () {
-        return [
-          {label: "Web", value: "web"},
-          {label: "iOS", value: "ios"},
-          {label: "Android", value: "android"},
-          {label: "Windows Phone", value: "windows-phone"},
-          {label: "Other", value: "other"}
-        ];
-      }
-    }
-  },
-
-  "postalAddress": {
-    type: Object,
-    label: "Postal Address"
-  },
-  "postalAddress.city":{
-    type:String,
-    label:"City"
-  },
-  "postalAddress.country":{
-    type:String,
-    label:"Country"
-  },
-
-  "links": {
-    type: [Object],
-    label: "Links"
-  },
-  "links.$.name":{
-    type: String,
-    label: "Name"
-  },
-  "links.$.url":{
-    type: String,
-    label: "URL",
-    regEx: SimpleSchema.RegEx.Url
-  },
-  "links.$.type": {
-    type:String,
-    label: "Type of URL",
-    allowedValues: ['web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore'],
-    autoform: {
-      options: [
-        //generic link types
-        {label: "Web", value: "web"},
-        {label: "Article", value: "article"},
-        {label: 'Blog', value:"blog"},
-        {label: "Other", value:"other"},
-        //appstores
-        {label: 'App Store', value:"appStore"},
-        {label: 'Google Play', value:"googlePlay"},
-        {label: 'Windows Store', value:"windowsStore"},
-        //social media types
-        {label: "Blogger", value: "blogger"},
-        {label: "Facebook", value: "facebook"},
-        {label: "Twitter", value: "twitter"},
-        {label: "Instagram", value: "instagram"},
-        {label: "Linkedin", value: "linkedin"}
-      ]
-    }
-  },
-
-  // The date the project was submitted to refugeetech platform
-  "dateListed": {
-    type: Date,
-    label: "Date Listed",
-    autoValue: function () {
-      if (this.isInsert) {
-        return new Date();
-      } else if (this.isUpsert) {
-        return {$setOnInsert: new Date()};
-      } else {
-        this.unset();  // Prevent user from supplying their own value
-      }
-    }
-  },
-  media: {
-    type: ProjectMediaLibrarySchema,
-    label: "Project Media Library",
-    optional:true
-  },
-  isRTProject: {
-    type:Boolean,
-    label: "Is this project a result of the Refugee Tech process?",
-  },
+  /*
+  ,
   dataStore: { //this object will contain everything else about a project; currently only used for RT Projects
     type:ProjectDataStoreSchema,
     optional:true
-  }
+  }*/
 });
+
+Categories.attachSchema(CategoriesSchema);
 
 Projects.attachSchema(ProjectsSchema);

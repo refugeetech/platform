@@ -9,8 +9,3 @@ Meteor.publish("singleProject", function (projectId) {
   // using the projectId as an argument
   return Projects.find({ _id: projectId });
 });
-
-Meteor.publish("projectMedia", function () {
-  //return cursor with all media
-  return ProjectMedia.find();
-});
