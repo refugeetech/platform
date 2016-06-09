@@ -1,5 +1,5 @@
-Reviews.allow({
-  insert: function () {
-    return true;
-  }
-});
+// Reviews.allow({
+//   insert: function () {
+//     return true;
+//   }
+// });

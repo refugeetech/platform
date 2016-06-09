@@ -142,12 +142,13 @@ ___Step1.1___
 #### Step 2
 ----
 - Prepare the API for an MVP release
-  - Upvote projects
-  - Fetch Projects
-   - embedd the count of upvotes
+  - Upvote projects //COMPLETED
+  - Fetch Projects //COMPLETED
+   - embedd the count of upvotes //COMPLETED
   - Use versioning for the api endpoints
     - /api/0/
   - Handle errors and unwanted requests //INITIATED
+  - Comment out evrything not used for the mvp //COMPLETED
 
 ----
 #### Step 3

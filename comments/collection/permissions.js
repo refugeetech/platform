@@ -1,5 +1,5 @@
-Comments.allow({
-  insert: function () {
-    return true;
-  }
-});
+// Comments.allow({
+//   insert: function () {
+//     return true;
+//   }
+// });
