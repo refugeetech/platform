@@ -74,6 +74,7 @@ momentjs:moment@2.13.1
 mongo@1.1.7
 mongo-id@1.0.4
 mrt:isolate-value@2.0.2
+nimble:restivus@0.8.5
 npm-bcrypt@0.8.5
 npm-mongo@1.4.43
 observe-sequence@1.0.11
