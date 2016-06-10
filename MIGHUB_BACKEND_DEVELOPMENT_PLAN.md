@@ -109,10 +109,17 @@ Previous link type definitions:
 ----
 
 ___Step1.0___
+- Install users package (to handle api users)
+- Install roles package 
+- Install the restivus api package
+- Configure the package
+- Test the installation
+
+___Step1.1___
 - Define endpoints to update project
   - Add security to API
     - Add API Keys capability to API
-- Define endpoints to add comments to project //COMPLETED
+- Define endpoints to add comments to project 
   - Decide if comments should be in a separate collection or within the project //SEPARATE COLLECTION CHOSEN
   - If separate collection
     - Decide if comments should be embedded with an id in a comments array in project //NOT EMBEDDED CHOSEN
@@ -126,29 +133,29 @@ ___Step1.0___
     - add new schema definition in a new file comments/collections/schema.js //COMPLETED
       - field 1: projectId , type = string, optional = false => id of the project the comment is made for //COMPLETED
       - field 2: value/text, type = string, min = (an integer for the minimum amount of characters for the comment), max = (ditto max characters for the comment)  //COMPLETED
-- Define endpoints to add reviews to project //COMPLETED
+- Define endpoints to add reviews to project 
   - Analogous to breakdown of comments above
-- Define endpoints to add ratings to project //COMPLETED
+- Define endpoints to add ratings to project 
   - Analogous to breakdown of comments above
 
-___Step1.1___
+___Step1.2___
 - Define endpoints to fetch all comments
   - Ditto Reviews, Ratings
-- Defined endpoints to fetch all comments/ratings/reviews on specific project //COMPLETED
-  - Ditto Reviews, Ratings //COMPLETED
+- Defined endpoints to fetch all comments/ratings/reviews on specific project 
+  - Ditto Reviews, Ratings 
 
 
 ----
 #### Step 2
 ----
 - Prepare the API for an MVP release
-  - Upvote projects //COMPLETED
-  - Fetch Projects //COMPLETED
-   - embedd the count of upvotes //COMPLETED
+  - Upvote projects 
+  - Fetch Projects 
+   - embedd the count of upvotes 
   - Use versioning for the api endpoints
     - /api/0/
-  - Handle errors and unwanted requests //INITIATED
-  - Comment out evrything not used for the mvp //COMPLETED
+  - Handle errors and unwanted requests 
+  - Comment out evrything not used for the mvp 
 
 ----
 #### Step 3
