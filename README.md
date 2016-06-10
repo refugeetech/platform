@@ -1,3 +1,5 @@
+# Refugee Tech Platform (ProjectHub) [![Code Climate](https://codeclimate.com/github/refugeetech/platform/badges/gpa.svg)](https://codeclimate.com/github/refugeetech/platform)
+
 # NOTE
 Welcome to the Refugee Tech Platform Repository.
 
