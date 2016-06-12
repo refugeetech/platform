@@ -1,5 +1,5 @@
-Projects.allow({
-  insert: function () {
-    return true;
-  }
-});
+// Projects.allow({
+//   insert: function () {
+//     return true;
+//   }
+// });
