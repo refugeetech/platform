@@ -11,8 +11,6 @@
   if(!Ratings) {
     Ratings = new Mongo.Collection('ratings');
   }
-  console.log("here");
-  console.log(Ratings);
   RatingsApiV01.addCollection(Ratings);
   
  
