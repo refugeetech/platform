@@ -25,7 +25,6 @@ kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
 practicalmeteor:faker
-simple:json-routes
 rajit:bootstrap3-datepicker
 aldeed:autoform-bs-datepicker
 reywood:publish-composite
