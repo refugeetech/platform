@@ -2,7 +2,7 @@
     useDefaultAuth: true,
     prettyJson: true,
     version:'v01',
-    defaultHeaders: {'Content-Type': 'application/json'}
+    defaultHeaders: {'Content-Type': 'application/json; charset=UTF-8'}
   });  
   
   // Generates: GET on /api/v01/projects
