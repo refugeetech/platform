@@ -1,4 +1,6 @@
+
 /*** START: STUFF NOT CURRENTLY USED ***/
+
 // CategoriesSchema = new SimpleSchema({
 //   "categories": {
 //     type: [String],
@@ -19,7 +21,6 @@
 //     }
 //   }
 // });
-
 
 // //helper schemas for the projectschema dataStore field
 // ProjectMediaFileSchema = new SimpleSchema({
@@ -130,7 +131,8 @@ ProjectsSchema = new SimpleSchema({
   },
   "description": {
     type: String,
-    label: "Project Description"
+    label: "Project Description",
+    optional: false
   },
   "challengeCategories": {
     type: [String],
@@ -195,7 +197,7 @@ ProjectsSchema = new SimpleSchema({
   "links.$.type": {
     type:String,
     label: "Type of URL",
-    allowedValues: ['home','pic','mainPic','logo','web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore','github','slack','trello'],
+    allowedValues: ['home','pic','mainPic','logo','web', 'article','blog','facebook', 'twitter', 'instagram', 'blogger','linkedin','other','appStore','googlePlay','windowsStore','webApp','github','slack','trello'],
     autoform: {
       options: [
     //generic link types
@@ -385,6 +387,6 @@ ProjectsSchema = new SimpleSchema({
   }*/
 });
 
-Categories.attachSchema(CategoriesSchema);
+//Categories.attachSchema(CategoriesSchema);
 
 Projects.attachSchema(ProjectsSchema);
