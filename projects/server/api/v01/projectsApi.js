@@ -58,10 +58,30 @@
   ExtendProjectWithRatings = (project) => {
     return _.extend(project,{upvotes: Ratings.find({rated:{collection:"projects", id:project._id},rating:"UP"}).fetch().length});
   }
-
+  
+  PostProject = (project) => {
+    try {
+      var id = Projects.insert(project);
+    }
+    catch(e) {
+      return { status: "error", data: e, body: project }
+    }
+    if(id) {
+      return { status: "success", data: Projects.findOne(id) }
+    }
+    return { status: "error", data: "Cant create project with request body", bodyParams: project }
+  }
 
   
-  
+  ProjectsApiV01.addRoute('projects/import', {
+    post: function () {
+      var response = [];
+      _.each(this.bodyParams,(p,i)=> {
+        response.push(PostProject(p));
+      });
+      return response;
+    }
+  });
  
 
 

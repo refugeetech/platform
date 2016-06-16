@@ -43,7 +43,7 @@ BODY EXAMPLE: (required: {rater, weakId, rated, collection, id})
 
 ROUTE: /projects
 
-BODY EXAMPLE: (required: {name, description, challengeCategories})
+BODY EXAMPLE: (required: {name, description, challengeCategories}, , optional: _id)
 ```
 {
   "name": "Lorem Ipsum",
@@ -145,3 +145,21 @@ BODY EXAMPLE: (required: {name, description, challengeCategories})
     "upvotes": 6
 }
 ```
+
+# POST many projects
+
+ROUTE: /projects/import
+
+BODY EXAMPLE: (required: {name, description, challengeCategories} , optional: _id)
+```
+[
+  { 
+    /* Project 1 */
+  },
+  {
+   / ... Project N */
+  }
+]
+```
+
+RESPONSE: Array with response body for each project
