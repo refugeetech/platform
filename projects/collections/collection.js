@@ -1,4 +1,7 @@
-Projects = new Mongo.Collection('projects');
+  Projects = Mongo.Collection.get('projects');
+  if(Projects === undefined) {
+    Projects = new Mongo.Collection('projects');
+  }
 
 //Add search index with easy search
 ProjectsIndex  = new EasySearch.Index({
