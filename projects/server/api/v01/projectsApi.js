@@ -72,6 +72,22 @@
     return { status: "error", data: "Cant create project with request body", bodyParams: project }
   }
 
+  PutProject = (project) => {
+    try {
+      var id = project._id
+      var entity;
+      Projects.update(id, {
+        $set: _.omit(project,'_id')
+      });
+    }
+    catch(e) {
+      return { status: "error", data: e, body: project }
+    }
+    if(id) {
+      return { status: "success", data: Projects.findOne(id) }
+    }
+    return { status: "error", data: "Cant create project with request body", bodyParams: project }
+  }
   
   ProjectsApiV01.addRoute('projects/import', {
     post: function () {
@@ -80,8 +96,17 @@
         response.push(PostProject(p));
       });
       return response;
+    },
+    put: function () {
+      var response = [];
+      _.each(this.bodyParams,(p,i)=> {
+        response.push(PutProject(p));
+      });
+      return response;
     }
   });
+  
+
  
 
 

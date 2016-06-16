@@ -146,11 +146,29 @@ BODY EXAMPLE: (required: {name, description, challengeCategories})
 }
 ```
 
-# POST many projects
+# POST many projects (create)
 
 ROUTE: /projects/import
 
 BODY EXAMPLE: (required: {name, description, challengeCategories} , optional: _id)
+```
+[
+  { 
+    /* Project 1 */
+  },
+  {
+   / ... Project N */
+  }
+]
+```
+
+RESPONSE: Array with response body for each project
+
+# PUT many projects (update)
+
+ROUTE: /projects/import
+
+BODY EXAMPLE: (required: {_id, name, description, challengeCategories})
 ```
 [
   { 
