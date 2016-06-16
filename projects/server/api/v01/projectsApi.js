@@ -15,13 +15,19 @@
   
   ProjectsApiV01.addRoute('projects/ratings', {
     get: function () {
-      return _.map(Projects.find().fetch(),(p,i)=> {return ExtendProjectWithRatings(p);});
+      return {
+        status: "success",
+        data: _.map(Projects.find().fetch(),(p,i)=> {return ExtendProjectWithRatings(p);})
+      };
     }
   });
   
   ProjectsApiV01.addRoute('projects/:id/ratings', {
     get: function () {
-      return ExtendProjectWithRatings(Projects.findOne({_id:this.urlParams.id}));
+      return {
+        status: "success",
+        data: ExtendProjectWithRatings(Projects.findOne({_id:this.urlParams.id}))
+      };
     }
   });
   
