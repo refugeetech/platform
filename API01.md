@@ -25,7 +25,7 @@ Content-Type:application/json
 
 ROUTE: /ratings
 
-BODY EXAMPLE: (required: {rater, weakId, rated, collection, id})
+BODY EXAMPLE: (required: [rater, weakId, rated, collection, id])
 ```
 {
     "rater": {
@@ -43,7 +43,7 @@ BODY EXAMPLE: (required: {rater, weakId, rated, collection, id})
 
 ROUTE: /projects
 
-BODY EXAMPLE: (required: {name, description, challengeCategories}, , optional: _id)
+BODY EXAMPLE: (required: [name, description, challengeCategories], optional: _id)
 ```
 {
   "name": "Lorem Ipsum",
@@ -110,7 +110,7 @@ BODY EXAMPLE: (required: {name, description, challengeCategories}, , optional: _
 
 ROUTE: /projects/:id
 
-BODY EXAMPLE: (required: {name, description, challengeCategories})
+BODY EXAMPLE: (required: [name, description, challengeCategories])
 ```
 {
     "name": "400contacts",
@@ -150,7 +150,7 @@ BODY EXAMPLE: (required: {name, description, challengeCategories})
 
 ROUTE: /projects/import
 
-BODY EXAMPLE: (required: {name, description, challengeCategories} , optional: _id)
+BODY EXAMPLE: (required: [name, description, challengeCategories] , optional: _id)
 ```
 [
   { 
@@ -168,7 +168,7 @@ RESPONSE: Array with response body for each project
 
 ROUTE: /projects/import
 
-BODY EXAMPLE: (required: {_id, name, description, challengeCategories})
+BODY EXAMPLE: (required: [_id, name, description, challengeCategories])
 ```
 [
   { 

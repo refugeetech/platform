@@ -139,7 +139,7 @@ ProjectsSchema = new SimpleSchema({
     label: "Challenge Categories",
     allowedValues: ['social', 'bureaucracy', 'housing', 'education',
     'language', 'employment', 'coordination','information'],
-    optional: false,
+    optional: true,
     autoform: {
       options: [
         {label: "Social", value: "social"},
@@ -156,7 +156,8 @@ ProjectsSchema = new SimpleSchema({
 
   "tags": {
     type: [String],
-    label: "Tags"
+    label: "Tags",
+    optional:true
   },
 
   // The actual date the project began
