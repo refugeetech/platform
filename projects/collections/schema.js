@@ -1,116 +1,119 @@
-CategoriesSchema = new SimpleSchema({
-  "categories": {
-    type: [String],
-    label: "Challenge Categories",
-    allowedValues: ['social', 'bureaucracy', 'housing', 'education',
-    'language', 'employment', 'coordination','information'],
-    autoform: {
-      options: [
-        {label: "Social", value: "social"},
-        {label: "Bureaucracy", value: "bureaucracy"},
-        {label: "Housing", value: "housing"},
-        {label: "Education", value: "education"},
-        {label: "Language", value: "language"},
-        {label: "Employment", value: "employment"},
-        {label: "Coordination", value: "coordination"},
-        {label: "Information", value: "information"}
-      ]
-    }
-  }
-});
+/*** START: STUFF NOT CURRENTLY USED ***/
+// CategoriesSchema = new SimpleSchema({
+//   "categories": {
+//     type: [String],
+//     label: "Challenge Categories",
+//     allowedValues: ['social', 'bureaucracy', 'housing', 'education',
+//     'language', 'employment', 'coordination','information'],
+//     autoform: {
+//       options: [
+//         {label: "Social", value: "social"},
+//         {label: "Bureaucracy", value: "bureaucracy"},
+//         {label: "Housing", value: "housing"},
+//         {label: "Education", value: "education"},
+//         {label: "Language", value: "language"},
+//         {label: "Employment", value: "employment"},
+//         {label: "Coordination", value: "coordination"},
+//         {label: "Information", value: "information"}
+//       ]
+//     }
+//   }
+// });
 
 
-//helper schemas for the projectschema dataStore field
-ProjectMediaFileSchema = new SimpleSchema({
-  "id": {
-    type: String,
-    optional:true,
-    label: "File"
-  }
-});
+// //helper schemas for the projectschema dataStore field
+// ProjectMediaFileSchema = new SimpleSchema({
+//   "id": {
+//     type: String,
+//     optional:true,
+//     label: "File"
+//   }
+// });
 
-ProjectMediaLibrarySchema = new SimpleSchema({
-  files: {
-    type: [ProjectMediaFileSchema],
-    label: "List of files",
-    optional:true
-  }
-});
+// ProjectMediaLibrarySchema = new SimpleSchema({
+//   files: {
+//     type: [ProjectMediaFileSchema],
+//     label: "List of files",
+//     optional:true
+//   }
+// });
 
-KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain category of users that will be implemented in later iterations
-  name: {
-    type:String,
-    label: "The name of the stakeholder"
-  },
-  media: { //used to store logos/images etc of the stakeholders
-    type: ProjectMediaLibrarySchema,
-    label: "Media library for this stakeholder",
-    optional:true
-  },
-  description: {
-    type:String,
-    label: "Describes the stakeholders and its role in this project"
-  }
-});
+// KeyStakeHolderSchema = new SimpleSchema({ //temporary schema of a certain category of users that will be implemented in later iterations
+//   name: {
+//     type:String,
+//     label: "The name of the stakeholder"
+//   },
+//   media: { //used to store logos/images etc of the stakeholders
+//     type: ProjectMediaLibrarySchema,
+//     label: "Media library for this stakeholder",
+//     optional:true
+//   },
+//   description: {
+//     type:String,
+//     label: "Describes the stakeholders and its role in this project"
+//   }
+// });
 
-ProjectEventSchema = new SimpleSchema({
-  title: {
-    type:String,
-    label:"Title of this event"
-  },
-  date: {
-    type:Date,
-    label:"The date of the event",
-    autoform: {
-      afFieldInput: {
-        type: "bootstrap-datepicker",
-        "data-date-autoclose": "true"
-      }
-    }
-  },
-  description: {
-    type:String,
-    label:"Describe the event"
-  },
-  meta: {
-    type:[Object], // meta data about this event
-    optional:true
-  },
-  media: { //used to store logos/images etc of the event
-    type: ProjectMediaLibrarySchema,
-    label: "Media library for this event"
-  }
-});
+// ProjectEventSchema = new SimpleSchema({
+//   title: {
+//     type:String,
+//     label:"Title of this event"
+//   },
+//   date: {
+//     type:Date,
+//     label:"The date of the event",
+//     autoform: {
+//       afFieldInput: {
+//         type: "bootstrap-datepicker",
+//         "data-date-autoclose": "true"
+//       }
+//     }
+//   },
+//   description: {
+//     type:String,
+//     label:"Describe the event"
+//   },
+//   meta: {
+//     type:[Object], // meta data about this event
+//     optional:true
+//   },
+//   media: { //used to store logos/images etc of the event
+//     type: ProjectMediaLibrarySchema,
+//     label: "Media library for this event"
+//   }
+// });
 
-ProjectDataStoreSchema = new SimpleSchema({
-  //this schema is used to store lots of metadata about RT Projects, good for not polluting the ProjectsSchema with arbitrary/temporary fields
-  keyContributors: {
-    type:[KeyStakeHolderSchema],
-    label: "List of key contributors",
-    optional:true
-  },
-  problemOwners: {
-    type:[KeyStakeHolderSchema],
-    label: "List of Problem Owners",
-    optional:true
-  },
-  projectOwners: {
-    type:[KeyStakeHolderSchema],
-    label: "List of Project Owners",
-    optional:true
-  },
-  productOwners: {
-    type:[KeyStakeHolderSchema],
-    label: "List of Product Owners",
-    optional:true
-  },
-  history: {
-    type:[ProjectEventSchema],
-    label: "List of events",
-    optional:true
+// ProjectDataStoreSchema = new SimpleSchema({
+//   //this schema is used to store lots of metadata about RT Projects, good for not polluting the ProjectsSchema with arbitrary/temporary fields
+//   keyContributors: {
+//     type:[KeyStakeHolderSchema],
+//     label: "List of key contributors",
+//     optional:true
+//   },
+//   problemOwners: {
+//     type:[KeyStakeHolderSchema],
+//     label: "List of Problem Owners",
+//     optional:true
+//   },
+//   projectOwners: {
+//     type:[KeyStakeHolderSchema],
+//     label: "List of Project Owners",
+//     optional:true
+//   },
+//   productOwners: {
+//     type:[KeyStakeHolderSchema],
+//     label: "List of Product Owners",
+//     optional:true
+//   },
+//   history: {
+//     type:[ProjectEventSchema],
+//     label: "List of events",
+//     optional:true
 
-  }
-});
+//   }
+// });
+
+/*** END: STUFF NOT CURRENTLY USED ***/
 
 // Since challengeCategories is not a collection
 // Schema for Projects collection
@@ -122,7 +125,8 @@ ProjectsSchema = new SimpleSchema({
   },
   "name": {
     type: String,
-    label: "Project Name"
+    label: "Project Name",
+    optional: false
   },
   "description": {
     type: String,
@@ -133,6 +137,7 @@ ProjectsSchema = new SimpleSchema({
     label: "Challenge Categories",
     allowedValues: ['social', 'bureaucracy', 'housing', 'education',
     'language', 'employment', 'coordination','information'],
+    optional: false,
     autoform: {
       options: [
         {label: "Social", value: "social"},
@@ -182,6 +187,11 @@ ProjectsSchema = new SimpleSchema({
       }
     }
   },
+  "links": {
+    type: [Object],
+    label: "Links",
+    optional: true,
+  },
   "links.$.type": {
     type:String,
     label: "Type of URL",
@@ -217,7 +227,15 @@ ProjectsSchema = new SimpleSchema({
       ]
     }
   },
-
+  "links.$.name":{
+    type: String,
+    label: "Name"
+  },
+  "links.$.url":{
+    type: String,
+    label: "URL",
+    regEx: SimpleSchema.RegEx.Url
+  },
   "postalAddress": {
     type: Object,
     label: "Postal Address",
@@ -233,22 +251,7 @@ ProjectsSchema = new SimpleSchema({
     label:"Country",
     optional:true
   },
-
-  "links": {
-    type: [Object],
-    label: "Links"
-  },
-  "links.$.name":{
-    type: String,
-    label: "Name"
-  },
-  "links.$.url":{
-    type: String,
-    label: "URL",
-    regEx: SimpleSchema.RegEx.Url
-  },
-
-  // The date the project was submitted to refugeetech platform
+  // AUTO: The date the project was submitted to refugeetech platform
   "dateListed": {
     type: Date,
     label: "Date Listed",
