@@ -1,4 +1,4 @@
-  ProjectsApiV01 = new Restivus({
+  var ProjectsApiV01 = new Restivus({
     useDefaultAuth: true,
     prettyJson: true,
     version:'v01',
@@ -11,9 +11,7 @@
   if(!Projects) {
     Projects = new Mongo.Collection('projects');
   }
-  ProjectsApiV01.addCollection(Projects, {
-    excludedEndpoints: ['put','delete']
-  });
+  ProjectsApiV01.addCollection(Projects);
   
   ProjectsApiV01.addRoute('projects/ratings', {
     get: function () {
