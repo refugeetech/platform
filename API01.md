@@ -1,6 +1,11 @@
 # base endpoint
 /api/v01
 
+HEADERS:
+```
+Content-Type:application/json
+```
+
 # get all projects
 /projects
 
@@ -17,7 +22,19 @@
 /ratings
 
 # POST new rating
-check out the docs for [Restivus](https://github.com/kahmali/meteor-restivus) for how to post to this endpoint
-/ratings/
+BODY PARAMS:
+```
+{
+    "rater": {
+        "weakId":"api-test",
+        "id":""
+    },
+    "rated": {
+        "collection":"projects",
+        "id": "koAeSLKJb9AjWALaq"
+    },
+    "rating": "UP"
+}
+```
 
 
