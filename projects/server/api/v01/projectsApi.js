@@ -11,8 +11,32 @@
   if(!Projects) {
     Projects = new Mongo.Collection('projects');
   }
-  ProjectsApiV01.addCollection(Projects);
   
+  // fixing PUT problems med simpleschema och restivus
+  Patch = (collection) => {
+    return function() {
+      var entity;
+      collection.update(this.urlParams.id, {
+        $set: this.bodyParams
+      });
+      entity = collection.findOne(this.urlParams.id);
+      return {
+        status: 'success',
+        data: entity
+      };
+    };
+  };
+  
+  ProjectsApiV01.addCollection(Projects,
+  {
+    endpoints: {
+      put: {
+        action: Patch(Projects)
+      }
+    }
+  });
+
+
   ProjectsApiV01.addRoute('projects/ratings', {
     get: function () {
       return {
@@ -34,6 +58,8 @@
   ExtendProjectWithRatings = (project) => {
     return _.extend(project,{upvotes: Ratings.find({rated:{collection:"projects", id:project._id},rating:"UP"}).fetch().length});
   }
+
+
   
   
  

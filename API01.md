@@ -22,6 +22,9 @@ Content-Type:application/json
 /ratings
 
 # POST new rating
+
+ROUTE: /ratings
+
 BODY EXAMPLE: (required: {rater, weakId, rated, collection, id})
 ```
 {
@@ -37,6 +40,9 @@ BODY EXAMPLE: (required: {rater, weakId, rated, collection, id})
 }
 ```
 # POST new project
+
+ROUTE: /projects
+
 BODY EXAMPLE: (required: {name, description, challengeCategories})
 ```
 {
@@ -98,4 +104,44 @@ BODY EXAMPLE: (required: {name, description, challengeCategories})
   },
   "migHubComplete": false
 }
-´´´
+```
+
+# PUT project
+
+ROUTE: /projects/:id
+
+BODY EXAMPLE: (required: {name, description, challengeCategories})
+```
+{
+    "name": "400contacts",
+    "description": "400contacts is a mentoring program with one goal in mind. To help refugees with engineering background get their first skilled job in Sweden.",
+    "links": [
+      {
+        "type": "home",
+        "name": "Home Page",
+        "url": "http://www.400contacts.com"
+      },
+      {
+        "type": "logo",
+        "name": "Logo",
+        "url": "https://pbs.twimg.com/profile_images/658954410320613376/lfmxz3ck_400x400.png"
+      }
+    ],
+    "challengeCategories": [
+      "employment"
+    ],
+    "tags": [
+      "employment"
+    ],
+    "startupDate": "2016-05-04T00:00:00.000Z",
+    "targetPlatforms": [
+      "web"
+    ],
+    "postalAddress": {
+      "city": "Stockholm",
+      "country": "Sweden"
+    },
+    "dateListed": "2016-05-29T11:48:16.397Z",
+    "upvotes": 6
+}
+```
