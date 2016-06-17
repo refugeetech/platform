@@ -162,7 +162,13 @@ BODY EXAMPLE: (required: [name, description, challengeCategories] , optional: _i
 ]
 ```
 
-RESPONSE: Array with response body for each project
+RESPONSE:
+```
+{
+  "status":"success",
+  "data": [{/* POST response for first project*/},{/* POST response for project N*/}]
+}
+```
 
 # PUT many projects (update)
 
@@ -180,4 +186,10 @@ BODY EXAMPLE: (required: [_id, name, description, challengeCategories])
 ]
 ```
 
-RESPONSE: Array with response body for each project
+RESPONSE:
+```
+{
+  "status":"success",
+  "data": [{/* PUT response for first project*/},{/* PUT response for project N*/}]
+}
+```

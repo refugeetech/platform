@@ -112,9 +112,7 @@
             
             console.log("checking if map contains all required keys for the project collection");
             const requiredKeys =["name", "description"] //, "challengeCategories"];
-            if(_.every(_.values(map),(v,i)=> {
-              return _.contains(requiredKeys,v);
-            })) {
+            if(_.every(_.values(map),(v,i)=> { return _.contains(requiredKeys,v);})) {
               console.log("success");
               console.log("checking if data contains mapped header keys. Using first object in array as the header.");
               console.log(this.bodyParams[0]);
@@ -160,14 +158,19 @@
                       return asyncmylife.wait();
                       
                     }
+                    return {status:"error" , data:"headerKeys:"+headerKeys.toString() +" has to contain all keys included in the map:"+map.toString()}
                   }
+                  return {status:"error" , data:"headerKeys:"+headerKeys.toString() +" has to have at least the same number of keys as the map: "+map.toString()}
                 }
+                return {status:"error" , data:"The body of the request has an uknown format"} //@TODO specify the format of the input data 
               }
+              return {status:"error" , data:"Either the body of the request is empty or the data is not contained in an array"}
             }
+            return {status:"error" , data:"The map: " + map.toString() +  " doesnt contains all required keys for the project collection"}
           }
           return {status:"error" , data:"need to specify a map in the query parameters, example: /import?o=convert&map=froma:tob,fromc:tod,frome:tof"}
         }
-        return response;
+        return {status:"error" , data:"No such an operation called: '"+operation+"'"}
       }
       
       var asyncmylife = new Future();
@@ -182,22 +185,17 @@
       
     },
     put: function () {
+      var asyncmylife = new Future();
       var response = [];
       _.each(this.bodyParams,(p,i)=> {
         response.push(PutProject(p));
       });
-      return response;
+      asyncmylife.return({status:"success", data:response});
+      return asyncmylife.wait();
     }
   });
   
   Future = Npm.require('fibers/future');
-  
-  doBatchOperation = (func)=> {
-    
-    var asyncmylife = new Future();
-    
-    return Fiber(func).run();
-  }
   
 
  
