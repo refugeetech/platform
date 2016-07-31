@@ -45,3 +45,4 @@ accounts-ui
 nimble:restivus
 alanning:roles
 dburles:mongo-collection-instances
+http
