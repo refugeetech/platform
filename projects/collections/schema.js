@@ -137,7 +137,7 @@ ProjectsSchema = new SimpleSchema({
     type: [String],
     label: "Challenge Categories",
     allowedValues: ['social', 'bureaucracy', 'housing', 'education',
-    'language', 'employment', 'coordination','information'],
+    'language', 'employment', 'coordination','information','healthcare','media-and-communication'],
     optional: true,
     autoform: {
       options: [
