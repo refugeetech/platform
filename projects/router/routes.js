@@ -21,3 +21,9 @@ FlowRouter.route('/projects/:projectId/update', {
     BlazeLayout.render('mainLayout', { main: 'updateProject' });
  }
 });
+
+FlowRouter.route('/projectstiles', {
+ action: function (params, queryParams) {
+    BlazeLayout.render('mainLayout', { main: 'projectsTiles' });
+ }
+});
