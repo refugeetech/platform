@@ -116,13 +116,12 @@
 
 /*** END: STUFF NOT CURRENTLY USED ***/
 
-// Since challengeCategories is not a collection
 // Schema for Projects collection
 ProjectsSchema = new SimpleSchema({
   "migHubComplete": {
     type: Boolean,
     label: "Has this project a completely filled profile on the mighub ?",
-    defaultValue: true
+    defaultValue: false
   },
   "name": {
     type: String,
@@ -138,7 +137,7 @@ ProjectsSchema = new SimpleSchema({
     type: [String],
     label: "Challenge Categories",
     allowedValues: ['social', 'bureaucracy', 'housing', 'education',
-    'language', 'employment', 'coordination','information'],
+    'language', 'employment', 'coordination','information','healthcare','media-and-communication'],
     optional: true,
     autoform: {
       options: [
@@ -149,7 +148,10 @@ ProjectsSchema = new SimpleSchema({
         {label: "Language", value: "language"},
         {label: "Employment", value: "employment"},
         {label: "Coordination", value: "coordination"},
-        {label: "Information", value: "information"}
+        {label: "Information", value: "information"},
+        // new additions
+        {label: "Media and Communication", value: "media-and-communication"},
+        {label: "Healthcare", value: "healthcare"}
       ]
     }
   },
