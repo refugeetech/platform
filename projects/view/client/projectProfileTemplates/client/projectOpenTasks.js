@@ -1,6 +1,9 @@
 Template.projectOpenTasks.helpers({
     //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
     project: function() {
+        console.log(Projects.findOne({
+            _id: FlowRouter.getParam('projectId')
+        }));
         return Projects.findOne({
             _id: FlowRouter.getParam('projectId')
         });
@@ -10,7 +13,7 @@ Template.projectOpenTasks.helpers({
             type: type
         }).url;
     },
-    isLinkNotEmpty: function(list,type) {
+    isLinkNotEmpty: function(list, type) {
         var url = _.findWhere(list, {
             type: type
         }).url;
@@ -29,13 +32,12 @@ Template.trelloLists.helpers({
         url = trelloUrlParser(url);
         Meteor.http.call("GET", url, function(error, result) {
             if (error) {
-                console.log("ProjectOpenTasks.js >getDataTrello >Error:"+error);
+                console.log("ProjectOpenTasks.js >getDataTrello >Error:" + error);
             }
             if (result) {
                 //limit result to the first 5 issues.
                 //because we can only get the result in callback we can't
                 //directly return it, so we're storing it in the Session...
-
                 Session.set("trelloLists", _.first(result.data, 5));
             }
         });
@@ -44,20 +46,20 @@ Template.trelloLists.helpers({
 });
 
 //trying to parse and fix trello url
-function trelloUrlParser(url){
-  //https://trello.com/b/rbpEfMld/data-science
-  if (url.includes("trello.com")) {
-      if (!url.includes("http"))
-          url = "https://" + url;
-      url = url.replace("http://", "https://");
-      url = url.replace("https://www", "https://");
-      url = url.replace("https://trello.com/b", "https://api.trello.com/1/boards");
-      //delete the humain readable name (data-science)
-      url = url.substr(0,url.lastIndexOf("/"));
-      url = url+"/lists";
-      console.log("url:"+url );
-      return url;
-  }
+function trelloUrlParser(url) {
+    //https://trello.com/b/rbpEfMld/data-science
+    if (url.includes("trello.com")) {
+        if (!url.includes("http"))
+            url = "https://" + url;
+        url = url.replace("http://", "https://");
+        url = url.replace("https://www", "https://");
+        url = url.replace("https://trello.com/b", "https://api.trello.com/1/boards");
+        //delete the humain readable name (data-science)
+        url = url.substr(0, url.lastIndexOf("/"));
+        url = url + "/lists";
+        console.log("url:" + url);
+        return url;
+    }
 }
 
 Template.githubIssues.helpers({
@@ -71,7 +73,7 @@ Template.githubIssues.helpers({
         url = githubUrlParser(url);
         Meteor.http.call("GET", url, function(error, result) {
             if (error) {
-                console.log("ProjectOpenTasks.js >getDataGitub >Error:"+error);
+                console.log("ProjectOpenTasks.js >getDataGitub >Error:" + error);
             }
             if (result) {
                 //limit result to the first 5 issues.
@@ -103,3 +105,11 @@ function githubUrlParser(url) {
         return url;
     }
 }
+
+
+Template.githubIssuesTableRow.events({
+    "click .githubIssueRow": function(event, template) {
+        //open issue link
+        window.open(this.html_url, "_blank");
+    }
+});
