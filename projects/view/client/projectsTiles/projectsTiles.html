@@ -1,17 +1,273 @@
 <template name="projectsTiles">
-  <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
-  <div class="page-header">
-     <a class="btn btn-4white-background btn-primary pull-right" href="/projects/add" role="button">Add Project</a>
-    <h1>View all projects</h1>
-  </div>
-  <div class="row">
-    <div class="grid" >
-      <div class="grid-item">...</div>
-      <div class="grid-item grid-item--width2">...</div>
-      <div class="grid-item">...</div>
+
+    <div class="container-fluid no-padding" >
+        <div class="hero" id="page-top-hero">
+            <div class="hero-title col-md-offset-1 col-md-6 col-xs-12">
+                <h1>Getting to know another point of view</h1>
+            </div>
+            <div class="col-md-offset-1 col-md-6 col-xs-12">
+                <h3>
+                  MyStory is a solution that help refugees to write their story of a newcomer
+              </h3>
+                <button class="btn btn-white btn-hero">Explore</button>
+            </div>
+            <div class="hero-links">
+                <button id="projectsButton" class="link link-active" >Projects</button>
+                <button id="volunteersButton" class="link" >Volunteer</button>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="col-xs-12 slide link-active" id="projects">
+
+                <div class="filters">
+
+                    <div class="filter-row">
+                        Helping refugees by solving
+                        <button id="challenges-filter" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            challenges <span class="caret"></span>
+                            <div class="dropdown" id="challenges-dropdown">
+                                <ul class="dropdown-menu filters-button-group">
+                                    <li><span class="challenges">All challenges</span></li>
+                                    {{#each challenges}}
+                                      <li><span class="challenges">{{this}}</span></li>
+                                    {{/each}}
+                                    <!--<li><span data-filter=".test1">Employment</span></li>
+                                    <li><span data-filter=".test2">Housing</span></li>
+                                    <li><span data-filter=".test3">Coordination</span></li>
+                                    <li><span data-filter=".test2">Education &amp; Language</span></li>
+                                    <li><span data-filter=".test1">Information</span></li>
+                                    <li><span data-filter=".test2">Social</span></li>-->
+                                </ul>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="filter-row">
+                        with projects
+                        <button id="country-filter" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            all over the world <span class="caret"></span>
+                            <div class="dropdown" id="country-dropdown">
+                                <ul class="dropdown-menu filters-button-group">
+                                    <li><span class="countries">All countries</span></li>
+                                    <li><span class="countries">Sweden</span></li>
+                                    <li role="separator" class="divider"></li>
+                                    {{#each countries}}
+                                      <li><span class="countries">{{this}}</span></li>
+                                    {{/each}}
+                                    <!-- <li><span data-filter=".test2">Country A</span></li>
+                                    <li><span data-filter=".test3">Country B</span></li>
+                                    <li><span data-filter=".test1">Country C</span></li>
+                                    <li><span data-filter=".test2">Country D</span></li>
+                                    <li><span data-filter=".test3">Country E</span></li> -->
+                                </ul>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="grid">
+                        <!--<div class="grid-sizer"></div>-->
+                        {{#each projects}} {{> gridItem}} {{/each}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 slide link-active" id="volunteer">
+                <section id="positions">
+                    <div class="container">
+                        <div class="col-xs-12">
+                            <h3 class="section-header">Open positions</h3>
+                            <div class="counter inverted">14</div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-8">
+                            If you have the right skillset and experience, you are more than welcome to help out.
+                        </div>
+
+                        <div class="table-headings col-xs-12" id="positions-table">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <h4>Role <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                                <div class="col-xs-3">
+                                    <h4>Project <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                                <div class="col-xs-3">
+                                    <h4>Challenge <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                                <div class="col-xs-2">
+                                    <h4>Country <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="table-listings col-xs-12">
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">Competency</div>
+                                <div class="col-xs-3 item">Jobs</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">Competency</div>
+                                <div class="col-xs-3 item">Jobs</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">Competency</div>
+                                <div class="col-xs-3 item">Jobs</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">Competency</div>
+                                <div class="col-xs-3 item">Jobs</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">Competency</div>
+                                <div class="col-xs-3 item">Jobs</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                        </ul>
+
+                        <button class="center-block btn btn-white">Show more</button>
+                    </div>
+                </section>
+
+                <section id="tasks">
+                    <div class="container">
+                        <div class="col-xs-12">
+                            <h3 class="section-header">Open tasks</h3>
+                            <div class="counter inverted">125</div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-8">
+                            If you have the right skillset and experience, you are more than welcome to help out.
+                        </div>
+
+                        <div class="table-headings col-xs-12" id="tasks-table">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <h4>Latest task <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                                <div class="col-xs-3">
+                                    <h4>Project <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                                <div class="col-xs-3">
+                                    <h4>Challenge <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                                <div class="col-xs-2">
+                                    <h4>Country <i class="fa fa-caret-down"></i></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="table-listings col-xs-12">
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">400 contacts</div>
+                                <div class="col-xs-3 item">Education &amp; Language</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">400 contacts</div>
+                                <div class="col-xs-3 item">Education &amp; Language</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">400 contacts</div>
+                                <div class="col-xs-3 item">Education &amp; Language</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">Lingio</div>
+                                <div class="col-xs-3 item">Education &amp; Language</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                            <li class="row">
+                                <div class="col-xs-4 item">Creative Copywriter</div>
+                                <div class="col-xs-3 item">Lingio</div>
+                                <div class="col-xs-3 item">Education &amp; Language</div>
+                                <div class="col-xs-2 item">Sweden</div>
+                            </li>
+                        </ul>
+
+                        <button class="center-block btn btn-white">Show more</button>
+                    </div>
+                </section>
+
+                <section id="become-part">
+                    <div class="hero">
+                        <div class="row">
+
+                            <div class="hero-title col-md-offset-2 col-md-8 col-xs-12">
+                                <h1 class="inverted">Do you also want to be a part of this community?</h1></div>
+                            <div class="hero-text col-md-offset-2 col-md-8 col-xs-12">
+                                <h2 class="inverted">We welcome volunteers from all backgrounds get involved with Refugee Tech. If you have a skill or relevant experience that can help us reach our goal of affecting positive change in the lives of refugees, we want to hear from you.</h2></div>
+                        </div>
+                        <div class="row">
+
+                            <button class="center-block btn btn-white hover-outline">Submit your solution</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="footer">
+                    <footer class="footer container">
+                        <div class="contact-links">
+
+                            <div class="col-sm-4 footer-link">
+                                <h3>General questions</h3>
+                                <a href="mailto:general@refugeetech.com">general@refugeetech.com</a>
+                            </div>
+                            <div class="col-sm-4 footer-link">
+                                <h3>Press inquiries</h3>
+                                <a href="mailto:press@refugeetech.com">press@refugeetech.com</a>
+                            </div>
+                            <div class="col-sm-4 footer-link">
+                                <h3>Companies &amp; Organisations</h3>
+                                <a href="mailto:press@refugeetech.com">press@refugeetech.com</a>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                    </footer>
+                    <div class="container navbar">
+                        <ul class="nav nav-pills">
+                            <!--<li class="active"><a v-link="{ path: '/' }">Home</a></li>-->
+                            <li><a href="/" class="header-title">Refugee Tech</a></li>
+                            <li><a href="#">© 2015 Refugee Tech</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Work Forum</a></li>
+                            <li><a href="#">About us</a></li>
+                            <!--<button class="btn btn-primary" id="login-button">Login</button>-->
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+            <!--end slide-->
+        </div>
     </div>
-  </div>
+</template>
 
-
-
+<template name="gridItem">
+    <div class="grid-item">
+        <a href="{{getURLByType links 'home'}}">
+            <span class="grid-tag">{{challengeCategories.[0]}}</span>
+            <span class="grid-title">{{name}}</span>
+            <img src="{{getURLByType links 'logo'}}" />
+        </a>
+    </div>
 </template>
