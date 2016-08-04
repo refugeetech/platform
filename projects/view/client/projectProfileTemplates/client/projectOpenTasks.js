@@ -1,9 +1,6 @@
 Template.projectOpenTasks.helpers({
     //Using the Flowrouter package to get the route param projects/:projectId ; is set up in the Template.projectProfile.onCreated callback
     project: function() {
-        console.log(Projects.findOne({
-            _id: FlowRouter.getParam('projectId')
-        }));
         return Projects.findOne({
             _id: FlowRouter.getParam('projectId')
         });
@@ -57,7 +54,6 @@ function trelloUrlParser(url) {
         //delete the humain readable name (data-science)
         url = url.substr(0, url.lastIndexOf("/"));
         url = url + "/lists";
-        console.log("url:" + url);
         return url;
     }
 }
@@ -79,8 +75,6 @@ Template.githubIssues.helpers({
                 //limit result to the first 5 issues.
                 //because we can only get the result in callback we can't
                 //directly return it, so we're storing it in the Session...
-                console.log(">>>");
-                console.log(result);
                 Session.set("issuesList", _.first(result.data, 5));
             }
         });
@@ -106,6 +100,18 @@ function githubUrlParser(url) {
     }
 }
 
+
+Template.githubIssuesTableRow.helpers({
+    getLabels: function(lab) {
+        var labels = "";
+        for(var i=0;i<lab.length;i++){
+           labels =labels + lab[i].name + ", ";
+        }
+        //delete the last ', '
+        labels = labels.substring(0, labels.length - 2);
+        return labels;
+    },
+});
 
 Template.githubIssuesTableRow.events({
     "click .githubIssueRow": function(event, template) {

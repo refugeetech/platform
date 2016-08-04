@@ -148,7 +148,7 @@
 <template name="githubIssuesTableRow">
     <tr class="githubIssueRow">
         <td>{{title}}</td>
-        <td>{{labels.[0].name}}</td>
+        <td>{{getLabels labels}}</td>
         <td>{{milestone.title}}</td>
     </tr>
 </template>
