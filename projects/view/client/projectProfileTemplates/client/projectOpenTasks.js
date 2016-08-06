@@ -15,7 +15,15 @@ Template.projectOpenTasks.helpers({
             type: type
         }).url;
         return !_.isEmpty(url);
-    }
+    },
+    getGithubRepos: function(list) {
+        // console.log(list);
+        var lis = _.where(list, {
+            type: 'github'
+        });
+        lis = _.flatten(lis);
+        return lis;
+    },
 });
 
 Template.trelloLists.helpers({
@@ -42,6 +50,61 @@ Template.trelloLists.helpers({
     },
 });
 
+Template.githubRepo.helpers({
+    getIssues: function(url) {
+        //url = "https://api.github.com/repos/frabcus/house/issues?status=opened";
+        url = githubIssuesUrlParser(url);
+        Meteor.http.call("GET", url, function(error, result) {
+            if (error) {
+                console.log("ProjectOpenTasks.js >getDataGitub >Error:" + error);
+            }
+            if (result) {
+                //limit result to the first 5 issues.
+                //because we can only get the result in callback we can't
+                //directly return it, so we're storing it in the Session...
+                Session.set("issuesList"+url, _.first(result.data, 5));
+            }
+        });
+        return Session.get("issuesList"+url);
+    },
+    getRepoName: function(url){
+      url = githubRepoNameUrlParser(url);
+      Meteor.http.call("GET", url, function(error, result) {
+          if (error) {
+              console.log("ProjectOpenTasks.js >getDataGitub >Error:" + error);
+          }
+          if (result) {
+              //limit result to the first 5 issues.
+              //because we can only get the result in callback we can't
+              //directly return it, so we're storing it in the Session...
+              // Session.set("repoName"+url, result.data.name);
+              Session.set("repoName"+url, result.data.full_name);
+          }
+      });
+      return Session.get("repoName"+url);
+    },
+});
+
+Template.githubIssuesTableRow.helpers({
+    getLabels: function(lab) {
+        var labels = "";
+        for (var i = 0; i < lab.length; i++) {
+            labels = labels + lab[i].name + ", ";
+        }
+        //delete the last ', '
+        labels = labels.substring(0, labels.length - 2);
+        return labels;
+    },
+});
+
+Template.githubIssuesTableRow.events({
+    "click .githubIssueRow": function(event, template) {
+        //open issue link
+        window.open(this.html_url, "_blank");
+    }
+});
+
+
 //trying to parse and fix trello url
 function trelloUrlParser(url) {
     //https://trello.com/b/rbpEfMld/data-science
@@ -58,32 +121,8 @@ function trelloUrlParser(url) {
     }
 }
 
-Template.githubIssues.helpers({
-    spitMeGithubURL: function(list) {
-        return _.findWhere(list, {
-            type: 'github'
-        }).url;
-    },
-    getData: function(url) {
-        //url = "https://api.github.com/repos/frabcus/house/issues?status=opened";
-        url = githubUrlParser(url);
-        Meteor.http.call("GET", url, function(error, result) {
-            if (error) {
-                console.log("ProjectOpenTasks.js >getDataGitub >Error:" + error);
-            }
-            if (result) {
-                //limit result to the first 5 issues.
-                //because we can only get the result in callback we can't
-                //directly return it, so we're storing it in the Session...
-                Session.set("issuesList", _.first(result.data, 5));
-            }
-        });
-        return Session.get("issuesList");
-    },
-});
-
 //trying to parse and fix the url
-function githubUrlParser(url) {
+function githubIssuesUrlParser(url) {
     if (url.includes("github.com")) {
         if (!url.includes("http"))
             url = "https://" + url;
@@ -100,22 +139,15 @@ function githubUrlParser(url) {
     }
 }
 
-
-Template.githubIssuesTableRow.helpers({
-    getLabels: function(lab) {
-        var labels = "";
-        for(var i=0;i<lab.length;i++){
-           labels =labels + lab[i].name + ", ";
-        }
-        //delete the last ', '
-        labels = labels.substring(0, labels.length - 2);
-        return labels;
-    },
-});
-
-Template.githubIssuesTableRow.events({
-    "click .githubIssueRow": function(event, template) {
-        //open issue link
-        window.open(this.html_url, "_blank");
+//trying to parse and fix the url
+function githubRepoNameUrlParser(url) {
+    if (url.includes("github.com")) {
+        if (!url.includes("http"))
+            url = "https://" + url;
+        url = url.replace("http://", "https://");
+        url = url.replace("https://www", "https://");
+        url = url.replace("https://", "https://api.");
+        url = url.replace("github.com/", "github.com/repos/");
+        return url;
     }
-});
+}
