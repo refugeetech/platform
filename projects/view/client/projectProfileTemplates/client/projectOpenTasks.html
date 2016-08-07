@@ -1,12 +1,14 @@
 <template name="projectOpenTasks">
     <section id="open-tasks" class="row bg-white">
 
-        <!-- show trello bloc only if there is a trello link -->
-        {{#if isLinkNotEmpty project.links 'trello'}} {{> trelloLists project}} {{/if}}
+        <!--show trello bloc only if there is a trello link-->
+        {{#if isListEmpty project.links 'trello'}}
+          {{> trelloLists project}}
+        {{/if}}
 
-        <!-- start github -->
-          <!-- show github bloc only if there is a github link -->
-          {{#if isLinkNotEmpty project.links 'github'}}
+        <!--start github -->
+          <!--show github bloc only if there is a github link-->
+        {{#if isListEmpty project.links 'github'}}
           <div class="col-lg-10 col-lg-offset-1">
               <h2 class="column-heading">Issues from Github</h2>
           </div>
@@ -19,14 +21,16 @@
               </div>
           </div>
           {{#each getGithubRepos project.links}}
-            {{> githubRepo}}
+            {{#if showRepo (getIssuesCount this) }}
+              {{> githubRepo}}
+            {{/if}}
           {{/each}}
         {{/if}}
-        <!-- end github -->
+        <!--end github-->
 
         <!-- start projectSlack -->
         {{>projectSlack}}
-        <!-- end projectSlack -->
+        <!--end projectSlack-->
     </section>
 </template>
 
@@ -78,7 +82,9 @@
 
   <div class="col-lg-10 col-lg-offset-1">
       <div class="col-lg-7" style="padding:0;">
+        {{#if showRepoName}}
           <h3>Issues in Repo: {{ getRepoName url }}</h3>
+        {{/if}}
       </div>
       <div class="col-lg-2 col-lg-offset-2">
           <a href="{{ url }}" class="btn">Go to Github</a>

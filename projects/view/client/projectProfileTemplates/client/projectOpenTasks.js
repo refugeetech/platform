@@ -5,25 +5,41 @@ Template.projectOpenTasks.helpers({
             _id: FlowRouter.getParam('projectId')
         });
     },
-    spitMeAnURL: function(list, type) {
-        return _.findWhere(list, {
-            type: type
-        }).url;
-    },
-    isLinkNotEmpty: function(list, type) {
-        var url = _.findWhere(list, {
-            type: type
-        }).url;
-        return !_.isEmpty(url);
+    isListEmpty: function(list, typ) {
+        console.log("--->",list);
+        var urlList = _.where(list, {
+            type: typ
+        });
+        if(typ=="github"){
+          Session.set("githubLinksCount",urlList.length);
+        }
+        return !_.isEmpty(urlList);
     },
     getGithubRepos: function(list) {
-        // console.log(list);
         var lis = _.where(list, {
             type: 'github'
         });
-        lis = _.flatten(lis);
         return lis;
     },
+    getIssuesCount: function(list){
+      var url = githubIssuesUrlParser(list.url);
+      Meteor.http.call("GET", url, function(error, result) {
+          if (error) {
+              console.log("ProjectOpenTasks.js >getDataGitub >Error:" + error);
+          }
+          if (result) {
+              Session.set("issuesListCount"+url,result.data.length);
+          }
+      });
+      return Session.get("issuesListCount"+url);
+    },
+    showRepo: function(issuesCount){
+      if(issuesCount==0 && Session.get("githubLinksCount")!=1){
+        return false;
+      }else{
+        return true;
+      }
+    }
 });
 
 Template.trelloLists.helpers({
@@ -83,6 +99,13 @@ Template.githubRepo.helpers({
       });
       return Session.get("repoName"+url);
     },
+    showRepoName: function(){
+      if(Session.get("githubLinksCount")>1){
+        return true
+      }else{
+        return false;
+      }
+    }
 });
 
 Template.githubIssuesTableRow.helpers({
