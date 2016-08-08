@@ -156,10 +156,26 @@ ProjectsSchema = new SimpleSchema({
     label: "Has this project a completely filled profile to be presented on the Setelin APP?",
     defaultValue: false
   },
+  defaultLanguage: {
+    type: String,
+    label: "The base language the apps description and other fields is written in.",
+    optional: false,
+    defaultValue: "en",
+    allowedValues: ["sv","en","fa","ar"], // TODO: check if these are the correct standardization for swedish, english, farsi, arabic
+    autoform: {
+      options: [
+        {label: "Svenska", value: "sv"},
+        {label: "English", value: "en"},
+        {label: "Farsi", value: "fa"},
+        {label: "Arabic", value: "ar"}
+      ]
+    }
+  },
   "name": {
     type: String,
     label: "Project Name",
-    optional: false
+    optional: false,
+    
   },
   "description": {
     type: String,
