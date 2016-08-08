@@ -1,10 +1,27 @@
 <template name="projectOpenTasks">
     <section id="open-tasks" class="row bg-white">
 
-        <!--show trello bloc only if there is a trello link-->
+        <!--start trello -->
+          <!--show trello bloc only if there is a trello link-->
         {{#if isListEmpty project.links 'trello'}}
-          {{> trelloLists project}}
+          <div class="col-lg-10 col-lg-offset-1">
+              <h2 class="column-heading">Open tasks from Trello</h2>
+          </div>
+          <div class="col-lg-10 col-lg-offset-1">
+              <div class="col-lg-7" style="padding:0;">
+                  <p>
+                      If you have the right skillset and experience, you are more than welcome to help out.
+                      <br/> All positions are most likely available to everybody worldwide.
+                  </p>
+              </div>
+          </div>
+          {{#each getTrelloBoards project.links}}
+            {{#if showBoard (getCardsCount this) }}
+              {{> trelloBoard}}
+            {{/if}}
+          {{/each}}
         {{/if}}
+        <!--end github-->
 
         <!--start github -->
           <!--show github bloc only if there is a github link-->
@@ -35,21 +52,16 @@
 </template>
 
 <!-- trello templates -->
-<template name="trelloLists">
-    <div class="col-lg-10 col-lg-offset-1">
-        <h2 class="column-heading">Open tasks from Trello</h2>
-    </div>
+<template name="trelloBoard">
 
     <div class="col-lg-10 col-lg-offset-1">
-
         <div class="col-lg-7" style="padding:0;">
-            <p>
-                If you have the right skillset and experience, you are more than welcome to help out.
-                <br/> All positions are most likely available to everybody worldwide.
-            </p>
+          {{#if showBoardName}}
+            <h3>Tasks in Board: {{ getBoardName url }}</h3>
+          {{/if}}
         </div>
         <div class="col-lg-2 col-lg-offset-2">
-            <a href="{{spitMeTrelloURL links }}" class="btn">Go to Trello</a>
+            <a href="{{ url }}" class="btn">Go to Trello</a>
         </div>
     </div>
 
@@ -57,23 +69,27 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Tasks</th>
-                    <th>Status</th>
-                    <th>Status</th>
+                    <th>Card</th>
+                    <th>Description</th>
+                    <th>Labels</th>
+                    <th>Bulletpoints</th>
                 </tr>
             </thead>
             <tbody>
-                {{#each getData (spitMeTrelloURL links)}} {{> trelloListsTableRow }} {{/each}}
+              {{#each getCards url }}
+                  {{> trelloTasksTableRow }}
+              {{/each}}
             </tbody>
         </table>
     </div>
 </template>
 
-<template name="trelloListsTableRow">
-    <tr>
+<template name="trelloTasksTableRow">
+    <tr class="trelloTaskRow">
         <td>{{name}}</td>
-        <td>Copy</td>
-        <td>To-do</td>
+        <td>{{desc}}</td>
+        <td>{{getLabels labels}}</td>
+        <td>{{countCheckItems idChecklists}}</td>
     </tr>
 </template>
 
