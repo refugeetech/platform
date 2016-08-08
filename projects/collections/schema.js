@@ -115,12 +115,45 @@
 // });
 
 /*** END: STUFF NOT CURRENTLY USED ***/
-
+TranslationSchema = new SimpleSchema({
+  field: {
+    type: String,
+    label: "Field to be translated",
+    optional: false,
+    allowedValues: ["description","name"],
+    autoform: {
+      options: [
+        {label: "Project Description", value: "description"},
+        {label: "Project Name", value: "name"}
+      ]
+    }
+  },
+  language: {
+    type: String,
+    label: "The language the field is translated to",
+    optional: false,
+    defaultValue: "sv",
+    allowedValues: ["sv","en","fa","ar"], // TODO: check if these are the correct standardization for swedish, english, farsi, arabic
+    autoform: {
+      options: [
+        {label: "Svenska", value: "sv"},
+        {label: "English", value: "en"},
+        {label: "Farsi", value: "fa"},
+        {label: "Arabic", value: "ar"}
+      ]
+    }
+  },
+  translation: {
+    type: String,
+    label: "The tranlated content",
+    optional: false
+  }
+});
 // Schema for Projects collection
 ProjectsSchema = new SimpleSchema({
   "migHubComplete": {
     type: Boolean,
-    label: "Has this project a completely filled profile on the mighub ?",
+    label: "Has this project a completely filled profile to be presented on the Setelin APP?",
     defaultValue: false
   },
   "name": {
@@ -132,6 +165,10 @@ ProjectsSchema = new SimpleSchema({
     type: String,
     label: "Project Description",
     optional: false
+  },
+  translations: {
+    type: [TranslationSchema],
+    optional: true
   },
   "challengeCategories": {
     type: [String],
