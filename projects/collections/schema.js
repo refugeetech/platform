@@ -171,6 +171,11 @@ ProjectsSchema = new SimpleSchema({
       ]
     }
   },
+  shortDescription: {
+    type:String,
+    label: "A one sentence description of the Project",
+    optional: true
+  },
   "name": {
     type: String,
     label: "Project Name",
