@@ -151,14 +151,9 @@ TranslationSchema = new SimpleSchema({
 });
 // Schema for Projects collection
 ProjectsSchema = new SimpleSchema({
-  "migHubComplete": {
-    type: Boolean,
-    label: "Has this project a completely filled profile to be presented on the Setelin APP?",
-    defaultValue: false
-  },
   defaultLanguage: {
     type: String,
-    label: "The base language the apps description and other fields is written in.",
+    label: "The base language the projects description and other fields is written in.",
     optional: false,
     defaultValue: "en",
     allowedValues: ["sv","en","fa","ar"], // TODO: check if these are the correct standardization for swedish, english, farsi, arabic
@@ -171,11 +166,6 @@ ProjectsSchema = new SimpleSchema({
       ]
     }
   },
-  shortDescription: {
-    type:String,
-    label: "A one sentence description of the Project",
-    optional: true
-  },
   "name": {
     type: String,
     label: "Project Name",
@@ -186,6 +176,12 @@ ProjectsSchema = new SimpleSchema({
     type: String,
     label: "Project Description",
     optional: false
+  },
+  "shortDescription": {
+    type: String,
+    label: "A one sentence description of the Project (maximum 140 characters)",
+    max: 140,
+    optional:true
   },
   translations: {
     type: [TranslationSchema],
@@ -327,6 +323,11 @@ ProjectsSchema = new SimpleSchema({
         this.unset();  // Prevent user from supplying their own value
       }
     }
+  },
+  "migHubComplete": {
+    type: Boolean,
+    label: "Has this project a completely filled profile to be presented on the Setelin APP?",
+    defaultValue: false
   }
   /*,
   media: {
@@ -340,13 +341,7 @@ ProjectsSchema = new SimpleSchema({
     label: "Is this project a result of the Refugee Tech process?"
   },
   */
-  /*
-  "shortDescription": {
-    type: String,
-    label: "Project Short Description (maximum 140 characters)",
-    max: 140,
-    optional:true
-  },
+  /*,
   */
   /*
   "email": {
