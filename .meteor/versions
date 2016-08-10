@@ -20,6 +20,9 @@ blaze@2.1.8
 blaze-html-templates@1.0.4
 blaze-tools@1.0.9
 boilerplate-generator@1.0.9
+brylie:accounts-admin-ui@0.3.0
+brylie:create-role-if-undefined@0.1.0
+brylie:first-user-admin@0.1.9
 caching-compiler@1.0.5
 caching-html-compiler@1.0.6
 callback-hook@1.0.9
@@ -66,6 +69,7 @@ matb33:bootstrap-transition-js@10.0.0
 mdg:validation-error@0.5.1
 meteor@1.1.15
 meteor-base@1.0.4
+meteor-platform@1.2.6
 minifier-css@1.1.12
 minifier-js@1.1.12
 minimongo@1.0.17
@@ -105,10 +109,10 @@ service-configuration@1.0.10
 session@1.1.6
 sha@1.0.8
 simple:json-routes@2.1.0
-softwarerero:accounts-t9n@1.3.4
 spacebars@1.0.12
 spacebars-compiler@1.0.12
 srp@1.0.9
+standard-app-packages@1.0.9
 standard-minifier-css@1.0.7
 standard-minifier-js@1.0.7
 templating@1.1.10
@@ -120,8 +124,6 @@ twbs:bootstrap@3.3.6
 ui@1.0.11
 underscore@1.0.9
 url@1.0.10
-useraccounts:core@1.14.2
-useraccounts:unstyled@1.14.2
 webapp@1.2.9
 webapp-hashing@1.0.9
 zimme:active-route@2.3.2

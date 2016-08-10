@@ -1,7 +1,13 @@
 <template name="viewProjects">
   <div class="page-header">
-     <a class="btn btn-4white-background btn-primary pull-right" href="/projects/add" role="button">Add Project</a>
     <h1>View all projects</h1>
+  </div>
+  <div class="row">
+    {{> loginButtons}}
+    <a class="btn btn-4white-background btn-primary pull-right" href="/projects/add" role="button">Add Project</a>
+  </div>
+  <div class="row">
+    {{> adminTemplate}}
   </div>
   <div class="row">
     {{> filterProjects }}
@@ -9,4 +15,12 @@
   <div class="row">
     {{> searchResults }}
   </div>
+</template>
+
+<template name="adminTemplate">
+  {{#if isInRole 'admin'}}
+    {{> accountsAdmin}}
+  {{else}}
+    Must be admin to see this...
+  {{/if}}
 </template>
