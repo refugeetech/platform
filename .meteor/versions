@@ -21,6 +21,7 @@ blaze-html-templates@1.0.4
 blaze-tools@1.0.9
 boilerplate-generator@1.0.9
 brylie:accounts-admin-ui@0.3.0
+brylie:api-umbrella@1.4.0
 brylie:create-role-if-undefined@0.1.0
 brylie:first-user-admin@0.1.9
 caching-compiler@1.0.5

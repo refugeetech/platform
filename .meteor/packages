@@ -47,3 +47,4 @@ dburles:mongo-collection-instances
 http
 brylie:first-user-admin
 brylie:accounts-admin-ui
+brylie:api-umbrella
