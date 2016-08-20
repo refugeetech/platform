@@ -187,9 +187,31 @@ ProjectsSchema = new SimpleSchema({
     type: [TranslationSchema],
     optional: true
   },
+  mainCategory: {
+      type: String,
+      label: "The main category this project belongs to",
+      allowedValues: ['social', 'bureaucracy', 'housing', 'education',
+      'language', 'employment', 'coordination','information','healthcare','media-and-communication'],
+      optional: false,
+      autoform: {
+        options: [
+          {label: "Social", value: "social"},
+          {label: "Bureaucracy", value: "bureaucracy"},
+          {label: "Housing", value: "housing"},
+          {label: "Education", value: "education"},
+          {label: "Language", value: "language"},
+          {label: "Employment", value: "employment"},
+          {label: "Coordination", value: "coordination"},
+          {label: "Information", value: "information"},
+          // new additions
+          {label: "Media and Communication", value: "media-and-communication"},
+          {label: "Healthcare", value: "healthcare"}
+        ]
+      }
+  },
   "challengeCategories": {
     type: [String],
-    label: "Challenge Categories",
+    label: "Other Challenge Categories this project is related to",
     allowedValues: ['social', 'bureaucracy', 'housing', 'education',
     'language', 'employment', 'coordination','information','healthcare','media-and-communication'],
     optional: true,
