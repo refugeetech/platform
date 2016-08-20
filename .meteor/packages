@@ -15,7 +15,6 @@ tracker                 # Meteor's client-side reactive programming library
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-useraccounts:unstyled
 accounts-password
 aldeed:simple-schema
 aldeed:collection2
@@ -46,3 +45,7 @@ nimble:restivus
 alanning:roles
 dburles:mongo-collection-instances
 http
+brylie:first-user-admin
+brylie:accounts-admin-ui
+brylie:api-umbrella
+outatime:jwt-simple
