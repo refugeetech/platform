@@ -2,7 +2,14 @@
   <div class="page-header">
     <h2>Update Project</h2>
   </div>
-
-  {{> quickForm collection="Projects" doc=project id="updateProjectForm" type="update"}}
-
+  {{#if isInRole 'contentAdmin'}}
+      {{> quickForm collection="Projects" doc=project id="updateProjectForm" type="update"}}
+  {{else}}
+      {{#if isInRole 'projectOwner'}}
+          <!-- todo : check if use is project owner of this project -->
+          You are not owner of this project and cant edit the content
+      {{else}}
+           You need to be a contentAdmin to edit this project
+      {{/if}}
+  {{/if}}
 </template>

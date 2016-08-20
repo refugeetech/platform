@@ -2,56 +2,60 @@
   <div class="page-header">
     <h2>Add Project</h2>
   </div>
-  {{# autoForm collection="Projects" id="insertProjectForm" type="insert" }}
-  {{> afQuickField name='name' autofocus='true'}}
-  {{> afQuickField name='description' rows=5 }}
-  {{> afQuickField name="shortDescription" }}
-  {{> afQuickField name='defaultLanguage'}}
-  {{> afQuickField name='translations'}}
-  {{> afQuickField name='mainCategory'}}
-  {{> afFormGroup name="challengeCategories" type="select-checkbox"}}
-  {{> afQuickField name="targetPlatforms" }}
-  {{> afQuickField name="links"}}
-  {{> afQuickField name="startupDate"}}
-  {{> afQuickField name="postalAddress"}}
-  {{> afQuickField name='migHubComplete'}}
-  <div class="form-group">
-    <label for="tags">
-      Tags
-    </label>
-    <!-- tell AutoForm this is the tags field via data-schema-key property-->
-    <input type="select"
-    id="tags"
-    data-schema-key="tags"
-    placeholder="Choose some tags (e.g. food, clothing, shelter)">
-  </div>
-<!--
-  
-  
-  
-  {{> afQuickField name="email" }}
--->
-<!--
-  {{> afQuickField name="solution"}}
--->
-
-
-<!--
-   {{> afQuickField name="isRTProject"}}
- -->
-
-<!-- 
-  {{> afFormGroup name="currentStage"}}
--->
-
-
-  
-
-  <!-- {{> afQuickField name="dataStore"}} -->
-
-  
-  <!-- {{> afQuickField name="pictures"}} -->
-
-  <button type="submit" class="btn btn-4white-background btn-primary">Submit Project</button>
-  {{/ autoForm }}
+  {{#if isInRole 'contentAdmin'}}
+      {{# autoForm collection="Projects" id="insertProjectForm" type="insert" }}
+      {{> afQuickField name='name' autofocus='true'}}
+      {{> afQuickField name='description' rows=5 }}
+      {{> afQuickField name="shortDescription" }}
+      {{> afQuickField name='defaultLanguage'}}
+      {{> afQuickField name='translations'}}
+      {{> afQuickField name='mainCategory'}}
+      {{> afFormGroup name="challengeCategories" type="select-checkbox"}}
+      {{> afQuickField name="targetPlatforms" }}
+      {{> afQuickField name="links"}}
+      {{> afQuickField name="startupDate"}}
+      {{> afQuickField name="postalAddress"}}
+      {{> afQuickField name='migHubComplete'}}
+      <div class="form-group">
+        <label for="tags">
+          Tags
+        </label>
+        <!-- tell AutoForm this is the tags field via data-schema-key property-->
+        <input type="select"
+        id="tags"
+        data-schema-key="tags"
+        placeholder="Choose some tags (e.g. food, clothing, shelter)">
+      </div>
+    <!--
+      
+      
+      
+      {{> afQuickField name="email" }}
+    -->
+    <!--
+      {{> afQuickField name="solution"}}
+    -->
+    
+    
+    <!--
+       {{> afQuickField name="isRTProject"}}
+     -->
+    
+    <!-- 
+      {{> afFormGroup name="currentStage"}}
+    -->
+    
+    
+      
+    
+      <!-- {{> afQuickField name="dataStore"}} -->
+    
+      
+      <!-- {{> afQuickField name="pictures"}} -->
+    
+      <button type="submit" class="btn btn-4white-background btn-primary">Submit Project</button>
+      {{/ autoForm }}
+  {{else}}
+    Must be a content administrator to see this
+  {{/if}}    
 </template>
