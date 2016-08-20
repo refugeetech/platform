@@ -11,7 +11,7 @@
   if(!Ratings) {
     Ratings = new Mongo.Collection('ratings');
   }
-  RatingsApiV01.addCollection(Ratings);
+  //RatingsApiV01.addCollection(Ratings);
   
  
 
