@@ -3,8 +3,8 @@
     prettyJson: true,
     version:'v02',
     defaultHeaders: {'Content-Type': 'application/json; charset=UTF-8'}
-  });  
-  
+  });
+
   // Generates: GET on /api/v01/projects
   // /api/v01/projects/:id for the Projects collection
   Projects = Mongo.Collection.get('projects');
@@ -29,3 +29,29 @@
       };
     }
   });
+
+  ProjectsApiV02.addRoute('projects/:id/upvote', {
+   get: function () {
+     Projects.update(this.urlParams.id, {
+      //  $set: { voteCount: 2 },
+       $inc: { "voteCount": 1 },
+     });
+     return {
+       status: "success",
+       data: Projects.findOne({_id:this.urlParams.id})
+     };
+   }
+ });
+
+ ProjectsApiV02.addRoute('projects/:id/downvote', {
+  get: function () {
+    Projects.update(this.urlParams.id, {
+     //  $set: { voteCount: 2 },
+      $inc: { "voteCount": -1 },
+    });
+    return {
+      status: "success",
+      data: Projects.findOne({_id:this.urlParams.id})
+    };
+  }
+});
