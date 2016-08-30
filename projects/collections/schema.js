@@ -351,7 +351,7 @@ ProjectsSchema = new SimpleSchema({
     label: "Has this project a completely filled profile to be presented on the Setelin APP?",
     defaultValue: false
   },
-  "voteCount": {
+  "upvotes": {
     type: Number,
     label: "vote count",
     defaultValue: 0

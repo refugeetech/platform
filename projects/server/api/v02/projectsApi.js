@@ -34,7 +34,7 @@
    get: function () {
      Projects.update(this.urlParams.id, {
       //  $set: { voteCount: 2 },
-       $inc: { "voteCount": 1 },
+       $inc: { "upvotes": 1 },
      });
      return {
        status: "success",
@@ -47,7 +47,7 @@
   get: function () {
     Projects.update(this.urlParams.id, {
      //  $set: { voteCount: 2 },
-      $inc: { "voteCount": -1 },
+      $inc: { "upvotes": -1 },
     });
     return {
       status: "success",
