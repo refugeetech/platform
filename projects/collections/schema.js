@@ -170,7 +170,7 @@ ProjectsSchema = new SimpleSchema({
     type: String,
     label: "Project Name",
     optional: false,
-    
+
   },
   "description": {
     type: String,
@@ -350,6 +350,11 @@ ProjectsSchema = new SimpleSchema({
     type: Boolean,
     label: "Has this project a completely filled profile to be presented on the Setelin APP?",
     defaultValue: false
+  },
+  "upvotes": {
+    type: Number,
+    label: "vote count",
+    defaultValue: 0
   }
   /*,
   media: {
