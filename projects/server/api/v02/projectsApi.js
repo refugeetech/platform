@@ -3,8 +3,8 @@
     prettyJson: true,
     version:'v02',
     defaultHeaders: {'Content-Type': 'application/json; charset=UTF-8'}
-  });  
-  
+  });
+
   // Generates: GET on /api/v01/projects
   // /api/v01/projects/:id for the Projects collection
   Projects = Mongo.Collection.get('projects');
@@ -29,3 +29,17 @@
       };
     }
   });
+
+  ProjectsApiV02.addRoute('newsletter/:email', {
+   get: function () {
+     var newsletteremail = {
+        "email": this.urlParams.email,
+        "dateAdded": new Date()
+       };
+     NewsletterEmailsSchema.validate(newsletteremail);
+     NewsletterEmails.insert(newsletteremail);
+     return {
+       status: "success"
+     };
+   }
+ });
