@@ -149,6 +149,24 @@ TranslationSchema = new SimpleSchema({
     optional: false
   }
 });
+
+//Schema for newsletter emails
+NewsletterEmailsSchema = new SimpleSchema({
+  email: {
+    type: String,
+    label: "email",
+    unique: true,
+    regEx: SimpleSchema.RegEx.Email
+  },
+  dateAdded: {
+    type: Date,
+    label: "Date Added",
+    autoValue: function(){
+      return new Date();
+    },
+  }
+});
+
 // Schema for Projects collection
 ProjectsSchema = new SimpleSchema({
   defaultLanguage: {
@@ -170,7 +188,7 @@ ProjectsSchema = new SimpleSchema({
     type: String,
     label: "Project Name",
     optional: false,
-    
+
   },
   "description": {
     type: String,
