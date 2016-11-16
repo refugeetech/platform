@@ -21,10 +21,14 @@ FlowRouter.route('/projects/:projectId/update', {
     BlazeLayout.render('mainLayout', { main: 'updateProject' });
  }
 });
+FlowRouter.route('/projectstiles', {
+ action: function (params, queryParams) {
+    BlazeLayout.render('mainLayout', { main: 'projectsTiles' });
+ }
+});
 
 FlowRouter.route("/project-profile-html-template", {
   action: function (params) {
     BlazeLayout.render("mainLayout", {main: "projectProfileHTMLTemplateRefactored"});
   }
 })
-
