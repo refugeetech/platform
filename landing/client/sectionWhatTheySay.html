@@ -1,18 +1,19 @@
 <template name="sectionWhatTheySay">
-  <section id="whatTheySay" class="row bgclr-blue">
+  <section id="whatTheySay" class="row">
     <div class="section-padding col-xs-12"></div>
     <div class="col-xs-12 context-header">
       <p>Buzz</p>
     </div>
-    <div class="col-xs-8 col-xs-offset-2 section-heading">
-      <h1>What they are saying about us</h1>
+    <div class="col-xs-8 col-xs-offset-2 section-heading margin10pxTopBottom">
+      <h2>What they are saying about us</h2>
     </div>
     <div class="col-xs-12">
       <div class="row owl-carousel">
         {{#each media}}
           <div id="{{id}}" class="media col-xs-12">
             <a href="{{source}}" alt="{{text}}" target="_blank">
-              <img class="img-responsive {{picClass}}" src="{{pic}}">
+              <h2 class="section-heading">"{{text}}".</h2>
+              <img class="img-responsive {{picClass}}" src="{{pic}}" style="max-width:200px;margin:auto" >
             </a>
           </div>
         {{/each}}

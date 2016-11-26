@@ -9,5 +9,7 @@ Template.searchbar.events({
   },
   'blur input':function(event,template) {
     $('#searchbar').removeClass('active'); //hide the searchbar when input blurs
+    //hide input
+    $('#searchbar input#search').css('display','none');
   }
 });
