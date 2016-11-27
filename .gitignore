@@ -4,3 +4,4 @@
 .DS_Store
 settings.json
 notes.js
+node_modules/

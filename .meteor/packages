@@ -32,7 +32,6 @@ matb33:bootstrap-collapse-js
 momentjs:moment
 jeremy:selectize
 zimme:active-route
-richsilv:owl-carousel
 gadicohen:reactive-window
 standard-minifier-css
 standard-minifier-js
@@ -49,3 +48,4 @@ brylie:first-user-admin
 brylie:accounts-admin-ui
 brylie:api-umbrella
 outatime:jwt-simple
+dennispark:owl-carousel-1

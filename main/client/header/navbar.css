@@ -3,11 +3,13 @@
 */
 
 #top-nav.navbar-default {
-  background: #fff;
+  /*background: #fff;*/
+  background-color: transparent;
   z-index: 20;
 }
 #top-nav.navbar-default .navbar-nav > li > a {
-  color: #1d2660;
+  /*color: #1d2660;*/
+  color: white;
 }
 #top-nav .navbar-brand {
   font-size: 16px;
@@ -24,9 +26,11 @@
   color: inherit;
   background: none;
 }
-
 #top-nav .container {
   position: relative;
+}
+#top-nav.shrinked {
+  background-color: white;
 }
 
 /* =========== Logo =========== */
@@ -59,7 +63,8 @@
   right: 100%;
 }
 #top-nav.navbar-default .navbar-toggle .icon-bar {
-  background-color: #1d2660;
+  /*background-color: #1d2660;*/
+  background-color: transparent;
   height: 3px;
 }
 
@@ -107,6 +112,9 @@ Media Queries
   #top-nav.shrinked .navbar-nav {
     height: calc(55/16 * 1em);
   }
+  #top-nav.shrinked .navbar-nav > li > a {
+    color: #1d2660;
+  }
   #top-nav .navbar-nav a {
     transition: all .1s ease-out;
     transition-property: padding;
@@ -153,6 +161,15 @@ Media Queries
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #top-nav .container {
+    background-color: white !important;
+  }
+  #top-nav.navbar-default .navbar-nav > li > a {
+    color: #1d2660;
+  }
+}
+
 @media only screen and (min-width: 992px) { /* md */
 
   /* =========== Logo =========== */
@@ -180,4 +197,8 @@ Media Queries
     margin-right: 0.5em;
     left: calc(-2/16 * 1em);
   }
+}
+
+.navbar {
+  border: 0px;
 }

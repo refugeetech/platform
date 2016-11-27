@@ -1,4 +1,4 @@
-#searchbar, #spinner {
+#searchbar, #spinner, #searchbar input#search {
   display: none;
 }
 
@@ -9,11 +9,11 @@ Media Queries
 @media only screen and (min-width: 768px) { /* sm */
   #searchbar {
     transition: transform 0.1s ease-out;
-    background: #F8F8F8;
     display: block;
     z-index: 10;
   }
   #searchbar.active {
+    background: #F8F8F8;
     transform: translateY(calc(76/16 * 1em));
   }
   #top-nav.shrinked + #searchbar {
