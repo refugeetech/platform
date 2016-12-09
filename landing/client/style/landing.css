@@ -156,6 +156,30 @@
   margin: 10px;
 }
 
+.margin15px {
+  margin: 15px;
+}
+
+.margin35px {
+  margin: 35px;
+}
+
 .owl-theme .owl-controls .owl-page span {
   background-color: #20245C;
+}
+
+.journeyImg{
+  height: 220px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.transition-heading{
+  font-family: "Lab Grotesque Regular", Helvetica, sans-serif !important;
+  font-size: 1.5em !important;
+}
+
+.transition-text{
+  font-size: 1.2em !important;
 }
