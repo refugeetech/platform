@@ -35,7 +35,6 @@ ddp-client@1.2.8
 ddp-common@1.2.6
 ddp-rate-limiter@1.0.5
 ddp-server@1.2.7
-dennispark:owl-carousel-1@0.0.1
 deps@1.0.12
 diff-sequence@1.0.6
 easy:search@2.0.9
@@ -106,6 +105,7 @@ reactive-var@1.0.10
 reload@1.1.9
 retry@1.0.8
 reywood:publish-composite@1.4.2
+richsilv:owl-carousel@0.1.0
 routepolicy@1.0.11
 service-configuration@1.0.10
 session@1.1.6
