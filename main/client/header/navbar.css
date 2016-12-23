@@ -74,6 +74,7 @@
   #top-nav .navbar-collapse {
     margin-top: calc(62/16 * 1em); /* 62 is navbar height */
     text-align: center;
+    max-height: 400px;
   }
   #top-nav .navbar-right .glyphicon {
     top: .2em;
@@ -152,6 +153,7 @@ Media Queries
   #top-nav .navbar-nav.navbar-right a {
     margin-right: calc(20/16 * 1em);
     padding: calc(28/16 * 1em - 0.2em) calc(4/16 * 1em) calc(26/16 * 1em - 5px);
+    line-height: 39px;
   }
   #top-nav.shrinked .navbar-right a {
     padding: 1em calc(4/16 * 1em) calc(1em - 5px);

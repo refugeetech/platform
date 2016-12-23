@@ -35,16 +35,16 @@ Template.mainNavbar.rendered = function () {
 };
 
 Template.mainNavbar.events({
-  'click .activate-searchbar': function(event) {
-    event.preventDefault();
-    if(!$('#searchbar').hasClass('active')) {
-        //show input
-        $('#searchbar input#search').css('display','block');
-        // Focus on the input of the searchbar only if it is already hidden
-        $('#searchbar input').focus();
-        //show autosuggestions only if input has focus
-        Session.set('willShowAutoSuggestion',true);
-    }
-    $('#searchbar').toggleClass('active'); // Toggle the searchbar
-  }
+  // 'click .activate-searchbar': function(event) {
+  //   event.preventDefault();
+  //   if(!$('#searchbar').hasClass('active')) {
+  //       //show input
+  //       $('#searchbar input#search').css('display','block');
+  //       // Focus on the input of the searchbar only if it is already hidden
+  //       $('#searchbar input').focus();
+  //       //show autosuggestions only if input has focus
+  //       Session.set('willShowAutoSuggestion',true);
+  //   }
+  //   $('#searchbar').toggleClass('active'); // Toggle the searchbar
+  // }
 });

@@ -1,6 +1,6 @@
 #landing-banner {
     padding: 2.2em 0;
-    min-height: 70vh;
+    min-height: 100vh;
     text-align: center;
     color: #fff;
     background-image: url('images/gfx_intro.jpg');
@@ -16,23 +16,29 @@
 }
 
 #landing-title {
-  font-size: 5rem;
-  text-shadow: 0 1px 0 #20245C; /* Match the color overlay hue of banner image*/
+    font-size: 5rem;
+    text-shadow: 0 1px 0 #20245C;
+    /* Match the color overlay hue of banner image*/
 }
 
 #contact {
-  text-align: center;
-  background-image: url('images/contactBg.jpg');
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border: 0px;
+    text-align: center;
+    background-image: url('images/contactBg.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0px;
 }
 
 #contact a {
-  color: #20245C;
+    color: #20245C;
+}
+
+#contact .contact-heading {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .landing-page-slogan {
@@ -41,10 +47,25 @@
     text-align: left;
 }
 
-.landing-slogan {
-    font-size: 0.7em;
+@media only screen and (max-width: 992px) {
+    .landing-page-slogan {
+        margin-left: 0%;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .landing-slogan {
+        font-size: 0.7em;
+        font-family: 'Lab Grotesque Medium', Helvetica, sans-serif;
+        text-align: left;
+        margin-left: 20px;
+    }
 }
 
+.landing-slogan {
+    font-size: 0.8em;
+    font-family: 'Lab Grotesque Medium', Helvetica, sans-serif;
+}
 
 #landing-get-involved {
     margin-top: -10%;
@@ -59,7 +80,7 @@
 
 .second-sector {
     background-color: #FFFFFF;
-    min-height:400px;
+    min-height: 400px;
 }
 
 .second-sector img {
@@ -79,107 +100,174 @@
     list-style-type: none;
 }
 
+
 /* SECTION #volunteer */
- .top-text-box {
-   align-items:center;
-   text-align: center;
- }
 
- .top-text-box h1 {
-   font-size: 4em;
- }
+.top-text-box {
+    align-items: center;
+    text-align: center;
+    font-family: 'Lab Grotesque Regular', Helvetica, sans-serif;
+}
 
-  .context-header  {
-   font-size: 1.5em;
-   font-family: "Lab gr"
- }
+.top-text-box h1 {
+    font-size: 3.4em;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-family: 'Lab Grotesque Medium', Helvetica, sans-serif;
+}
 
- .target-groups-text {
-   font-size: 1.5em;
- }
+#volunteer .btn-red {
+  margin-top: 30px;
+  padding: 0.7em 1.7em;
+}
 
+#volunteer .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 
+#volunteer img {
+      margin-bottom: 30px;
+}
 
- .bgimg-banner {
+.context-header {
+    font-size: 1.5em;
+    font-family: "Lab gr";
+}
+
+.target-groups-text {
+    font-size: 1.5em;
+}
+
+.bgimg-banner {
     position: relative;
     text-align: center;
     color: #fff;
     background-image: url('images/background-header.jpg');
     font-size: 1em;
+}
 
- }
+.bgclr-blue {
+    background-color: #20245C;
+    color: white;
+}
 
- .bgclr-blue {
-   background-color: #20245C;
-   color: white;
- }
-
- .bgclr-white {
-   background-color: white;
-   color:#20245C;
+.bgclr-white {
+    background-color: white;
+    color: #20245C;
 }
 
 .bgclr-pink {
-  background-color: #f23372;
-  color:white;
+    background-color: #f23372;
+    color: white;
 }
 
- .transition-column {
-   align-items: center;
-   text-align: center;
-   padding: 70px 0;
- }
+.transition-column {
+    align-items: center;
+    text-align: center;
+    padding: 70px 0;
+}
 
- #peak1-blog {
-   text-align: center;
- }
+#transition .section-padding {
+    padding-top: 0em;
+}
 
- .section-padding {
-   padding-top: 3em;
-   padding-bottom: 3em;
- }
+#peak1-blog {
+    text-align: center;
+}
 
- .margin2px {
-   margin: 2px;
- }
+.section-padding {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
 
- .margin5px {
-   margin: 5px;
- }
+.margin2px {
+    margin: 2px;
+}
 
- .margin10pxTopBottom {
-   margin-top: 10px;
-   margin-bottom: 10px;
- }
+.margin5px {
+    margin: 5px;
+}
+
+.margin10pxTopBottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 .margin10px {
-  margin: 10px;
+    margin: 10px;
 }
 
 .margin15px {
-  margin: 15px;
+    margin: 15px;
 }
 
 .margin35px {
-  margin: 35px;
+    margin: 35px;
 }
 
 .owl-theme .owl-controls .owl-page span {
-  background-color: #20245C;
+    background-color: #20245C;
 }
 
-.journeyImg{
-  height: 220px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.journeyImg {
+    height: 220px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.transition-heading{
-  font-family: "Lab Grotesque Regular", Helvetica, sans-serif !important;
-  font-size: 1.5em !important;
+.transition-heading {
+    font-family: "Lab Grotesque Regular", Helvetica, sans-serif !important;
+    font-size: 1.5em !important;
 }
 
-.transition-text{
-  font-size: 1.2em !important;
+.transition-text {
+    font-size: 1.2em !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .transition-text {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+#whatwedo p {
+    font-size: 1.9em;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+/* OurProcess Section */
+
+.read-and-continue {
+    padding: 60px;
+    text-align: left;
+}
+
+#knowledgeSection {}
+
+#projectsSection {
+    background-color: #f5f5f5;
+}
+
+.ourProcessHeading {
+    margin-top: 0px;
+    font-size: 3em !important;
+    font-weight: normal !important;
+}
+
+.ourProcessBtn {
+    margin-left: -15px;
+    margin-top: 30px;
+    border: 0px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #knowledge-projects-row {
+        margin-left:30px;
+        margin-right:30px;
+    }
 }
