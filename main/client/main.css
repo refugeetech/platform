@@ -69,30 +69,30 @@ body {
    font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:bold; font-style:normal;;
    font-size: 3em;
  }
- 
+
  h2 {
-   font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:bold; font-style:normal; 
+   font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:bold; font-style:normal;
  }
- 
+
  .column-heading {
    font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:bold; font-style:normal;
    font-size: 2em;
    line-height: calc(54/46);
  }
- 
+
  .column-paragraph {
   font-size: 1.5em;
   line-height: calc(50/40);
  }
- 
+
  .section-paragraph {
   font-size: 2em;
   line-height: calc(48/32);
  }
- 
+
  .context-header {
-   font-family: 'Lab Grotesque Medium', Helvetica, sans-serif; font-weight:normal; font-style:italic;;
-   font-size: 1.5em;
+   font-family: 'Lab Grotesque Bold', Helvetica, sans-serif;
+   font-size: 1.2em;
  }
 
 /* ==========================================================================
