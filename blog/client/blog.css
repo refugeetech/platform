@@ -1,0 +1,24 @@
+#blog-section {
+    margin-top: 0px;
+}
+
+#top-nav-bg {
+    background-color: #1F235C !important;
+    height: 8rem;
+}
+
+#genres {
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#genres a {
+    margin-right: 25px;
+    font-size: 18px;
+    font-family: "LabGrotesque", Roboto, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+#articles {
+    margin-top: 20px;
+}
