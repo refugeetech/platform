@@ -4,19 +4,26 @@
         <div class="container">
             <div class="row" id="genres">
                 <div class="col-lg-12">
-                    <a href="">Genre 1</a>
-                    <a href="">Genre 2</a>
-                    <a href="">Genre 3</a>
-                    <a href="">Genre 4</a>
+                    <a href="">All</a>
+                    {{#each genres}}
+                        <a href="">{{ this.genre }}</a>
+                    {{/each}}
                 </div>
             </div>
             <div class="row" id="articles">
                 <div class="col-lg-12">
-                    <div class="col-lg-12 article-box">
-                        <div class="col-xs-offset-3 col-xs-9 article-box-txt">
-                            text
+                    {{#each articles}}
+                    <a href="{{ encodeTitle title}}" target="_blank" >
+                        <div class="col-lg-12 article-box" style="background-image: url({{ featuredImage }})">
+                            <div class="col-xs-offset-3 col-xs-9 article-box-txt">
+                                <h3>{{ genre }}</h3>
+                                <h1>{{ title }}</h1>
+                                <h4>{{ subtitle }}</h4>
+                                <p>Date: {{ formatDate postedOn }}</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                    {{/each}}
                 </div>
             </div>
         </div>

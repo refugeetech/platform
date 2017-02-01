@@ -1,0 +1,41 @@
+#manage-section {
+    margin-top: 0px;
+    color: black;
+}
+
+#top-nav-bg {
+    background-color: #1F235C !important;
+    height: 7rem;
+}
+
+.table img {
+    float: right;
+    max-height: 50px;
+}
+
+.articleTitle {
+    font-weight: bold;
+    padding-left: 20px !important;
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+.alignBottom {
+    vertical-align: bottom !important;
+}
+
+.btn,
+.btn-danger {
+    font-size: 14px !important;
+    padding: 3px 16px !important;
+    border: 2px solid;
+    color: black !important;
+}
+
+.articleImage {
+    width: 200px;
+    max-width: 200px;
+    border-right: 1px solid lightgray;
+}

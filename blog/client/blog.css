@@ -22,3 +22,34 @@
 #articles {
     margin-top: 20px;
 }
+
+.article-box {
+    min-height: 180px;
+    background-color: #e92e71;
+    opacity: 0.8;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+}
+
+.article-box:hover {
+    opacity: 0.9;
+    background-size: 110%;
+    /*-webkit-transition: all 0.3s ease-in-out;*/
+    /*transform: scale(1.5);*/
+    transition: all 0.3s ease-in;
+}
+
+.article-box h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}

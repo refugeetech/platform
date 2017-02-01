@@ -1,0 +1,73 @@
+<template name="article">
+    <section class="row page-header" id="article-section">
+        <div id="top-nav-bg"></div>
+        <div class="container">
+            {{#if show article}}
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="/images/blog_bg1.png" class="center-block img-responsive" />
+                </div>
+            </div>
+            <div class="row" id="article-title-row">
+                <div class="col-lg-offset-2 col-lg-8">
+                    <h1 id="article-title">{{ article.title}}</h1>
+                    <h5 id="article-sub-title">{{ article.subtitle }}</h5>
+                </div>
+                <div class="col-lg-2" id="article-posted-on">
+                    <h4>Posted on: {{ formatDate article.postedOn }}</h4>
+                </div>
+            </div>
+            <div class="row" id="article-social-btns">
+                <div class="col-lg-offset-2 col-lg-8">
+                    <div id="nbr-shares">
+                        <span id="nbr-shares-value">{{ article.shares }}</span>
+                        <span id="nbr-shares-txt">shares</span>
+                    </div>
+                    <a href="https://www.facebook.com/share.php?u={{ currentURL }}&title={{ article.title }}" target="_blank" class="btn btn-facebook">
+                        <i class="fa fa-facebook"></i> Share
+                    </a>
+                    <a href="http://twitter.com/home?status={{ article.title }}+{{ currentURL }}" target="_blank" class="btn btn-twitter">
+                        <i class="fa fa-twitter"></i> Tweet
+                    </a>
+                    <a href="https://plus.google.com/share?url={{ currentURL }}" target="_blank" class="btn btn-google-plus">
+                        <i class="fa fa-google-plus"></i> Share
+                    </a>
+                    <a href="mailto:hello@refugeetech.com" class="btn btn-email">
+                        <i class="fa fa-envelope"></i> E-mail
+                    </a>
+                </div>
+            </div>
+            <div class="row" id="article-text">
+                <div class="col-lg-offset-2 col-lg-8">
+                    {{{ article.content }}}
+                </div>
+            </div>
+            <div class="row" id="article-tags">
+                <div class="col-lg-offset-2 col-lg-8">
+                    {{#each article.articleTags}}
+                    <button class="btn btn-link">{{this}}</button> {{/each}}
+                </div>
+            </div>
+            <div class="row" id="article-comments">
+                <div class="col-lg-offset-2 col-lg-8">
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src =
+                                "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=248858468894065";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <div class="fb-comments" data-href="{{ currentURL }}" data-numposts="5" data-width="100%" ></div>
+                </div>
+            </div>
+            {{else}}
+            <h1 id="article-title">Article not found</h1>
+            {{/if}}
+        </div>
+    </section>
+</template>

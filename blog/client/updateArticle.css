@@ -1,0 +1,10 @@
+#addArticle {
+    margin-top: 50px;
+    color: #20245C;
+    min-height: 300px;
+}
+
+.btn {
+    padding: 3px 20px !important;
+    font-size: 1em !important;
+}
