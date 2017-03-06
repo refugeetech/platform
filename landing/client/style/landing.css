@@ -42,7 +42,7 @@
 }
 
 .landing-page-slogan {
-    margin-left: 45%;
+    margin-left: 30%;
     width: 80%;
     text-align: left;
 }
@@ -63,8 +63,8 @@
 }
 
 .landing-slogan {
-    font-size: 0.8em;
-    font-family: 'Lab Grotesque Medium', Helvetica, sans-serif;
+    font-size: 0.9em;
+    font-family: 'Lab Grotesque Regular', Helvetica, sans-serif;
 }
 
 #landing-get-involved {
@@ -117,17 +117,17 @@
 }
 
 #volunteer .btn-red {
-  margin-top: 30px;
-  padding: 0.7em 1.7em;
+    margin-top: 30px;
+    padding: 0.7em 1.7em;
 }
 
 #volunteer .container-fluid {
-  padding-left: 30px;
-  padding-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #volunteer img {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .context-header {
@@ -220,6 +220,8 @@
 .transition-heading {
     font-family: "Lab Grotesque Regular", Helvetica, sans-serif !important;
     font-size: 1.5em !important;
+    padding-top: 18px;
+    padding-bottom: 8px;
 }
 
 .transition-text {
@@ -237,6 +239,13 @@
     font-size: 1.9em;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+#whatwedo .btn-red {
+    font-family: "Lab Grotesque Light", Helvetica, sans-serif !important;
+    margin-top: 30px;
+    padding: 0.7em 1.7em;
+    text-decoration: none;
 }
 
 
@@ -267,7 +276,7 @@
 
 @media only screen and (max-width: 1024px) {
     #knowledge-projects-row {
-        margin-left:30px;
-        margin-right:30px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 }

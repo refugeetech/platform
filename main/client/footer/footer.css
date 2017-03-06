@@ -1,49 +1,53 @@
 #main-footer {
-  margin-top: 1em;
-  padding-top: 1em;
+    margin-top: 1em;
+    padding-top: 1em;
 }
 
 .footer-contact-colab {
-  padding-bottom: 3rem;
-
+    padding-bottom: 3rem;
 }
 
 .footer-bottom {
-  border-top:1px solid black;
-  padding-top: 3%;
-  padding-bottom: 3%;
+    border-top: 1px solid black;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 #footer-logo-img {
-  width:250px;
+    width: 250px;
 }
 
 .footer-top a {
-  color: #e92e71;
-  text-decoration: none;
-  font-size: 2rem;
+    color: #e92e71;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 .footer-contact-header {
-  font-size: 2.25rem;
-  margin-bottom: 1em;
-  font-family: "Lab Grotesque Medium", Helvetica, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color:#20245C;
+    font-size: 2.25rem;
+    margin-bottom: 1em;
+    font-family: "Lab Grotesque Medium", Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #20245C;
 }
 
 .footer-links {
-  float: right;
-  font-size: 1.8rem;
+    float: right;
+    font-size: 1.8rem;
 }
 
 .footer-links a {
-  color: #e92e71;
-  text-decoration: none;
-  font-size: 2rem;
+    color: #e92e71;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 .footer-links {
-  margin-top: 1.3rem;
+    margin-top: 1.3rem;
+}
+
+.footer-copyright {
+    font-family: "Lab Grotesque Medium", Helvetica, sans-serif;
+    color: #20245C;
 }

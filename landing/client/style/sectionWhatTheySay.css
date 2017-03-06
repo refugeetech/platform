@@ -1,14 +1,38 @@
 #whatTheySay {
-  text-align: center;
-  color: #20245C;
+    text-align: center;
+    color: #20245C;
 }
 
 #whatTheySay img.constrain {
-  max-height: 20em;
-  max-width: 20em;
-  display: inline-block;
+    max-height: 20em;
+    max-width: 20em;
+    display: inline-block;
 }
 
 #whatTheySay h1 {
-  font-size: 1.5em;
+    font-size: 1.5em;
+}
+
+#whatTheySay a {
+    color: #20245C;
+}
+
+#whatTheySay .section-padding {
+    padding-top: 1em;
+}
+
+#whatTheySay .section-padding-bottom {
+    padding-top: 1em;
+}
+
+.owl-dot span {
+    background-color: #20245C !important;
+}
+
+.owl-dot:hover span {
+    background-color: #F496B8 !important;
+}
+
+.owl-dot.active span {
+    background-color: #D92D6F !important;
 }
